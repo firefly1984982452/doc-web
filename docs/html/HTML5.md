@@ -3,9 +3,8 @@
 
 参考书籍： [《HTML5 权威指南》](https://book.douban.com/subject/25786074/)
 
-> 其它：我只记录了冷门的不常用的信息，其它基础的没有记录。
 
-!> 注意！
+!> 我只记录了冷门的不常用的信息，其它基础的没有记录。
 
 # 一、URL 部分
 
@@ -15,7 +14,8 @@
 
 用法：
 
-```
+
+```html
 <head>
   <base href="https://wx3.sinaimg.cn/" target="_blank">
 </head>
@@ -55,6 +55,10 @@
 ```
 <h1 title="版权说明">版权项：XXX</h1>
 ```
+
+<div class="example-box">
+  <p title="版权说明">版权项：XXX</p>
+</div>
 
 ## 【3】`tabindex`：按<kbd>tab</kbd>键之后按顺序遍历
 

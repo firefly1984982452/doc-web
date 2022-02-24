@@ -1,10 +1,4 @@
-
-<style>
-  p.example{
-    color:#f00;
-    font-size:2em;
-  }
-</style>
+# CSS之进阶总结
 
 # 一、CSS 的进化历史
 
@@ -480,37 +474,38 @@ color: transparent;
 
 ## 【3】文字描边：-webkit-text-stroke
 
-◆ 示例：
 
-<p class="example" style="-webkit-text-stroke:1px #ff0;">文字描边</p>
+<div class="example-box">
+  <p style="-webkit-text-stroke:1px #ff0;">文字描边</p>
+</div>
 
-◆ 代码：
+代码：
 
-```
+```css
 -webkit-text-stroke: 1px #ff0;
 ```
 
 ## 【4】文字阴影：text-shadow
 
-◆ 示例：
-
-<p class="example" style="text-shadow: 5px 5px 5px #f00;">文字阴影</p>
+<div class="example-box">
+  <p style="text-shadow: 5px 5px 5px #f00;">文字阴影</p>
+</div>
 
 ◆ 代码：
 
-```
+```css
 text-shadow: 5px 5px 5px #f00;
 ```
 
 ## 【5】文字颜色：-webkit-text-fill-color
 
-◆ 示例：
-
-<p class="example" style="-webkit-text-fill-color: red;color: green;">文字颜色</p>
+<div class="example-box">
+  <p style="-webkit-text-fill-color: red;color: green;">文字颜色</p>
+</div>
 
 ◆ 代码：
 
-```
+```css
 a{
   -webkit-text-fill-color: red;
   color: green;

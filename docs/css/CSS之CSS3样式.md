@@ -1,13 +1,4 @@
-
-<style>
-  p.example{
-    color:#f00;
-    border: 1px solid;
-  }
-  div.example{
-    border: 1px solid #f00;
-  }
-</style>
+# CSS之CSS3样式
 
 - [MDN 全元素](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
@@ -209,11 +200,12 @@ article h1 {
 
 ## 【0】`text-emphasis`：强调文字
 
-◆ 示例：
 
-<p class="example" style="text-emphasis: open green;-webkit-text-emphasis: open green;">你好，hello world.</p>
+<div class="example-box">
+  <p style="text-emphasis: open green;-webkit-text-emphasis: open green;">你好，hello world.</p>
+</div>
 
-◆ 代码：
+代码：
 
 ```
 text-emphasis: 'x';
@@ -1033,22 +1025,26 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ◆ `font-variant: small-caps`效果：
 
-<p class="example" style="font-size:3em;">This</p>
-<p class="example" style="font-size:3em;font-variant: small-caps">This</p>
+<div class="example-box">
+  <p>This</p>
+  <p style="font-variant: small-caps">This</p>
+</div>
 
 ◆ `font-variant-ligatures: no-common-ligatures`效果：
-
-<p class="example" style="font-size:3em;">fight</p>
-<p class="example" style="font-size:3em;text-rendering: optimizeSpeed;">fight</p>
+<div class="example-box">
+  <p>fight</p>
+  <p style="text-rendering: optimizeSpeed;">fight</p>
+</div>
 
 ◆ [链接：MDN 中 font-variant-numeric 的不同值对比](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant-numeric)
 
 ## 【2】行内元素文字间距自动调整
 
-◆ 效果：
 
-<p class="example" style="width: 100px; text-align: justify; text-align-last: justify">姓名</p>
-<p class="example" style="width: 100px; text-align: justify; text-align-last: justify">家庭住址</p>
+<div class="example-box">
+  <p style="width: 200px; text-align: justify; text-align-last: justify">姓名</p>
+  <p style="width: 200px; text-align: justify; text-align-last: justify">家庭住址</p>
+</div>
 
 ◆ 代码：
 
@@ -1074,17 +1070,18 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 - direction: rtl
 - unicode-bidi: bidi-override【依赖于 direction】
 
-◆ 效果：
 
-<p class="example" style="text-align: right">
-  我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
-</p>
-<p class="example" style="direction: rtl">
-  我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
-</p>
-<p class="example" style="direction: rtl; unicode-bidi: bidi-override">
-  我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
-</p>
+<div class="example-box">
+  <p style="font-size:.5em;text-align: right">
+    我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
+  </p>
+  <p style="font-size:.5em;direction: rtl">
+    我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
+  </p>
+  <p style="font-size:.5em;direction: rtl; unicode-bidi: bidi-override">
+    我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
+  </p>
+</div>
 
 ◆ 代码：
 
@@ -1136,11 +1133,12 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 - word-spacing:30px; // 单词与单词之间的距离。
 - letter-spacing:-3px; // 字母与字母之间的距离。
 
-◆ 效果预览：
 
-<p class="example">默认：I am a programer</p>
-<p class="example" style="word-spacing:30px;">间距：I am a programer</p>
-<p class="example" style="letter-spacing:-3px;">间距：I am a programer</p>
+<div class="example-box">
+  <p >默认：I am a programer</p>
+  <p  style="word-spacing:30px;">间距：I am a programer</p>
+  <p  style="letter-spacing:-3px;">间距：I am a programer</p>
+</div>
 
 ## 【6】文字连字符换行：`hyphens`
 
@@ -1148,8 +1146,10 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ◆ 与`text-align: justify`的区别
 
-<p class="example" style="width: 100px; hyphens: auto;border:1px solid">An extreme ly long English word</p>
-<p class="example" style="width: 100px; text-align: justify; text-align-last: justify;border:1px solid">An extreme ly long English word</p>
+<div class="example-box">
+<p  style="width: 100px; hyphens: auto;border:1px solid">An extreme ly long English word</p>
+<p  style="width: 100px; text-align: justify; text-align-last: justify;border:1px solid">An extreme ly long English word</p>
+</div>
 
 ```
 <p style="width: 100px; hyphens: auto;border:1px solid">An extreme ly long English word</p>
@@ -1564,23 +1564,24 @@ vertical-align: text-top; // 文字对齐图片顶部
 vertical-align: text-bottom; // 默认文字对齐图片底部
 ```
 
-◆ 效果预览：
 
-<p class="example">
-  文字与图片对齐
-  <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
-  设置为顶部对齐
-</p>
-<p class="example">
-  文字与图片对齐
-  <img style="vertical-align: text-bottom;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
-  设置为底部对齐
-</p>
+<div class="example-box">
+  <p>
+    文字与图片对齐
+    <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
+    设置为顶部对齐
+  </p>
+  <p>
+    文字与图片对齐
+    <img style="vertical-align: text-bottom;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
+    设置为底部对齐
+  </p>
+</div>
 
 ◆ 源码：
 
 ```
-<p class="example">
+<p>
   文字与图片对齐
   <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
   设置为顶部对齐
@@ -1603,7 +1604,9 @@ image-rendering: pixelated;
 
 ## 【1】`resize` 属性
 
-<p class="example" style="resize:both;overflow: hidden;">resize属性规定是否由用户调整元素大小</p>
+<div class="example-box">
+  <p style="resize:both;overflow: hidden;">resize属性规定是否由用户调整元素大小</p>
+</div>
 
 ```
 resize:both;
@@ -1830,12 +1833,12 @@ html
 
 ## 【1】更改`<button />`的默认样式为无
 
-◆ 示例：
 
-<div class="example">
-  <button>button 样式</button>
-  <br />
-  <button style="appearance:none;">文本样式</button>
+<div class="example-box">
+    <br />
+    <button>button 样式</button>
+    <br />
+    <button style="appearance:none;">文本样式</button>
 </div>
 
 ◆ 代码：
@@ -1869,7 +1872,8 @@ input#test {
 }
 </style>
 
-<div class="example">
+<div class="example-box">
+  <br />
   <input type="checkbox" />默认复选框
   <br />
   <input id="test" type="checkbox" />更改默认复选框

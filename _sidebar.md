@@ -17,23 +17,20 @@
 
 - JavaScript基础对象
   - [JavaScript之Object对象](/docs/JavaScript-Object/JavaScript之Object对象.md)
-  - [JavaScript之Array对象](/docs/JavaScript-Object/JavaScript之Array对象.md)
+  - [JavaScript之Array数组](/docs/JavaScript-Object/JavaScript之Array数组.md)
   - [JavaScript之String对象](/docs/JavaScript-Object/JavaScript之String对象.md)
   - [JavaScript之Number](/docs/JavaScript-Object/JavaScript之Number.md)
   - [JavaScript之Math](/docs/JavaScript-Object/JavaScript之Math.md)
   - [JavaScript之Date时间对象](/docs/JavaScript-Object/JavaScript之Date时间对象.md)
   - [JavaScript之RegExp正则表达式](/docs/JavaScript-Object/JavaScript之RegExp正则表达式.md)
-  - [JavaScript之Date时间对象](/docs/JavaScript-Object/JavaScript之Date时间对象.md)
   - [JavaScript之Function函数](/docs/JavaScript-Object/JavaScript之Function函数.md)
   - [JavaScript之HTTP对象](/docs/JavaScript-Object/JavaScript之HTTP对象.md)
-  - [JavaScript之Document对象](/docs/JavaScript-Object/JavaScript之Document对象.md)
-  - [JavaScript之DOM对象](/docs/JavaScript-Object/JavaScript之DOM对象.md)
 
 - JavaScript进阶
   - [JavaScrip专业名词](docs/JavaScript/JavaScrip专业名词.md)
   - [JavaScrip专业名词](docs/JavaScript/JavaScript递归穷举所有排列组合并找出重复值.md)
   - [JavaScript之观察者模式-Obverse](/docs/JavaScript/JavaScript之观察者模式-Obverse.md)
-  - [JavaScript之控制对象](/docs/JavaScript/JavaScript之控制对象.md)
+  - [JavaScript控制对象](/docs/JavaScript/JavaScript控制对象.md)
   - [JavaScript之面向对象](/docs/JavaScript/JavaScript之面向对象.md)
   - [JavaScript之进阶总结](/docs/JavaScript/JavaScript之进阶总结.md)
   - [JavaScript深拷贝浅拷贝全析](/docs/JavaScript/JavaScript深拷贝浅拷贝全析.md)

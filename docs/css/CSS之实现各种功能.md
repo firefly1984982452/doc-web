@@ -1,14 +1,4 @@
-
-<style>
-  p.example{
-    color:#f00;
-    border: 1px solid;
-  }
-  div.example{
-    border: 1px solid #f00;
-  }
-</style>
-
+# CSS之实现各种功能
 # 【1】test
 
 test
@@ -36,14 +26,15 @@ word-wrap: break-word;
 
 ◆ 示例：
 
-<p class="example" style="width:300px;display: -webkit-box;
+<div class="example-box">
+  <p style="width:300px;display: -webkit-box;
 overflow: hidden;
 white-space: normal!important;
 text-overflow: ellipsis;
 word-wrap: break-word;
 -webkit-line-clamp: 3;
 -webkit-box-orient: vertical;">日历中的历法又分为阴历、阳历和阴阳合历,三种。 阳历亦即太阳历,其历年为一个回归年,现时国际通用的公历(格里高利历)和中国的干支历即属于太阳历这类。</p>
-
+</div>
 ---
 
 # 【3】新版本上线（指导蒙版）
@@ -74,12 +65,12 @@ border-width: 10px;
 
 ◆ 示例：
 
-<div class="example">
-<div style="width: 0;
-height: 0;
-border-color: #f60 transparent transparent transparent;
-border-style: solid;
-border-width: 20px;"></div>
+<div class="example-box">
+  <div style="width: 0;
+  height: 0;
+  border-color: #f60 transparent transparent transparent;
+  border-style: solid;
+  border-width: 20px;"></div>
 </div>
 
 ---
@@ -801,7 +792,7 @@ li:not(:last-child)...
   }
 </style>
 
-<div class="example" style="padding:10px;">
+<div class="example-box" style="padding:10px;">
   <div class="arrow" style="transform: rotate(-45deg);"></div>
   <div class="arrow" style="transform: rotate(135deg);"></div>
   <br />

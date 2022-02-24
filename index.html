@@ -3,12 +3,28 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Page</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    div.example-box {
+      border: 1px solid #f00;
+      color: #f00;
+      font-size: 2em;
+    }
 
+    div.example-box::before {
+      content: '◆ 示例效果：';
+      color: #f00;
+      font-size: .3em;
+    }
+
+    div.example-box p {
+      margin: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -16,20 +32,52 @@
   <script>
     window.$docsify = {
       name: '前端',
-      repo: 'https://github.com/firefly1984982452/doc-web.git',
+      repo: 'https://github.com/firefly1984982452/doc-web',
       // 是否开启首页
       coverpage: true,
       // 左侧导航栏
       loadSidebar: true,
+      subLevel: 4,
       subMaxLevel: 3,
       auto2top: true,
       // 顶部菜单栏
       loadNavbar: true,
+      // 左侧搜索栏
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 search ',
+        noData: '😞 No Results! ',
+        depth: 6
+      },
+      // 字数统计
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+      // 分页
+      pagination: {
+        previousText: 'PREVIOUS',
+        nextText: 'NEXT',
+        crossChapter: true
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 插件：复制代码 -->
   <script src="//unpkg.com/docsify-copy-code"></script>
+  <!-- 插件：全文搜索 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+  <!-- 插件：分页 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 插件：放大图片 -->
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <!-- 插件：字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 插件：bash命令高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 
 </body>
 

@@ -7,10 +7,15 @@
 
 我最近使用vue写项目，打包之后只能在服务器上预览效果，而我又没有服务器，此时就可以用这个工具了。
 
-`npm install live-server -g`
+```bash
+npm install live-server -g
+```
 
 然后到需要的目录下输入命令行
-`live-server`
+
+```bash
+live-server
+```
 
 
 # 跨域代理
