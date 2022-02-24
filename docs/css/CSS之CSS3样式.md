@@ -205,7 +205,6 @@ article h1 {
   <p style="text-emphasis: open green;-webkit-text-emphasis: open green;">你好，hello world.</p>
 </div>
 
-代码：
 
 ```
 text-emphasis: 'x';
@@ -227,11 +226,22 @@ text-emphasis: filled sesame #555;
 
 ## 【1】box-shadow
 
-`box-shadow: 50px 50px 0 20px #ffb;`
+```
+box-shadow: 50px 50px 0 20px #ffb;
+```
 
-◆ 示例图：
+<style>
+  .box-shadow{
+    width:100px;
+    heigth: 100px;
+    background: #fbb;
+    box-shadow: 50px 50px 0 20px #ffb;
+  }
+</style>
+<div class="example-box">
+  <div class="box-shadow">hello</div>
+</div>
 
-![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gj0nvzcynqj308y069dfn.jpg)
 
 ◆ 解析：
 
@@ -265,7 +275,15 @@ border-color: rgba(255,255,0,.2);
 
 ### 【4.1】用 box-shadow
 
-![image](https://wx3.sinaimg.cn/large/0069qZtTgy1gizk2ty7otj304304aa9x.jpg)
+
+<div class="example-box">
+  <div style="
+  width:100px;
+  height:100px;
+  background: #fbfb;
+  box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;">内容</div>
+</div>
+
 
 ```
 background: #fbfb;
@@ -274,7 +292,15 @@ box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;
 
 ### 【4.2】用 outline
 
-![image](https://wx4.sinaimg.cn/mw1024/0069qZtTgy1gizka5updnj3042044746.jpg)
+
+<div class="example-box">
+  <div style="
+  width:100px;
+  height:100px;
+  background: #fbfb;
+  outline: 5px solid #ff0;
+  border: 5px solid #f00;">内容</div>
+</div>
 
 ```
 background: #fbfb;
@@ -282,17 +308,24 @@ outline: 5px solid #ff0;
 border: 5px solid #f00;
 ```
 
-◆ **outline 和 border 的区别**：
+outline 和 border 的区别
 
 - `outline`不占空间，`border`占空间
 - 设置圆角（`border-radius`）之后，`border`边框会贴紧，`outline`不会
 - `outline-set`可以设置边距
 
-◆ **区别的图片**
+<div class="example-box">
+  <div style="
+  width:100px;
+  height:100px;
+  background: #fbfb;
+  outline: 5px solid #ff0;
+  border: 5px solid #f00;
+  border-radius: 50%;
+  outline-offset: 10px;">内容</div>
+</div>
 
-![image](https://wx1.sinaimg.cn/mw1024/0069qZtTgy1gizkad0s9lj304k04aweg.jpg)
-
-◆ **区别的代码**:
+区别的代码
 
 ```
 background: #fbfb;
@@ -302,7 +335,7 @@ border-radius: 50%;
 outline-offset: 10px;
 ```
 
-◆ `outline-offset`：偏移
+`outline-offset`：偏移
 
 ```
 outline: 1px dashed #f00;
@@ -326,16 +359,19 @@ outline-offset: -10px;
 
 ## 【6】信封边框
 
-<div
-  style="
-    width: 200px;
-    height: 100px;
-    padding: 1em;
-    border: 10px solid transparent;
-    background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%);
-    background-size: 0.6em 0.6em;
-  "
-></div>
+<div class="example-box">
+  <div
+    style="
+      width: 200px;
+      height: 100px;
+      padding: 1em;
+      border: 10px solid transparent;
+      background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%);
+      background-size: 0.6em 0.6em;
+    "
+  ></div>
+</div>
+
 
 ```
 .box {
@@ -361,7 +397,10 @@ border-image: 33.3% url("./test.jpg") round;
 
 ◆ 自适应椭圆
 
-<div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 20% / 50%"></div>
+<div class="example-box">
+  <div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 20% / 50%"></div>
+</div>
+
 
 ```
 width: 300px;
@@ -372,7 +411,10 @@ border-radius: 20% / 50%;
 
 ◆ 半圆
 
-<div class="box" style="width: 50px; height: 100px; background-color: #fbb; border-radius: 0 100% 100% 0 / 50%"></div>
+<div class="example-box">
+  <div class="box" style="width: 50px; height: 100px; background-color: #fbb; border-radius: 0 100% 100% 0 / 50%"></div>
+</div>
+
 
 ```
 width: 50px;
@@ -383,7 +425,10 @@ border-radius: 0 100% 100% 0 / 50%
 
 ◆ 其它形状
 
-<div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 10% 50% / 50% 10%"></div>
+<div class="example-box">
+  <div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 10% 50% / 50% 10%"></div>
+</div>
+
 
 ```
 width: 300px;
@@ -569,8 +614,10 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 
 **rotate(10turn)代表转 10 圈**
 
-<div class="box" style="margin: 60px 0 0 60px; width: 300px; border: 1px solid #bbf; transform: rotate(45deg); overflow: hidden">
-  <img src="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg" style="width: 100%; transform: rotate(-45deg) scale(1.5)" />
+<div class="example-box">
+  <div class="box" style="margin: 60px 0 0 60px; width: 300px; border: 1px solid #bbf; transform: rotate(45deg); overflow: hidden">
+    <img src="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg" style="width: 100%; transform: rotate(-45deg) scale(1.5)" />
+  </div>
 </div>
 
 ### 【1.1】菱形
@@ -635,7 +682,9 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 
 ![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gj0mzj9rt8j307o041t8i.jpg)
 
-`transform: perspective(30px)rotateX(5deg);`
+```
+transform: perspective(30px)rotateX(5deg);
+```
 
 同样会导致内容变成梯形，所以用伪元素生成
 
@@ -942,14 +991,17 @@ background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,g
 
 ### 【4.1】饼图
 
-<div
-  style="
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
-  "
-></div>
+<div class="example-box">
+  <div
+    style="
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
+    "
+  ></div>
+</div>
+
 
 ```
 background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
@@ -957,27 +1009,31 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ### 【4.2】伪圆环效果
 
-<div
-  style="
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  "
->
+<div class="example-box">
+
   <div
     style="
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      background-color: #fff;
+      background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     "
   >
+    <div
+      style="
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #fff;
+      "
+    >
+    </div>
   </div>
 </div>
+
 
 ---
 
@@ -987,6 +1043,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ### 【1.1】text
 
+```
 - text-align: -webkit-match-parent; // 匹配父元素样式
 
 - text-align: center | left | right | justify; // 文本对齐方式
@@ -1017,11 +1074,16 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 - text-rendering: optimizeSpeed; // 连字形式【英文的 fi 会分开】
 
+```
+
+
 ### 【1.2】font
 
+```
 - font-variant: small-caps(小型大写字母字体); // 字体变体
 - font-variant-ligatures: no-common-ligatures; // 连字形式【英文的 fi 会分开】
 - font-variant-numeric: slashed-zero; // 数字 0 显示为中间有斜杠，好和 o 区分
+```
 
 ◆ `font-variant: small-caps`效果：
 
@@ -1046,7 +1108,6 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
   <p style="width: 200px; text-align: justify; text-align-last: justify">家庭住址</p>
 </div>
 
-◆ 代码：
 
 ```
 <style>
@@ -1083,7 +1144,6 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
   </p>
 </div>
 
-◆ 代码：
 
 ```
 <p style="text-align: right">
@@ -1835,13 +1895,11 @@ html
 
 
 <div class="example-box">
-    <br />
     <button>button 样式</button>
     <br />
     <button style="appearance:none;">文本样式</button>
 </div>
 
-◆ 代码：
 
 ```
 {
@@ -1858,7 +1916,6 @@ appearance:none;
 
 ## 【2】更改`<input />`默认的大小和边框样式
 
-◆ 示例：
 
 <style>
 
@@ -1873,13 +1930,11 @@ input#test {
 </style>
 
 <div class="example-box">
-  <br />
   <input type="checkbox" />默认复选框
   <br />
   <input id="test" type="checkbox" />更改默认复选框
 </div>
 
-◆ 代码：
 
 ```
 input#test {

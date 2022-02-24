@@ -15,9 +15,9 @@
 
 ![image](https://wx4.sinaimg.cn/large/0069qZtTgy1godp89sf40j31pl0u0kjl.jpg)
 
-[在线观看](https://firefly1984982452.github.io/my-web-page/canvas.html)
+- [在线观看](https://firefly1984982452.github.io/my-web-page/canvas.html)
 
-[源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/canvas.html)
+- [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/canvas.html)
 
 ## 【1】canvas 的通用标准语法
 
@@ -169,9 +169,9 @@ function rectFn() {
 
 # 四、实例：canvas数据流动效
 
-[效果预览](https://firefly1984982452.github.io/my-web-page/canvas-dataflow.html)
+- [效果预览](https://firefly1984982452.github.io/my-web-page/canvas-dataflow.html)
 
-源码：
+- 源码：
 
 ```
 <html lang="en">
@@ -231,7 +231,7 @@ function rectFn() {
 </html>
 ```
 
-vue组件版源码：
+- vue组件版源码：
 
 ```
 <template>

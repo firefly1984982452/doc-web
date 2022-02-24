@@ -1,14 +1,5 @@
 # HTML之DOM对象
 
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="css,result" data-user="zshuai34" data-slug-hash="WNNzeZZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="WNNzeZZ">
-  <span>See the Pen <a href="https://codepen.io/zshuai34/pen/WNNzeZZ">
-  WNNzeZZ</a> by zshuai34 (<a href="https://codepen.io/zshuai34">@zshuai34</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-# 链接
-
 - [菜鸟教程](https://www.runoob.com/jsref/dom-obj-document.html)
 - [w3cschool](https://www.w3school.com.cn/js/js_htmldom_document.asp)
 

@@ -49,25 +49,30 @@
 
 **stroke-linecap：**
 
-<svg>
-  <g fill="none" stroke="black" stroke-width="6">
-    <path stroke-linecap="butt" d="M5 20 l215 0" />
-    <path stroke-linecap="round" d="M5 40 l215 0" />
-    <path stroke-linecap="square" d="M5 60 l215 0" />
-  </g>
-</svg>
+<div class="example-box">
+  <svg>
+    <g fill="none" stroke="black" stroke-width="6">
+      <path stroke-linecap="butt" d="M5 20 l215 0" />
+      <path stroke-linecap="round" d="M5 40 l215 0" />
+      <path stroke-linecap="square" d="M5 60 l215 0" />
+    </g>
+  </svg>
+</div>
 
-<br />
+
 
 **stroke-dasharray：**
 
-<svg>
-  <g fill="none" stroke="black" stroke-width="4">
-    <path stroke-dasharray="5,5" d="M5 20 l215 0" />
-    <path stroke-dasharray="10,10" d="M5 40 l215 0" />
-    <path stroke-dasharray="20,10,5,5,5,10" d="M5 60 l215 0" />
-  </g>
-</svg>
+<div class="example-box">
+  <svg>
+    <g fill="none" stroke="black" stroke-width="4">
+      <path stroke-dasharray="5,5" d="M5 20 l215 0" />
+      <path stroke-dasharray="10,10" d="M5 40 l215 0" />
+      <path stroke-dasharray="20,10,5,5,5,10" d="M5 60 l215 0" />
+    </g>
+  </svg>
+</div>
+
 
 ```
 <svg>
@@ -147,9 +152,12 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 ## 【2】`<rect>`矩形
 
-<svg>
-  <rect x="0" y="0" height="100" width="200" style="stroke: #70d5dd; fill: #dd524b" />
-</svg>
+<div class="example-box">
+  <svg>
+    <rect x="0" y="0" height="100" width="200" style="stroke: #70d5dd; fill: #dd524b" />
+  </svg>
+</div>
+
 
 ```
 <svg>
@@ -163,9 +171,12 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 - CY：圆中心的 y 坐标；
 - r：圆的半径。
 
+<div class="example-box">
   <svg>
   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
   </svg>
+</div>
+
 
 ```
 <svg>
@@ -180,9 +191,13 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 - RX：水平半径；
 - RY：垂直半径。
 
+<div class="example-box">
   <svg>
-  <ellipse cx="300" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"/>
+    <ellipse cx="300" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"/>
   </svg>
+</div>
+
+
 
 ```
 <svg>
@@ -197,9 +212,13 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 - x2：x 轴定义线条的结束；
 - y2：y 轴定义线条的结束。
 
-<svg>
-  <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"/>
-</svg>
+<div class="example-box">
+  <svg>
+    <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"/>
+  </svg>
+</div>
+
+
 
 ```
 <svg>
@@ -209,9 +228,13 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 ## 【6】`<polygon>`多边形
 
-<svg height="250" width="500">
-  <polygon points="220,10 300,210 170,250 123,234" style="fill:lime;stroke:purple;stroke-width:1" />
-</svg>
+<div class="example-box">
+  <svg height="250" width="500">
+    <polygon points="220,10 300,210 170,250 123,234" style="fill:lime;stroke:purple;stroke-width:1" />
+  </svg>
+</div>
+
+
 
 ```
 <svg height="250" width="500">
@@ -221,10 +244,14 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 ## 【7】`<polyline>`曲线
 
-<svg>
-  <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:none;stroke:black;stroke-width:3" />
-  <polyline points="20,20 40,25 60,40 80,120 120,140 200,180"style="fill:none;stroke:red;stroke-width:4" />
-</svg>
+<div class="example-box">
+  <svg>
+    <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:none;stroke:black;stroke-width:3" />
+    <polyline points="20,20 40,25 60,40 80,120 120,140 200,180"style="fill:none;stroke:red;stroke-width:4" />
+  </svg>
+</div>
+
+
 
 ```
 <svg>
@@ -248,9 +275,13 @@ A = elliptical Arc【椭圆弧】
 Z = closepath【闭合路径】
 ```
 
-<svg>
-    <path d="M150 0 L75 200 L225 200 Z" />
-</svg>
+<div class="example-box">
+  <svg>
+      <path d="M150 0 L75 200 L225 200 Z" />
+  </svg>
+</div>
+
+
 
 ```
 <svg>
@@ -260,14 +291,18 @@ Z = closepath【闭合路径】
 
 ## 【9】`<text>`文本
 
-<svg>
-   <defs>
-    <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
-  </defs>
-  <text x="10" y="100" style="fill:red;">
-    <textPath xlink:href="#path1">I love SVG I love SVG</textPath>
-  </text>
-</svg>
+<div class="example-box">
+  <svg>
+    <defs>
+      <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
+    </defs>
+    <text x="10" y="100" style="fill:red;">
+      <textPath xlink:href="#path1">I love SVG I love SVG</textPath>
+    </text>
+  </svg>
+</div>
+
+
 
 ```
 <svg>
@@ -291,15 +326,19 @@ Z = closepath【闭合路径】
 
 ## 【2】`<feGaussianBlur>`模糊
 
-<svg>
-  <defs>
-    <filter id="f1" x="0" y="0">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
-    </filter>
-  </defs>
-  <rect width="90" height="90" stroke="green" stroke-width="3"
-  fill="yellow" filter="url(#f1)" />
-</svg>
+<div class="example-box">
+  <svg>
+    <defs>
+      <filter id="f1" x="0" y="0">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+      </filter>
+    </defs>
+    <rect width="90" height="90" stroke="green" stroke-width="3"
+    fill="yellow" filter="url(#f1)" />
+  </svg>
+
+</div>
+
 
 ```
 <svg>
@@ -317,17 +356,21 @@ Z = closepath【闭合路径】
 
 - [更多阴影效果](https://www.runoob.com/svg/svg-feoffset.html)
 
-<svg>
-  <defs>
-    <filter id="f2" x="0" y="0" width="200%" height="200%">
-      <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
-      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
-      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-    </filter>
-  </defs>
-  <rect width="90" height="90" stroke="green" stroke-width="3"
-  fill="yellow" filter="url(#f2)" />
-</svg>
+<div class="example-box">
+  <svg>
+    <defs>
+      <filter id="f2" x="0" y="0" width="200%" height="200%">
+        <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+      </filter>
+    </defs>
+    <rect width="90" height="90" stroke="green" stroke-width="3"
+    fill="yellow" filter="url(#f2)" />
+  </svg>
+</div>
+
+
 
 ```
 <svg>
@@ -345,15 +388,19 @@ Z = closepath【闭合路径】
 
 ## 【4】`<linearGradient>`线性渐变
 
-<svg>
-  <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
-      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-</svg>
+<div class="example-box">
+  <svg>
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+  </svg>
+</div>
+
+
 
 ```
 <svg>
@@ -369,16 +416,20 @@ Z = closepath【闭合路径】
 
 ## 【5】`<radialGradient>`放射性渐变
 
-<svg>
-  <defs>
-    <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-      <stop offset="0%" style="stop-color:rgb(255,255,255);
-      stop-opacity:0" />
-      <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
-    </radialGradient>
-  </defs>
-  <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad2)" />
-</svg>
+<div class="example-box">
+  <svg>
+    <defs>
+      <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+        <stop offset="0%" style="stop-color:rgb(255,255,255);
+        stop-opacity:0" />
+        <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+      </radialGradient>
+    </defs>
+    <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad2)" />
+  </svg>
+</div>
+
+
 
 ```
 <svg>
@@ -399,15 +450,19 @@ Z = closepath【闭合路径】
 
 ## 【1】`<g>`组
 
-<svg width="300" height="100">
-  <g id="myCircle">
-    <text x="25" y="20">圆形</text>
-    <circle cx="50" cy="50" r="20"/>
-  </g>
+<div class="example-box">
+  <svg width="300" height="100">
+    <g id="myCircle">
+      <text x="25" y="20">圆形</text>
+      <circle cx="50" cy="50" r="20"/>
+    </g>
 
-  <use href="#myCircle" x="100" y="0" fill="blue" />
-  <use href="#myCircle" x="200" y="0" fill="white" stroke="blue" />
-</svg>
+    <use href="#myCircle" x="100" y="0" fill="blue" />
+    <use href="#myCircle" x="200" y="0" fill="white" stroke="blue" />
+  </svg>
+</div>
+
+
 
 ```
 <svg width="300" height="100">
@@ -423,14 +478,18 @@ Z = closepath【闭合路径】
 
 ## 【2】`<pattern>`图案填充
 
-<svg width="500" height="500">
-  <defs>
-    <pattern id="dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-      <circle fill="#bee9e8" cx="50" cy="50" r="35" />
-    </pattern>
-  </defs>
-  <rect x="0" y="0" width="100%" height="100%" fill="url(#dots)" />
-</svg>
+<div class="example-box">
+
+  <svg width="500" height="500">
+    <defs>
+      <pattern id="dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+        <circle fill="#bee9e8" cx="50" cy="50" r="35" />
+      </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#dots)" />
+  </svg>
+</div>
+
 
 ```
 <svg width="500" height="500">
@@ -445,10 +504,13 @@ Z = closepath【闭合路径】
 
 ## 【3】`<image>`图片
 
-<svg viewBox="0 0 100 100" width="200" height="200">
-  <image xlink:href="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg"
-    width="100%" height="100%"/>
-</svg>
+<div class="example-box">
+  <svg viewBox="0 0 100 100" width="200" height="200">
+    <image xlink:href="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg"
+      width="100%" height="100%"/>
+  </svg>
+</div>
+
 
 ```
 <svg viewBox="0 0 100 100" width="200" height="200">
@@ -469,11 +531,15 @@ Z = closepath【闭合路径】
 
 - `repeatCount`：动画的循环模式。
 
-<svg width="500px" height="100px">
-  <rect x="0" y="0" width="100" height="100" fill="#feac5e">
-    <animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" />
-  </rect>
-</svg>
+<div class="example-box">
+
+  <svg width="500px" height="100px">
+    <rect x="0" y="0" width="100" height="100" fill="#feac5e">
+      <animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" />
+    </rect>
+  </svg>
+</div>
+
 
 ```
 <svg width="500px" height="100px">

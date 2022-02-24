@@ -36,7 +36,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="./static/logo.ico" rel="shortcut icon" />
 ```
 
-**tips:`vue-cli` 项目中，要把`.ico` 文件放在 `static` 文件中，并重新编译运行**
+!> `vue-cli` 项目中，要把`.ico` 文件放在 `static` 文件中，并重新编译运行
 
 ## 【3】自适应手机
 
@@ -262,7 +262,7 @@ p{
 
 # 五、屏幕尺寸，分辨率，像素，PPI
 
-[学习链接](https://zhuanlan.zhihu.com/p/26232703?utm_source=com.tencent.mtt)
+- [学习链接](https://zhuanlan.zhihu.com/p/26232703?utm_source=com.tencent.mtt)
 
 ## 【1】名词解释
 
@@ -446,11 +446,10 @@ line-height: 1.5; // 资料上都是1，但chrome和firfox上应该都是1.5
 
 ## 【1】文字渐变
 
-◆ 示例：
 
-<h1 style="background: linear-gradient(to bottom, #8AF0FF,#3780E6);-webkit-background-clip: text;color: transparent;">文字渐变</h1>
-
-◆ 代码：
+<div class="example-box">
+  <h1 style="background: linear-gradient(to bottom, #8AF0FF,#3780E6);-webkit-background-clip: text;color: transparent;">文字渐变</h1>
+</div>
 
 ```
 background: linear-gradient(to bottom, #8AF0FF,#3780E6);;
@@ -479,8 +478,6 @@ color: transparent;
   <p style="-webkit-text-stroke:1px #ff0;">文字描边</p>
 </div>
 
-代码：
-
 ```css
 -webkit-text-stroke: 1px #ff0;
 ```
@@ -491,8 +488,6 @@ color: transparent;
   <p style="text-shadow: 5px 5px 5px #f00;">文字阴影</p>
 </div>
 
-◆ 代码：
-
 ```css
 text-shadow: 5px 5px 5px #f00;
 ```
@@ -502,8 +497,6 @@ text-shadow: 5px 5px 5px #f00;
 <div class="example-box">
   <p style="-webkit-text-fill-color: red;color: green;">文字颜色</p>
 </div>
-
-◆ 代码：
 
 ```css
 a{
@@ -533,15 +526,17 @@ a{
 
 ## 【8】垂直排版
 
-◆ 示例：
 
-<p style="writing-mode: vertical-lr;text-orientation: upright;">数字横向123</p>
-<hr />
-<p style="writing-mode: vertical-lr;">竖向2021排版</p>
-<hr />
-<p style="writing-mode: vertical-lr;">竖向<span style="text-combine-upright: all;">2021</span>排版</p>
+<div class="example-box" style="font-size:.7em;">
+  <p style="writing-mode: vertical-lr;text-orientation: upright;">数字横向123</p>
+  <hr />
+  <p style="writing-mode: vertical-lr;">竖向2021排版</p>
+  <hr />
+  <p style="writing-mode: vertical-lr;">竖向<span style="text-combine-upright: all;">2021</span>排版</p>
+</div>
 
-◆ 代码：
+
+
 
 ```
 p{
@@ -711,7 +706,9 @@ p{
 
 ## 【1】打印方法
 
-`window.print();`
+```
+window.print();
+```
 
 ## 【2】局部打印
 
@@ -830,7 +827,7 @@ table {
 
 ---
 
-# 十三、@supports 支持
+# 十三、`@supports` 支持
 
 `supports`命令用来判断浏览器是否支持某项 CSS 功能。
 
@@ -1188,41 +1185,6 @@ user-select: auto | text | none | contain | all;
 
 ---
 
-# 二十三、CSS 插件之 gsap 数字动画
-
-```
-npm install gsap@2.0.2
-
-最新版本我尝试的时候不行，也许不同环境下可以
-```
-
-```
-<input v-model="number" type="text" step="20">
-<p>{{ animatedNumber }}</p>
-...
-import { TweenLite } from 'gsap/TweenMax'
-export default {
-  data() {
-    return {
-      number: 0,
-      tweenedNumber: 0
-    }
-  },
-
-  computed: {
-    animatedNumber: function() {
-      return this.tweenedNumber.toFixed(0);
-    }
-  },
-  watch: {
-    number: function(newValue) {
-      TweenLite.to(this.$data, 2, { tweenedNumber: newValue })
-    }
-  },
-}
-```
-
----
 
 # CSS 其它案例
 

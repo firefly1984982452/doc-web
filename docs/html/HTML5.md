@@ -136,7 +136,6 @@
 
 ?> 点击鼠标后可看到写错的单词seperate下面有黄色的标识
 
-
 ## 【9】`data-`：放置自定义数据
 
 ```
@@ -229,11 +228,21 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 。</p>
 ```
 
+<div class="example-box">
+  <p>勾股定理是<var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>。</p>
+</div>
+
 ## 【6】`<u>`和`<s>`：下划线和删除线
 
 - `<u>`：下划线；
 
 - `<s>`：删除线。
+
+<div class="example-box">
+  <u>下划线</u>
+  <br />
+  <s>删除线</s>
+</div>
 
 ## 【7】`<ins>`和`<del>`：下划线和删除线
 
@@ -253,6 +262,15 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </ins>
 ```
 
+<div class="example-box">
+  <ins cite="./why.html" datetime="2018-05">
+    <p>项目比原定时间提前两周结束。</p>
+  </ins>
+  <del cite="./why.html" datetime="2018-05">
+    <p>项目比原定时间提前两周结束。</p>
+  </del>
+</div>
+
 ## 【8】`<code>`：代码块
 
 `<code>`表示代码，如果需要显示多行代码，需要放在`<pre>`标签里面。
@@ -270,13 +288,18 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `<kbd>`：键盘代码；
 
-- `<samp>`：示例。
 
 ```
-<p>Windows 可以按下
-<kbd> <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Del</kbd> </kbd>
+<p>Windows 可以按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Del</kbd> 
 重启。</p>
 ```
+
+<div class="example-box">
+  <p>Windows 可以按下<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Del</kbd> 
+  重启。</p>
+</div>
+
+- `<samp>`：示例。
 
 ```
 <p>如果使用没有定义的变量，浏览器会报错：
@@ -284,7 +307,19 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </p>
 ```
 
+<div class="example-box">
+  <p>如果使用没有定义的变量，浏览器会报错：
+  <samp>Uncaught ReferenceError: foo is not defined</samp>。
+  </p>
+</div>
+
 ## 【10】`<mark>`：突出显示
+
+
+<div class="example-box">
+  <p>信息<mark>突出</mark></p>
+</div>
+
 
 ## 【11】`<small>`：最小字号显示（12px）
 
@@ -299,8 +334,15 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ```
 
 ```
-<p>本次马拉松比赛第一名是<data value="39">张三</data></p>。
+<p>本次马拉松比赛第一名是<data value="39">张三</data>。</p>
 ```
+
+
+<div class="example-box">
+  <p>运动会预定<time datetime="2015-06-10">下周三</time>举行。</p>
+  <p>本次马拉松比赛第一名是<data value="39">张三</data>。</p>
+</div>
+
 
 ## 【13】`<address>`：联系方式
 
@@ -312,6 +354,10 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 <abbr title="HyperText Markup Language">HTML</abbr>
 ```
 
+<div class="example-box">
+  <abbr title="HyperText Markup Language">HTML</abbr>
+</div>
+
 ## 【15】`<dfn>`：术语
 
 ```
@@ -320,6 +366,13 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 <dfn title="全球性计算机网络">Internet</dfn>。
 </p>
 ```
+
+<div class="example-box">
+  <p>
+  通过 TCP/IP 协议连接的全球性计算机网络，叫做
+  <dfn title="全球性计算机网络">Internet</dfn>。
+  </p>
+</div>
 
 ## 【16】`<ruby>`：文字的语音注释
 
@@ -330,12 +383,12 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </ruby>
 ```
 
-显示：
-
-```
-han zi
-汉 字
-```
+<div class="example-box">
+  <ruby>
+  汉<rp>(</rp><rt>han</rt><rp>)</rp>
+  字<rp>(</rp><rt>zi</rt><rp>)</rp>
+  </ruby>
+</div>
 
 ---
 
@@ -361,7 +414,15 @@ han zi
 </ol>
 ```
 
-产生的结果就是 3、2、1。
+
+<div class="example-box">
+  <ol reversed>
+    <li>列表项 A</li>
+    <li>列表项 B</li>
+    <li>列表项 C</li>
+  </ol>
+</div>
+
 
 ### 【1.2】start：起始编号
 
@@ -373,7 +434,15 @@ han zi
 </ol>
 ```
 
-产生的结果就是 5、6、7。
+
+<div class="example-box">
+  <ol start="5">
+    <li>列表项 A</li>
+    <li>列表项 B</li>
+    <li>列表项 C</li>
+  </ol>
+</div>
+
 
 ### 【1.3】type：样式
 
@@ -405,6 +474,18 @@ han zi
   <dd>硬盘</dd>
 </dl>
 ```
+
+<div class="example-box">
+  <dl>
+    <dt>CPU</dt>
+    <dd>中央处理器</dd>
+    <dt>Memory</dt>
+    <dd>内存</dd>
+    <dt>Hard Disk</dt>
+    <dd>硬盘</dd>
+  </dl>
+</div>
+
 
 多个术语（`<dt>`）对应一个解释（`<dd>`），或者多个解释（`<dd>`）对应一个术语（`<dt>`），都是合法的。
 
@@ -505,6 +586,10 @@ han zi
 <img src="foo.jpg" alt="示例图片">
 ```
 
+<div class="example-box">
+  <img src="foo.jpg" alt="示例图片">
+</div>
+
 ## 【2】`width`，`height`：宽度和高度
 
 单位是像素或百分比。
@@ -576,6 +661,12 @@ han zi
 </figure>
 ```
 
+<div class="example-box">
+  <figure>
+    <img src="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg">
+    <figcaption>示例图片</figcaption>
+  </figure>
+</div>
 ---
 
 # 七、视频标签
@@ -658,11 +749,19 @@ han zi
 <a href="data:,hello,world" download="hello.txt">下载hello.txt</a>
 ```
 
+<div class="example-box">
+  <a href="data:,hello,world" download="hello.txt">下载hello.txt</a>
+</div>
+
 ### 【1.1.2】邮件：`mailto:`
 
 ```
 <a href="mailto:contact@example.com">联系我们</a>
 ```
+
+<div class="example-box">
+  <a href="mailto:contact@example.com">联系我们</a>
+</div>
 
 邮件协议还允许指定其他几个邮件要素。
 
@@ -680,11 +779,19 @@ han zi
 <a href="tel:13312345678">13312345678</a>
 ```
 
+<div class="example-box">
+  <a href="tel:13312345678">13312345678</a>
+</div>
+
 ## 【1.2】`download`：下载
 
 ```
 <a href="data:,hello,world" download="hello.txt">下载hello.txt</a>
 ```
+
+<div class="example-box">
+  <a href="data:,hello,world" download="hello.txt">下载hello.txt</a>
+</div>
 
 ## 【1.3】`rel` 属性
 
@@ -701,6 +808,12 @@ han zi
 	baidu.com
 </a>
 ```
+
+<div class="example-box">
+  <a href="https://baidu.com/" target="_blank" rel="noopener">
+	baidu.com
+  </a>
+</div>
 
 - nofollow
 
@@ -794,6 +907,15 @@ han zi
 </fieldset>
 ```
 
+
+<div class="example-box">
+  <fieldset>
+    <legend>学生情况登记</legend>
+    <p>年龄：<input type="text" name="age"></p>
+    <p>性别：<input type="text" name="gender"></p>
+  </fieldset>
+</div>
+
 ## 【2】`<datalist>`：容器标签
 
 ```
@@ -809,6 +931,20 @@ han zi
 </datalist>
 ```
 
+<div class="example-box">
+  <label for="ice-cream-choice">冰淇淋：</label>
+  <input type="text" list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+
+  <datalist id="ice-cream-flavors">
+    <option value="巧克力">
+    <option value="椰子">
+    <option value="薄荷">
+    <option value="草莓">
+    <option value="香草">
+  </datalist>
+</div>
+
+
 ## 【3】`<input>`和`<output>`：输入输出标签
 
 - `<input>`：输入；
@@ -821,6 +957,13 @@ han zi
 <output name="result">20</output>
 ```
 
+
+<div class="example-box">
+  <input type="number" name="a" value="10"> +
+  <input type="number" name="b" value="10"> =
+  <output name="result">20</output>
+</div>
+
 ## 【4】`<progress>`和`<meter>`：进度和指示器标签
 
 - `<progress>`：进度；
@@ -832,15 +975,21 @@ han zi
 <meter id="file" max="100" value="70"> 70% </meter>
 ```
 
+
+<div class="example-box">
+  <progress id="file" max="100" value="70"> 70% </progress>
+  <meter id="file" max="100" value="70"> 70% </meter>
+</div>
+
 ---
 
 # 十一、`<input />`标签
 
 ## HTML5 input 标签所有 type
 
-[预览效果](https://firefly1984982452.github.io/my-web-page/input-type.html)
+- [预览效果](https://firefly1984982452.github.io/my-web-page/input-type.html)
 
-[源码](https://github.com/firefly1984982452/my-web-page/blob/master/input-type.html)
+- [源码](https://github.com/firefly1984982452/my-web-page/blob/master/input-type.html)
 
 元素
 
@@ -870,7 +1019,7 @@ han zi
 
 ## HTML5 input 标签所有属性
 
-[链接](https://www.runoob.com/tags/tag-input.html)
+- [链接](https://www.runoob.com/tags/tag-input.html)
 
 - maxlength：最大输入长度
 - minlength：最小输入长度
@@ -926,6 +1075,20 @@ modal.close();
   这是一段解释文本。
 </details>
 ```
+<div class="example-box">
+  <details open>
+    <summary>这是标题</summary>
+    这是一段解释文本。
+  </details>
+</div>
+
+<style>
+  summary::-webkit-details-marker {
+    background: url(https://example.com/foo.svg);
+    color: transparent;
+  }
+</style>
+
 
 **设置三角箭头样式**
 
@@ -944,6 +1107,7 @@ summary::-webkit-details-marker {
   color: transparent;
 }
 ```
+
 
 ---
 
@@ -996,7 +1160,10 @@ summary::-webkit-details-marker {
 
 兼容性在各大浏览器都挺好，但MDN不推荐使用，以后也可能会删除。
 
-<marquee>hello world , your canvas is good.</marquee>
+<div class="example-box">
+  <marquee>hello world , your canvas is good.</marquee>
+</div>
+
 
 ```
 <marquee >hello world , your canvas is good.</marquee>
