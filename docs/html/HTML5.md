@@ -1,7 +1,10 @@
 # HTML5
-学习链接： [阮一峰](https://wangdoc.com/html/)
 
-参考书籍： [《HTML5 权威指南》](https://book.douban.com/subject/25786074/)
+参考：
+
+- [阮一峰](https://wangdoc.com/html/)
+
+- [《HTML5 权威指南》](https://book.douban.com/subject/25786074/)
 
 
 !> 我只记录了冷门的不常用的信息，其它基础的没有记录。
@@ -113,6 +116,10 @@
 <p contenteditable="true">阅读时是正常模式，鼠标点击后，本句内容可修改。</p>
 ```
 
+<div class="example-box">
+  <p contenteditable="true">阅读时是正常模式，鼠标点击后，本句内容可修改。</p>
+</div>
+
 ## 【8】`spellcheck`：打开拼写检查
 
 ```
@@ -121,7 +128,12 @@
 </p>
 ```
 
-（**我在 chrome 和 firefox 下都无效，没找到原因:(**）
+<div class="example-box">
+  <p contenteditable="true" spellcheck="true">
+  英语单词 separate 容易写错成 seperate。
+  </p>
+</div>
+
 
 ## 【9】`data-`：放置自定义数据
 
