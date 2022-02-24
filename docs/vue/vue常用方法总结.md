@@ -153,9 +153,9 @@ B.vue
 ```
 this.$route.params
 ```
-*tips:A.vue使用的是`$router`，B.vue使用的是`$route`，极易混淆。*
+!> A.vue使用的是`$router`，B.vue使用的是`$route`，极易混淆。
 
-**此处push的必须是name，不能是path，如果要用path的话，可以用query**
+!> 此处push的必须是name，不能是path，如果要用path的话，可以用query
 
 ## 【2】地址栏'/'传参
 
@@ -782,7 +782,7 @@ this.$message.success('info');
 
 `html`部分：
 
-注意：此处的data要注意**网络请求的异步问题**
+!> 此处的data要注意**网络请求的异步问题**
 
 ```
 <swiper :options="swiperOption" ref="mySwiper">
@@ -991,7 +991,7 @@ export default {
 }
 ```
 
-[参考](https://segmentfault.com/a/1190000012272194)
+- [参考](https://segmentfault.com/a/1190000012272194)
 
 ---
 
@@ -1009,7 +1009,7 @@ data: () => ({
 
 `<img v-lazy:background-image="{src: item.pic_url, error: 'http://bpic.588ku.com/back_pic/03/53/97/65579958bb0ec9a.jpg!r850/fw/400', loading: 'default_banner'}" />`
 
-注意：`error`里的图片得是网络图片，用本地图片我设置了很久都没有效果。
+!> `error`里的图片得是网络图片，用本地图片我设置了很久都没有效果。
 
 ---
 

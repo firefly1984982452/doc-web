@@ -897,7 +897,7 @@ $(".company_color").click(function(){
 
 # 十九、Blob 实现下载文件
 
-[参考链接](https://zhuanlan.zhihu.com/p/97768916)
+- [参考链接](https://zhuanlan.zhihu.com/p/97768916)
 
 DOM:
 

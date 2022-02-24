@@ -250,7 +250,7 @@ html,body{
 }
 ```
 
-**tips:因为我的布局很简单，页面也不多，所以我用了`*`号选择器**
+!> :因为我的布局很简单，页面也不多，所以我用了`*`号选择器
 
 ## 【3】absolute 方法实现
 
@@ -871,7 +871,7 @@ background-position: 0 1.1em;
 
 # 自定义图片对比控件
 
-[效果预览地址](https://firefly1984982452.github.io/my-web-page/image-contrast.html)
+- [效果预览地址](https://firefly1984982452.github.io/my-web-page/image-contrast.html)
 
 ```
 <!DOCTYPE html>
@@ -942,7 +942,7 @@ background-position: 0 1.1em;
 
 # 【26】沿环形路径平移的动画
 
-[效果预览地址](https://firefly1984982452.github.io/my-web-page/circle-animation.html)
+- [效果预览地址](https://firefly1984982452.github.io/my-web-page/circle-animation.html)
 
 ```
 <!DOCTYPE html>

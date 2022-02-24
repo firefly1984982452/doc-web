@@ -75,7 +75,7 @@
 
 **addEventListener 的第 3 个参数**
 
-[MDN 链接](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
+- [MDN 链接](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
 
 第 3 个参数可为`useCapture`（`Boolean`），也可为`options`（`Object`）：
 
@@ -249,7 +249,7 @@ this.$refs.ref.scrollLeft = 100
 
 # 四、DOM 事件对象
 
-[链接](HTML之DOM事件对象)
+- [链接](HTML之DOM事件对象)
 
 # 五、DOM console 对象
 

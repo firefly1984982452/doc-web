@@ -296,7 +296,7 @@ console.log(arr[1],arr[-2]); // b c
 
 - 代理的过程中，可以通过`apply`绑定拦截原来的函数。
 
-[JS Proxy 的优势以及使用场景](https://www.suibianlu.com/c/p/14220.html)
+- [JS Proxy 的优势以及使用场景](https://www.suibianlu.com/c/p/14220.html)
 
 
 # 三、总结

@@ -226,7 +226,7 @@ top: 0;
 
 # 六、多列布局：column
 
-[MDN-学习链接](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [MDN-学习链接](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 
 ```
 columns: 3;
@@ -375,11 +375,11 @@ html
 
 # 九、五种 CSS 经典布局
 
-[阮一峰的博客链接](https://www.ruanyifeng.com/blog/2020/08/five-css-layouts-in-one-line.html)
+- [阮一峰的博客链接](https://www.ruanyifeng.com/blog/2020/08/five-css-layouts-in-one-line.html)
 
 ◆ 【1】空间居中布局
 
-[CodePen](https://codepen.io/una/pen/YzyYbBx) 示例
+- [CodePen](https://codepen.io/una/pen/YzyYbBx) 示例
 
 ```
 .container {
@@ -392,7 +392,7 @@ html
 
 核心：`flex: 0 1 150px;`
 
-[CodePen](https://codepen.io/una/pen/WNQdBza) 示例
+- [CodePen](https://codepen.io/una/pen/WNQdBza) 示例
 
 ```
 .container {
@@ -408,7 +408,7 @@ html
 
 ◆ 【3】两栏式布局
 
-[CodePen](https://codepen.io/una/pen/gOaNeWL) 示例
+- [CodePen](https://codepen.io/una/pen/gOaNeWL) 示例
 
 ```
 .container {
@@ -419,7 +419,7 @@ html
 
 ◆ 三明治布局
 
-[CodePen](https://codepen.io/una/pen/bGVXPWB) 示例
+- [CodePen](https://codepen.io/una/pen/bGVXPWB) 示例
 
 ```
 .container {
@@ -430,7 +430,7 @@ html
 
 ◆ 圣杯布局
 
-[CodePen](https://codepen.io/una/pen/mdVbdBy) 示例
+- [CodePen](https://codepen.io/una/pen/mdVbdBy) 示例
 
 HTML
 

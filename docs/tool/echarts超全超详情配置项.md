@@ -24,7 +24,7 @@
 npm install echarts --save
 ```
 
-注意项：如果 echarts 用的是 5.0以上，对应的其它插件也要更新到最新版。
+!> 如果 echarts 用的是 5.0以上，对应的其它插件也要更新到最新版。
 
 ## 【2】写 echarts 组件
 

@@ -139,7 +139,7 @@ arr.sort((a,b) =>  a - b); //[1, 23, 53, 122, 231]
 
 1. 原理
 
-[Array.sort 原理](https://blog.csdn.net/coder_chenz/article/details/77156047)
+- [Array.sort 原理](https://blog.csdn.net/coder_chenz/article/details/77156047)
 
 v8 引擎的 sort 函数给出的排序方式：
 
@@ -205,7 +205,7 @@ var arr = [123,124,'124'];
 arr.indexOf(124);    //1
 ```
 
-注意了，数字 124 和字符串'124'是不同的元素。
+!> 数字 124 和字符串'124'是不同的元素。
 
 ## 【5】`find`和`findIndex`：搜索指定的元素
 
@@ -404,7 +404,7 @@ Array.of(1,2,3); // [1,2,3]
 
 ## 【1】`flat()`和`flatMap()`
 
-[学习链接](https://blog.csdn.net/qq_29055201/article/details/86530254)
+- [学习链接](https://blog.csdn.net/qq_29055201/article/details/86530254)
 
 ◆ `flat`
 

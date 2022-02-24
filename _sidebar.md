@@ -28,7 +28,7 @@
 
 - JavaScript进阶
   - [JavaScrip专业名词](docs/JavaScript/JavaScrip专业名词.md)
-  - [JavaScrip专业名词](docs/JavaScript/JavaScript递归穷举所有排列组合并找出重复值.md)
+  - [JavaScript递归穷举所有排列组合并找出重复值](docs/JavaScript/JavaScript递归穷举所有排列组合并找出重复值.md)
   - [JavaScript之观察者模式-Obverse](/docs/JavaScript/JavaScript之观察者模式-Obverse.md)
   - [JavaScript控制对象](/docs/JavaScript/JavaScript控制对象.md)
   - [JavaScript之面向对象](/docs/JavaScript/JavaScript之面向对象.md)
@@ -83,7 +83,6 @@
 
 - 其它语言
   - [sql 语句（基础）](/docs/other-program/sql语句（基础）.md)
-  - [Emmet(Zencoding)语法](/docs/other-program/)
   - [git 进阶](/docs/other-program/git进阶.md)
   - [TypeScript 总结](/docs/other-program/TypeScript总结.md)
   - [docker](/docs/other-program/docker.md)

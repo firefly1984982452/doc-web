@@ -2,7 +2,7 @@
 
 ---
 
-[链接](https://blog.csdn.net/shenlei19911210/article/details/78529939?spm=1001.2014.3001.5501)
+- [链接](https://blog.csdn.net/shenlei19911210/article/details/78529939?spm=1001.2014.3001.5501)
 
 # 一、普通发布代码
 
@@ -145,7 +145,7 @@ git clone 'xx'
 
 # 九、git 设备多帐户
 
-[链接](https://www.jianshu.com/p/cacf91579268)
+- [链接](https://www.jianshu.com/p/cacf91579268)
 
 # 十、将源码转入新的仓库
 

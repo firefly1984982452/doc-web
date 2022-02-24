@@ -315,11 +315,9 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【10】`<mark>`：突出显示
 
-
 <div class="example-box">
   <p>信息<mark>突出</mark></p>
 </div>
-
 
 ## 【11】`<small>`：最小字号显示（12px）
 
@@ -336,7 +334,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ```
 <p>本次马拉松比赛第一名是<data value="39">张三</data>。</p>
 ```
-
 
 <div class="example-box">
   <p>运动会预定<time datetime="2015-06-10">下周三</time>举行。</p>
@@ -414,7 +411,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </ol>
 ```
 
-
 <div class="example-box">
   <ol reversed>
     <li>列表项 A</li>
@@ -433,7 +429,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   <li>列表项 C</li>
 </ol>
 ```
-
 
 <div class="example-box">
   <ol start="5">
@@ -720,11 +715,9 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </script>
 ```
 
-◆ 注意事项：
+!> 1. 浏览器需要一个服务器环境，否则 `canvas` 的 `toDataURL` 方法会报错。该方法是将其转换为 base64 格式的图片地址。
 
-1. 浏览器需要一个服务器环境，否则 `canvas` 的 `toDataURL` 方法会报错。该方法是将其转换为 base64 格式的图片地址。
-
-2. 可使用本地视频和 flv 格式的监控视频。
+!> 2. 可使用本地视频和 flv 格式的监控视频。
 
 ---
 
@@ -797,7 +790,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - noopener
 
-[noopener](https://www.xinshouzhanzhang.com/rel-noopener.html):
+- [noopener](https://www.xinshouzhanzhang.com/rel-noopener.html):
 
 当你使用`target="_blank"`打开一个新的标签页时，新页面的 window 对象上有一个属性`opener`，它指向的是前一个页面的 `window`对象，这样，后一个页面就获得了前一个页面的控制权，可以使用`window.opener.location.replace`更改前一个页面的`url`。简单来说就是，用户点击了一个超链接，该链接在新窗口打开的同时，竟然更改了前一个页面的链接。
 
@@ -817,7 +810,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - nofollow
 
-[nofollow](https://blog.csdn.net/qq_33981438/article/details/80909881)
+- [nofollow](https://blog.csdn.net/qq_33981438/article/details/80909881)
 
 不跟踪链接，利于 SEO 优化。
 
@@ -907,7 +900,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </fieldset>
 ```
 
-
 <div class="example-box">
   <fieldset>
     <legend>学生情况登记</legend>
@@ -957,7 +949,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 <output name="result">20</output>
 ```
 
-
 <div class="example-box">
   <input type="number" name="a" value="10"> +
   <input type="number" name="b" value="10"> =
@@ -974,7 +965,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 <progress id="file" max="100" value="70"> 70% </progress>
 <meter id="file" max="100" value="70"> 70% </meter>
 ```
-
 
 <div class="example-box">
   <progress id="file" max="100" value="70"> 70% </progress>
@@ -1113,13 +1103,13 @@ summary::-webkit-details-marker {
 
 # 十三、`<map>`标签
 
-[链接](https://www.runoob.com/try/try.php?filename=tryhtml_areamap)
+- [链接](https://www.runoob.com/try/try.php?filename=tryhtml_areamap)
 
 ---
 
 # 十四、`<figure>`、`<figcaption>`标签：独立的主流代码（如图片、代码等）
 
-[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure)
+- [MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure)
 
 ```
 <figure>
@@ -1160,11 +1150,11 @@ summary::-webkit-details-marker {
 
 兼容性在各大浏览器都挺好，但MDN不推荐使用，以后也可能会删除。
 
+```
+<marquee >hello world , your canvas is good.</marquee>
+```
+
 <div class="example-box">
   <marquee>hello world , your canvas is good.</marquee>
 </div>
 
-
-```
-<marquee >hello world , your canvas is good.</marquee>
-```

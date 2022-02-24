@@ -8,7 +8,7 @@
 
 # 二、CSS in JS
 
-[阮一峰的博客教程](https://www.ruanyifeng.com/blog/2017/04/css_in_js.html)
+- [阮一峰的博客教程](https://www.ruanyifeng.com/blog/2017/04/css_in_js.html)
 
 `CSS in JS` 是个库，里面有各种操作 `css` 的 `js` 函数，如：`polished.js`
 
@@ -54,7 +54,7 @@ const styles = {
 
 # 三、CSS Moudles
 
-[阮一峰的博客教程](https://www.ruanyifeng.com/blog/2016/06/css_modules.html)
+- [阮一峰的博客教程](https://www.ruanyifeng.com/blog/2016/06/css_modules.html)
 
 ## CSS Moudles 是什么
 

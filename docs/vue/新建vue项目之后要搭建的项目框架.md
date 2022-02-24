@@ -2,7 +2,7 @@
 
 ---
 
-[github地址](https://github.com/firefly1984982452/base)
+- [github地址](https://github.com/firefly1984982452/base)
 
 # 搭建
 
@@ -234,19 +234,19 @@ export default new Router({
 
 # vuex
 
-[链接](https://firefly1984982452.github.io/2018/03/19/vue%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/#%E4%BD%BF%E7%94%A8Vuex)
+- [链接](https://firefly1984982452.github.io/2018/03/19/vue%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/#%E4%BD%BF%E7%94%A8Vuex)
 
 ---
 
 # eventBus
 
-[链接](https://firefly1984982452.github.io/2018/03/19/vue%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/#vue%E5%85%84%E5%BC%9F%E7%BB%84%E4%BB%B6%E9%80%9A%E8%BF%87eventbus%E4%BC%A0%E5%80%BC)
+- [链接](https://firefly1984982452.github.io/2018/03/19/vue%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/#vue%E5%85%84%E5%BC%9F%E7%BB%84%E4%BB%B6%E9%80%9A%E8%BF%87eventbus%E4%BC%A0%E5%80%BC)
 
 ---
 
 # 配置echarts
 
-[链接](https://firefly1984982452.github.io/2020/09/08/echarts%E8%B6%85%E5%85%A8%E8%B6%85%E8%AF%A6%E6%83%85%E9%85%8D%E7%BD%AE%E9%A1%B9/#%E5%9C%A8vue%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)
+- [链接](https://firefly1984982452.github.io/2020/09/08/echarts%E8%B6%85%E5%85%A8%E8%B6%85%E8%AF%A6%E6%83%85%E9%85%8D%E7%BD%AE%E9%A1%B9/#%E5%9C%A8vue%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)
 
 ---
 # 写README.MD

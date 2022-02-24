@@ -99,7 +99,7 @@ index.js
 传递：
 `<router-link to="/params/198/jspang website is very good">params</router-link> `
 
-tips:正则
+?> 正则
 `path:'/params/:newsId(\\d+)/:newsTitle'`
 
 ---
@@ -228,9 +228,7 @@ index.js
 + redirect：仔细观察URL，redirect是直接改变了url的值，把url变成了真实的path路径。
 + alias：URL路径没有别改变，这种情况更友好，让用户知道自己访问的路径，只是改变了<router-view>中的内容。
 
-## 6.3 tips
-
-别名请不要用在path为’/’中，如下代码的别名是不起作用的。
+!> 别名请不要用在path为’/’中，如下代码的别名是不起作用的。
 
 ```
 {

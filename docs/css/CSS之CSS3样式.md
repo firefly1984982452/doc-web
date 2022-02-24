@@ -6,9 +6,9 @@
 
 ## 【1】伪元素、伪类选择器
 
-[预览效果](https://firefly1984982452.github.io/my-web-page/select-page.html)
+- [预览效果](https://firefly1984982452.github.io/my-web-page/select-page.html)
 
-[源码](https://github.com/firefly1984982452/my-web-page/blob/master/select-page.html)
+- [源码](https://github.com/firefly1984982452/my-web-page/blob/master/select-page.html)
 
 ### 【1.1】伪元素
 
@@ -344,7 +344,7 @@ outline-offset: -10px;
 
 ## 【5】border-style 属性
 
-[效果](https://www.w3school.com.cn/tiy/t.asp?f=csse_border-style)
+- [效果](https://www.w3school.com.cn/tiy/t.asp?f=csse_border-style)
 
 - `none`：无；
 - `hidden`：同“`none`”，在 `table` 中能解决边框冲突；
@@ -386,7 +386,7 @@ outline-offset: -10px;
 
 ## 【7】重复边框背景图片
 
-[链接](https://dabblet.com/gist/c73fd4ea4b592a05c004)
+- [链接](https://dabblet.com/gist/c73fd4ea4b592a05c004)
 
 ```
 border: 10px solid;
@@ -439,7 +439,7 @@ border-radius: 10% 50% / 50% 10%;
 
 ◆ 斜杠`/`的用法
 
-[链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius)
+- [链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius)
 
 ```
 border-radius: 1em/5em;
@@ -574,13 +574,13 @@ background-attachment: local, scroll;
 
 ![image](https://wx3.sinaimg.cn/large/0069qZtTgy1gnbbuxfn3aj31hb0sk154.jpg)
 
-[效果预览](https://firefly1984982452.github.io/my-web-page/background-repeat.html)
+- [效果预览](https://firefly1984982452.github.io/my-web-page/background-repeat.html)
 
 ---
 
 # 四、转换：`transform`
 
-[所有旋转效果](https://c.runoob.com/codedemo/3391)
+- [所有旋转效果](https://c.runoob.com/codedemo/3391)
 
 ```
 /* 转换中心 */
@@ -721,7 +721,7 @@ transform: matrix(2, 2, 0, 2, 45, 0);
 
 可以裁剪图片
 
-[效果预览](https://firefly1984982452.github.io/my-web-page/clip-path.html)
+- [效果预览](https://firefly1984982452.github.io/my-web-page/clip-path.html)
 
 ## 【1】矩形：inset
 
@@ -1171,9 +1171,9 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ![image](https://wx1.sinaimg.cn/mw2000/0069qZtTgy1gx43wj1frpj32ko0ts1kx.jpg)
 
-◆ [效果预览](https://firefly1984982452.github.io/my-web-page/word-break.html)
+- [效果预览](https://firefly1984982452.github.io/my-web-page/word-break.html)
 
-◆ [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/word-break.html)
+- [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/word-break.html)
 
 ## 【4】盒装饰器中断
 
@@ -1184,9 +1184,9 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ![image](https://wx2.sinaimg.cn/orj360/0069qZtTgy1gx43neotd9j30ju0g0dm6.jpg)
 
-◆ [效果预览](https://firefly1984982452.github.io/my-web-page/box-decoration-break.html)
+- [效果预览](https://firefly1984982452.github.io/my-web-page/box-decoration-break.html)
 
-◆ [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/box-decoration-break.html)
+- [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/box-decoration-break.html)
 
 ## 【5】文字间距
 
@@ -1343,7 +1343,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ### 【2.3】填充模式
 
-[学习链接](https://www.w3cplus.com/css3/understanding-css-animation-fill-mode-property.html)
+- [学习链接](https://www.w3cplus.com/css3/understanding-css-animation-fill-mode-property.html)
 
 - `none`：【默认】无改变。
 - `forwards`：保留最后一帧，不回到初始状态。
@@ -1462,7 +1462,7 @@ window.requestAnimationFrame(() => {
 
 # 十二、滤镜：`filter`
 
-[filter 所有效果](https://www.runoob.com/try/try.php?filename=trycss_ex_images_filters)
+- [filter 所有效果](https://www.runoob.com/try/try.php?filename=trycss_ex_images_filters)
 
 ◆ 常用：
 
@@ -1547,11 +1547,11 @@ backdrop-filter: saturate(80%);
 
 ## 所有效果
 
-[mix-blend-moe 所有效果](https://www.runoob.com/try/try.php?filename=trycss_mix-blend-mode-all)
+- [mix-blend-moe 所有效果](https://www.runoob.com/try/try.php?filename=trycss_mix-blend-mode-all)
 
 ## isolation：隔离
 
-[示例](https://www.zhangxinxu.com/study/201601/css3-isolation-isolate.html)
+- [示例](https://www.zhangxinxu.com/study/201601/css3-isolation-isolate.html)
 
 ```
 isolation: isolate;
@@ -1563,7 +1563,7 @@ isolation: isolate;
 
 ## 【1】`object-fit`
 
-[效果预览](https://firefly1984982452.github.io/my-web-page/object-fit.html)
+- [效果预览](https://firefly1984982452.github.io/my-web-page/object-fit.html)
 
 ◆ **语法**
 
@@ -1716,7 +1716,7 @@ img{
 
 # 十七、`mask`：面具
 
-[学习链接](https://www.zhangxinxu.com/wordpress/2017/11/css-css3-mask-masks/)
+- [学习链接](https://www.zhangxinxu.com/wordpress/2017/11/css-css3-mask-masks/)
 
 **目前一定要用-webkit-来兼容**
 
@@ -1774,7 +1774,7 @@ img{
 
 ## 【1】any-hover
 
-[学习链接](https://www.zhangxinxu.com/wordpress/2020/01/css-any-hover-media/)
+- [学习链接](https://www.zhangxinxu.com/wordpress/2020/01/css-any-hover-media/)
 
 在 PC 端 hover 时背景会变色，在不具备 hover 的设备上（如移动端）下划线会消失。
 
@@ -2002,7 +2002,7 @@ input#test {
 
 # 二十一、`will-change`：性能优化
 
-[will-change 链接](https://developer.mozilla.org/en-US/docs/Web/CSS/will-change) [animation 事件监听](https://www.runoob.com/try/try.php?filename=tryjsref_animationstart)
+- [will-change 链接](https://developer.mozilla.org/en-US/docs/Web/CSS/will-change) [animation 事件监听](https://www.runoob.com/try/try.php?filename=tryjsref_animationstart)
 
 两者结合的实例：
 
@@ -2075,7 +2075,7 @@ input#test {
 
 # 二十二、`preserve`
 
-[学习链接](https://www.cnblogs.com/coco1s/p/15178959.html)
+- [学习链接](https://www.cnblogs.com/coco1s/p/15178959.html)
 
 1. transform-style: preserve-3d; // 子元素将保留其 3D 位置。
 

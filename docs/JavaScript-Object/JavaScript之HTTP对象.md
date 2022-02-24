@@ -41,7 +41,7 @@
 
 # 五、跨域
 
-[更全跨域方法链接](https://segmentfault.com/a/1190000011145364)
+- [更全跨域方法链接](https://segmentfault.com/a/1190000011145364)
 
 - `jsonp`跨域
 - 跨域资源共享（`CORS`）

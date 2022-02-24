@@ -352,7 +352,7 @@ window.addEventListener("beforeunload", function (event) {
 
 ◆ 示例
 
-[菜鸟教程-示例](https://www.runoob.com/try/try.php?filename=tryjsref_ondrag_all)
+- [菜鸟教程-示例](https://www.runoob.com/try/try.php?filename=tryjsref_ondrag_all)
 
 # 八、多媒体（Media）事件
 
@@ -452,7 +452,7 @@ window.addEventListener("beforeunload", function (event) {
 
 ◆ 示例
 
-[菜鸟教程-示例](https://www.runoob.com/try/try.php?filename=tryjsref_animationstart)
+- [菜鸟教程-示例](https://www.runoob.com/try/try.php?filename=tryjsref_animationstart)
 
 # 十、过渡事件
 
@@ -474,7 +474,7 @@ window.addEventListener("beforeunload", function (event) {
 
 `postMessage`和`onmessage`是`HTML5`的方法，用来解决跨页面通信，或者通过`iframe`嵌套的不同页面的通信的。`postMessage`为发送方，`onmessage`为接收方。
 
-[链接](https://www.cnblogs.com/super-yu/p/9480589.html)
+- [链接](https://www.cnblogs.com/super-yu/p/9480589.html)
 
 # 十二、事件对象
 

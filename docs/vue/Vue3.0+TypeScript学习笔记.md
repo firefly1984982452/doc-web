@@ -2,7 +2,7 @@
 
 ---
 
-[链接](https://jspang.com/detailed?id=64)
+- [链接](https://jspang.com/detailed?id=64)
 
 # 搭建 vue3 环境
 

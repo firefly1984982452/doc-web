@@ -4,7 +4,7 @@
 
 # 链接
 
-[菜鸟教程](https://www.runoob.com/linux/linux-file-content-manage.html)
+- [菜鸟教程](https://www.runoob.com/linux/linux-file-content-manage.html)
 
 # 快捷键
 

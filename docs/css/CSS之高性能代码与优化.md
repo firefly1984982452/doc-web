@@ -179,4 +179,4 @@ Class
 
 如不可点击时可改为`cursor: not-allowed;`
 
-[所有的鼠标样式](https://www.w3school.com.cn/tiy/t.asp?f=eg_csse_cursor)
+- [所有的鼠标样式](https://www.w3school.com.cn/tiy/t.asp?f=eg_csse_cursor)

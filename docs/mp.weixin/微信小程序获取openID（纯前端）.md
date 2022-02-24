@@ -9,7 +9,7 @@
 
 # 源码
 
-[源码地址](https://github.com/firefly1984982452/wechat-remind/blob/master/pages/index/index.vue)
+- [源码地址](https://github.com/firefly1984982452/wechat-remind/blob/master/pages/index/index.vue)
 
 # 代码
 

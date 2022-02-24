@@ -85,7 +85,7 @@ export function detectiveBrowse() {
 
 # 六、窗口
 
-[链接](https://blog.51cto.com/dapengtalk/1883928)
+- [链接](https://blog.51cto.com/dapengtalk/1883928)
 
 - 窗口可见区域宽（控制台不算）：`innerWidth` / `document.body.clientWidth` / `document.body.offsetWidth` / `document.body.scrollWidth`
 - 窗口可见区域高（控制台不算）：`innerHeight` / `document.body.clientHeight` / `document.body.offsetHeight` / `document.body.scrollHeight`
@@ -302,7 +302,7 @@ structuralClone(obj).then(res=>{
 - `addEventListener`监听的必须是`'message'`
 - `window.postMessage`发送的必须是自己的`域名`
 
-[学习链接](https://blog.csdn.net/weixin_40650646/article/details/81777398)
+- [学习链接](https://blog.csdn.net/weixin_40650646/article/details/81777398)
 
 需求：在页面 a,里打开新窗口 b，在 b 窗口里点击 postMessage 按钮，能够在 a 页面收到发来的消息
 
@@ -341,13 +341,13 @@ window.postMessage("hi there!", location.origin);
 
 上传文件，达到`<input type="file">`的功能
 
-[链接](https://www.zhangxinxu.com/study/202108/button-picker-file-upload.php)
+- [链接](https://www.zhangxinxu.com/study/202108/button-picker-file-upload.php)
 
 ---
 
 # 十七、HTML 事件属性
 
-[HTML 事件属性列表](https://www.w3school.com.cn/tags/html_ref_eventattributes.asp)
+- [HTML 事件属性列表](https://www.w3school.com.cn/tags/html_ref_eventattributes.asp)
 
 所有的事件都可以由 window 监听：
 

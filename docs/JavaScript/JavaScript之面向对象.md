@@ -22,15 +22,15 @@ xm.age = 15;
 
 `var xm = {age:15}`
 
-[JS 中的类](https://www.jianshu.com/p/edf4d665d0df)
+- [JS 中的类](https://www.jianshu.com/p/edf4d665d0df)
 
-[JS 对象与 JAVA 对象的区别](https://www.cnblogs.com/yanyunpiaomaio/p/11025444.html)
+- [JS 对象与 JAVA 对象的区别](https://www.cnblogs.com/yanyunpiaomaio/p/11025444.html)
 
 ---
 
 # 三、JavaScript 面向对象
 
-[参考](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)
+- [参考](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)
 
 ## 【1】封装
 

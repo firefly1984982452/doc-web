@@ -560,13 +560,13 @@ line-break: anywhere; // 任意位置标点都可以换行
 
 ## 【10】优化字体性能：font-display
 
-[链接](https://zhuanlan.zhihu.com/p/28369304)
+- [链接](https://zhuanlan.zhihu.com/p/28369304)
 
 ---
 
 # 十、display 显示
 
-[链接](https://blog.csdn.net/qq_42161935/article/details/99844944)
+- [链接](https://blog.csdn.net/qq_42161935/article/details/99844944)
 
 - `inline`
 - `block`
@@ -819,7 +819,7 @@ table {
 }
 ```
 
-注意：你不能用所有的 CSS 属性`:first`。您只能更改文档的边距，`orphans`, `widows` 和分页符。所有其他的 CSS 属性将被忽略。
+!> 你不能用所有的 CSS 属性`:first`。您只能更改文档的边距，`orphans`, `widows` 和分页符。所有其他的 CSS 属性将被忽略。
 
 ## 【8】`:left`和`:right`
 
@@ -892,11 +892,11 @@ font-size: 14px;
 
 # 十六、`content: ''` 的妙用
 
-[链接](https://echeverra.cn/2021/08/06/css-content/)
+- [链接](https://echeverra.cn/2021/08/06/css-content/)
 
 # 十七、counter 计数器
 
-[MDN-counter](<https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter()>) [MDN-counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) [其它博客](https://blog.csdn.net/lhjuejiang/article/details/79823803)
+- [MDN-counter](<https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter()>) [MDN-counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) [其它博客](https://blog.csdn.net/lhjuejiang/article/details/79823803)
 
 ## 【1】属性
 
@@ -1078,7 +1078,7 @@ counters(name, string, style) string
 
 # 十八、content 中的特殊字符及图标
 
-[网址](https://blog.csdn.net/qq_41995919/article/details/112377349)
+- [网址](https://blog.csdn.net/qq_41995919/article/details/112377349)
 
 ---
 
@@ -1086,7 +1086,7 @@ counters(name, string, style) string
 
 ## 【1】scroll-behavior
 
-[学习链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/scroll-behavior)
+- [学习链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/scroll-behavior)
 
 当用户手动导航时设置更平滑的滚动。
 
@@ -1096,7 +1096,7 @@ scroll-behavior: smooth;
 
 ## 【2】scroll-snap-type
 
-[学习链接](https://www.cnblogs.com/coco1s/p/11993942.html)
+- [学习链接](https://www.cnblogs.com/coco1s/p/11993942.html)
 
 值：
 
@@ -1116,7 +1116,7 @@ scroll-behavior: smooth;
 
 ## 【5】overflow-anchor：滚动锚点
 
-[学习链接](https://www.zhangxinxu.com/wordpress/2020/08/css-overflow-anchor/)
+- [学习链接](https://www.zhangxinxu.com/wordpress/2020/08/css-overflow-anchor/)
 
 ```
 overflow-anchor: auto; // 默认，自动
@@ -1128,7 +1128,7 @@ overflow-anchor: none; // 禁止滚动锚点
 - `touch-action: none;` 禁止有任何操作，此时的 scroll 无效
 - `touch-action: pan-x;` 此时只有 x 轴能滑动，y 粙是滑动不了的。
 
-[其它](https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action)
+- [其它](https://developer.mozilla.org/zh-CN/docs/Web/CSS/touch-action)
 
 ---
 
@@ -1190,7 +1190,7 @@ user-select: auto | text | none | contain | all;
 
 ## 空间动画
 
-[链接](https://css-tricks.com/recreating-the-apple-music-hits-playlist-animation-in-css/)
+- [链接](https://css-tricks.com/recreating-the-apple-music-hits-playlist-animation-in-css/)
 
 ```
 <!DOCTYPE html>

@@ -2,7 +2,7 @@
 
 ---
 
-[链接](https://jspang.com/detailed?id=63)
+- [链接](https://jspang.com/detailed?id=63)
 
 # 安装及使用
 
