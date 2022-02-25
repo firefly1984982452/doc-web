@@ -5,23 +5,24 @@
 
 # 【2】限定 N 行
 
-```
-display: -webkit-box;
-overflow: hidden;
-white-space: normal!important;
-text-overflow: ellipsis;
-word-wrap: break-word;
--webkit-line-clamp: 1;
--webkit-box-orient: vertical;
+```css
+div{
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal!important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
 
-单行
+/* 单行 */
 .table tbody > tr > td.name{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
  }
 ```
-
 
 <div class="example-box">
   <p style="width:300px;display: -webkit-box;
@@ -32,6 +33,7 @@ word-wrap: break-word;
 -webkit-line-clamp: 3;
 -webkit-box-orient: vertical;">日历中的历法又分为阴历、阳历和阴阳合历,三种。 阳历亦即太阳历,其历年为一个回归年,现时国际通用的公历(格里高利历)和中国的干支历即属于太阳历这类。</p>
 </div>
+
 ---
 
 # 【3】新版本上线（指导蒙版）
@@ -52,12 +54,14 @@ top: 12px;
 
 # 【4】CSS 做三角形
 
-```
-width: 0;
-height: 0;
-border-color: #f60 transparent transparent transparent;
-border-style: solid;
-border-width: 10px;
+```css
+div{
+  width: 0;
+  height: 0;
+  border-color: #f60 transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+}
 ```
 
 <div class="example-box">
@@ -72,7 +76,7 @@ border-width: 10px;
 
 # 【5】检查边距
 
-```
+```css
 *{
   background: #000 !important;
   color: #0f0 !important;
@@ -99,7 +103,7 @@ border-width: 10px;
 
 # 【9】满屏背景和固定宽度
 
-```
+```css
 main{
   width: 1000px; // 可不写
   margin:0 calc(50% - 500px;)
@@ -112,7 +116,7 @@ main{
 
 ## 方法 1：中间内容用 calc
 
-```
+```css
 header{
   height: 100px;
   background-color: #bbf;
@@ -129,7 +133,7 @@ footer{
 
 ## 方法 2：用 flex
 
-```
+```css
 body{
   display: flex;
   flex-direction: column;
@@ -151,7 +155,7 @@ footer{
 
 # 【11】table 表格控制列宽
 
-```
+```css
 table-layout: fixed;
 ```
 
@@ -177,7 +181,7 @@ table-layout: fixed;
 </div>
 
 
-```
+```css
 border: 10px solid rgba(255, 255, 255, 0.5);
 background: #fbb;
 background-clip: padding-box;
@@ -203,7 +207,7 @@ background-clip: padding-box;
 
 ### 【2.1】设置背景宽和高都是 100%
 
-```
+```css
 html,body{
 	height: 100%;
 }
@@ -215,7 +219,7 @@ html,body{
 
 ### 【2.2】html 页面
 
-```
+```html
 <div class="box">
 	<div class="item">
 		item
@@ -225,7 +229,7 @@ html,body{
 
 ### 【2.3】基础的 CSS
 
-```
+```css
 * {
 	margin: 0;
 	padding: 0;
@@ -250,13 +254,13 @@ html,body{
 }
 ```
 
-!> :因为我的布局很简单，页面也不多，所以我用了`*`号选择器
+!> 因为我的布局很简单，页面也不多，所以我用了`*`号选择器
 
 ## 【3】absolute 方法实现
 
 ### 【3.1】固定宽高
 
-```
+```css
 .box{
 	position: relative;
 }
@@ -273,7 +277,7 @@ html,body{
 
 ### 【3.2】百分比宽高
 
-```
+```css
 .box{
 	position: relative;
 }
@@ -287,11 +291,11 @@ html,body{
 }
 ```
 
-**重点：`transform: translate(-50%,-50%);`**
+!> 重点：`transform: translate(-50%,-50%);`
 
 ## 【3】块级元素实现水平居中
 
-```
+```css
 .box{
 	position: relative;
 }
@@ -303,7 +307,7 @@ html,body{
 
 ## 【4】flex 方法实现
 
-```
+```css
 .box{
 	display: flex;
 	justify-content: center;
@@ -326,14 +330,14 @@ html,body{
 
 ## 【1】方法一：`first-child`
 
-```
+```css
 li{border-top:1px solid #000;}
 li:first-child{border-top:none;}
 ```
 
 ## 【2】方法二：`*+*`
 
-```
+```css
 li+li{
     border-top: 1px dashed #999;
 }
@@ -341,7 +345,7 @@ li+li{
 
 ## 【3】方法三：`:not(:last-child)`
 
-```
+```css
 li:not(:last-child)...
 ```
 
@@ -349,7 +353,7 @@ li:not(:last-child)...
 
 # 【16】更改自带的 scorll 滚动条样式
 
-```
+```css
 ::-webkit-scrollbar{
     width: .07rem;
     height: .07rem;
@@ -370,7 +374,7 @@ li:not(:last-child)...
 
 # 【17】CSS 水波特效动画
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -444,7 +448,7 @@ li:not(:last-child)...
 
 # 【18】用 radial-gradient 和 linear-gradient 实现单个 div 下渐变进度条
 
-```
+```css
 .rate {
   width: 500px;
   --c: #3200ff;
@@ -529,7 +533,7 @@ li:not(:last-child)...
 
 # 【20】outline 属性实现悬浮时高亮
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -580,7 +584,7 @@ li:not(:last-child)...
 
 # 【21】border 边框动效
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -662,7 +666,7 @@ li:not(:last-child)...
 </div>
 
 
-```
+```html
 <style>
   section {
     width: 300px;
@@ -726,7 +730,7 @@ li:not(:last-child)...
 </div>
 
 
-```
+```css
 width: 20px;
 height: 20px;
 border-top: 1px solid #c3c8d6;
@@ -747,19 +751,19 @@ transform: rotate(45deg);
 
 ## 【24.1】text-decoration
 
-```
+```css
 text-decoration: underline;
 ```
 
 ## 【24.2】border
 
-```
+```css
 border-bottom: 1px solid #f00;
 ```
 
 ## 【24.3】background
 
-```
+```css
 background: linear-gradient(gray, gray) no-repeat;
 background-size: 100% 1px;
 background-position: 0 1.1em;
@@ -820,7 +824,7 @@ background-position: 0 1.1em;
 
 
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -873,7 +877,7 @@ background-position: 0 1.1em;
 
 - [效果预览地址](https://firefly1984982452.github.io/my-web-page/image-contrast.html)
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -944,7 +948,7 @@ background-position: 0 1.1em;
 
 - [效果预览地址](https://firefly1984982452.github.io/my-web-page/circle-animation.html)
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1016,7 +1020,7 @@ background-position: 0 1.1em;
 
 单个球的环绕运动
 
-```
+```css
 .area>.ball1{
     animation: anmiteX 12s linear 0s infinite alternate,
     anmiteY 12s linear 0s infinite alternate;
@@ -1044,7 +1048,7 @@ background-position: 0 1.1em;
 
 此时只是叠加动画，加上 6 秒的时间差之后才有上右下左的环绕效果：
 
-```
+```css
 animation: anmiteX 12s linear -6s infinite alternate,/* 叠加上6秒时间差 */
           anmiteY 12s linear 0s infinite alternate;
 ```
@@ -1053,7 +1057,7 @@ animation: anmiteX 12s linear -6s infinite alternate,/* 叠加上6秒时间差 *
 
 ## 源码
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
@@ -1137,7 +1141,8 @@ animation: anmiteX 12s linear -6s infinite alternate,/* 叠加上6秒时间差 *
 
 <style>
 .line-clamp{
-  width: 300px;
+  width: 400px;
+  border: 1px solid #000;
 }
 .line-clamp h2{
   text-align: center;
@@ -1151,29 +1156,31 @@ animation: anmiteX 12s linear -6s infinite alternate,/* 叠加上6秒时间差 *
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.line-clamp em{
+.line-clamp b{
   display: block;
   text-align: center;
 }
 </style>
 
-<div class="example-box line-clamp">
-  <h2><p><em>单行居中，多行居左<em></p></h2>
-  <h2><p>上呼吸道感染，咽喉痛无发热</p></h2>
-  <h2><p>老人主诉头晕多日，饭后胸闷，结合体检情况，考虑为交感神经。</p></h2>
+<div class="example-box">
+  <div class="line-clamp">
+    <h2><p><b>单行居中显示文字。<b></p></h2>
+    <h2><p>单行居中显示文字，多行居左显示。</p></h2>
+    <h2><p>单行居中显示文字，多行居左显示，最多两行超过用省略号结尾。</p></h2>
+  </div>
 </div>
 
 解析：
 
 前 2 项条件：
 
-```
+```html
 <h2><p>咽喉痛无发热</p></h2>
 <h2><p>上呼吸道感染，咽喉痛无发热</p></h2>
 <h2><p>老人主诉头晕多日，饭后胸闷，结合体检情况，考虑为交感神经。</p></h2>
+```
 
-...
-
+```css
 h2{
   text-align: center;
 }
@@ -1185,7 +1192,7 @@ p{
 
 第 3 项条件关键代码
 
-```
+```css
 display: -webkit-box; // 设置display，将对象作为弹性伸缩盒子模型显示
 -webkit-line-clamp: 2; // 限制在一个块元素显示的文本的行数
 -webkit-box-orient: vertical; // 规定框的子元素应该被水平或垂直排列
@@ -1193,7 +1200,7 @@ display: -webkit-box; // 设置display，将对象作为弹性伸缩盒子模型
 
 配合 `overflow : hidden` 和 `text-overflow: ellipsis` 即可实现 `webkit` 内核下的多行省略
 
-```
+```css
 p {
     display: inline-block;
     text-align: left;
@@ -1211,13 +1218,12 @@ h2{
 
 但是单行也会居左，而不是居中，所以要同样再嵌套一层。
 
-```
+```css
 <h2><p><em>单行居中，多行居左<em></p></h2>
 ```
 
 
-```
-
+```html
 <style>
 .line-clamp{
   width: 300px;

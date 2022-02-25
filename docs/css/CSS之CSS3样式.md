@@ -68,15 +68,15 @@
 
 以下内容无效：
 
-```
+```css
 .container:focus input {
   width: 230px;
 }
 ```
 
-用:focus-within 解决：
+用`:focus-within` 解决：
 
-```
+```css
 .container:focus-within input {
   width: 230px;
 }
@@ -88,7 +88,7 @@
 
 ![image](https://user-images.githubusercontent.com/8554143/43560900-2ef72358-9647-11e8-8123-ecfc45828c3d.gif)
 
-```
+```css
 img{
   display: none;
   position: fixed;
@@ -104,9 +104,9 @@ img{
 .g-password:focus-within img{
   display: block;
 }
+```
 
-...
-
+```html
 <div class="g-container">
     <h2>登录</h2>
     <div class="g-username">
@@ -123,7 +123,7 @@ img{
 
 ## 【3】`:root`选择器
 
-```
+```css
 :root{
   color: red;
 }
@@ -138,7 +138,7 @@ html{
 
 1.用于 `dialog` 弹框
 
-```
+```css
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -146,7 +146,7 @@ dialog::backdrop {
 
 2.用于 `video` 全屏
 
-```
+```css
 video::backdrop {
   background-color: #f00;
 }
@@ -154,7 +154,7 @@ video::backdrop {
 
 ## 【5】`:fullscreen`：全屏样式
 
-```
+```css
 div:fullscreen{
   color: #ff0;
 }
@@ -164,7 +164,7 @@ div:fullscreen{
 
 原来的写法：
 
-```
+```css
 section h1,
 section h2,
 article h1 {
@@ -174,7 +174,7 @@ article h1 {
 
 使用`:is`优化后的写法：
 
-```
+```css
 :is(section,article) :is(h1,h2){
   color: #f00;
 }
@@ -206,7 +206,7 @@ article h1 {
 </div>
 
 
-```
+```css
 text-emphasis: 'x';
 text-emphasis: '点';
 text-emphasis: '\25B2';
@@ -220,13 +220,12 @@ text-emphasis: open sesame;
 
 text-emphasis: filled sesame #555;
 
-
 -webkit-text-emphasis-position: under;
 ```
 
 ## 【1】box-shadow
 
-```
+```css
 box-shadow: 50px 50px 0 20px #ffb;
 ```
 
@@ -257,7 +256,7 @@ box-shadow: 50px 50px 0 20px #ffb;
 
 `border-image-repeat`: 重复（`repeat`）、拉伸（`stretch`）或铺满（`round`）。
 
-```
+```css
 border-image: url(border.png) 30 round;
 ```
 
@@ -265,7 +264,7 @@ border-image: url(border.png) 30 round;
 
 `rgba`或`hsla`
 
-```
+```css
 color: hsla(1,0%,100%,.2);
 border: solid 3px;
 border-color: rgba(255,255,0,.2);
@@ -285,7 +284,7 @@ border-color: rgba(255,255,0,.2);
 </div>
 
 
-```
+```css
 background: #fbfb;
 box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;
 ```
@@ -302,13 +301,13 @@ box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;
   border: 5px solid #f00;">内容</div>
 </div>
 
-```
+```css
 background: #fbfb;
 outline: 5px solid #ff0;
 border: 5px solid #f00;
 ```
 
-outline 和 border 的区别
+`outline` 和 `border` 的区别
 
 - `outline`不占空间，`border`占空间
 - 设置圆角（`border-radius`）之后，`border`边框会贴紧，`outline`不会
@@ -327,7 +326,7 @@ outline 和 border 的区别
 
 区别的代码
 
-```
+```css
 background: #fbfb;
 outline: 5px solid #ff0;
 border: 5px solid #f00;
@@ -335,9 +334,9 @@ border-radius: 50%;
 outline-offset: 10px;
 ```
 
-`outline-offset`：偏移
+- `outline-offset`：偏移
 
-```
+```css
 outline: 1px dashed #f00;
 outline-offset: -10px;
 ```
@@ -373,7 +372,7 @@ outline-offset: -10px;
 </div>
 
 
-```
+```css
 .box {
   width: 200px;
   height: 100px;
@@ -388,7 +387,7 @@ outline-offset: -10px;
 
 - [链接](https://dabblet.com/gist/c73fd4ea4b592a05c004)
 
-```
+```css
 border: 10px solid;
 border-image: 33.3% url("./test.jpg") round;
 ```
@@ -402,7 +401,7 @@ border-image: 33.3% url("./test.jpg") round;
 </div>
 
 
-```
+```css
 width: 300px;
 height: 100px;
 background-color: #fbb;
@@ -416,7 +415,7 @@ border-radius: 20% / 50%;
 </div>
 
 
-```
+```css
 width: 50px;
 height: 100px;
 background-color: #fbb;
@@ -430,7 +429,7 @@ border-radius: 0 100% 100% 0 / 50%
 </div>
 
 
-```
+```css
 width: 300px;
 height: 100px;
 background-color: #fbb;
@@ -441,7 +440,7 @@ border-radius: 10% 50% / 50% 10%;
 
 - [链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius)
 
-```
+```cs
 border-radius: 1em/5em;
 
 /* 等价于： */
@@ -495,7 +494,7 @@ border-bottom-left-radius:  1em 5em;
 
 背景图片可以有多个，可以摆放在任意位置
 
-```
+```css
 background: url('1.png'),
             url('2.png'),
             url('3.png'),
@@ -503,7 +502,7 @@ background: url('1.png'),
 background-repeat: no-repeat;
 background-size: 0.2rem 0.2rem;
 background-position: 0 0, 100% 0, 0 100%, 100% 100%;
-<!-- 或写成下面这样 -->
+/* 或写成下面这样 */
 background-position: top left, top right, bottom left, bottom right;
 ```
 
@@ -517,14 +516,14 @@ background-position: top left, top right, bottom left, bottom right;
 
 方法一：
 
-```
+```css
 background: url(img_url) no-repeat;
 background-position: bottom 20px right 20px;
 ```
 
 方法二：
 
-```
+```css
 padding: 20px;
 background: url(img_url) no-repeat;
 background-position: bottom right;
@@ -535,7 +534,7 @@ background-origin: content-box;
 
 ### 【4.2】calc
 
-```
+```css
 background: url(img_url) no-repeat;
 background-position: calc(100% - 20px, 100% - 20px);
 ```
@@ -544,7 +543,7 @@ background-position: calc(100% - 20px, 100% - 20px);
 
 背景依附，默认为`scroll`，随背景滚动
 
-```
+```css
 background-attachment: fixed; // 背景不会随内容滚动
 ```
 
@@ -552,7 +551,7 @@ background-attachment: fixed; // 背景不会随内容滚动
 
 ![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gmf5vn5ch4j307l07igln.jpg)
 
-```
+```css
 background-image: radial-gradient(at top, rgba(0,0,0,0.2), rgba(0,0,0,0));
 background-repeat: no-repeat;
 background-size: 100% 15px;
@@ -582,7 +581,7 @@ background-attachment: local, scroll;
 
 - [所有旋转效果](https://c.runoob.com/codedemo/3391)
 
-```
+```css
 /* 转换中心 */
 transform-origin: top;
 /* 旋转 */
@@ -602,7 +601,7 @@ transform: rotate3d(1, 0, 0, 83deg);
 
 也可以所有属性合并：
 
-```
+```css
 transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 ```
 
@@ -622,7 +621,7 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 
 ### 【1.1】菱形
 
-```
+```css
 .lin{
   width: 200px;
   height: 200px;
@@ -640,7 +639,7 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 
 ### 【1.2】长方形
 
-```
+```css
 .lin-long > img{
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   transition: ls clip-path;
@@ -656,7 +655,7 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 
 **skewX 默认会把字体内容也旋转，解决方式是加伪元素**
 
-```
+```css
 .box{
   position: relative;
   width: 100px;
@@ -682,13 +681,13 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 
 ![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gj0mzj9rt8j307o041t8i.jpg)
 
-```
+```css
 transform: perspective(30px)rotateX(5deg);
 ```
 
 同样会导致内容变成梯形，所以用伪元素生成
 
-```
+```css
 .border{
   width: 200px;
   height: 100px;
@@ -711,7 +710,7 @@ transform: perspective(30px)rotateX(5deg);
 
 `skew`、`scale`、`rotate`、`translate` 等全都是由 `matrix` 矩阵实现的。
 
-```
+```css
 transform: matrix(2, 2, 0, 2, 45, 0);
 ```
 
@@ -727,7 +726,7 @@ transform: matrix(2, 2, 0, 2, 45, 0);
 
 ◆ 语法：
 
-```
+```css
 clip-path:inset(上 右 下 左); // 4个值
 clip-path:inset(上右下左); // 1个值
 clip-path:inset(上 左右 下); // 3个值
@@ -739,7 +738,7 @@ clip-path:inset(上右下左 round 圆角); // 值+圆角【border-radius】
 
 ![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gnbaa0b9f5j30ok09oaa8.jpg)
 
-```
+```css
 clip-path: inset(10px 20px 0px 5px); // 矩形
 clip-path: inset(25% 5px round 5px 25%);// 其它
 ```
@@ -748,7 +747,7 @@ clip-path: inset(25% 5px round 5px 25%);// 其它
 
 ◆ 语法：
 
-```
+```css
 clip-path:circle(半径 at x y);
 ```
 
@@ -756,7 +755,7 @@ clip-path:circle(半径 at x y);
 
 ![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gnaii751tlj30kk08l0st.jpg)
 
-```
+```css
 clip-path: circle(50% at 50% 50%); // 正圆
 clip-path: circle(); // 正圆-简写
 clip-path: circle(50% at 0 100%); // 其它形状圆
@@ -766,7 +765,7 @@ clip-path: circle(50% at 0 100%); // 其它形状圆
 
 ◆ 语法：
 
-```
+```css
 clip-path:ellipse(x y at 圆心x 圆心y);
 ```
 
@@ -774,7 +773,7 @@ clip-path:ellipse(x y at 圆心x 圆心y);
 
 ![image](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gnairkejmxj30k508hjrf.jpg)
 
-```
+```css
 clip-path: clip-path: ellipse(30% 20% at 50% 50%);; // 正圆
 clip-path: ellipse(40% 20% at 20% 70%); // 其它形状
 ```
@@ -783,7 +782,7 @@ clip-path: ellipse(40% 20% at 20% 70%); // 其它形状
 
 ◆ 语法：
 
-```
+```css
 clip-path:polygon(x1 y1, x2 y2, x3 y3,...);
 ```
 
@@ -793,7 +792,7 @@ clip-path:polygon(x1 y1, x2 y2, x3 y3,...);
 
 ![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gnai8f18pkj309605nt8m.jpg)
 
-```
+```css
 clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 85%);
 ```
 
@@ -801,7 +800,7 @@ clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 85%);
 
 ![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gnai8jg39zj308e05nwed.jpg)
 
-```
+```css
 clip-path: (0 100%, 50% 0, 100% 100%);
 ```
 
@@ -819,7 +818,7 @@ clip-path: (0 100%, 50% 0, 100% 100%);
 
 ![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gj0ob24z97j306y03qmwy.jpg)
 
-```
+```css
 box-shadow: 15px 0 5px -10px #000;
 ```
 
@@ -831,7 +830,7 @@ box-shadow: 15px 0 5px -10px #000;
 
 ![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gj0ob7xfq6j307d03sjr7.jpg)
 
-```
+```css
 box-shadow: 15px 0 5px -10px #000, -15px 0 5px -10px #000;
 ```
 
@@ -839,7 +838,7 @@ box-shadow: 15px 0 5px -10px #000, -15px 0 5px -10px #000;
 
 ![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gj0ojj9giyj305602i3yg.jpg)
 
-```
+```css
 text-shadow: 5px 5px 5px #f00;
 ```
 
@@ -847,7 +846,7 @@ text-shadow: 5px 5px 5px #f00;
 
 **文字效果**
 
-```
+```css
 /* 凸起印刷效果 */
 text-shadow: 0 1px 1px rgba(0, 0, 100, 0.8);
 /* 文字外发光效果 */
@@ -862,7 +861,7 @@ text-shadow: 0 1px hsl(0, 0%, 85%), 0 2px hsl(0, 0%, 80%), 0 3px hsl(0, 0%, 75%)
 
 ![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gj0ol4gog9j305l03amx2.jpg)
 
-```
+```css
 width: 0;
 height: 0;
 border: 100px solid ;
@@ -874,19 +873,19 @@ filter: drop-shadow(5px 5px 5px #000);
 
 ◆ 图标换色
 
-```
+```css
 filter: drop-shadow(#f00 20px 0)
 ```
 
 ## 【4】通过阴影弱化背景
 
-```
+```css
 box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
 ```
 
 重点：用伪元素设置 blur
 
-```
+```css
 .cover{
   width: 600px;
   height: 500px;
@@ -946,7 +945,7 @@ box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
 
 ![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gj0f2jukxkj308v05pt8r.jpg)
 
-```
+```css
 background: linear-gradient(#ff0 50%, #f00 50%);
 background-size: 100% 50%;
 ```
@@ -955,7 +954,7 @@ background-size: 100% 50%;
 
 ![image](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gj0f30zb6bj308t05nn04.jpg)
 
-```
+```css
 background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,green 10%);
 ```
 
@@ -963,7 +962,7 @@ background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,g
 
 ![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gj0m36t5cij306q068web.jpg)
 
-```
+```css
 width: 200px;
 height: 200px;
 background:#ffb;
@@ -981,7 +980,7 @@ background-repeat:no-repeat;
 
 ![image](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gj0f30zb6bj308t05nn04.jpg)
 
-```
+```css
 background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,green 10%);
 ```
 
@@ -1003,7 +1002,7 @@ background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,g
 </div>
 
 
-```
+```css
 background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 ```
 
@@ -1043,56 +1042,41 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ### 【1.1】text
 
-```
 - text-align: -webkit-match-parent; // 匹配父元素样式
-
 - text-align: center | left | right | justify; // 文本对齐方式
-
 - text-align-last: center | left | right; // 段落最后一行对齐方式
-
 - text-decoration: overline | underline | line-through; // 文本线条的简写
-
 - text-decoration-color: #fff; // 线条颜色
-
 - text-decoration-line: overline | underline | line-through; // 线条位置
-
 - text-decoration-style: solid | double | dotted | dashed | wavy ; 线条样式
-
 - text-decoration-skip: ink | spaces | edges; // 文字和线的覆盖关系
-
 - text-underline-position: under; // 下划线位置
-
 - text-underline-offset: 5px; // 下划线偏移值
-
 - text-indent: 2em; // 段落第 1 行缩进，开头空 2 格
-
 - text-overflow: ellipsis | clip | 'string'【仅 firefox】; // 文字超出
-
 - text-shadow: 2px 2px #ff0; // 文字阴影
-
 - text-transform: uppercase | lowercase | capitaliza; // 文字转换大小写
-
 - text-rendering: optimizeSpeed; // 连字形式【英文的 fi 会分开】
 
-```
 
 
 ### 【1.2】font
 
-```
+
 - font-variant: small-caps(小型大写字母字体); // 字体变体
 - font-variant-ligatures: no-common-ligatures; // 连字形式【英文的 fi 会分开】
 - font-variant-numeric: slashed-zero; // 数字 0 显示为中间有斜杠，好和 o 区分
-```
 
-◆ `font-variant: small-caps`效果：
+
+◆ `font-variant: small-caps`
 
 <div class="example-box">
   <p>This</p>
   <p style="font-variant: small-caps">This</p>
 </div>
 
-◆ `font-variant-ligatures: no-common-ligatures`效果：
+◆ `font-variant-ligatures: no-common-ligatures`
+
 <div class="example-box">
   <p>fight</p>
   <p style="text-rendering: optimizeSpeed;">fight</p>
@@ -1109,7 +1093,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 </div>
 
 
-```
+```html
 <style>
   div {
     width: 100px;
@@ -1133,19 +1117,19 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 
 <div class="example-box">
-  <p style="font-size:.5em;text-align: right">
+  <p style="text-align: right">
     我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
   </p>
-  <p style="font-size:.5em;direction: rtl">
+  <p style="direction: rtl">
     我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
   </p>
-  <p style="font-size:.5em;direction: rtl; unicode-bidi: bidi-override">
+  <p style="direction: rtl; unicode-bidi: bidi-override">
     我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
   </p>
 </div>
 
 
-```
+```html
 <p style="text-align: right">
   我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
 </p>
@@ -1211,7 +1195,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 <p  style="width: 100px; text-align: justify; text-align-last: justify;border:1px solid">An extreme ly long English word</p>
 </div>
 
-```
+```html
 <p style="width: 100px; hyphens: auto;border:1px solid">An extreme ly long English word</p>
 <p style="width: 100px; text-align: justify; text-align-last: justify;border:1px solid">An extreme ly long English word</p>
 ```
@@ -1220,7 +1204,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 必须加上`-webkit-`
 
-```
+```css
 -webkit-line-clamp: 3;
 ```
 
@@ -1238,7 +1222,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gnadz5a2rlj30ih06kt9g.jpg)
 
-```
+```css
 .circle {
   width: 250px;
   height: 250px;
@@ -1253,7 +1237,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gnadzmmpw3j30j406oaas.jpg)
 
-```
+```css
 .circle {
   width: 250px;
   height: 250px;
@@ -1271,7 +1255,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ## 【1】写法
 
-```
+```css
 <style>
   div {
     width: 0px;
@@ -1318,9 +1302,9 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
     }
   }
 </style>
+```
 
-...
-
+```html
 <div> content </div>
 ```
 
@@ -1356,7 +1340,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 用`width:0`到`width:100%`模拟出打字效果。
 
-```
+```css
 @keyframes typing {
   from {
     width: 0;
@@ -1374,7 +1358,7 @@ p{
 
 ### 【4.1】backface-visibility：背面向屏幕时是否可见
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -1405,7 +1389,7 @@ p{
 
 ## 【5】使用 requestAnimationFrame 手动反复调用动画
 
-```
+```js
 this.$refs.ref_trademark.className = 'trademark'
 window.requestAnimationFrame(() => {
   window.requestAnimationFrame(() => {
@@ -1420,7 +1404,7 @@ window.requestAnimationFrame(() => {
 
 可以直接写`transition:all 2s;`来过渡所有样式。
 
-```
+```css
 <style>
   div {
     width: 100px;
@@ -1444,9 +1428,9 @@ window.requestAnimationFrame(() => {
     width: 300px;
   }
 </style>
+```
 
-...
-
+```html
 <div></div>
 ```
 
@@ -1472,7 +1456,7 @@ window.requestAnimationFrame(() => {
 
 多个`filter`滤镜一起使用：**加空格**
 
-```
+```css
 filter: blur(4px) brightness(0.3);
 ```
 
@@ -1480,13 +1464,13 @@ filter: blur(4px) brightness(0.3);
 
 ◆ 方法一：`backdrop-filter`
 
-```
+```css
 backdrop-filter: blur(10px);
 ```
 
 注：`backdrop-filter`中其它属性大多只是[颜色变化](https://cloud.tencent.com/developer/section/1072021)。
 
-```
+```css
 backdrop-filter: contrast(40%);
 backdrop-filter: drop-shadow(4px 4px 10px blue);
 backdrop-filter: grayscale(30%);
@@ -1500,7 +1484,7 @@ backdrop-filter: saturate(80%);
 
 ◆ 方法二：在`::before`里面加传统`filter`
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1553,7 +1537,7 @@ backdrop-filter: saturate(80%);
 
 - [示例](https://www.zhangxinxu.com/study/201601/css3-isolation-isolate.html)
 
-```
+```css
 isolation: isolate;
 ```
 
@@ -1579,7 +1563,7 @@ isolation: isolate;
 
 ## 【2】`image-set`
 
-```
+```css
 background-image: -webkit-image-set(url('./cute.png') 2x, url('./yellow.jpeg') 3x);
 ```
 
@@ -1591,7 +1575,7 @@ background-image: -webkit-image-set(url('./cute.png') 2x, url('./yellow.jpeg') 3
 
 可以显示多张背景图片的混合，或者背景图片和颜色的混合。
 
-```
+```css
 background-image: url(...g);
 background-color: #51B7D3;
 background-blend-mode: luminosity;
@@ -1599,7 +1583,7 @@ background-blend-mode: luminosity;
 
 或
 
-```
+```css
 background: url(img/pattern.png), url(img/jellyfish.jpg), #f07e32;
 background-blend-mode: screen;
 ```
@@ -1608,7 +1592,7 @@ background-blend-mode: screen;
 
 与 `background-position`写法一样，区别是`object-position`用于对象，一般用图片，而`background-position`只能用在背景里面。
 
-```
+```css
 img {
   height: 100px;
   width: 100px;
@@ -1619,10 +1603,10 @@ img {
 
 ## 【5】`vertical-align`：文字对齐图片方式
 
-```
-vertical-align: text-top; // 文字对齐图片顶部
-vertical-align: text-bottom; // 默认文字对齐图片底部
-```
+
+- vertical-align: text-top; // 文字对齐图片顶部
+- vertical-align: text-bottom; // 默认文字对齐图片底部
+
 
 
 <div class="example-box">
@@ -1638,9 +1622,7 @@ vertical-align: text-bottom; // 默认文字对齐图片底部
   </p>
 </div>
 
-◆ 源码：
-
-```
+```html
 <p>
   文字与图片对齐
   <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
@@ -1652,7 +1634,7 @@ vertical-align: text-bottom; // 默认文字对齐图片底部
 
 ## 【7】`image-rendering`：增强图像渲染
 
-```
+```css
 image-rendering: auto;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
@@ -1668,7 +1650,7 @@ image-rendering: pixelated;
   <p style="resize:both;overflow: hidden;">resize属性规定是否由用户调整元素大小</p>
 </div>
 
-```
+```css
 resize:both;
 overflow: hidden;
 ```
@@ -1676,14 +1658,13 @@ overflow: hidden;
 条件：
 
 - 子元素要比父元素大；
-
 - 一定要写上`overflow: hidden;`
 
 ## 【2】z-index 属性
 
 如果父元素的 z-index 很低，并且被其它元素遮住，那子元素的 z-index 再大也不会显示在最上面。
 
-```
+```css
 
 .A{
   z-index:1;
@@ -1702,15 +1683,20 @@ overflow: hidden;
 
 - [MDN](https://developer.mozilla.org/de/docs/Web/CSS/-webkit-box-reflect)
 
-![image](https://images2015.cnblogs.com/blog/857662/201609/857662-20160926120127360-1912773451.png)
 
-```
+
+<div class="example-box" style="height:250px">
+  <img style="-webkit-box-reflect: below;" height="100px" src="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg">
+</div>
+
+
+```css
 img{
   -webkit-box-reflect: below;
 }
 ```
 
-**仅 chrome 生效**
+!> 仅 chrome 生效
 
 ---
 
@@ -1718,7 +1704,7 @@ img{
 
 - [学习链接](https://www.zhangxinxu.com/wordpress/2017/11/css-css3-mask-masks/)
 
-**目前一定要用-webkit-来兼容**
+!> 目前一定要用-webkit-来兼容
 
 - mask-image：面具图像
 - mask-mode：面具模型
@@ -1728,7 +1714,7 @@ img{
 - mask-size：面具大小
 - mask-composite：面具复合
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1736,9 +1722,7 @@ img{
       img {
         width: 100%;
         height: 100%;
-
         border: 20px solid #f00;
-
         -webkit-mask-image: url("https://firefly1984982452.github.io/my-web-page/animation.png");
         mask-image: url("https://firefly1984982452.github.io/my-web-page/animation.png");
 
@@ -1778,9 +1762,8 @@ img{
 
 在 PC 端 hover 时背景会变色，在不具备 hover 的设备上（如移动端）下划线会消失。
 
-css
 
-```
+```css
 @media (any-hover: hover) {
   a:hover{
     background: yellow;
@@ -1793,9 +1776,8 @@ css
 }
 ```
 
-html
 
-```
+```html
 <a href="#">在PC端hover时背景会变色，在不具备hover的设备上（如移动端）下划线会消失。</a>
 ```
 
@@ -1803,7 +1785,7 @@ html
 
 在 PC 端 点击 input 时与在不具备 hover 的设备上（如移动端）点击时不同的效果。
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1845,7 +1827,7 @@ html
 
 ## 【3】aspect-ratio：纵横比
 
-```
+```css
 @media (aspect-ratio: 1/1) {
   div {
     color: red;
@@ -1865,7 +1847,7 @@ html
 
 ## 【4】display-mode：全屏样式
 
-```
+```css
 
 @media all and (display-mode: fullscreen) {
   body {
@@ -1901,17 +1883,16 @@ html
 </div>
 
 
-```
-{
+```css
+button {
 appearance:none;
 -webkit-appearance:none;
 -moz-appearance:none;
 }
+```
 
-...
-
+```html
 <button>一些文本。</button>
-
 ```
 
 ## 【2】更改`<input />`默认的大小和边框样式
@@ -1936,7 +1917,7 @@ input#test {
 </div>
 
 
-```
+```css
 input#test {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -1945,9 +1926,9 @@ input#test {
   height: 30px;
   border: 2px solid red;
 }
+```
 
-...
-
+```html
 <input id="test" type="checkbox" />
 ```
 
@@ -1955,9 +1936,9 @@ input#test {
 
 # 二十、css 比较函数：`min()`、`max()`、`clamp()`
 
-可以择优选择一个最合适的尺寸，不仅用于 width，还可以用于 font-size 等值。
+可以择优选择一个最合适的尺寸，不仅用于 width，还可以用于 `font-size` 等值。
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -2006,7 +1987,7 @@ input#test {
 
 两者结合的实例：
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
@@ -2078,14 +2059,9 @@ input#test {
 - [学习链接](https://www.cnblogs.com/coco1s/p/15178959.html)
 
 1. transform-style: preserve-3d; // 子元素将保留其 3D 位置。
-
 2. perspective-origin: x-axis y-axis; // 设置位置
-
-```
-// x-axis : 定义该视图在 x 轴上的位置。默认值：50%
-// y-axis : 定义该视图在 y 轴上的位置。默认值：50%
-```
-
+- x-axis : 定义该视图在 x 轴上的位置。默认值：50%
+- y-axis : 定义该视图在 y 轴上的位置。默认值：50%
 3. perspective: number|none;
 
 # 二十三、移动端环境变量函数 `env()`和`constant()`
@@ -2099,17 +2075,13 @@ input#test {
 
 H5 网页设置`viewport-fit=cover`的时候才生效，小程序里的`viewport-fit`默认是`cover`
 
-```
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 ```
 
-```
+```css
 height: calc(96rpx+ constant(safe-area-inset-bottom));//兼容 IOS<11.2
-
 height: calc(96rpx + env(safe-area-inset-bottom));//兼容 IOS>11.2
-
 padding-bottom: constant(safe-area-inset-bottom);//兼容 IOS<11.2
-
 padding-bottom: env(safe-area-inset-bottom);//兼容 IOS>11.2
-
 ```

@@ -7,7 +7,7 @@
 
 ## 规范
 
-```
+```html
 <div class="box">
   <div class="item"></div>
 </div>
@@ -15,7 +15,7 @@
 
 ## 示例
 
-```
+```css
 .box{
   width: 400px;
   height: 400px;
@@ -42,7 +42,7 @@
 
 ## flex 居中最简单的一种方式
 
-```
+```css
 .father {
   display: flex;
 }
@@ -53,7 +53,7 @@
 
 ## flex 中最后一个元素右对齐
 
-```
+```css
 .father{
   justify-content:space-between;
 }
@@ -84,7 +84,7 @@
 
 ## gap
 
-```
+```css
 ul {
   display: flex;
   border: 1px solid #f00;
@@ -101,15 +101,12 @@ li {
 
 ---
 
-## flex 中的 `justify-content: space-evenly`
+## justify-content：分布属性
 
-◆ **均匀分布**
+- justify-content: space-between; // 两端对齐
+- justify-content: space-around; // 两端间隙相等，项目中间的间隙比较大
+- justify-content: space-evenly; // 两端与项目中间的间隙一样大
 
-```
-justify-content: space-between; // 两端
-justify-content: space-around; // 两端间隙相等，项目中间的间隙比较大
-justify-content: space-evenly; // 两端与项目中间的间隙一样大
-```
 
 ◆ 区别：
 
@@ -117,7 +114,7 @@ justify-content: space-evenly; // 两端与项目中间的间隙一样大
 
 ◆ **IOS 之类的兼容性用 before 和 after**
 
-```
+```css
 container{
       display: flex;
       flex-flow: row nowrap;
@@ -138,15 +135,15 @@ container{
 
 ## 【1】基本使用
 
-```
+```css
 display: grid;
-<!-- 列的排列 -->
+/* 列的排列 */
 grid-template-columns: 1fr 1fr 1fr 1fr;
-<!-- 列间距 -->
+/* 列间距 */
 grid-column-gap: 0.4rem;
-<!-- 行的排列 -->
+/* 行的排列 */
 grid-template-rows: 1fr 1fr 1fr;
-<!-- 行间距 -->
+/* 行间距 */
 grid-row-gap: 0.3rem;
 ```
 
@@ -159,7 +156,7 @@ grid-row-gap: 0.3rem;
 
 `place-items`和`place-self`上同。
 
-```
+```css
 display: grid;
 place-content: center;
 ```
@@ -168,7 +165,7 @@ place-content: center;
 
 ### 【3.1】响应式布局`auto-fit`
 
-```
+```css
 width: 100%;
 height: 400px;
 display: grid;
@@ -180,7 +177,7 @@ grid-template-columns: repeat(auto-fit, 100px);
 
 ### 【3.2】跨越所有列`1 / -1`
 
-```
+```css
 .fullwidth {
   grid-column: 1 / -1;
 }
@@ -205,7 +202,7 @@ grid-template-columns: repeat(auto-fit, 100px);
 
 如果同时设置 left 和 right，相当于隐式的给了宽度。top 和 bottom 同理。
 
-```
+```css
 position: absolute;
 left: 30px;
 right: 30px;
@@ -213,9 +210,8 @@ right: 30px;
 
 ## sticky：粘性布局
 
-重点：
 
-```
+```css
 position: sticky;
 top: 0;
 ```
@@ -228,11 +224,11 @@ top: 0;
 
 - [MDN-学习链接](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 
-```
+```css
 columns: 3;
 ```
 
-```
+```css
 .main {
   color: #f00;
   /* 设置列数 */
@@ -305,7 +301,7 @@ section{
 
 父元素：
 
-```
+```css
 .content-box::after{
   clear: both;
   content: '';
@@ -315,7 +311,7 @@ section{
 
 邻近元素：
 
-```
+```css
 .left{
   float: left;
 }
@@ -342,9 +338,7 @@ Flexbox 定义了伸缩容器内伸缩项目该如何布局
 
 和`visibility: hidden;`有类似效果，能够占位。其它用处没有测出来。
 
-css
-
-```
+```css
 <style>
   .hidden {
     content-visibility: hidden;
@@ -362,9 +356,7 @@ css
 </style>
 ```
 
-html
-
-```
+```html
 <main>
   <p>3223</p>
   <div>test</div>
@@ -377,24 +369,24 @@ html
 
 - [阮一峰的博客链接](https://www.ruanyifeng.com/blog/2020/08/five-css-layouts-in-one-line.html)
 
-◆ 【1】空间居中布局
+## 【1】空间居中布局
 
 - [CodePen](https://codepen.io/una/pen/YzyYbBx) 示例
 
-```
+```css
 .container {
     display: grid;
     place-items: center;
 }
 ```
 
-◆ 【2】并列式布局
+## 【2】并列式布局
 
 核心：`flex: 0 1 150px;`
 
 - [CodePen](https://codepen.io/una/pen/WNQdBza) 示例
 
-```
+```css
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -406,35 +398,33 @@ html
 }
 ```
 
-◆ 【3】两栏式布局
+## 【3】两栏式布局
 
 - [CodePen](https://codepen.io/una/pen/gOaNeWL) 示例
 
-```
+```css
 .container {
     display: grid;
     grid-template-columns: minmax(150px, 25%) 1fr;
 }
 ```
 
-◆ 三明治布局
+## 【4】三明治布局
 
 - [CodePen](https://codepen.io/una/pen/bGVXPWB) 示例
 
-```
+```css
 .container {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 ```
 
-◆ 圣杯布局
+## 【5】圣杯布局
 
 - [CodePen](https://codepen.io/una/pen/mdVbdBy) 示例
 
-HTML
-
-```
+```html
 <div class="container">
     <header/>
     <div/>
@@ -444,9 +434,7 @@ HTML
 </div>
 ```
 
-CSS
-
-```
+```css
 .container {
     display: grid;
     grid-template: auto 1fr auto / auto 1fr auto;

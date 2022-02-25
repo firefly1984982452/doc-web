@@ -89,7 +89,7 @@
 
 ◆ `once`例子：
 
-```javascript
+```js
 window.addEventListener('click', () => {
   console.log('click')
 }, { once: true })
@@ -97,7 +97,7 @@ window.addEventListener('click', () => {
 
 ◆ `passive`例子：
 
-```javascript
+```js
 <script>
 document.getElementById("myAnchor").addEventListener("click", function (event) {
 	event.preventDefault()
@@ -118,7 +118,7 @@ document.getElementById("myAnchor").addEventListener("click", function (event) {
 
 ## 【2】 visibilityState 和 hidden：页面隐藏状态
 
-```javascript
+```js
 addEventListener('visibilitychange', function () {
   console.log(hidden,visibilityState)
   // 用户离开了当前页面
@@ -144,7 +144,7 @@ addEventListener('visibilitychange', function () {
 
 [直接进入此详情页时点返回会返回到首页](https://m.qidian.com/author/402631776)
 
-```javascript
+```js
 if(document.referrer === '') {
   window.location.href = 'https://www.baidu.com/'
 } else {
@@ -241,7 +241,7 @@ if(document.referrer === '') {
 
 js 设置向左滑动
 
-```javascript
+```js
 this.$refs.ref.scrollLeft = 100
 ```
 

@@ -3,9 +3,7 @@
 # 一、学习链接
 
 - [阮一峰-SVG 教程](https://wangdoc.com/webapi/svg.html)
-
 - [菜鸟教程-SVG 教程](https://www.runoob.com/svg/svg-rect.html)
-
 - [菜鸟教程-SVG 实例](https://www.runoob.com/svg/svg-examples.html)
 
 ---
@@ -74,7 +72,7 @@
 </div>
 
 
-```
+```html
 <svg>
   <g fill="none" stroke="black" stroke-width="6">
     <path stroke-linecap="butt" d="M5 20 l215 0" />
@@ -96,7 +94,7 @@
 
 ### 【3.1】直接写入`html`中
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head></head>
@@ -115,7 +113,7 @@
 
 ### 【3.2】写在独立文件中，用`<img>`、`<object>`、`<embed>`、`<iframe>`等标签插入网页。
 
-```
+```html
 <img src="circle.svg">
 <object id="object" data="circle.svg" type="image/svg+xml"></object>
 <embed id="embed" src="icon.svg" type="image/svg+xml">
@@ -124,7 +122,7 @@
 
 ### 【3.3】CSS 中使用 SVG
 
-```
+```css
 .logo {
   background: url(icon.svg);
 }
@@ -132,7 +130,7 @@
 
 ### 【3.4】SVG 转为 BASE64 编码，然后作用 DATA URL 写入网页。
 
-```
+```html
 <img src="data:image/svg+xml;base64,[data]">
 ```
 
@@ -144,7 +142,7 @@
 
 SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的一部分，就要指定`viewBox`属性。
 
-```
+```html
 <svg width="100" height="100" viewBox="50 50 50 50">
   <circle id="mycircle" cx="50" cy="50" r="50" />
 </svg>
@@ -159,7 +157,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </div>
 
 
-```
+```html
 <svg>
   <rect x="0" y="0" height="100" width="200" style="stroke: #70d5dd; fill: #dd524b" />
 </svg>
@@ -178,7 +176,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </div>
 
 
-```
+```html
 <svg>
   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
 </svg>
@@ -199,7 +197,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 
 
-```
+```html
 <svg>
   <ellipse cx="300" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"/>
 </svg>
@@ -220,7 +218,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 
 
-```
+```html
 <svg>
   <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"/>
 </svg>
@@ -236,7 +234,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 
 
-```
+```html
 <svg height="250" width="500">
   <polygon points="220,10 300,210 170,250 123,234" style="fill:lime;stroke:purple;stroke-width:1" />
 </svg>
@@ -253,7 +251,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 
 
-```
+```html
 <svg>
   <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:none;stroke:black;stroke-width:3" />
   <polyline points="20,20 40,25 60,40 80,120 120,140 200,180"style="fill:none;stroke:red;stroke-width:4" />
@@ -262,18 +260,18 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 ## 【8】`<path>`路径
 
-```
-M = moveto【函数】
-L = lineto【画线】
-H = horizontal lineto【水平线】
-V = vertical lineto【垂直线】
-C = curveto【曲线到】
-S = smooth curveto【平滑曲线】
-Q = quadratic Bézier curve【二次Bézier曲线】
-T = smooth quadratic Bézier curveto【光滑二次曲线Bézier曲线】
-A = elliptical Arc【椭圆弧】
-Z = closepath【闭合路径】
-```
+
+- M = moveto【函数】
+- L = lineto【画线】
+- H = horizontal lineto【水平线】
+- V = vertical lineto【垂直线】
+- C = curveto【曲线到】
+- S = smooth curveto【平滑曲线】
+- Q = quadratic Bézier curve【二次Bézier曲线】
+- T = smooth quadratic Bézier curveto【光滑二次曲线Bézier曲线】
+- A = elliptical Arc【椭圆弧】
+- Z = closepath【闭合路径】
+
 
 <div class="example-box">
   <svg>
@@ -283,7 +281,7 @@ Z = closepath【闭合路径】
 
 
 
-```
+```html
 <svg>
     <path d="M150 0 L75 200 L225 200 Z" />
 </svg>
@@ -304,7 +302,7 @@ Z = closepath【闭合路径】
 
 
 
-```
+```html
 <svg>
    <defs>
     <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
@@ -340,7 +338,7 @@ Z = closepath【闭合路径】
 </div>
 
 
-```
+```html
 <svg>
   <defs>
     <filter id="f1" x="0" y="0">
@@ -372,7 +370,7 @@ Z = closepath【闭合路径】
 
 
 
-```
+```html
 <svg>
   <defs>
     <filter id="f2" x="0" y="0" width="200%" height="200%">
@@ -402,7 +400,7 @@ Z = closepath【闭合路径】
 
 
 
-```
+```html
 <svg>
   <defs>
     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -431,7 +429,7 @@ Z = closepath【闭合路径】
 
 
 
-```
+```html
 <svg>
   <defs>
     <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
@@ -456,21 +454,17 @@ Z = closepath【闭合路径】
       <text x="25" y="20">圆形</text>
       <circle cx="50" cy="50" r="20"/>
     </g>
-
     <use href="#myCircle" x="100" y="0" fill="blue" />
     <use href="#myCircle" x="200" y="0" fill="white" stroke="blue" />
   </svg>
 </div>
 
-
-
-```
+```html
 <svg width="300" height="100">
   <g id="myCircle">
     <text x="25" y="20">圆形</text>
     <circle cx="50" cy="50" r="20"/>
   </g>
-
   <use href="#myCircle" x="100" y="0" fill="blue" />
   <use href="#myCircle" x="200" y="0" fill="white" stroke="blue" />
 </svg>
@@ -479,7 +473,6 @@ Z = closepath【闭合路径】
 ## 【2】`<pattern>`图案填充
 
 <div class="example-box">
-
   <svg width="500" height="500">
     <defs>
       <pattern id="dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
@@ -491,7 +484,7 @@ Z = closepath【闭合路径】
 </div>
 
 
-```
+```html
 <svg width="500" height="500">
   <defs>
     <pattern id="dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
@@ -512,7 +505,7 @@ Z = closepath【闭合路径】
 </div>
 
 
-```
+```html
 <svg viewBox="0 0 100 100" width="200" height="200">
   <image xlink:href="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg"
     width="100%" height="100%"/>
@@ -522,17 +515,12 @@ Z = closepath【闭合路径】
 ## 【4】`<animate>`动画
 
 - `attributeName`：发生动画效果的属性名。
-
 - `from`：单次动画的初始值。
-
 - `to`：单次动画的结束值。
-
 - `dur`：单次动画的持续时间。
-
 - `repeatCount`：动画的循环模式。
 
 <div class="example-box">
-
   <svg width="500px" height="100px">
     <rect x="0" y="0" width="100" height="100" fill="#feac5e">
       <animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" />
@@ -541,7 +529,7 @@ Z = closepath【闭合路径】
 </div>
 
 
-```
+```html
 <svg width="500px" height="100px">
   <rect x="0" y="0" width="100" height="100" fill="#feac5e">
     <animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" />

@@ -14,7 +14,7 @@
 
 `ellipsis`将超过指定长度的文本，使用省略号替代（查看完整代码）。
 
-```
+```css
 const styles = {
   ...polished.ellipsis('200px')
 }
@@ -22,7 +22,7 @@ const styles = {
 
 `hideText`用于隐藏文本，显示图片。
 
-```
+```css
 const styles = {
   'background-image': 'url(logo.png)',
   ...polished.hideText(),
@@ -31,7 +31,7 @@ const styles = {
 
 `hiDPI`指定高分屏样式。
 
-```
+```css
 const styles = {
  [polished.hiDPI(1.5)]: {
    width: '200px',
@@ -41,7 +41,7 @@ const styles = {
 
 `retinaImage`为高分屏和低分屏设置不同的背景图。
 
-```
+```css
 const styles = {
  ...polished.retinaImage('my-img')
 };
@@ -66,7 +66,7 @@ const styles = {
 
 配置`webpack.config.js`：
 
-```
+```js
 module.exports = {
   entry: __dirname + '/index.js',
   output: {
@@ -100,7 +100,7 @@ module.exports = {
 
 App.css
 
-```
+```css
 .text {
     color: red;
 }
@@ -108,7 +108,7 @@ App.css
 
 main.html
 
-```
+```html
 import style from './App.css';
 <h1 className={style.title}>
   Hello World
@@ -117,7 +117,7 @@ import style from './App.css';
 
 编译之后：
 
-```
+```html
 <h1 class="_3zyde4l1yATCOkgn-DBWEL">
   Hello World
 </h1>
@@ -129,7 +129,7 @@ import style from './App.css';
 
 `App.css`加入一个全局`class`。
 
-```
+```css
 .title {
   color: red;
 }
@@ -145,7 +145,7 @@ import style from './App.css';
 
 在 App.css 中，让`.title`继承`.className` 。
 
-```
+```css
 .className {
   background-color: blue;
 }
@@ -154,9 +154,11 @@ import style from './App.css';
   composes: className;
   color: red;
 }
+```
 
-<!-- 或者 -->
+或者：
 
+```css
 .title {
   composes: className from './another.css';
   color: red;
@@ -169,7 +171,7 @@ import style from './App.css';
 
 `CSS Modules` 支持使用变量，不过需要安装 `PostCSS` 和 `postcss-modules-values`。
 
-```
+```bash
 $ npm install --save postcss-loader postcss-modules-values
 ```
 

@@ -64,7 +64,7 @@ canvas 代码都放在顶层标签`<canvas>`之中，由 JS 生成内容，一�
 <canvas class="box" id="rect"> </canvas>
 ```
 
-```javascript
+```js
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");
@@ -79,7 +79,7 @@ function rectFn() {
 <canvas class="box" id="moveTo"> </canvas>
 ```
 
-```javascript
+```js
 function rectFn() {
   let c = document.querySelector("#moveTo");
   let ctx = c.getContext("2d");
@@ -95,7 +95,7 @@ function rectFn() {
 <canvas class="box" id="arc"> </canvas>
 ```
 
-```javascript
+```js
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");
@@ -111,7 +111,7 @@ function rectFn() {
 <canvas class="box" id="text"> </canvas>
 ```
 
-```javascript
+```js
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");
@@ -127,7 +127,7 @@ function rectFn() {
 <canvas class="box" id="gradient"> </canvas>
 ```
 
-```javascript
+```js
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");
@@ -154,7 +154,7 @@ function rectFn() {
 <canvas class="box" id="image"> </canvas>
 ```
 
-```javascript
+```js
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");

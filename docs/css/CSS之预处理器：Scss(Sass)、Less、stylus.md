@@ -13,7 +13,7 @@
 
 `Sass`靠缩进表示嵌套关系
 
-```
+```css
 .father
     width:100px;
     .son
@@ -22,7 +22,7 @@
 
 `Scss`靠花括号表示嵌套关系
 
-```
+```css
 .father{
     width:100px;
     .son{
@@ -37,7 +37,7 @@
 
 安装
 
-```
+```bash
 npm install scss/ -g
 npm install less -g
 npm install stylus -g
@@ -45,7 +45,7 @@ npm install stylus -g
 
 编译成 css 文件
 
-```
+```bash
 scss test.scss
 less test.scss
 stylus test.scss
@@ -53,7 +53,7 @@ stylus test.scss
 
 ## 在浏览器环境中使用
 
-```
+```html
 <link rel="stylesheet/less" type="text/css" href="styles.less" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
 ```
@@ -71,7 +71,7 @@ stylus test.scss
 
 以下 3 种模板均编译为：
 
-```
+```css
 #header {
   width: 10px;
   height: 20px;
@@ -80,7 +80,7 @@ stylus test.scss
 
 - Less：`@`
 
-```
+```css
 @width: 10px;
 @height: @width + 10px;
 #header {
@@ -91,7 +91,7 @@ stylus test.scss
 
 - Scss：`$`
 
-```
+```css
 $width: 10px;
 $height: $width + 10px;
 #header {
@@ -102,7 +102,7 @@ $height: $width + 10px;
 
 - Stylus：直接写
 
-```
+```css
 siteWidth = 10px
 siteHeight = siteWidth + 10px
 #header
@@ -114,7 +114,7 @@ siteHeight = siteWidth + 10px
 
 - Less：`.public();`
 
-```
+```css
 .public {
   border-radius: 5px;
 }
@@ -126,7 +126,7 @@ p {
 
 - Scss：`@mixin`和`@include`
 
-```
+```css
 @mixin rounded-corners {
   border-radius: 5px;
 }
@@ -137,7 +137,7 @@ p {
 
 - Stylus
 
-```
+```css
 border-radius(n)
   border-radius n
 
@@ -149,7 +149,7 @@ p
 
 - Less 和 Scss：`{ { } }`
 
-```
+```css
 header{
   p{
     color: #f00;
@@ -159,7 +159,7 @@ header{
 
 - Stylus：缩进
 
-```
+```css
 header
   p
     color: #f00
@@ -167,7 +167,7 @@ header
 
 ## 【4】函数(Functions)
 
-```
+```css
 body{
   padding add(10px, 5)
 }
@@ -175,7 +175,7 @@ body{
 
 - Less： `.name {@functions ~IFFE}`
 
-```
+```css
 .paletteMixin() {
   @functions: ~`(function() {
     this.palette = function() {
@@ -190,7 +190,7 @@ body{
 
 调用 @functions 方法
 
-```
+```css
 .test {
     color: ~`palette()`;
 }
@@ -198,7 +198,7 @@ body{
 
 - Scss：`@function name`
 
-```
+```css
 @function add(a,b) {
     @return a + b;
 }
@@ -206,7 +206,7 @@ body{
 
 - Stylus：缩进
 
-```
+```css
 add(a, b)
   a + b
 ```

@@ -18,13 +18,13 @@
 
   组件化，方便开发维护和测试
 
-  JavaScript 和 CSS 可以方便的共享变量和方法
+  `JavaScript` 和 `CSS` 可以方便的共享变量和方法
 
 # 二、html `<head>`相关
 
 ## 【1】禁止缓存
 
-```
+```html
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
@@ -32,7 +32,7 @@
 
 ## 【2】添加标签栏 logo
 
-```
+```html
 <link rel="shortcut icon" type="image/x-icon" href="./static/logo.ico" rel="shortcut icon" />
 ```
 
@@ -40,7 +40,7 @@
 
 ## 【3】自适应手机
 
-```
+```html
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 ```
 
@@ -50,13 +50,13 @@
 
 ## 【1】CSS 禁止鼠标点击
 
-```
+```css
 pointer-events:none;
 ```
 
 ## 【2】禁用鼠标左键
 
-```
+```js
 $(document).ready(function(){
   $(document).bind('contextmenu', function(e){
     return false;
@@ -68,7 +68,7 @@ $(document).ready(function(){
 
 简单例子：
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -105,7 +105,7 @@ $(document).ready(function(){
 
 与地图交互的复杂效果：
 
-```
+```html
 <template>
 	<div class="page">
         <map1 class="map" />
@@ -143,7 +143,7 @@ $(document).ready(function(){
 
 重点：`map`放在底层，`home`的`总DOM`设置为`none`，然后哪些地方需要点击就设置为`all`。
 
-```
+```css
 .home{
     pointer-events: none;
     .left,.right{
@@ -164,7 +164,7 @@ $(document).ready(function(){
 
 如：
 
-```
+```css
 html,body{
 	font-size: 20px;
 }
@@ -179,7 +179,7 @@ p{
 
 ## 【2】rem
 
-```
+```js
 (function() {
 	//首先取得当得屏幕宽度
 	var width = window.screen.width;
@@ -194,19 +194,19 @@ p{
 
 ## 【3】视口的相对单位
 
-```
-vm：1/100的视口宽度；
-vh：1/100的视口高度；
-vmax：当前vw和vh中较大的一个值；
-vmin：当前vw和vh中较小的一个值；
-vmin、vmax的作用：在做移动端页面开发时，会使得文字大小在横竖屏下保持一致。
-```
+
+- `vm`：1/100的视口宽度；
+- `vh`：1/100的视口高度；
+- `vmax`：当前`vw`和`vh`中较大的一个值；
+- `vmin`：当前`vw`和`vh`中较小的一个值；
+- `vmin`、`vmax`的作用：在做移动端页面开发时，会使得文字大小在横竖屏下保持一致。
+
 
 ## 【4】`min-inline-size`、`max-inline-size`：最小/最大直列大小
 
 最小/最大直列大小
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
@@ -249,7 +249,7 @@ vmin、vmax的作用：在做移动端页面开发时，会使得文字大小在
 
 ## 移动端最快使用 rem 的方法
 
-```
+```css
 html {
   font-size: calc(100vw/7.5)
 }
@@ -266,9 +266,9 @@ p{
 
 ## 【1】名词解释
 
-- ppi【屏幕像素密度】：（pixels per inch）指每英雨所拥有的像素尺寸。
-- inch【英寸】：屏幕尺寸。指屏幕对角线的长度，可由勾股定理求出宽和高的长度【**1 英寸=2.54 厘米**】。
-- px【像素】：分辨率。由手机宽和高组成。
+- `ppi`【屏幕像素密度】：（pixels per inch）指每英雨所拥有的像素尺寸。
+- `inch`【英寸】：屏幕尺寸。指屏幕对角线的长度，可由勾股定理求出宽和高的长度【**1 英寸=2.54 厘米**】。
+- `px`【像素】：分辨率。由手机宽和高组成。
 
 ## 【2】公式
 
@@ -315,14 +315,9 @@ p{
 
 # 六、CSS 自定义属性（CSS 变量）
 
-要点：
+用`--`命名，用`val()`使用。
 
-- `--`命名
-- `val()`使用
-
-使用：
-
-```
+```css
 :root{
   --main-color: #fbb;
 }
@@ -364,7 +359,7 @@ Table 表格中，定了 width，如果其它的内容很高，内容少的可�
 
 ◆ 方法一
 
-```
+```css
 html,body{heigth:100%}
 ```
 
@@ -372,27 +367,30 @@ html,body{heigth:100%}
 
 使用绝对定位
 
-```
+```css
 height: 100%;
 position: absolute;
 ```
 
 ## 【7】max-width/min-width 和 max-height/min-height
 
-**超越!important**
+- 特性1：能超越`!important`。
 
-```
+如下例，最终生效的是`400px`。
+
+```html
 <img src="./floor.jpeg" style="width: 300px!important;" />
+```
+```css
 img{min-width: 400px;}
 ```
 
-最终生效的是`400px`。
 
-**min-width 覆盖 max-width**
+- 特性2：`min-width` 覆盖 `max-width`。
 
 如果`min-width`和`max-width`冲突时，取`min-width`的值。
 
-```
+```css
 min-width: 400px;
 max-width: 350px;
 ```
@@ -410,7 +408,7 @@ max-width: 350px;
 
 默认：
 
-```
+```css
 line-height: 20px;
 line-height: normal;
 line-height: 150%;
@@ -423,7 +421,7 @@ line-height: 1.5; // 资料上都是1，但chrome和firfox上应该都是1.5
 
 设置元素的宽高比为 `10:1`：
 
-```
+```css
 .box{
   aspect-ratio: 10 / 1;
 }
@@ -451,7 +449,7 @@ line-height: 1.5; // 资料上都是1，但chrome和firfox上应该都是1.5
   <h1 style="background: linear-gradient(to bottom, #8AF0FF,#3780E6);-webkit-background-clip: text;color: transparent;">文字渐变</h1>
 </div>
 
-```
+```css
 background: linear-gradient(to bottom, #8AF0FF,#3780E6);;
 -webkit-background-clip: text;
 color: transparent;
@@ -465,7 +463,9 @@ color: transparent;
 - `subpixel-antialiased`: 默认值，有轻微锯齿；
 - `antialiased`: 抗锯齿很好。
 
-抗锯齿：`body{-webkit-font-smoothing: antialiased;}`
+```css
+body{-webkit-font-smoothing: antialiased;}
+```
 
 `Gecko`内核的抗锯齿效果：
 
@@ -513,7 +513,7 @@ a{
 
 ## 【7】自定义字体：font-face
 
-```
+```css
 @font-face {
     font-family: DIGITAL-Dream;
     src: url("../assets/font/DIGITAL-Dream.ttf");
@@ -527,7 +527,7 @@ a{
 ## 【8】垂直排版
 
 
-<div class="example-box" style="font-size:.7em;">
+<div class="example-box" style="font-size:.8em;">
   <p style="writing-mode: vertical-lr;text-orientation: upright;">数字横向123</p>
   <hr />
   <p style="writing-mode: vertical-lr;">竖向2021排版</p>
@@ -538,7 +538,7 @@ a{
 
 
 
-```
+```css
 p{
   text-orientation: upright; // 数字横向显示
   writing-mode: vertical-lr; // 竖向排版
@@ -550,7 +550,7 @@ p span{
 
 ## 【9】断行规则：line-break
 
-```
+```css
 line-break: auto; // 默认
 line-break: loose; // 限制最小
 line-break: normal; // 常规
@@ -568,14 +568,14 @@ line-break: anywhere; // 任意位置标点都可以换行
 
 - [链接](https://blog.csdn.net/qq_42161935/article/details/99844944)
 
-- `inline`
-- `block`
-- `inline-table`
-- `table-cell`
-- `flow-root`
+- `inline`：行内
+- `block`：一行
+- `inline-table`：行内表格
+- `table-cell`：所有内容在一行
+- `flow-root`：撑开浮动的元素高度
 - `flex`
 - `grid`
-- `content`
+- `content`：不产生边框、背景、颜色，只显示内容。
 
 ## 【1】inline
 
@@ -589,21 +589,6 @@ line-break: anywhere; // 任意位置标点都可以换行
 - `width`和`height`正常
 - `marin`和`padding`正常
 
-## 【3】inline-table
-
-行内表格
-
-## 【4】table-cell
-
-所有内容在一行
-
-## 【5】flow-root
-
-撑开浮动的元素高度
-
-## 【6】content
-
-不产生边框、背景、颜色，只显示内容。
 
 ---
 
@@ -617,7 +602,7 @@ line-break: anywhere; // 任意位置标点都可以换行
 
 ## 【1】初始值：initial
 
-```
+```css
 html,body{
   color: red;
 }
@@ -633,7 +618,7 @@ p{
 
 ## 【2】继承：inherit
 
-```
+```css
 html,body{
   color: red;
 }
@@ -649,7 +634,7 @@ p{
 
 ## 【3】复原：unset
 
-```
+```css
 html,body{
   color: red;
 }
@@ -665,7 +650,7 @@ p{
 
 ## 【4】恢复：revert
 
-```
+```css
 .revert li {
   list-style: none;
 }
@@ -681,7 +666,7 @@ p{
 
 `all` 取值只能是 `initial`、`inherit`、`unset` 和 `revert`
 
-```
+```css
 <style>
 .test{
     border: 1px solid black;
@@ -706,7 +691,7 @@ p{
 
 ## 【1】打印方法
 
-```
+```js
 window.print();
 ```
 
@@ -714,7 +699,7 @@ window.print();
 
 ### 【2.1】media 属性
 
-```
+```css
 @media screen {
   /* 只对屏幕浏览有效 */
 }
@@ -729,7 +714,7 @@ window.print();
 
 ### 【2.2】媒体查询
 
-```
+```css
 <style type="text/css">
 	@media print {
 		.no{
@@ -741,7 +726,7 @@ window.print();
 
 ## 【3】页眉页脚
 
-```
+```css
 @media print {
   header {
     display: table-header-group;
@@ -756,7 +741,7 @@ window.print();
 
 ## 【4】打印方向
 
-```
+```css
 <style type="text/css" media="print">
 @page {
   size: landscape !important;
@@ -764,15 +749,21 @@ window.print();
 </style>
 ```
 
-横向打印：`size: landscape` 竖向打印：`size: portrait` 自动【默认】：`size: auto`
+- 横向打印：`size: landscape`；
+- 竖向打印：`size: portrait`；
+- 自动【默认】：`size: auto`。
 
 ## 【5】分页
 
 分页符属性用来设置页面的分页（即另起一页），共有三个相关属性。
 
-`page-break-before`：元素之前分页 `page-break-after`：元素之后分页 `page-break-inside`：元素内部分页这三个属性的值都是两个：`always`（生效）和`avoid`（避免）。
+- `page-break-before`：元素之前分页；
+- `page-break-after`：元素之后分页；
+- `page-break-inside`：元素内部分页。
 
-```
+这三个属性的值都是两个：`always`（生效）和`avoid`（避免）。
+
+```css
 h1 {
   /* 总是在 h1 元素之前分页 */
   page-break-before: always;
@@ -794,7 +785,7 @@ table {
 
 用`<thead>`元素定义表头，`<tbody>`元素定义表的数据
 
-```
+```html
 <table>
   <thead>
     <tr>
@@ -812,7 +803,7 @@ table {
 
 ## 【7】只设置打印文档时第一页的样式
 
-```
+```css
 @page :first {
   margin-left: 50%;
   margin-top: 50%;
@@ -837,7 +828,7 @@ table {
 
 （仅火狐支持`text-overflow: '***';`，其它浏览均会显示`'...'`）
 
-```
+```css
 .info {
   width: 300px;
   height: 50px;
@@ -858,9 +849,9 @@ table {
     text-overflow: ellipsis;
   }
 }
+```
 
-...
-
+```html
 <div class="info">"these vulnerabilities occur when untrusted data is sent"</div>
 ```
 
@@ -884,7 +875,7 @@ table {
 
 # 十五、HTML 默认字体大小 14px
 
-```
+```css
 font-size: 14px;
 ```
 
@@ -913,7 +904,7 @@ font-size: 14px;
 
 例子：
 
-```
+```css
 <style>
     p{counter-reset:count 4;}
     p:after{
@@ -941,7 +932,7 @@ font-size: 14px;
 
 例子：
 
-```
+```css
 <style>
     p{counter-reset:count 3; counter-increment:count;}
     p:after{
@@ -974,7 +965,7 @@ font-size: 14px;
 
 例子：
 
-```
+```css
 <style>
     p{counter-reset:count 1 count1 3; counter-increment:count 2 count1}
     p:after{
@@ -999,7 +990,7 @@ font-size: 14px;
 
 写法：
 
-```
+```css
 counters(name, string, style) string
 ```
 
@@ -1011,7 +1002,7 @@ counters(name, string, style) string
 
 例子：
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1090,7 +1081,7 @@ counters(name, string, style) string
 
 当用户手动导航时设置更平滑的滚动。
 
-```
+```css
 scroll-behavior: smooth;
 ```
 
@@ -1100,15 +1091,15 @@ scroll-behavior: smooth;
 
 值：
 
-- mandatory【默认】：滚动结束后强制停在指定的地方。
+- `mandatory`【默认】：滚动结束后强制停在指定的地方。
 
-- proximity【接近】：滚动结束后可能停在结束的地方，也可以会偏移一些（配合`scroll-snap-align`一起使用）。
+- `proximity`【接近】：滚动结束后可能停在结束的地方，也可以会偏移一些（配合`scroll-snap-align`一起使用）。
 
 一般用在父元素上。
 
 ## 【3】scroll-snap-align
 
-方向：start/center/end。
+方向：`start`/`center`/`end`。
 
 一般用在子元素上。
 
@@ -1118,7 +1109,7 @@ scroll-behavior: smooth;
 
 - [学习链接](https://www.zhangxinxu.com/wordpress/2020/08/css-overflow-anchor/)
 
-```
+```css
 overflow-anchor: auto; // 默认，自动
 overflow-anchor: none; // 禁止滚动锚点
 ```
@@ -1136,20 +1127,16 @@ overflow-anchor: none; // 禁止滚动锚点
 
 - [学习链接](https://www.zhangxinxu.com/wordpress/2018/01/css-caret-color-first-line/)
 
-```
-
+```css
 input.custom { caret-color: #0f0; }
-
 ```
 
 ---
 
 # 二十一、user-select：用户选择
 
-```
-
+```css
 user-select: auto | text | none | contain | all;
-
 ```
 
 有时候用`<p>`标签默认鼠标能选中文字，这时可以使用`user-select: none`来禁止点击文字之后处于选中状态，也能避免复制能操作。
@@ -1158,8 +1145,7 @@ user-select: auto | text | none | contain | all;
 
 # 二十二、all：级联和继承
 
-```
-
+```css
 <style>
   section {
     color: blue;
@@ -1171,9 +1157,8 @@ user-select: auto | text | none | contain | all;
     all: initial;
   }
 </style>
-
-...
-
+```
+```html
 <section>
   <p>This is a section!</p>
 
@@ -1192,7 +1177,7 @@ user-select: auto | text | none | contain | all;
 
 - [链接](https://css-tricks.com/recreating-the-apple-music-hits-playlist-animation-in-css/)
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 

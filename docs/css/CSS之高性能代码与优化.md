@@ -11,7 +11,7 @@
 
 比如`line-height`写倍数、`font-size`写百分比更利于维护。
 
-```
+```css
 font-size:20px;
 height:20px;
 line-heigth:20px;
@@ -19,7 +19,7 @@ line-heigth:20px;
 
 换成
 
-```
+```css
 font-size: 150%;
 height:20px;
 line-heigth:1.5;
@@ -29,7 +29,7 @@ line-heigth:1.5;
 
 比如：我们不需要左边框
 
-```
+```css
 border-width: 1px 1px 1px 0;
 border-color: #fff;
 border-style: solid;
@@ -37,7 +37,7 @@ border-style: solid;
 
 但下次要把`1px`改为`2px`的话要改 3 次，可以直接优化成：
 
-```
+```css
 border-width: 1px;
 border-left-width: 0;
 border-color: #fff;
@@ -46,7 +46,7 @@ border-style: solid;
 
 ## 【3】currentColor
 
-```
+```css
 p{
   color: red;
   border: solid 1px currentColor;
@@ -59,7 +59,7 @@ p 标签的边框会直接获取到 color 的颜色。
 
 ## 【4】合理使用简写
 
-```
+```css
 background: red;
 background-color: red;
 ```
@@ -72,7 +72,7 @@ background-color: red;
 
 ## 目录注释
 
-```
+```js
 /*--*\
 引入的CSS目录
 \*--*/
@@ -88,7 +88,7 @@ import './assets/css/public.css';
 
 ## 具体 CSS 文件的注释
 
-```
+```css
 /*-------*\
   $主框架
 \*-------*/
@@ -132,7 +132,7 @@ import './assets/css/public.css';
 
 下划线（ `__` ）代表子元素；连字符（ `-` ）代表不同状态；
 
-```
+```css
 .ul{}
 .ul_li{}
 .ul_li-display{}

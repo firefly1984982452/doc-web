@@ -13,7 +13,7 @@
 <body onbeforeunload="return myFunction()">
 ```
 
-```javascript
+```js
 <script>
 function myFunction() {
 	return "我在这写点东西...";
@@ -23,7 +23,7 @@ function myFunction() {
 
 2. 绑定 `window`对象
 
-```javascript
+```js
 window.onbeforeunload = function (e) {
   e = e || window.event;
   // 兼容IE8和Firefox 4之前的版本
@@ -37,7 +37,7 @@ window.onbeforeunload = function (e) {
 
 3. 在 `addEventListener` 中监听 `beforeunload`
 
-```javascript
+```js
 window.addEventListener("beforeunload", function (event) {
 	event.returnValue = "我在这写点东西...";
 });
@@ -233,7 +233,7 @@ function myFunction() {
 
 **电脑如果点关闭按钮后直接关闭了，可刷新时点取消重新加载网站后重试。**
 
-```javascript
+```js
 window.addEventListener("beforeunload", function (event) {
      event.returnValue = "我在这写点东西...";
 });

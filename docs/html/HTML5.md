@@ -839,7 +839,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 `type`属性也可以设成`module`，表示这是一个 `ES6` 模块，不是传统脚本。
 
-```javascript
+```js
 <script type="module" src="main.js"></script>
 ```
 
@@ -847,7 +847,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 不支持 `ES6` 模块时，应使用`nomodule`属性。
 
-```javascript
+```js
 <script type="module" src="main.js"></script>
 <script nomodule src="fallback.js"></script>
 ```
@@ -856,7 +856,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 不支持`sciprt`时
 
-```javascript
+```js
 <noscript>
   您的浏览器不能执行 JavaScript 语言，页面无法正常显示。
 </noscript>
@@ -1034,7 +1034,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 JS 操作：
 
-```javascript
+```js
 const modal = document.querySelector('dialog');
 
 // 对话框显示，相当于增加 open 属性
