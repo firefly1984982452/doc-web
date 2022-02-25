@@ -165,7 +165,7 @@ var param = Object.fromEntries(p);
 |       seal        |  ×  |  ×  |  ✓  |
 |      freeze       |  ×  |  ×  |  ×  |
 
-## 不可扩展对象`preventExtensions`
+## 【1】不可扩展对象`preventExtensions`
 
 !> `Object.preventExtensions`不能增，能删改
 
@@ -188,7 +188,7 @@ console.log(obj); // {b: "hello"} 修改成功
 Object.isExtensible(obj);// false
 ```
 
-## 密封的对象`seal`
+## 【2】密封的对象`seal`
 
 !> `Object.seal`不能增删，能改
 
@@ -211,7 +211,7 @@ console.log(obj); // {a:1,b: "hello"} 修改成功
 Object.isSealed(obj);// true
 ```
 
-## 冻结的对象`freeze`
+## 【3】冻结的对象`freeze`
 
 !> `Object.freeze`不能增删改
 
