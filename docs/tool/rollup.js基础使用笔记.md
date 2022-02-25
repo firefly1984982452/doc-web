@@ -8,20 +8,20 @@ rollup.js是Javascript的ES模块打包器，我们熟知的Vue、React等诸多
 
 # 安装
 
-```
+```bash
 npm i rollup -g
 ```
 
 # 新建文件
 
 src/a.js
-```
+```js
 const a = 1;
 export default a;
 ```
 
 src/main.js
-```
+```js
 import a from './a.js';
 export default function(){
     console.log(a);
@@ -30,14 +30,14 @@ export default function(){
 
 # 打包编译
 
-```
-<!-- 编译 -->
+```bash
+# 编译
 $ rollup src/main.js -f es
 
-<!-- 编译并以ES模块输出 -->
+# 编译并以ES模块输出
 $ rollup src/main.js -f es -o dist/bundle.js
 
-<!-- 编译并以CommonJS模块输出 -->
+# 编译并以CommonJS模块输出
 $ rollup src/main.js --format cjs --output.file dist/bundle-cjs.js
 ```
 
@@ -51,17 +51,16 @@ $ rollup src/main.js --format cjs --output.file dist/bundle-cjs.js
 
 ## CommonJS标准
 
-```
+```bash
 $ node
 > const m = require('./dist/bundle-cjs.js')
 > m()
 1 
-
 ```
 
 ## ES标准
 
-```
+```bash
 $ node
 > require('./dist/bundle.js')()
 /Users/sam/Desktop/rollup-test/dist/bundle.js:7

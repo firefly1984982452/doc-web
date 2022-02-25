@@ -8,13 +8,13 @@
 
 ## 安装
 
-```
+```bash
 npm install typescript -g
 ```
 
 或
 
-```
+```bash
 yarn global add typescript
 ```
 
@@ -22,7 +22,7 @@ yarn global add typescript
 
 **新建`demo.ts`：**
 
-```
+```js
 function test() {
     let web: string="hello world"
     console.log(web);
@@ -32,20 +32,20 @@ test();
 
 **编译：**
 
-```
+```bash
 tsc temo.ts
 node temo.js
 ```
 
 **或**
 
-```
+```bash
 npm install -g ts-node
 ```
 
 安装成功后：
 
-```
+```bash
 ts-node Demo1.ts
 ```
 
@@ -59,7 +59,7 @@ js 是弱类型语言，可以被改变。
 
 ## 【1】基本使用
 
-```
+```js
 // 定义count是number类型
 const count : number = 1;
 count = 'hello'; // 此时改变类型为string就会报错编译不通过
@@ -67,7 +67,7 @@ count = 'hello'; // 此时改变类型为string就会报错编译不通过
 
 ## 【2】自定义静态类型
 
-```
+```js
 interface XisoJieJie {
     uname: string,
     age: number
@@ -94,7 +94,7 @@ console.log(xh);
 
 **【3.2.1】对象类型**
 
-```
+```js
 const xiaoJieJie: {
     name: string,
     age: number
@@ -107,7 +107,7 @@ console.log(xiaoJieJie.name)
 
 **【3.2.2】数组类型**
 
-```
+```js
 const arr : number [] = [1,2,3];
 const xiaoJieJies : String [] = ['小明','小红','小黄'];
 console.log(xiaoJieJies)
@@ -115,7 +115,7 @@ console.log(xiaoJieJies)
 
 **【3.2.3】类类型**
 
-```
+```js
 class Person{}
 const xm : Person = new Person();
 console.log(xm);
@@ -123,7 +123,7 @@ console.log(xm);
 
 **【3.2.4】函数类型**
 
-```
+```js
 const j : () => string = ()=> {return '小明'};
 console.log(j);
 ```
@@ -134,14 +134,14 @@ console.log(j);
 
 ## 【1】类型注释
 
-```
+```js
 let count : number;
 count = 123
 ```
 
 ## 【2】类型推断
 
-```
+```js
 let countInference = 123
 ```
 
@@ -155,7 +155,7 @@ let countInference = 123
 
 **无定义时：**
 
-```
+```js
 function getTotal(one : number, two :number){
     return one + two
 }
@@ -166,7 +166,7 @@ const total = getTotal(1,2)
 
 **定义时：**
 
-```
+```js
 function getTotal(one : number, two :number) : number{
     return one + two
 }
@@ -176,7 +176,7 @@ const total = getTotal(1,2)
 
 **无需 return 时：void**
 
-```
+```js
 function sayHello(){
 	console.log('hello world!);
 }
@@ -186,7 +186,7 @@ function sayHello(){
 
 异常：
 
-```
+```js
  function errorFuntion() : never{
     throw new Error()
     console.log('Hello World')
@@ -195,7 +195,7 @@ function sayHello(){
 
 死循环：
 
-```
+```js
  function forNever() : never{
      while(true){}
      console.log('Hello JSPang')
@@ -206,7 +206,7 @@ function sayHello(){
 
 TS 函数参数解构：
 
-```
+```js
 function add ({one, two} : {one: number, two: number}) {
     return one + two;
 }
@@ -217,7 +217,7 @@ console.log(three); // 4
 
 ES6 函数参数解构：
 
-```
+```js
 function add({x,y} = {}){
     return x+y;
 }
@@ -231,7 +231,7 @@ console.log(sum); // 8
 
 ## 各种类型
 
-```
+```js
 const numberArr : number [] = [1,2,3];
 
 const stringArr : string [] = ['a','b','c'];
@@ -264,11 +264,14 @@ const xiaoJieJies1: Lady1[] = [{
 
 # 元组
 
-```
-// 无约束
-const arr1 : (number | string) [] = [1,'a',1,2,'b'];
+无约束：
 
-// 有约束
+```js
+const arr1 : (number | string) [] = [1,'a',1,2,'b'];
+```
+
+有约束:
+```js
 const arr2 : [string,string,number] = ['a','b',3];
 ```
 
@@ -278,7 +281,7 @@ const arr2 : [string,string,number] = ['a','b',3];
 
 ## 【1】定义接口
 
-```
+```js
 interface Girl {
     name: string;
     age: number;
@@ -306,7 +309,7 @@ getResume(xh);
 
 语法：`?:`
 
-```
+```js
 interface Girl {
     name: string;
     age: number;
@@ -320,7 +323,7 @@ interface Girl {
 
 `string`的意思是对象名是 string 类型，`any`的意思是对象值是任意类型。
 
-```
+```js
 interface Girl1 {
     name: string;
     age: number;
@@ -342,7 +345,7 @@ const xh = {
 
 比如：`say(): string;`代表`say`方法返回`string`类型的值。
 
-```
+```js
 interface Girl1 {
     name: string;
     age: number;
@@ -368,14 +371,14 @@ const xh = {
 
 错误的：
 
-```
+```js
 class XiaoJieJie implements Girl{
 }
 ```
 
 正确的：
 
-```
+```js
 class XiaoJieJie implements Girl{
     name = '小红';
     age = 12;
@@ -395,7 +398,7 @@ console.log(XiaoJieJie)
 - `function`里面的约束定型改为新接口名；
 - 新的对象里面除了原接口约束的属性，也要把新的属性加上。
 
-```
+```js
 interface Teacher extends Girl {
     teach():string;
 }
@@ -427,7 +430,7 @@ getResume2(girl2);
 
 ## 【1】继承与重写
 
-```
+```js
 class Lady {
     content = 'hello world!';
     sayHello () {
@@ -447,7 +450,7 @@ class XiaoJieJie extends Lady {
 
 JAVA 中类的继承
 
-```
+```js
 class Animal{
     public void move(){
         System.out.println("动物可以移动");
@@ -484,7 +487,7 @@ class Dog extends Animal{
 
 私有，只有自己能用。
 
-```
+```js
 class Lady {
     private content = 'hello world!';
     private privateFn () {
@@ -503,7 +506,7 @@ console.log(new Lady().privateFn()); // 编译不通过
 
 受保护，只能在自己及子类用。
 
-```
+```js
 class Lady {
     protected protectedFn () {
         return 'protected';
@@ -539,7 +542,7 @@ console.log(new Lady().protectedFn()); // 编译不通过
 
 构造函数及继承
 
-```
+```js
 class People {
     constructor (public name: string,public sex:string) {
         this.name = name;
@@ -562,7 +565,7 @@ console.log(teacher,teacher.age);
 
 ES6 实现对比：
 
-```
+```js
 class People {
     constructor (name,sex) {
         this.name = name;
@@ -586,8 +589,7 @@ console.log(teacher,teacher.age);
 
 JAVA 实现对比：
 
-```
-
+```js
 class People {
     public String name;
     public int sex;
@@ -604,7 +606,7 @@ public class Teacher extends People {
 
 ## 【4】get 和 set
 
-```
+```js
 class XiaoJieJie {
     constructor(private _age:number,private _name: string){
     }
@@ -628,14 +630,14 @@ console.log(xj,xj.age); // XiaoJieJie { _age: 18, _name: '小明' } 16
 
 编译如果无法通过需要加上 es5：
 
-```
+```bash
 tsc demo.ts -t es5
 node demo.js
 ```
 
 java 中
 
-```
+```js
 class Stutent1{
     private String name;
     private int age;
@@ -661,7 +663,7 @@ class Stutent1{
 
 不用 new 新建就可以创建
 
-```
+```js
 class Girl {
     static sayLove(){
         return '你好';
@@ -675,7 +677,7 @@ console.log(Girl.sayLove());
 
 ## 【6】只读属性 readonly
 
-```
+```js
 class XiaoJieJie {
     constructor(private readonly _age:number,private _name: string){
     }
@@ -709,7 +711,7 @@ console.log(xj,xj.age);
 - 普通的重写
 - 可以调用父类
 
-```
+```js
 class Girl {
     skill(){
         conso.log('skill)
@@ -748,7 +750,7 @@ console.log(new Girl().skill())
 - 不能调用父类
 - abstract 方法不能有具体实现内容
 
-```
+```js
 abstract class Girl {
     abstract skill()
 }
@@ -789,7 +791,7 @@ java 中多态的实现方式
 - 方式二：接口
 - 方式三：抽象类和抽象方法
 
-```
+```js
 abstract class Animal {
     abstract void eat();
 }
@@ -827,7 +829,7 @@ class Dog extends Animal {
 
 `include`属性是用来指定要编译的文件
 
-```
+```js
 {
   "include":["demo.ts"],
   "compilerOptions": {
@@ -839,7 +841,7 @@ class Dog extends Animal {
 
 `exclude`属性是用来指定不要编译的文件
 
-```
+```js
 {
   "exclude":["demo.ts"],
   "compilerOptions": {
@@ -851,7 +853,7 @@ class Dog extends Animal {
 
 `files`属性是用来指定要编译的文件，和`include`相同
 
-```
+```js
 {
   "files":["demo.ts"],
   "compilerOptions": {
@@ -876,7 +878,7 @@ class Dog extends Animal {
 
 ## 【1】联合类型
 
-```
+```js
 interface Waiter {
     anjiao: boolean,
     say:()=>{}
@@ -896,7 +898,7 @@ function test(animal: Waiter | Teacher){})
 
 根据具体的值来断言用哪个接口
 
-```
+```js
 function test(animal: Waiter | Teacher){
     // 方法一：类型断言：根据某个值来判断用哪个方法
     if(animal.anjiao){
@@ -911,7 +913,7 @@ function test(animal: Waiter | Teacher){
 
 判断在对象中是否存在该方法
 
-```
+```js
 function test(animal: Waiter | Teacher){
     // 方法二：in语法：判断在对象中是否存在该方法
     if('skill' in animal){
@@ -925,7 +927,7 @@ function test(animal: Waiter | Teacher){
 
 ## 【4】断言和 in 的实例
 
-```
+```js
 interface Waiter {
     anjiao: boolean,
     say:()=>{}
@@ -973,7 +975,7 @@ test(xiaoming);
 
 判断是不是不同的类型
 
-```
+```js
 function add(first: string | number, second: string | number){
     if(typeof first == 'string' || typeof second == 'string'){
         return `${first}${second}`;
@@ -986,8 +988,7 @@ console.log(add(1,2)) // 3
 
 ## 【6】类型保护-instanceof 语法
 
-```
-
+```js
 class NumberObj{
     count: number
 }
@@ -1025,7 +1026,7 @@ console.log(addObj(obj3,obj4)) // 480
 
 # 枚举
 
-```
+```js
 enum Data {
     MASSAGE,
     STATU,
@@ -1053,7 +1054,7 @@ STATU
 
 枚举可以自定义值：
 
-```
+```js
 enum Data {
     MASSAGE = 'success',
     STATU = 3,
@@ -1079,7 +1080,7 @@ undefined
 
 ## 【1】在方法中使用
 
-```
+```js
 function join<T>(first: T, second: T){
     return `${first}${second}`;
 }
@@ -1091,7 +1092,7 @@ console.log(join <number> (3,2)) // 32
 
 优化：
 
-```
+```js
 function join<T1,T2>(first: T1, second: T2){
     return `${first}${second}`;
 }
@@ -1100,7 +1101,7 @@ console.log(join <number,string> (3,'date')) // 3date
 
 ## 【2】在类中使用
 
-```
+```js
 class SelectGirl {
     constructor (private girls: string){}
     getGirl(index: number): string {
@@ -1112,7 +1113,7 @@ const selectGirl = new SelectGirl(['小A','小B','小C']);
 
 这时只能使用 string 类型的，改为泛型即可使用任意类型。
 
-```
+```js
 class SelectGirl<T> {
     constructor (private girls: T){}
     getGirl(index: number): T {
@@ -1145,7 +1146,7 @@ const selectGirl2 = new SelectGirl([1,2,3]);
 
 在 page.ts 文件里，写出下面的代码：
 
-```
+```js
 class Header {
   constructor() {
     const elem = document.createElement("div");
@@ -1181,7 +1182,7 @@ class Page {
 
 写完后我们用`tsc`进行编译一次，然后修改`index.html`文件，在`<body>`标签里引入`<script>`标签，并实例化`Page`，代码如下:
 
-```
+```html
 <body>
   <script>new Page();</script>
 </body>
@@ -1193,7 +1194,7 @@ class Page {
 
 用 namespace 和 export 导出，用 Home.page()实例化。
 
-```
+```js
 namespace Home {
   class Header {
     constructor() {
@@ -1229,7 +1230,7 @@ namespace Home {
 }
 ```
 
-```
+```js
 new Home.Page();
 ```
 
@@ -1237,7 +1238,7 @@ new Home.Page();
 
 新建一个`components.ts`文件作为组件
 
-```
+```js
 namespace Components {
   export class Header1 {
     constructor() {
@@ -1251,7 +1252,7 @@ namespace Components {
 
 在`page.ts`里面使用
 
-```
+```js
 namespace Home {
   export class Page {
     constructor() {
@@ -1263,7 +1264,7 @@ namespace Home {
 
 在`index.html`中引用新编辑的文件
 
-```
+```html
 <script src="./build/page.js"></script>
 <script src="./build/components.js"></script>
 ```
@@ -1272,7 +1273,7 @@ namespace Home {
 
 将`tsconfig.json`中的`"module":"commonjs"`改为`"module":"amd"`；然后修改`outFile`配置项。
 
-```
+```js
 {
   "outFile": "./build/page.js"
 }
@@ -1284,7 +1285,7 @@ namespace Home {
 
 在`Components.ts`文件下编写：
 
-```
+```js
 namespace Components {
   export namespace SubComponents {
     export class Test {}
@@ -1302,7 +1303,7 @@ namespace Components {
 
 修改`compontens.ts`，删除`namespace`
 
-```
+```js
 export class Header1 {
     constructor() {
     const elem = document.createElement("div");
@@ -1324,7 +1325,7 @@ export class Content1 {
 
 `page.ts`：
 
-```
+```js
 import { Header1, Content1 } from "./components";
 export class Page {
   constructor() {
@@ -1336,7 +1337,7 @@ export class Page {
 
 `html`：
 
-```
+```html
 <script>new Home.Page();</script>
 ```
 
@@ -1350,7 +1351,7 @@ export class Page {
 
 **【2.2】使用`default`关键字：**
 
-```
+```js
 import { Header1, Content1 } from "./components";
 export default class Page {
   constructor() {
@@ -1362,7 +1363,7 @@ export default class Page {
 
 **【2.3】使用：**
 
-```
+```js
 <script>
     require(['page'], function(page){
         new page.default();
@@ -1376,15 +1377,15 @@ export default class Page {
 
 安装
 
-```
+```bash
 yarn add --dev parcel@next
 ```
 
 修改`package.json`里边的代码。
 
-{
-
-"scripts": { "test": "parcel ./src/index.html" }, }
+```js
+{"scripts": { "test": "parcel ./src/index.html" }, }
+```
 
 输入`yarn test`，打包出地址：`http://localhost:1234`
 

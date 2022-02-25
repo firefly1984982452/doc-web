@@ -7,7 +7,7 @@
 
 依次在终端执行下面的脚本
 
-```
+```bash
 sudo npm uninstall npm -g
 sudo rm -rf /usr/local/lib/node /usr/local/lib/node_modules /var/db/receipts/org.nodejs.*
 sudo rm -rf /usr/local/include/node /Users/$USER/.npm
@@ -32,7 +32,7 @@ sudo rm /usr/local/lib/dtrace/node.d
 
 ## 【0】清理缓存后
 
-```
+```bash
 npm cache clear --force
 ```
 
@@ -40,34 +40,36 @@ npm cache clear --force
 
 设置 npm 镜像源：
 
-```
+```bash
 npm config set registry http://registry.npm.taobao.org
 ```
 
 查看镜像源：
 
-```
+```bash
 npm config get registry
 ```
 
 proxy 错误之后重置后再设置镜像源
 
-```
 1、置空
+```bash
 npm config get proxy
 npm config get https-proxy
 如果返回值不为null，继续执行：
 （这一步很重要，一定要保证两个命令的返回值都为null,话说回来，应该出现这个错误这两个返回值有不为null的）
 npm config set proxy null
 npm config set https-proxy null
+```
 
 2、设置
+```bash
 npm config set registry http://registry.cnpmjs.org/
 ```
 
-设置 cnpm 镜像源：
+3、设置 cnpm 镜像源：
 
-```
+```bash
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
@@ -82,56 +84,56 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 ## 【3】install 安装软件包
 
-```
+```bash
 npm install
 ```
 
 安装单个软件包
 
-```
+```bash
 npm install <package-name>
 ```
 
 ## 【4】uninstall:卸载软件包
 
-```
+```bash
 npm uninstall
 ```
 
 如果使用 `-S` 或 `--save` 标志，则此操作还会移除 `package.json` 文件中的引用。
 
-```
+```bash
 npm uninstall -S <package-name>
 npm uninstall -D <package-name>
 ```
 
 如果该软件包是全局安装的，则需要添加 `-g` 或 `--global` 标志：
 
-```
+```bash
 npm uninstall -g <package-name>
 ```
 
 ## 【5】outdated：查看有哪些过时的软件包
 
-```
+```bash
 npm outdated
 ```
 
 ## 【6】update：更新软件包
 
-```
+```bash
 npm update
 ```
 
 更新单个软件包：
 
-```
+```bash
 npm update <package-name>
 ```
 
 更新至最新版本：
 
-```
+```bash
 npm install npm@latest -g
 ```
 
@@ -139,11 +141,11 @@ npm install npm@latest -g
 
 可以使用 @ 语法来安装 npm 软件包的旧版本：
 
-```
+```bash
 npm install <package>@<version>
 ```
 
-```
+```bash
 npm install -g webpack@4.16.4
 ```
 
@@ -151,13 +153,13 @@ npm install -g webpack@4.16.4
 
 列出软件包所有的以前的版本：
 
-```
+```bash
 npm view <package> versions
 ```
 
 最新的可用版本：
 
-```
+```bash
 npm view [package_name] version
 ```
 
@@ -165,7 +167,7 @@ npm view [package_name] version
 
 所有已安装的 npm 软件包的最新版本：
 
-```
+```bash
 npm list
 ```
 
@@ -199,21 +201,21 @@ npm list
 
 - bin
 
-```
+```bash
 npm bin
 /Users/evalx/node_modules/.bin
 ```
 
 - prefix
 
-```
+```bash
 npm prefix
 /Users/evalx
 ```
 
 - root
 
-```
+```bash
 npm root
 /Users/evalx/node_modules
 ```
@@ -222,7 +224,7 @@ npm root
 
 检查出当前是否最新版本，是否有错误
 
-```
+```bash
 npm doctor
 ```
 
@@ -234,7 +236,7 @@ npm doctor
 
 # 使用软件包
 
-```
+```js
 const _ = require('lodash')
 ```
 

@@ -1,7 +1,5 @@
 #  新建vue项目之后要搭建的项目框架
 
----
-
 - [github地址](https://github.com/firefly1984982452/base)
 
 # 搭建
@@ -16,7 +14,7 @@
 
 新建一个`rem-config.js`文件
 
-```
+```js
 function resizeHtml() {
   //首先取得当前窗口宽度
   var width =
@@ -41,7 +39,7 @@ export default function() {
 
 在`main.js`里面引入
 
-```
+```js
 import remConfig from './config/rem-config'; // 配置rem
 remConfig(); // 执行rem
 ```
@@ -50,7 +48,7 @@ remConfig(); // 执行rem
 
 新建`reset.css`
 
-```
+```css
 @charset "utf-8";
 /*公共样式*/
 html,body{padding:0; margin:0;cursor: default;height: 100%;}
@@ -76,7 +74,7 @@ input[type="number"]{-moz-appearance:textfield;}
 
 在`app.vue`里面引入
 
-```
+```css
 <style>
 @import url('./assets/css/base.css');
 </style>
@@ -90,7 +88,7 @@ input[type="number"]{-moz-appearance:textfield;}
 
 2.然后新建一个`font.css`文件记录所有字体
 
-```
+```css
 @font-face {
     font-family: FZZYJW;
     src: url("../assets/font/FZZYJW.ttf");
@@ -103,13 +101,13 @@ input[type="number"]{-moz-appearance:textfield;}
 
 3.在`main.js`里面引用
 
-```
+```js
 import './config/font-family-config.css'; // 配置字体
 ```
 
 4.应用
 
-```
+```css
 font-family: 'PINGFANG-REGULAR';
 ```
 
@@ -121,14 +119,14 @@ font-family: 'PINGFANG-REGULAR';
 
 在`main.js`里面定义
 
-```
+```js
 import Box from '@/components/box'
 Vue.component('Box', Box);
 ```
 
 在`home.vue`里面使用
 
-```
+```js
 <div>
   <Box />
 </div>
@@ -149,7 +147,7 @@ page2.vue
 
 ## 【2】在route.js里面定义
 
-```
+```js
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home'
@@ -189,7 +187,7 @@ export default new Router({
 
 ## 【3】在home里面跳转
 
-```
+```js
 ...
   <div class="page">
       <div class="header">
@@ -232,21 +230,21 @@ export default new Router({
 
 ---
 
-# vuex
+# Vuex
 
-- [链接](https://firefly1984982452.github.io/2018/03/19/vue%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/#%E4%BD%BF%E7%94%A8Vuex)
+- 参考[Vuex](/docs/vue/vue常用方法总结.md#Vuex)
 
 ---
 
-# eventBus
+# EventBus
 
-- [链接](https://firefly1984982452.github.io/2018/03/19/vue%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/#vue%E5%85%84%E5%BC%9F%E7%BB%84%E4%BB%B6%E9%80%9A%E8%BF%87eventbus%E4%BC%A0%E5%80%BC)
+- 参考[EventBus](/docs/vue/vue常用方法总结.md#EventBus)
 
 ---
 
 # 配置echarts
 
-- [链接](https://firefly1984982452.github.io/2020/09/08/echarts%E8%B6%85%E5%85%A8%E8%B6%85%E8%AF%A6%E6%83%85%E9%85%8D%E7%BD%AE%E9%A1%B9/#%E5%9C%A8vue%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)
+- 参考[配置echarts](/docs/tool/echarts超全超详情配置项.md#在vue中如何使用)
 
 ---
 # 写README.MD

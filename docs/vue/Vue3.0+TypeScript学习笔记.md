@@ -8,7 +8,7 @@
 
 下载最新 vue-cli
 
-```
+```bash
 npm install -g @vue/cli
 # OR
 yarn global add @vue/cli
@@ -20,7 +20,10 @@ yarn global add @vue/cli
 
 9 步式对话。
 
-1.使用`vue create vue3-1`创建 2.选择自定义 3.选择 TypeScript 4.创建完成后使用`yarn serve`运行项目
+1. 使用`vue create vue3-1`创建 
+2. 选择自定义 
+3. 选择 TypeScript 
+4. 创建完成后使用`yarn serve`运行项目
 
 ## 【2】vue-cli 图形界面搭建
 
@@ -32,7 +35,7 @@ yarn global add @vue/cli
 
 做一个单行点击显示值事件
 
-```
+```js
 <template>
   <div>
     <div>请选择</div>
@@ -81,7 +84,7 @@ export default defineComponent({
 
 将所有对应的值封装为一个对象：
 
-```
+```js
 <button
       v-for="(item, index) in data.girls"
       v-bind:key="index"
@@ -116,7 +119,7 @@ export default {
 
 `data`变量没有作`类型注解`，而是采用了`TypeScript`的`类型推断`。
 
-```
+```js
 interface DataProps {
   girls: string[];
   selectGirl: string;
@@ -127,15 +130,13 @@ const data: DataProps = ...
 
 ## 【3】用 toRefs 优化 DOM 中的对象
 
-引入：
 
-```
+```js
 import { reactive, toRefs } from "vue";
 ```
 
-JS:
 
-```
+```js
 export default {
   name: "App",
   setup() {
@@ -155,9 +156,7 @@ export default {
 };
 ```
 
-DOM:
-
-```
+```html
 <button
       v-for="(item, index) in girls"
       v-bind:key="index"
@@ -191,7 +190,7 @@ errorCaptured -> onErrorCaptured
 
 ## 【2】使用
 
-```
+```js
 setup() {
     console.log("1-开始创建组件-----setup()");
     const data: DataProps = reactive({
@@ -226,7 +225,7 @@ setup() {
 
 ## 【3】和 vue2 的生命周期也能混合使用
 
-```
+```js
 setup() {
     ... //内容不变
 },
@@ -255,7 +254,7 @@ updated() {
 
 只要页面中有`update`的情况，就会跟踪生成`event`。
 
-```
+```js
 import { .... ,onRenderTracked,} from "vue";
 
 ...
@@ -270,7 +269,7 @@ onRenderTracked((event) => {
 
 只有发生变化的值才会触发
 
-```
+```js
 onRenderTriggered((event) => {
   console.log("状态触发组件--------------->");
   console.log(event);
@@ -294,7 +293,7 @@ event:
 
 方法 1：methods:
 
-```
+```js
 chooseFn: (index: number) => {
     data.currentValue = data.deviceList[index];
     document.title = data.currentValue;
@@ -304,7 +303,7 @@ chooseFn: (index: number) => {
 
 方法 2：watch:
 
-```
+```js
 watch(refData.currentValue, (newValue, oldValue) => {
     document.title = newValue;
 });
@@ -323,7 +322,7 @@ return {
 
 useNowTime.ts
 
-```
+```js
 import {ref} from 'vue';
 
 const nowTime = ref("00:00:00");
@@ -341,7 +340,7 @@ export { nowTime, getNowTime}
 
 引入：
 
-```
+```js
 <template>
   <div class="hello">
     <h1>{{nowTime}}</h1>
@@ -370,7 +369,7 @@ export default defineComponent({
 
 useURLAxios.ts
 
-```
+```js
 import {ref} from 'vue';
 import axios from 'axios';
 
@@ -402,7 +401,7 @@ export default useUrlAxios;
 
 使用：
 
-```
+```js
 <template>
   <div class="hello">
     <div v-if="loading">loading...</div>
@@ -438,7 +437,7 @@ export default defineComponent({
 
 Modal.vue
 
-```
+```js
 <template>
     <div>modal</div>
 </template>
@@ -456,7 +455,7 @@ export default {
 
 app.vue 使用
 
-```
+```js
 <modal />
 //...
 import modal from "./components/Modal.vue";
@@ -474,7 +473,7 @@ const app = {
 
 更改 modal.vue
 
-```
+```js
 <template>
     <teleport to="#modal">
     <div>modal</div>
@@ -484,7 +483,7 @@ const app = {
 
 在 html 中使用
 
-```
+```html
 <body>
   <div id="app"></div>
   <div id="modal"></div>
@@ -501,7 +500,7 @@ const app = {
 
 ## 【1】编写 AsyncShow.vue 异步返回数据的组件
 
-```
+```js
 <template>
   <h1>{{result}}</h1>
 </template>
@@ -523,7 +522,7 @@ export default defineComponent({
 
 ## 【2】引用
 
-```
+```js
 import AsyncShow from "./components/AsyncShow.vue";
 
 ...
@@ -540,7 +539,7 @@ const app = {
 
 ## 【3】使用
 
-```
+```vue
 <div>
   <Suspense>
     <template #default>

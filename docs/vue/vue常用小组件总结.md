@@ -5,7 +5,7 @@
 # 使用方法
 
 
-```
+```js
 <boxTitle :title="'巡查任务'" />
 
 import boxTitle from '@/components/common/box-title';
@@ -23,7 +23,7 @@ components: {
 
 **代码**：
 
-```
+```js
 <template>
     <p class="title">
       <i></i>
@@ -74,7 +74,7 @@ export default {
 
 **使用**：
 
-```
+```html
 <boxTitle :title="'巡查任务'" />
 ```
 
@@ -86,7 +86,7 @@ export default {
 
 **代码**：
 
-```
+```html
 <template>
   <div class="devices-item">
       <p  :style="'color:'+color">{{name}}</p>
@@ -140,6 +140,6 @@ export default {
 
 **使用**：
 
-```
+```html
 <devicesItem :title="'总数'" :color="'#D7E4FF'" :name="123"/>
 ```

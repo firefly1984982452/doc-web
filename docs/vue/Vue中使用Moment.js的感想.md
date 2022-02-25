@@ -4,15 +4,19 @@
 
 # 下载
 
-`npm install moment --save`
+```bash
+npm install moment --save
+```
 或
-`cnpm install moment --save`
+```bash
+cnpm install moment --save
+```
 
 # 导入并定义
 
 `main.js`文件中：
 
-```
+```js
 import moment from 'moment' // 导入文件
 Vue.prototype.$moment = moment // 赋值使用
 moment.locale('zh-cn') // 需要汉化
@@ -20,7 +24,9 @@ moment.locale('zh-cn') // 需要汉化
 
 # 使用
 
-`this.$moment().add('months',6).format('YYYY-MM-DD')`
+```js
+this.$moment().add('months',6).format('YYYY-MM-DD')
+```
 
 这个方法就是从此刻开始算，往后加6个月
 

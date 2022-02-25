@@ -13,7 +13,7 @@
 
 # 代码
 
-```
+```js
 <template>
 	<view class="page">
 		<button type="primary" class="button" plain="true" @click="requestSubscribeMessage" size="mini">授权</button>

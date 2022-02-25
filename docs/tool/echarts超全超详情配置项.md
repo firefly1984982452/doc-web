@@ -2,7 +2,6 @@
 
 ---
 
-原 date: 2018-11-20 14:35:18
 
 # 一、链接
 
@@ -16,11 +15,11 @@
 
 ---
 
-# 二、在 vue 中如何使用
+# 二、在vue中如何使用
 
 ## 【1】下载
 
-```
+```bash
 npm install echarts --save
 ```
 
@@ -28,7 +27,7 @@ npm install echarts --save
 
 ## 【2】写 echarts 组件
 
-```
+```js
 <template>
   <div :style="{width: width, height:height}">
       <div class="echarts" :id="domID" :style="{width: width,height:height,cursor: 'col-resize'}"></div>
@@ -222,7 +221,7 @@ export default {
 
 和常规的注册全局组件一样的写法
 
-```
+```js
 // 引入echarts公用组件
 import Ehcart from '@/components/echarts';
 Vue.component('ehcart', Ehcart);
@@ -230,7 +229,7 @@ Vue.component('ehcart', Ehcart);
 
 ## 【4】在 vue 里面使用
 
-```
+```js
 <ehcart
   ref="echarts_nevel"
   config='test'
@@ -247,7 +246,7 @@ echart.refresh();
 
 ## 【5】配置 echarts 具体内容
 
-```
+```js
 import {getAdapterFont} from '../../assets/js/common'
 export const option = {
     tooltip: {
@@ -296,7 +295,7 @@ export const option = {
 
 common.js
 
-```
+```js
 /*
 生成guid
 */
@@ -325,7 +324,7 @@ export const getAdapterFont = (e = 7) => {
 
 # 三、常见通用配置项
 
-```
+```js
 option = {
     // 标题组件，包含主标题和副标题
     title: {
@@ -456,7 +455,7 @@ option = {
 
 ## 【1】颜色渐变
 
-```
+```js
 color:[new echarts.graphic.LinearGradient(
         0, 0, 0, 1,       //4个参数用于配置渐变色的起止位置, 这4个参数依次对应右/下/左/上四个方位. 而0 0 0 1则代表渐变色从正上方开始
         [
@@ -468,14 +467,14 @@ color:[new echarts.graphic.LinearGradient(
 
 ## 【2】饼图最小区域面积
 
-```
+```js
 type: 'pie',
 minAngle: 15,
 ```
 
 ## 【3】y 轴文字过长显示省略号
 
-```
+```js
 axisLabel: {
     textStyle: {
         fontSize: getAdapterFont(6),
@@ -502,7 +501,7 @@ axisLabel: {
 
 main.js
 
-```
+```js
 // 引入eventBus
 import EventBus from './bus/eventBus';
 Vue.prototype.$eventBus = EventBus;
@@ -514,13 +513,13 @@ if (window) {
 
 page.vue
 
-```
+```js
 window.$eventBus.$emit('residenceData', resData.map(v => v.lx));
 ```
 
 index.js
 
-```
+```js
 var attackSourcesName = [];
 window.$eventBus.$on('residenceData',v=>{
     attackSourcesName = v;
@@ -531,7 +530,7 @@ window.$eventBus.$on('residenceData',v=>{
 
 ## 【2】echarts 与 elementUI 中的 carousel 走马灯结合的轮播
 
-```
+```js
 <el-carousel :interval="3000" arrow="always" class="img-box">
     <el-carousel-item
         v-for="(item,index) in 2"
@@ -560,7 +559,7 @@ echart2.refresh();
 
 `resizeB`的具体方法：
 
-```
+```js
 resizeB: function () {
     let timer1 = setTimeout(() => {
         this.chart.resize()
@@ -581,7 +580,7 @@ resizeB: function () {
 
 ## 【1】折线图-line
 
-```
+```js
 option = {
     xAxis: {
         type: 'category',
@@ -601,7 +600,7 @@ option = {
 
 ## 【1.1】折线图最高值显示
 
-```
+```js
 markPoint: {
   symbol: 'circle',
   symbolSize: 1,
@@ -625,7 +624,7 @@ markPoint: {
 
 竖向
 
-```
+```js
 xAxis: {
     type: 'category'
 },
@@ -637,7 +636,7 @@ yAxis: {
 
 横向
 
-```
+```js
 xAxis: {
     type: 'value'
 },
@@ -651,7 +650,7 @@ yAxis: {
 
 重点：所有数据有一个共同的`stack`，如`stack: '总量'`。
 
-```
+```js
 series: [
     {
         name: '联盟广告',
@@ -680,7 +679,7 @@ series: [
 
 重点：`type: 'pie',radius: '55%',`
 
-```
+```js
 series: [
     {
         name: '访问来源',
@@ -701,7 +700,7 @@ series: [
 
 重点：`type: 'pie',radius: ['50%', '70%'],`
 
-```
+```js
 series: [
     {
         name: '访问来源',
@@ -724,6 +723,6 @@ series: [
 
 - 鼠标悬浮时去掉动画
 
-```
+```js
 hoverAnimation:false,
 ```

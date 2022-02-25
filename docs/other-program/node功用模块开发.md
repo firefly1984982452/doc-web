@@ -6,7 +6,7 @@
 
 读取.js
 
-```
+```js
 const fs = require("fs");
 const dir = "./_posts";
 
@@ -22,7 +22,7 @@ console.log(JSON.stringify(files));
 
 运行这个`读取.js`并写入对应的 json 配置点：
 
-```
+```js
 var process = require("child_process");
 var fs = require("fs");
 process.exec("node ./readAllFile.js", function (err, out, stderr) {

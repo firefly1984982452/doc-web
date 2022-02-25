@@ -10,7 +10,7 @@ yyyy-MM-DD HH:mm:ss
 
 # 当前周
 
-```
+```js
 getCurrWeekDays () {
     let weekOfday = parseInt(this.$moment().format('d')) // 计算今天是这周第几天
     let start = this.$moment().subtract(weekOfday-1, 'days').format('YYYY-MM-DD') // 周一日期
@@ -21,7 +21,7 @@ getCurrWeekDays () {
 
 # 当前月
 
-```
+```js
 getCurrMonthDays () {
     let start = this.$moment().add('month', 0).format('YYYY-MM') + '-01'
     let end = this.$moment(start).add('month', 1).add('days', -1).format('YYYY-MM-DD')
@@ -31,7 +31,7 @@ getCurrMonthDays () {
 
 # 当前季度
 
-```
+```js
 getCurrJiDays () {
     let start = this.$moment().startOf('quarter').format("YYYY-MM-DD")
     let end = this.$moment().endOf('quarter').format("YYYY-MM-DD")
@@ -41,7 +41,7 @@ getCurrJiDays () {
 
 # 当前年
 
-```
+```js
 getCurrYearDays () {
     let start = this.$moment().format('YYYY-01-01')
     let end = this.$moment().format('YYYY-12-31')

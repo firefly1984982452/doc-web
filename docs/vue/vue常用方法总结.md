@@ -1,15 +1,12 @@
 #  vue常用方法总结
 
----
-
-
 # vue绑定内联样式
 
-```
+```html
 <div :style="styleData">
 ```
 
-```
+```js
 data:{
   styleData: {
     color: '#f00',
@@ -25,7 +22,7 @@ data:{
 # slot插槽
 
 father.vue
-```
+```html
 <child>
   <div slot='up'>start</div>
   <div> content </div>
@@ -34,7 +31,7 @@ father.vue
 ```
 
 child.vue
-```
+```html
 <div>
   <slot name='up' />
   ...
@@ -44,7 +41,9 @@ child.vue
 
 效果：
 
-`start content end`
+```
+start content end
+```
 
 ---
 
@@ -54,7 +53,7 @@ child.vue
 
 main.js
 
-```
+```js
 Vue.filter('name',function(){
   return 'test'
 })
@@ -64,7 +63,7 @@ Vue.filter('name',function(){
 
 mixin.js
 
-```
+```js
 export default {
     filters: {
         name: function() {
@@ -76,14 +75,14 @@ export default {
 
 main.js
 
-```
+```js
 import mixin from './mixin'
 Vue.mixin(mixin)
 ```
 
 **created和methods也是同样的效果**
 
-```
+```js
 export default {
     created(){
         console.log('created')
@@ -100,7 +99,7 @@ export default {
 ## 【1】全局使用
 
 main.js
-```
+```js
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -114,7 +113,7 @@ Vue.component('six-button', SixiButton)
 ## 【2】局部使用
 
 test.vue
-```
+```vue
 <template>
   <div>
     <child />
@@ -139,7 +138,7 @@ components:{
 ## 【1】直接跳转
 
 A.vue
-```
+```js
 this.$router.push({
 	name : 'B',
 	params : {
@@ -150,7 +149,7 @@ this.$router.push({
 ```
 
 B.vue
-```
+```js
 this.$route.params
 ```
 !> A.vue使用的是`$router`，B.vue使用的是`$route`，极易混淆。
@@ -161,7 +160,7 @@ this.$route.params
 
 router.js
 
-```
+```js
 {
     path: '/success/:order_id',
     name: 'success',
@@ -192,7 +191,7 @@ A.vue
 
 详情如下：
 
-```
+```js
 this.axios.post(url,params).then((res) => {
 		console.log(res.data);
 }).catch(
@@ -203,7 +202,7 @@ this.axios.post(url,params).then((res) => {
 
 ## 【2】设置请求头带cooike
 
-```
+```js
 import axios from 'axios'
 axios.defaults.withCredentials=true;//让ajax携带cookie
 Vue.prototype.$axios = axios;
@@ -214,28 +213,43 @@ Vue.prototype.$axios = axios;
 # vue-cli快速构建vue2项目
 
 ## 【1】安装webpack
-`npm install -g webpack`
+```bash
+npm install -g webpack
+```
 
 ## 【2】安装vue-cli
-`npm install -g vue-cli`
+```bash
+npm install -g vue-cli
+```
 
 ## 【3】初始化
-`vue init webpack myVueStudy`
+```bash
+vue init webpack myVueStudy
+```
 
 初始化过程中有些需要填的选项，直接按`enter`键就可以了。
 
 ## 【4】安装模块
-`npm install`
+```bash
+npm install
+```
 
 ## 【5】运行
-`npm run dev`
+```bash
+npm run dev
+```
 
 ## 【6】打包
 
 config/index.js
-`assetsPublicPath: './',`
 
-`npm run build`
+```js
+assetsPublicPath: './',
+```
+
+```bash
+npm run build
+```
 
 
 ---
@@ -244,7 +258,7 @@ config/index.js
 
 ## 方法一：事件监听
 
-```
+```html
 <el-input 
 	style="width: 400px;" 
 	v-model.number="params.account" 
@@ -266,13 +280,13 @@ config/index.js
 
 ## 方法二：自定义指令
 
-```
+```html
 <el-input v-model.number=“value” v-number-only placeholder="请输入电话"></el-input>
 ```
 
 封装个自定义指令放在标签上
 
-```
+```js
 directives: {
   numberOnly: {
     bind: function(el) {
@@ -290,7 +304,7 @@ directives: {
 
 ## 方法三：最后验证
 
-```
+```js
 if(Number.isNaN(Number(this.searchForm.contactPhone))){
   return this.$message.error('联系电话只能输入数字！')
 }
@@ -300,7 +314,7 @@ if(Number.isNaN(Number(this.searchForm.contactPhone))){
 
 # vue中监听键盘事件
 
-```
+```js
 created(){
 	var that = this;
 	document.onkeydown = function(e) {
@@ -321,7 +335,7 @@ created(){
 
 # vue中新标签用target:blank跳转
 
-```
+```js
 let routeUrl = this.$router.resolve({
   path: '/peoManager/peopleDetails',
   query: {index: index, peopleID: item.peopleID}
@@ -350,13 +364,13 @@ window.open(routeUrl.href, '_blank')
 # vue项目for循环注意事项
 
 项目中用了
-```
-v-for="(item) in arr"
+```js
+V-for="(item) in arr"
 ```
 
 改成
-```
-v-for="item in arr"
+```js
+V-for="item in arr"
 ```
 
 运行没有问题，但打包会报错
@@ -369,7 +383,7 @@ v-for="item in arr"
 
 ### child.vue
 
-```
+```js
 sendData() {
     this.$emit('sendDataFun', 'hello');
 }
@@ -377,7 +391,7 @@ sendData() {
 
 ### father.vue
 
-```
+```html
 <child @sendDataFun="get"></child>
 ...
 get(val){
@@ -389,13 +403,13 @@ get(val){
 
 ### father.vue
 
-```
+```html
 <child :sendType="type"></child>
 ```
 
 ### child.vue
 
-```
+```js
 ...
 props:{
 	sendType:''
@@ -412,7 +426,7 @@ watch:{
 
 ### father.vue
 
-```
+```vue
 <child ref="child" @sendDataFun="get"></child>
 ...
 this.$refs.child.sendData();
@@ -425,7 +439,7 @@ get(val){
 
 ### child.vue
 
-```
+```js
 sendData() {
     this.$emit('sendDataFun', 'hello');
 }
@@ -435,20 +449,20 @@ sendData() {
 
 ---
 
-# vue兄弟组件用eventbus通信
+# EventBus
 
 
 新建`bus.js`
 
 
-```
+```js
 import Vue from "vue"
 export default new Vue();
 ```
 
 `main.js`里设置为通用：
 
-```
+```js
 // 引入eventBus
 import EventBus from './bus/eventBus'; 
 Vue.prototype.$eventBus = EventBus;
@@ -456,7 +470,7 @@ Vue.prototype.$eventBus = EventBus;
 
 兄组件`child1.vue`
 
-```
+```html
 <span @click="send">点击</span>
 send(){
 	eventBus.$emit('sentMsg','hellowrold~');
@@ -465,7 +479,7 @@ send(){
 
 弟组件`child2.vue`
 
-```
+```js
 mounted() {
     eventBus.$on('sentMsg',v=>{
         console.log(v)
@@ -482,7 +496,7 @@ mounted() {
 重点：用`window.eventBus`而不是`this.eventBus`，因为普通js里面的`this`是代表`vue`，而普通js获取不到`vue`的值。
 
 main.js
-```
+```js
 // 引入eventBus
 import EventBus from './bus/eventBus'; 
 Vue.prototype.$eventBus = EventBus;
@@ -493,13 +507,13 @@ if (window) {
 ```
 
 page.vue
-```
+```js
 window.$eventBus.$emit('residenceData', resData.map(v => v.lx));
 ```
 
 index.js
-```
-var attackSourcesName = [];
+```js
+Var attackSourcesName = [];
 window.$eventBus.$on('residenceData',v=>{
     attackSourcesName = v;
 })
@@ -512,7 +526,7 @@ window.$eventBus.$on('residenceData',v=>{
 
 # filter访问data数据
 
-```
+```js
 var that;
 export default {
     data() {
@@ -541,14 +555,14 @@ export default {
 
 ## beforeRouteEnter用法：keepAlive-列表不缓存详情页缓存
 
-```
+```js
 meta: {
     keepAlive: true,
     isBack:false
 }
 ```
 
-```
+```js
 beforeRouteEnter(to,from,next){
     // 如果是从详情页回到列表页
     console.log(from.name)
@@ -571,7 +585,7 @@ activated(){
 
 ## beforeRouteEnter访问data里面的数据
 
-```
+```js
 beforeRouteEnter(to, from, next) {
     if(to.name == '智慧护理工作台') {
         next(vm=>{
@@ -583,7 +597,9 @@ beforeRouteEnter(to, from, next) {
 ```
 
 重点：
-`next(vm=>{vm.show=true;})`
+```js
+next(vm=>{vm.show=true;})
+```
 
 
 
@@ -591,7 +607,7 @@ beforeRouteEnter(to, from, next) {
 
 当页面路由不变，参数改变时用它
 
-```
+```js
 beforeRouteUpdate(to,form,next){
     console.log('路由更新之前：从to获取参数', to.params, '从this.$route获取参数', this.$route.params)
     next()
@@ -601,15 +617,17 @@ beforeRouteUpdate(to,form,next){
 
 ---
 
-# 使用Vuex
+# Vuex
 
 ## 下载
 
-`npm install vuex --save`
+```bash
+npm install vuex --save
+```
 
 ## `main.vue`
 
-```
+```js
 import { mapState,mapMutations } from 'vuex';
 ...
 computed: {
@@ -625,19 +643,19 @@ methods: {
 如：
 
 原来：
-```
+```js
 this.$store.commit('handleTabsList',this.$store.state.tabsList)
 ```
 
 现在：
-```
+```js
 this.handleTabsList(this.tabsList)
 
 ```
 
 ## store.js
 
-```
+```js
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -664,7 +682,7 @@ export default new Vuex.Store({
 
 ## main.js
 
-```
+```js
 import store from './store'
 
 new Vue({
@@ -681,7 +699,9 @@ new Vue({
 
 # 使用静态资源
 
-`image:require('../../assets/img/fn1.png')`
+```js
+image:require('../../assets/img/fn1.png')
+```
 
 ---
 
@@ -693,14 +713,14 @@ new Vue({
 
 ## 关闭element中的多条消息（只显示一条）
 
-```
+```js
 this.$message.closeAll();
 this.$message.success('info');
 ```
 
 ## 让el-select可以绑定对象
 
-```
+```html
 <el-select value-key="name">
   <el-option
     v-for="item in list"
@@ -713,7 +733,7 @@ this.$message.success('info');
 
 ## 手动控制popover弹层的显示与隐藏状态
 
-```
+```html
 <popover ref="popover"></popover>
  
 // ElementUI并没有给我们明确控制popover弹层显示与关闭状态的方法，但是通过ref获取元素之后发现，元素上面已经内置关闭和打开的方法，
@@ -723,7 +743,7 @@ this.$message.success('info');
 
 表格中多个popover
 
-```
+```html
 <template slot-scope="scope">
   <div class="operation">
     <el-popover trigger="click"  :ref="`popover-${scope.$index}`"  placement="top" width="100" >
@@ -743,7 +763,7 @@ this.$message.success('info');
 
 # vue2的双向绑定原理【`Object.defineProperty`】
 
-```
+```html
 <div id="div"></div>
 <input type="text" name="" id="test" value="" />
   <script>
@@ -774,7 +794,9 @@ this.$message.success('info');
 
 ## 安装
 
-`npm install swiper`
+```bash
+npm install swiper
+```
 
 然后视情况看要不要在main.js里面全局引用，如果界面少可以不用。
 
@@ -784,7 +806,7 @@ this.$message.success('info');
 
 !> 此处的data要注意**网络请求的异步问题**
 
-```
+```html
 <swiper :options="swiperOption" ref="mySwiper">
     <swiper-slide v-for="(item,index) in data" :key="index" class="swiper-slide">
         {{item}}
@@ -794,7 +816,7 @@ this.$message.success('info');
 
 `js`部分
 
-```
+```js
 import 'swiper/dist/css/swiper.css'
 import {swiper, swiperSlide} from 'vue-awesome-swiper'
 
@@ -825,7 +847,7 @@ components: {
 
 视情况而定，有的代码需要，有的不需要。
 
-```
+```css
 .swiper-container{
     windth:100%important;
     heidth:100px!important;
@@ -838,11 +860,13 @@ components: {
 
 ## 安装vue-i18n
 
+```bash
 npm install vue-i18n --save
+```
 
 ## main.js文件配置
 
-```
+```js
 // 引入i18n国际化插件
 import VueI18n from 'vue-i18n'
 Vue.use(VueI18n)
@@ -868,7 +892,7 @@ new Vue({
 
 - en.json
 
-```
+```json
 {
     "common": {
         "home": "Home",
@@ -906,8 +930,7 @@ new Vue({
 
 - zh.json
 
-```
-
+```json
 {
     "common":{
         "home": "首页",
@@ -945,7 +968,7 @@ new Vue({
 
 ## 使用vue-i18n
 
-```
+```html
 <h1 >{{$t('common.home')}}</h1>
 <el-button @click="changeTest">切换</el-button>
 
@@ -963,7 +986,7 @@ changeTest(){
 
 # 消息无缝滚动
 
-```
+```js
 export default {
   data() {
     return {
@@ -997,7 +1020,7 @@ export default {
 
 # 图片错误时显示默认图片
 
-```
+```html
 <img v-bind:src="userData.photo" :onerror="logo" class="img-box4">  
 
 data: () => ({  
@@ -1009,13 +1032,15 @@ data: () => ({
 
 `<img v-lazy:background-image="{src: item.pic_url, error: 'http://bpic.588ku.com/back_pic/03/53/97/65579958bb0ec9a.jpg!r850/fw/400', loading: 'default_banner'}" />`
 
-!> `error`里的图片得是网络图片，用本地图片我设置了很久都没有效果。
+!> 注意`error`里的图片得是网络图片，用本地图片不一定生效。
 
 ---
 
 # 图片中绝对地址和相对址引用
 
-`<img src="~static/20180315130936.png"/>`
+```js
+<img src="~static/20180315130936.png"/>
+```
 
 ---
 
@@ -1025,14 +1050,15 @@ data: () => ({
 
 在`vue`页面中引入
 
-`import mui from '../../js/mui.js';`
+```js
+import mui from '../../js/mui.js';
+```
 
 在严格模式下报错
 
 在`.babel.rc`中加入如下代码，排除mui相关的js就可以了：
 
-```
-
+```js
 {
 "presets": [ "es2015" ],
 "ignore": [
@@ -1049,7 +1075,7 @@ data: () => ({
 
 ## 【1】箭头函数不指向this
 
-```
+```js
 watch:{
   // 普通函数可以获取this
   deviceCode: function() {}

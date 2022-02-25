@@ -4,7 +4,7 @@
 
 首先，上代码：
 
-```
+```js
 this.isShowPage = this.$store.state.isFresh === false ? true : false
 this.$bus.off('showChildrenMenuBus')
 this.$bus.on('showChildrenMenuBus', val => {
@@ -14,7 +14,7 @@ this.$bus.on('showChildrenMenuBus', val => {
 
 最终，我的实现方法：
 
-```
+```js
 watch: {
     '$store.state.isShowChildrenMenu' (val, oldVal) {
         console.log(val, oldVal)
@@ -27,9 +27,9 @@ this.isShowPage = this.$store.state.isFresh === false ? true : false
 
 # 知识点1
 
-``` this.isShowPage = this.$store.state.isFresh === false ? true : false ``` 是一直存在的，这里是一个**判断是刷新还是路由跳转**，值变回了初始值就是强制刷新了，值变成了其它的就是路由路转。
+`this.isShowPage = this.$store.state.isFresh === false ? true : false ` 是一直存在的，这里是一个**判断是刷新还是路由跳转**，值变回了初始值就是强制刷新了，值变成了其它的就是路由路转。
 
-以前用vuex一直苦恼于刷新了值就变回初始值了，万万没想到竟然在这里还就是要实现这样的效果。
+以前用`vuex`一直苦恼于刷新了值就变回初始值了，万万没想到竟然在这里还就是要实现这样的效果。
 
 # 知识点2
 

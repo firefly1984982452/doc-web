@@ -44,8 +44,7 @@
 
 # 用MessageChannel实现
 
-```
-
+```html
 <!DOCTYPE html>
 
 <html lang="en-zh">
@@ -98,8 +97,7 @@
 
 # 用MutationObserver实现
 
-```
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>

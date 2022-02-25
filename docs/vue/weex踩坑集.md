@@ -3,7 +3,7 @@
 ---
 # 项目创建
 
-```
+```bash
 weex create proj
 npm install weexpack -g
 npm install
@@ -15,7 +15,7 @@ weex run android
 
 # 运行
 
-```
+```bash
 npm run dev
 npm run serve
 ```
@@ -40,7 +40,7 @@ npm run serve
 
 ## image组件
 
-```
+```html
 <image :src="item.src"></image>
 ```
 
@@ -51,7 +51,7 @@ npm run serve
 
 # 调用原生组件 
 
-```
+```js
 var modal = weex.requireModule('modal');
 ...
 modal.toast({
@@ -75,7 +75,7 @@ modal.toast({
 
 ## 方法一
 
-```
+```js
 let url = 'http://api.tkjidi.com/getGoodsLink?appkey=ed33ed5a1a73e00c65f6c8da5793fb8a&type=www_lingquan';
 this.getData(url,res=>{
 	modal.toast({message:'请求成功'+res,duration:10});
@@ -85,7 +85,7 @@ this.getData(url,res=>{
 ```
 
 在`methods{}`中写请求方法
-```
+```js
 getData(url,callback){
 	return stream.fetch({
 		methods:'get',
@@ -97,7 +97,7 @@ getData(url,callback){
 
 ## 方法二
 
-```
+```js
 stream.fetch({
 	methods:'GET',
 	type:'json',
@@ -106,6 +106,3 @@ stream.fetch({
  console.log(res.data)
 })
 ```
-
-
-

@@ -64,7 +64,7 @@ docker 可以理解为**容器/虚拟机/服务器**。
 
 将 docker 的 80 端口，映射到服务器的 8080 端口：
 
-```
+```bash
 docker run -p 8080:80 nginx
 ```
 
@@ -80,7 +80,7 @@ docker run -p 8080:80 nginx
 
 开吂 `detached` 模式的方法：`-d`
 
-```
+```bash
 docker run -d -p 8080:80 nginx
 ```
 
@@ -88,7 +88,7 @@ docker run -d -p 8080:80 nginx
 
 `xx` 为`<ID or Image Name >`
 
-```
+```bash
 docker attach xx
 ```
 
@@ -98,13 +98,13 @@ docker attach xx
 
 只打印一次
 
-```
+```bash
 docker logx xx
 ```
 
 访问一次打印一次
 
-```
+```bash
 docker logs -f xx
 ```
 
@@ -114,7 +114,7 @@ docker logs -f xx
 
 ## 【1】使用镜像时直接开启交互模式（进入 Shell 脚本）
 
-```
+```bash
 docker run -it ubuntu sh
 ```
 
@@ -138,13 +138,13 @@ docker run -it ubuntu sh
 
 进入 detached 模式：
 
-```
+```bash
 docker run -d -p 8080:80 nginx
 ```
 
 进入到交互模式：
 
-```
+```bash
 docker exec -it xx sh
 ```
 
@@ -152,13 +152,13 @@ docker exec -it xx sh
 
 导出
 
-```
+```bash
 docker image save test:lastest -o new-test.image
 ```
 
 导入
 
-```
+```bash
 docker image load -i .\new-test.image
 ```
 
@@ -168,7 +168,7 @@ docker image load -i .\new-test.image
 
 1. 新建 dockerfile 文件
 
-```
+```dockerfile
 FROM ubuntu:latest
 RUN  apt-get update && \
          DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y python3.9 python3-pip python3.9-dev
@@ -178,7 +178,7 @@ CMD ["python3","test.py"]
 
 2. 同目录下 test.py 文件的代码
 
-```
+```py
 print("Hello JSPang")
 ```
 
@@ -186,13 +186,13 @@ print("Hello JSPang")
 
 - `-f`：指定打包的名称
 
-```
+```bash
 docker image build -f test -t name .
 ```
 
 4. 此时已经可以运行
 
-```
+```bash
 docker run name
 ```
 
@@ -202,19 +202,19 @@ docker run name
 
 1. 构建
 
-```
+```bash
 docker image build -t pdd/pdd-name .
 ```
 
 2. 推送
 
-```
+```bash
 dcker login
 ```
 
 3. 输入帐号密码后推送
 
-```
+```bash
 docker image push pdd/pdd-name
 ```
 
@@ -222,13 +222,13 @@ docker image push pdd/pdd-name
 
 最新版
 
-```
+```dockerfile
 FROM ubuntu:latest
 ```
 
 或者
 
-```
+```dockerfile
 FROM ubuntu:最合适的版本
 ```
 
@@ -236,7 +236,7 @@ FROM ubuntu:最合适的版本
 
 不建议：
 
-```
+```dockerfile
 FROM ubuntu:latest
 RUN apt-get update
 RUN apt-get install -y wget
@@ -248,7 +248,7 @@ RUN rm -rf ipinfo_2.0.1_linux_amd64.tar.gz
 
 建议使用`&& \`进行连接：
 
-```
+```dockerfile
 FROM ubuntu:latest
 RUN apt-get update && \
     apt-get install -y wget && \
@@ -266,14 +266,14 @@ RUN apt-get update && \
 
 1. 新建 Dockerfile.copy 文件
 
-```
+```dockerfile
 FROM node:alpine3.14
 COPY index.js  /app/index.js
 ```
 
 2. 新建 index.js 文件
 
-```
+```js
 //1. 导入 http 模块
 const http = require('http');
 //2. 创建服务器对象
@@ -291,13 +291,13 @@ server.on('request', (req, res) => {
 
 3. 构建
 
-```
+```bash
 docker image build -f Dockerfile.copy -t hello-copy .
 ```
 
 4. 运行及映射端口
 
-```
+```bash
 docker container run -it -p 3000:3000 hello-copy sh
 ```
 
@@ -307,20 +307,20 @@ docker container run -it -p 3000:3000 hello-copy sh
 
 1. Dockerfile.add 文件内容
 
-```
+```dockerfile
 FROM node:alpine3.14
 ADD index.tar  /app/
 ```
 
 2. 用 ADD 命令进行打包镜像
 
-```
+```bash
 docker image build -f Dockerfile.add -t hello-gzip .
 ```
 
 3. 打包好以后使用交互模式，开启容器。
 
-```
+```bash
 docker container run -it -p 3000:3000 hello-gzip sh
 
 ```
@@ -333,7 +333,7 @@ docker container run -it -p 3000:3000 hello-gzip sh
 
 1. 用 ENV 定义变量
 
-```
+```dockerfile
 FROM ubuntu:latest
 ENV VERSION=2.0.1
 RUN apt-get update && \
@@ -346,7 +346,7 @@ RUN apt-get update && \
 
 2. 用 ARG 定义变量
 
-```
+```dockerfile
 FROM ubuntu:latest
 ARG VERSION=2.0.1
 RUN apt-get update && \
@@ -365,7 +365,7 @@ RUN apt-get update && \
 
 用交互模式进入到`ipconfig-env`镜像中，然后输入`env`可以看到当前镜像的信息。
 
-```
+```bash
 docker container run -it ipinfo-env
 ```
 
@@ -375,13 +375,13 @@ docker container run -it ipinfo-env
 
 在构建时，可以使用`—build-arg` 参数来更改变量的值，比如现在要把变量`VERSION`的值进行修改,就可以使用下面的命令。
 
-```
+```bash
 docker image build -f Dockerfile.ARG -t ipinfo-arg-2.0.0 --build-arg VERSION=2.0.0 .
 ```
 
 这时候我们再使用交互模式，开启`ipinfo-arg-2.0.0`容器。
 
-```
+```bash
 docker container run -it ipinfo-arg-2.0.0
 ```
 
@@ -393,21 +393,21 @@ docker container run -it ipinfo-arg-2.0.0
 
 Dockerfile-cmd 内容
 
-```
+```dockerfile
 FROM ubuntu:21.04
 CMD ["echo","hello docker"]
 ```
 
 Dockerfile-entrypoint 内容
 
-```
+```dockerfile
 FROM ubuntu:21.04
 ENTRYPOINT ["echo","hello docker"]
 ```
 
 Dockerfile 内容
 
-```
+```dockerfile
 FROM ubuntu:21.04
 ENTRYPOINT [ "echo"]
 CMD []
@@ -415,7 +415,7 @@ CMD []
 
 2. 对三个 Dockerfile 文件分别打包，打包成了下面三个镜像包。
 
-```
+```bash
 demo-cmd          latest    25bb1dee8c29   2 weeks ago   80.3MB
 demo-entrypoint   latest    214b876fc74c   2 weeks ago   80.3MB
 demo-both         latest    6c64ebc22c19   2 weeks ago   80.3MB
@@ -425,31 +425,31 @@ demo-both         latest    6c64ebc22c19   2 weeks ago   80.3MB
 
 - demo-cmd 镜像的使用
 
-```
-$docker container run --rm -it demo-cmd
+```bash
+$ docker container run --rm -it demo-cmd
 hello docker
 ```
 
-```
-$docker container run --rm -it demo-cmd echo "hello world"
+```bash
+$ docker container run --rm -it demo-cmd echo "hello world"
 hello world
 ```
 
 - demo-entrypoint 镜像的使用
 
-```
+```bash
 $ docker container run --rm -t demo-entrypoint
 hello docker
 ```
 
-```
+```bash
 $ docker container run --rm -t demo-entrypoint echo "jspang.com"
 hello docker echo jspang.com
 ```
 
 - demo-both 镜像的使用
 
-```
+```bash
 $ docker container run --rm -t demo-both "hello jspang"
 hello jspang
 ```

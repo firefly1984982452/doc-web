@@ -4,7 +4,7 @@
 
 # 判断当前是哪个浏览器
 
-```
+```js
 var inBrowser = typeof window !== 'undefined';
 var inWeex = typeof WXEnvironment !== 'undefined' && !!WXEnvironment.platform;
 var weexPlatform = inWeex && WXEnvironment.platform.toLowerCase();
@@ -21,6 +21,6 @@ var isFF = UA && UA.match(/firefox\/(\d+)/);
 
 # 用正则代替 indexOf 和 includes
 
-```
+```js
 /native code/.test(Array.toString())
 ```

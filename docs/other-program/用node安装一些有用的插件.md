@@ -22,23 +22,28 @@ live-server
 
 像我们一般做测试用一些外部的接口数据，比如淘宝开放的一些优惠券接口，可是如果我们用浏览器访问是会跨域的，这时使用我们的代理，可以简单的先看到效果。
 
-```
+```bash
 proxy
-
 ```
 
 （使用axios可以更简单的处理跨域问题）
 
 # 将md文件直接在浏览器上预览效果
 
-`npm install -g i5ting_toc`
+```bash
+npm install -g i5ting_toc
+```
 
-`i5ting_toc -f 文件名 -o`
+```bash
+i5ting_toc -f 文件名 -o
+```
 
- 浏览器会自动打开！ (文件夹中会多一个preview的文件夹，生成html就在里面)
+浏览器会自动打开！ (文件夹中会多一个preview的文件夹，生成html就在里面)
 
 # 更新node
 
-`npm install node`
+```bash
+npm install node
+```
 
 win10

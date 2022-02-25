@@ -25,7 +25,9 @@ JAVA环境参考这个：[链接](https://www.runoob.com/java/java-environment-s
 	
 在需要安装的目录下输入如下命令：
 
-`keytool -genkey -keystore key.jks  -alias key1 -keyalg RSA -validity 10000`
+```bash
+keytool -genkey -keystore key.jks  -alias key1 -keyalg RSA -validity 10000
+```
 
 (`key.jks`是打包出来的证书文件，`key1`就是别名，可适情况改名，但是后缀名`.jks`千万不要改)
 
@@ -40,7 +42,9 @@ JAVA环境参考这个：[链接](https://www.runoob.com/java/java-environment-s
 
 在刚刚生成的目录下输入命令：
 
-`keytool -v -list -keystore key.jks`
+```bash
+keytool -v -list -keystore key.jks
+```
 
 **同样，输入密码时，无论你输入什么，控制台都不会显示，所以正常输入即可**
 
@@ -58,9 +62,10 @@ JAVA环境参考这个：[链接](https://www.runoob.com/java/java-environment-s
 
 - 安装依赖
 
-输入`npm install`
+```bash
+npm install
+```
 
-![如图](http://doc.shopsn.cn/Uploads/Editor/2018-07-11/5b459a3285f09.jpg)
 **如果有红色报错可多试几次npm install 如果有黄色警告可以不用管）**
 
 ## 打包

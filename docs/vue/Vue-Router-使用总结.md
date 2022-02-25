@@ -10,14 +10,15 @@
 
 ## 1.2 我的参考链接
 
-`http://jspang.com/2017/04/13/vue-router/`
+[link](http://jspang.com/2017/04/13/vue-router/)
 
 ## 1.3 布署到本地服务器
 
 进入项目文件夹，然后使用命令行：
-`
+
+```bash
 npm start
-`
+```
 
 再访问`http://localhost:8080/`就能在浏览器上看到网页了。
 每次更改直接保存就能看到更新的内容， 不用刷新浏览器。
@@ -31,7 +32,7 @@ npm start
 首先在src/components文件夹下新建想跳转到的页面，名称为`Page1.vue`
 
 Page1.vue：
-```
+```js
 <template>
 	<p>新的页面</p>
 </template>
@@ -46,7 +47,8 @@ Page1.vue：
 ## 2.2 配置
 
 index.js
-```
+
+```js
 import Page1 from '@/components/Page1'
 ……
 {
@@ -57,7 +59,10 @@ import Page1 from '@/components/Page1'
 ```
 
 ## 2.3 跳转
-`<router-link to="/Page1">诗词</router-link>`
+
+```js
+<router-link to="/Page1">诗词</router-link>
+```
 
 ---
 
@@ -65,20 +70,25 @@ import Page1 from '@/components/Page1'
 
 ## 3.1 通过<router-link> 标签中的to传参
 
-用`<router-link>`标签中的to属性进行传参，写成:to
+用`<router-link>`标签中的to属性进行传参，写成`:to`
 
-`<router-link :to="{name:'Page1',params:{username:'彭丹丹'}}">找宝宝并用link to传参</router-link>`
+```js
+<router-link :to="{name:'Page1',params:{username:'彭丹丹'}}">找宝宝并用link to传参</router-link>
+```
 
 接收：
 
-`<p>{{$route.params.username}}</p>`
+```js
+<p>{{$route.params.username}}</p>
+```
 
 ## 3.2 vue-router 利用url传递参数
 
 :冒号的形式传递参数
 
 index.js
-```
+
+```js
 {
     path:'/params/:newsId/:newsTitle',
      component:Params
@@ -86,7 +96,7 @@ index.js
 ```
 
 接收：
-```
+```js
 <template>
     <div>
         <h2>{{ msg }}</h2>
@@ -97,23 +107,27 @@ index.js
 ```
 
 传递：
-`<router-link to="/params/198/jspang website is very good">params</router-link> `
+```js
+<router-link to="/params/198/jspang website is very good">params</router-link> 
+```
 
-?> 正则
-`path:'/params/:newsId(\\d+)/:newsTitle'`
+`?>` 正则
+```js
+path:'/params/:newsId(\\d+)/:newsTitle'
+```
 
 ---
 # 4. 单页面多路由区域操作
 
 app.vue
-```
+```js
 <router-view ></router-view>
  <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;"></router-view>
  <router-view name="right" style="float:right;width:50%;background-color:#c0c;height:300px;"></router-view>
 ```
 
 index.js
-```
+```js
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
@@ -144,15 +158,16 @@ export default new Router({
 })
 ```
 
-最后在App.vue中配置我们的<router-link>就可以了
+最后在App.vue中配置我们的`<router-link>`就可以了
 
-```
+```js
 <router-link to="/">首页</router-link> | 
 <router-link to="/hi">Hi页面</router-link> |
 ```
 
 最后：app.vue的结构如下：
-```
+
+```js
 <template>
   <div id="app" class="shi">
    <nav>
@@ -175,7 +190,8 @@ export default new Router({
 ## 5.1 redirect基本重定向
 
 index.js
-```
+
+```js
   routes: [
     {
       path: '/',
@@ -188,12 +204,14 @@ index.js
 ```
 
 任意页面
-`<router-link to="/goHome">去首页</router-link>`
+```js
+<router-link to="/goHome">去首页</router-link>
+```
 
 ## 5.2 重定向时传递参数
 
 index.js
-```
+```js
 {
   path:'/params/:newsId(\\d+)/:newsTitle',
   component:Params
@@ -204,7 +222,9 @@ index.js
 ```
 
 任意页面
-`<router-link to="/goRuoHua/55/妈妈">去首页并用重定向传参</router-link>`
+```js
+<router-link to="/goRuoHua/55/妈妈">去首页并用重定向传参</router-link>
+```
 
 ---
 
@@ -213,7 +233,7 @@ index.js
 ## 6.1 使用
 
 index.js
-```
+```js
 {
     path: '/Page1',
     component: Page1,
@@ -222,7 +242,9 @@ index.js
 ```
 
 任意页面
-`<router-link to="/Page1">去“关于我”的页面</router-link>`
+```js
+<router-link to="/Page1">去“关于我”的页面</router-link>
+```
 
 ## 6.2 redirect和alias的区别
 + redirect：仔细观察URL，redirect是直接改变了url的值，把url变成了真实的path路径。
@@ -230,7 +252,7 @@ index.js
 
 !> 别名请不要用在path为’/’中，如下代码的别名是不起作用的。
 
-```
+```js
 {
   path: '/',
   component: Hello,
@@ -246,7 +268,7 @@ index.js
 
 在`/src/App.vue`文件里添加了`<transition>`标签，并给标签起了一个名字叫`fade`。
 
-```
+```js
 <transition name="fade">
   <router-view ></router-view>
 </transition>
@@ -262,7 +284,7 @@ fade-leave-active:离开过渡的结束状态，元素被删除时生效，离�
 ```
 
 如下使用：
-```
+```css
 .fade-enter {
   opacity:0;
 }
@@ -280,18 +302,18 @@ fade-leave-active:离开过渡的结束状态，元素被删除时生效，离�
 
 ## 7.3 过渡模式mode
 
-in-out:新元素先进入过渡，完成之后当前元素过渡离开。
-out-in:当前元素先进行过渡离开，离开完成后新元素过渡进入。
+- in-out:新元素先进入过渡，完成之后当前元素过渡离开。
+- out-in:当前元素先进行过渡离开，离开完成后新元素过渡进入。
 
 ---
 
 # 8. 路由中mode的设置和404页面的处理
 
 ## 8.1 mode的两个值
-	histroy:当你使用 history 模式时，地址址不再有“#”号，URL 就像正常的 url，例如 `http://jsapng.com/lms/`，也好看！
-	hash:默认’hash’值，但是hash看起来就像无意义的字符排列，不太好看也不符合我们一般的网址浏览习惯。
+- histroy:当你使用 history 模式时，地址址不再有“#”号，URL 就像正常的 url，例如 `http://jsapng.com/lms/`，也好看！
+- hash:默认’hash’值，但是hash看起来就像无意义的字符排列，不太好看也不符合我们一般的网址浏览习惯。
 
-```
+```js
 export default new Router({
 	mode : 'history',
 	  routes: [
@@ -312,7 +334,7 @@ export default new Router({
 
 index.js
 
-```
+```js
 {
    path:'*',
    component:Error
@@ -322,7 +344,7 @@ index.js
 新建404页面
 	在/src/components/文件夹下新建一个Error.vue的文件。简单输入一些有关错误页面的内容。
 
-```
+```js
 <template>
     <div>
         <h2>{{ msg }}</h2>
@@ -341,7 +363,9 @@ export default {
 
 当输入错的网址时就会有效果，同时自己写错了也会有。
 
-`<router-link to="/bbbbbb">我是瞎写的</router-link>`
+```js
+<router-link to="/bbbbbb">我是瞎写的</router-link>
+```
 
 ---
 
@@ -349,7 +373,7 @@ export default {
 
 直接在路由配置文件（/src/router/index.js）中写钩子函数。但是在路由文件中我们只能写一个beforeEnter,就是在进入此路由配置时。
 
-```
+```js
 {
       path:'/params/:newsId(\\d+)/:newsTitle',
       component:Params,
@@ -367,7 +391,7 @@ export default {
 + from:路径跳转前的路径信息，也是一个对象的形式。
 + next:路由的控制参数，常用的有next(true)和next(false)。
 
-next()如果写false和注释它是一样的效果，都不能进入了。
+`next()`如果写false和注释它是一样的效果，都不能进入了。
 
 ---
 
@@ -377,11 +401,13 @@ next()如果写false和注释它是一样的效果，都不能进入了。
 
 App.vue
 
-`<button @click="goback">后退</button>`
+```js
+<button @click="goback">后退</button>
+```
 
 相应的方法
 
-```
+```js
 <script>
 export default {
   name: 'app',

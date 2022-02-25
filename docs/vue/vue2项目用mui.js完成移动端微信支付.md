@@ -20,7 +20,7 @@
 
 然后用点击事件或其它事件调用下面的方法
 
-```
+```js
 function pay(){
 	var that = this;
 	plus.payment.getChannels(function(channels){
