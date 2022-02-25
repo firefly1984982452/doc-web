@@ -11,7 +11,7 @@
 
 !> 示例中的`<script />`中的`src`省略了`https:`，应写全`<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=0OWWSRyoeYuDcFPIdUN1aCupU0m2eAzZ"></script>`。
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>

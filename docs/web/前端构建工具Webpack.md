@@ -14,7 +14,7 @@
 
 截至 2021 年 8 月 24 日，`webpack` 和 `webpack-dev-server` 的版本都到了 `5.x` 以上，但是之前成熟的课程都是 `3.x` 的样子，所以我就阮一峰的经典版本安装测试。
 
-```
+```json
 "devDependencies": {
   "autoprefixer": "7.1.2",
   "babel-core": "^6.26.3",
@@ -54,7 +54,7 @@
 
 # 四、webpack 模板
 
-```
+```json
 module.exports={
   //入口文件的配置项
   entry:{},
@@ -71,7 +71,7 @@ module.exports={
 
 # 五、入口和出口配置
 
-```
+```js
 const path = require('path');
 module.exports={
   entry:{
@@ -88,13 +88,13 @@ module.exports={
 
 ◆ src/main.js
 
-```
+```js
 document.getElementById('title').innerHTML='Hello Webpack';
 ```
 
 ◆ 将 main.js 文件打包为 bundle.js
 
-```
+```js
 webpack main.js bundle.js
 ```
 
@@ -102,7 +102,7 @@ webpack main.js bundle.js
 
 ◆ 配置`webpack.config.js` 文件
 
-```
+```js
 module.exports = {
   entry: './main.js',
   output: {
@@ -113,13 +113,13 @@ module.exports = {
 
 ◆ 使用命令
 
-```
-webpack
+```bash
+$ webpack
 ```
 
 # 六、多入口、多出口配置
 
-```
+```js
 const path = require('path');
 module.exports={
   entry:{
@@ -137,13 +137,13 @@ module.exports={
 
 ◆ 先下载
 
-```
-npm i webpack-dev-server –save-dev
+```bash
+$ npm i webpack-dev-server –save-dev
 ```
 
 ◆ 再配置 `webpack.config.js` 文件
 
-```
+```js
 devServer:{
   //设置基本目录结构
   contentBase:path.resolve(__dirname,'dist'),
@@ -158,7 +158,7 @@ devServer:{
 
 ◆ 最后配置 `package.json` 文件
 
-```
+```json
 "scripts": {
     "server":"webpack-dev-server"
  },
@@ -172,7 +172,7 @@ devServer:{
 
 ◆ 定义`./src/css/index.css`文件
 
-```
+```css
 body{
   background-color: red;
   color: white;
@@ -181,19 +181,19 @@ body{
 
 ◆ 在`/src/entery.js`中引入
 
-```
+```js
 import css from './css/index.css';
 ```
 
 ◆ 下载`style-loader`和`css-loader`
 
-```
-npm i -D style-loader css-loader
+```bash
+$ npm i -D style-loader css-loader
 ```
 
 ◆ 配置 `webpack.config.js`文件
 
-```
+```js
 module:{
   rules: [
     {
@@ -210,7 +210,7 @@ module:{
 
 ◆ 配置 `webpack.config.js`文件
 
-```
+```js
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports={
   plugins: [
@@ -225,13 +225,13 @@ module.exports={
 
 ◆ 下载 `html-webpack-plugin`
 
-```
-npm i -D html-webpack-plugin
+```bash
+$ npm i -D html-webpack-plugin
 ```
 
 ◆ 配置 `webpack.config.js` 文件
 
-```
+```js
 const htmlPlugin = require('html-webpack-plugin')
 module.exports={
   plugins: [
@@ -254,13 +254,13 @@ module.exports={
 
 ◆ 安装 `url-loader`
 
-```
-npm i -D url-loader
+```bash
+$ npm i -D url-loader
 ```
 
 ◆ 配置`webpack.config.js` 文件
 
-```
+```js
 module:{
   rules: [
     {
@@ -284,13 +284,13 @@ module:{
 
 ◆ 安装 `node-sass` 和 `sass-loader`
 
-```
-npm i -D node-sass sass-loader
+```bash
+$ npm i -D node-sass sass-loader
 ```
 
 ◆ 配置`webpack.config.js` 文件
 
-```
+```js
 {
   test: /\.scss$/,
   use: ["style-loader" , "css-loader" , "sass-loader"]
@@ -301,13 +301,13 @@ npm i -D node-sass sass-loader
 
 ◆ 安装 `postcss-loader` 和 `autoprefixer`（自动添加前缀的插件）
 
-```
-npm install --save-dev postcss-loader autoprefixer
+```bash
+$ npm install --save-dev postcss-loader autoprefixer
 ```
 
 ◆ 在项目根目录新建 `postcss.config.js` 配置文件
 
-```
+```js
 module.exports = {
   plugins: [
     require('autoprefixer')
@@ -317,7 +317,7 @@ module.exports = {
 
 ◆ 配置`webpack.config.js` 文件
 
-```
+```js
 {
   test: /\.css$/,
   use: extractTextPlugin.extract({
@@ -334,13 +334,13 @@ module.exports = {
 
 ◆ 安装
 
-```
-npm i -D babel-core babel-loader babel-preset-es2015 babel-preset-react
+```bash
+$ npm i -D babel-core babel-loader babel-preset-es2015 babel-preset-react
 ```
 
 ◆ 配置`webpack.config.js` 文件
 
-```
+```js
 {
   test:/\.(jsx|js)$/,
   use:{

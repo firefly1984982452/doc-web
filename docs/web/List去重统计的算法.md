@@ -4,7 +4,7 @@
 
 # 题：将list变成arry
 
-```
+```js
 const list = [
     { name: '1', type:1 },
     { name: '1', type:1 },
@@ -37,7 +37,7 @@ const arry = [
 4.删除原来的统计数据
 ```
 
-```
+```js
       let arr =  [
         { name: '1', type:1 },
         { name: '1', type:1 },
@@ -137,7 +137,7 @@ const arry = [
 
 # 8月28日二解
 
-```
+```js
 const arr = [];
 var item = {
     name: list[0].name,
@@ -165,7 +165,7 @@ console.log(arr);
 
 ![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gi6oba2y5ej30qu064q6r.jpg)
 
-```
+```js
 var ary = list.reduce((item, next) => {
     var isHas = item.find(v => v.name === next.name && v.type === next.type);
     if(isHas == undefined) {

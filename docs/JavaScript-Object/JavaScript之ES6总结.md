@@ -689,19 +689,18 @@ factorial(5) // 120
 
 # 七、数组的扩展
 
-<iframe style="width:100%;height:900px;" src="https://firefly1984982452.github.io/2020/06/08/JavaScript%E4%B9%8BArray%E6%95%B0%E7%BB%84/"></iframe>
-
+- 参考[JavaScript之Array数组](/docs/JavaScript-Object/JavaScript之Array数组.md)
 ---
 
 # 八、对象
 
-<iframe style="width:100%;height:900px;" src="https://firefly1984982452.github.io/2020/08/05/JavaScript%E4%B9%8BObject%E5%AF%B9%E8%B1%A1/"></iframe>
+- 参考[JavaScript之Object对象](/docs/JavaScript-Object/JavaScript之Object对象.md)
 
 ---
 
 # 九、正则 RegExp
 
-<iframe style="width:100%;height:900px;" src="https://firefly1984982452.github.io/2020/12/23/JavaScript%E4%B9%8BRegExp%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></iframe>
+- 参考[JavaScript之RegExp正则表达式](/docs/JavaScript-Object/JavaScript之RegExp正则表达式.md)
 
 # 十、Symbol
 
@@ -1555,7 +1554,7 @@ async function doIt(){
 }
 doIt();
 
-```js
+```
 
 结果和上一个不停用`then`链的一样，但是代码要清晰得多，而且没有回调地狱。
 
@@ -1563,7 +1562,7 @@ doIt();
 
 # 二十、Class
 
-<iframe style="width:100%;height:900px;" src="https://firefly1984982452.github.io/2020/12/07/JavaScript%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"></iframe>
+- 参考[JavaScript之面向对象](/docs/JavaScript/JavaScript之面向对象.md)
 
 ---
 

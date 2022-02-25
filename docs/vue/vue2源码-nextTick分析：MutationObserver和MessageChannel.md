@@ -4,7 +4,7 @@
 
 # 为什么要用nextTick
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,7 +158,7 @@ vue2中在2018年12月20号用MutationObser替换了MessageChannel（有很多�
 
 因为MutationObserver是宏任务，MessageChannel是微任务，比它先执行，选用它肯定考虑了这部分因素。
 
-```
+```html
 <!DOCTYPE html>
 
 <html lang="en-zh">

@@ -4,8 +4,8 @@
 - [链接](https://www.cnblogs.com/cangqinglang/p/8963557.html)
 
 
-**异步**：现在和将来的时间间隙
-**并行**：能够同时发生的事情
+- **异步**：现在和将来的时间间隙
+- **并行**：能够同时发生的事情
 
 并行：比如进程与线程，独立运行并且能同时运行。
 
@@ -105,7 +105,7 @@ console.log('end');
 
 ## 【1】不使用时
 
-```js
+```html
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -130,7 +130,7 @@ console.log('end');
 ## 【2】使用时
 
 test.html
-```
+```html
 <!DOCTYPE html>
 <html >
   <head>
@@ -151,11 +151,10 @@ test.html
     </script>
   </body>
 </html>
-
-```js
+```
 
 worker.js
-```
+```js
 onmessage = function (event) {
     var n = 1;
     while (n < 9999) {
@@ -181,9 +180,9 @@ JS引擎是单线程的，本质上还是没有改变。
 
 可以使用live-server搭建一个简单的本地服务器：
 
-```js
-`npm install live-server -g`
-`live-server`
+```bash
+npm install live-server -g
+live-server
 ```
 
 ---

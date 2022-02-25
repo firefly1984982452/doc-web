@@ -15,7 +15,7 @@
 
 ![image](https://wx4.sinaimg.cn/mw1024/0069qZtTgy1gikkhg5ipwj30rg0gk3ze.jpg)
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,7 +95,7 @@
 
 ![image](https://wx1.sinaimg.cn/mw1024/0069qZtTgy1gikkgwc35qj30r40fvwf0.jpg)
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
