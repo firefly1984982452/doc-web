@@ -16,15 +16,14 @@
 
 **用法：**
 
-```
+```js
 var obj1 = {a:2,b:{name:'小明'}};
 var obj2 = Object.create(obj1);
-
 ```
 
 **详解：**
 
-```
+```js
 var obj1 = {a:2,b:{name:'小明'}};
 var obj2 = Object.create(obj1);
 obj2.a = 3;
@@ -34,24 +33,28 @@ console.log(obj1,obj2);
 
 **结果：**
 
-![image](https://img2020.cnblogs.com/blog/919128/202007/919128-20200731133016520-25880925.png)
+```
+{a: 2, b: {name: '小红'}}
+
+{a: 3}
+```
 
 **结论：**
 
-obj1对象中的一级对象a:2并没有受影响，但二级对象b已经受影响。所以**`Object.create`克隆的对象也只能实现一级对象的深拷贝**。
+obj1对象中的一级对象a:2并没有受影响，但二级对象b已经受影响。所以`Object.create`克隆的对象也只能实现一级对象的深拷贝。
 
 
 ## 【2】数组用concat
 
 **用法：**
 
-```
+```js
 [].concat(arr)
 ```
 
 **详解：**
 
-```
+```js
 var arr = [{id:1,name:'1',other:{sex:'男'}}]
 var brr = [].concat(arr);
 brr[0].id = 2;
@@ -60,7 +63,11 @@ console.log(arr[0],brr[0])
 ```
 **结果：**
 
-![image](![image](https://img2020.cnblogs.com/blog/919128/202007/919128-20200731132657850-1056830592.png))
+```
+{id: 2, name: '1', other: {sex: '女'}}
+
+{id: 2, name: '1', other: {sex: '女'}}
+```
 
 **结论：**
 
@@ -71,14 +78,14 @@ arr的一级对象(id)和对象里面的对象(other.sex)都是引用同一个�
 
 **用法：**
 
-```
+```js
 var obj1 = {a: 1}
 var obj2 = Object.assign({}, obj1)
 ```
 
 **详解：**
 
-```
+```js
 var obj = {id:1,name:{a:'xx'},fn:function(){},un:undefined};
 var obj2 = Object.assign({}, obj);
 obj2.id = 2;
@@ -87,7 +94,11 @@ console.log(obj,obj2)
 ```
 **结果：**
 
-![image](https://img2020.cnblogs.com/blog/919128/202007/919128-20200731111401682-688288366.png)
+```
+{id: 1, name: {a: 'obj2'}, un: undefined, fn: ƒ}
+
+{id: 2, name: {a: 'obj2'}, un: undefined, fn: ƒ}
+```
 
 **结论：**
 
@@ -97,14 +108,14 @@ obj的一级对象(id)的确不受影响，但对象里面的对象(name.a)还�
 
 **用法：**
 
-```
+```js
 var obj1 = {a: 1}
 var obj2 = {...obj1}
 ```
 
 **详解：**
 
-```
+```js
 var obj = {id:1,name:{a:'xx'},fn:function(){},un:undefined};
 var obj2 = {...obj};
 obj2.id = 2;
@@ -113,7 +124,11 @@ console.log(obj,obj2)
 ```
 **结果：**
 
-![image](https://img2020.cnblogs.com/blog/919128/202007/919128-20200731111401682-688288366.png)
+```
+{id: 1, name: {a: 'obj2'}, un: undefined, fn: ƒ}
+
+{id: 2, name: {a: 'obj2'}, un: undefined, fn: ƒ}
+```
 
 **结论：**
 
@@ -134,7 +149,7 @@ obj的一级对象(id)的确不受影响，但对象里面的对象(name.a)还�
 ## 【1】JSON.parse(JSON.stringify())
 
 
-```
+```js
 var obj1 = {a: 1}
 obj2 = JSON.parse(JSON.stringify(obj1))
 ```
@@ -142,7 +157,7 @@ obj2 = JSON.parse(JSON.stringify(obj1))
 
 ## 【2】MessageChannel
 
-```
+```js
 var obj = {id:1,name:{a:'xx'}};
 
 function structuralClone(obj) {
@@ -162,11 +177,17 @@ structuralClone(obj).then(res=>{
 <!-- 用promise是为了好传数据 -->
 ```
 
-![image](https://img2020.cnblogs.com/blog/919128/202007/919128-20200731133645338-66683973.png)
+结果：
+
+```
+{id: 1, name: {a: 'xx'}}
+
+{id: 1, name: {a: 'obj3'}}
+```
 
 ## 【3】用lodash.cloneDeep
 
-```
+```js
 import _ from 'lodash'
 var obj = {id:1,name:{a:'xx'},fn:function(){},un:undefined};
 var obj2 = _.cloneDeep(obj);
@@ -174,4 +195,12 @@ obj2.name.a = 'obj2';
 console.log(obj,obj2)
 ```
 
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1ghcrk94yhdj30dm033aa5.jpg)
+
+
+结果：
+
+```
+{id: 1, name: {a: 'xx'}, fn: ƒ}
+
+{id: 1, name: {a: 'obj2'}, fn: ƒ}
+```

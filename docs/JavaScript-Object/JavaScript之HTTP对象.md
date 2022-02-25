@@ -57,7 +57,7 @@
 
 ### 【1.1】原生实现
 
-```
+```js
 <script>
   var script = document.createElement('script');
   script.type = 'text/javascript';
@@ -75,7 +75,7 @@
 
 ### 【1.2】jquery ajax
 
-```
+```js
 $.ajax({
     url: 'http://www.domain2.com:8080/login',
     type: 'get',
@@ -87,7 +87,7 @@ $.ajax({
 
 ### 【1.3】vue.js：
 
-```
+```js
 this.$http.jsonp('http://www.domain2.com:8080/login', {
     params: {},
     jsonp: 'handleCallback'
@@ -101,14 +101,15 @@ this.$http.jsonp('http://www.domain2.com:8080/login', {
 
 ### 【2.1】原生ajax
 
-```
-// 前端设置是否带cookie
+前端设置是否带cookie
+
+```js
 xhr.withCredentials = true;
 ```
 
 ### 【2.2】jQuery ajax
 
-```
+```js
 $.ajax({
     ...
    xhrFields: {
@@ -121,7 +122,7 @@ $.ajax({
 
 ### 【2.3】vue框架 axios设置
 
-```
+```js
 axios.defaults.withCredentials = true
 ```
 ## 【3】Nodejs中间件代理跨域
@@ -137,7 +138,7 @@ axios.defaults.withCredentials = true
 
 这种方式通常用于获取嵌入页面中的第三方页面数据。一个页面发送消息，另一个页面判断来源并接收消息。
 
-```
+```js
 // 发送消息端
 window.parent.postMessage('message', 'http://test.com')
 // 接收消息端
@@ -158,13 +159,13 @@ mc.addEventListener('message', event => {
 
 方法一：
 
-```
+```js
 <meta http-equiv="Pragma" content="no-cache">
 ```
 
 方法二：
 
-```
+```js
 <meta http-equiv="expires" content="mon, 18 apr 2016 14:30:00 GMT">
 ```
 

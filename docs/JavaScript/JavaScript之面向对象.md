@@ -2,7 +2,7 @@
 
 # 一、java 对象
 
-```
+```js
 // 创建类——“人”
 public class People{
     int age;
@@ -36,7 +36,7 @@ xm.age = 15;
 
 ### 【1.1】生成对象
 
-```
+```js
 function Cat(name,color){
     this.name = name;
     this.color = color;
@@ -50,7 +50,7 @@ cat2; // Cat {name: "小猫", color: "黑色"} 指向Cat对象
 
 **相当于我们平时用的数组中的**：
 
-```
+```js
 var arr = new Array(3).fill(2);
 var brr = new Array(5).fill(8);
 arr; // (3) [2, 2, 2] 指向Array对象
@@ -61,7 +61,7 @@ brr; // (5) [8, 8, 8, 8, 8] 指向Array对象
 
 ## 【2】对象的构造函数
 
-```
+```js
 function Cat(name,color){
     this.name = name;
     this.color = color;
@@ -72,7 +72,7 @@ function Cat(name,color){
 
 ### 【2.1】es6 语法糖 class
 
-```
+```js
 class Cat{
     constructor(x,y){
         this.x = x;
@@ -88,19 +88,19 @@ cat1; // Cat {name: "大猫", color: "黄色"} 指向Cat对象
 
 所以，`cat1`实例含有`constructor`属性指向它(Cat)的`构造函数`。
 
-```
+```js
 cat1.constructor === Cat; // true
 ```
 
 **相当于我们平时用的数组中的**：
 
-```
+```js
 [1,2].constructor === Array; // true
 ```
 
 **其它**
 
-```
+```js
 [2].constructor(); // []
 [2].constructor() === Array.prototype.constructor();
 ```
@@ -109,13 +109,13 @@ cat1.constructor === Cat; // true
 
 `JavaScript`还提供了`instanceof`运算符，验证`原型对象(Cat)`与`实例对象(cat1)`之间的关系。
 
-```
+```js
 cat1 instanceof Cat; // true
 ```
 
 **相当于我们平时用的数组中的**：
 
-```
+```js
 [1,2] instanceof Array; // true
 ```
 
@@ -125,7 +125,7 @@ cat1 instanceof Cat; // true
 
 ### 【3.1】直接添加造成的问题
 
-```
+```js
 function Cat(name,color){
     this.name = name;
     this.color = color;
@@ -143,13 +143,13 @@ cat1.eat == cat2.eat; // false
 
 此时 eat 方法占用了太多内存，并且它们没有指向同一个引用地址，永远不会相等。参考数组的其实是相等的。
 
-```
+```js
 [1].push == [2].push; // true
 ```
 
 ### 【3.2】用 prototype 添加方法
 
-```
+```js
 function Cat(name,color){
     this.name = name;
     this.color = color;
@@ -170,32 +170,32 @@ cat1.eat == cat2.eat; // true，它们是指向同一个内存地址下的方法
 
 ### 【4.1】判断对象和实例的关系`isPrototypeOf`
 
-```
+```js
 Cat.prototype.isPrototypeOf(cat1); // true
 ```
 
 **相当于我们平时用的数组中的**：
 
-```
+```js
 Array.prototype.isPrototypeOf([]); // true
 ```
 
 ### 【4.2】判断是本地属性还是 prototype 属性
 
-```
+```js
 cat1.hasOwnProperty('name'); // true
 cat1.hasOwnProperty('type'); // false
 ```
 
 ### 【4.3】in
 
-```
+```js
 'name' in cat1; // true
 ```
 
 **相当于我们平时用的数组中的**：
 
-```
+```js
 'push' in []; // true
 ```
 
@@ -203,19 +203,19 @@ cat1.hasOwnProperty('type'); // false
 
 一般情况下，实例对象的`__proto__`指向原型对象的`prototype`。 `prototype`被实例的`__proto__`指向 `__proto__`指向构造函数的`prototype` `__proto__`存在于实例和构造函数的原型对象，而不是实例与构造函数。如：
 
-```
+```js
 cat1.__proto__ === Cat.prototype; // true
 ```
 
 **相当于我们平时用的数组中的**：
 
-```
+```js
 [].__proto__ === Array.prototype; // true
 ```
 
 **其它情况**
 
-```
+```js
 function fn(){};
 fn.__proto__ === Function.prototype; // true
 ```
@@ -224,14 +224,14 @@ fn.__proto__ === Function.prototype; // true
 
 1. `Function`原型对象也同样适用此规则：
 
-```
+```js
 Function.__proto__ === Function.prototype; // true
 Function.prototype.__proto__ == Object.prototype; // true 为了不指向自身的Function.prototype造成循环引用
 ```
 
 2. `Object`函数也是一个`Function`函数：
 
-```
+```js
 Object.__proto__ === Function.prototype; // true
 Object.prototype.__proto__ === null ; // true 为了不指向自身的Object.prototype造成循环引用
 ```
@@ -242,7 +242,7 @@ Object.prototype.__proto__ === null ; // true 为了不指向自身的Object.pro
 
 # 四、DOM 也有原型链
 
-```
+```js
 <html>
   <head>
     <title>dom原型测试</title>
@@ -268,7 +268,7 @@ Object.prototype.__proto__ === null ; // true 为了不指向自身的Object.pro
 
 ### 先看不用 Object.create 来实现继承
 
-```
+```js
 function Pd(){
 }
 Pd.prototype = Array.prototype;
@@ -286,7 +286,7 @@ console.log(pdd); // Pd [3] __proto__:Array(0)直接就是真正的数组的__pr
 
 ### 用 Object.create 实现继承
 
-```
+```js
 function Pd(){
 }
 Pd.prototype = Object.create(Array.prototype);
@@ -313,7 +313,7 @@ console.log(pdd); // Pd [3] __proto__:Array[__proto__:Array(0)]就是__proto__�
 
 ### 用 Object.create 实现继承自己的类并带参数
 
-```
+```js
 function Cat(name,color){
     this.name = name;
     this.color = color;
@@ -332,7 +332,7 @@ console.log(cat1,pdd); // Cat {name: "大猫", color: "黄色"} Pd {name: "小
 
 ### 用原生写法实现继承自己的类并带参数
 
-```
+```js
 function Cat(name,color){
     this.name = name;
     this.color = color;
@@ -350,7 +350,7 @@ console.log(cat1,pdd); // Cat {name: "大猫", color: "黄色"} Pd {name: "小
 
 ## 用 Object.create 克隆对象
 
-```
+```js
 var obj1 = {a:2,b:{name:'小明'}};
 var obj2 = Object.create(obj1);
 console.log(obj2); // {}
@@ -369,7 +369,7 @@ obj2 的具体值：
 
 # 六、extends 继承
 
-```
+```js
 class Cat{
     constructor(){
         console.log('cat');
@@ -383,7 +383,7 @@ var child = new Child();
 
 继承所有参数：
 
-```
+```js
 class Cat{
     constructor(name){
         this.name = name;
@@ -403,7 +403,7 @@ console.log(cat,child); // Cat {name: "1"} Child {name: "2"}
 
 # 七、`new.target`方法判断是否父类
 
-```
+```js
 class Cat{
     constructor(){
         console.log(new.target);
@@ -429,7 +429,7 @@ var child = new Child();
 
 ## 性能
 
-```
+```js
 var startTime=new Date().getTime();
 var a2 = new Object();
 for(var i = 0;i<10000000;i++){
@@ -449,7 +449,7 @@ console.log('new Array()输出耗时:',endTime2-startTime2);
 
 结果：
 
-```
+```js
 []输出耗时: 304
 new Array()输出耗时: 600
 ```
@@ -466,7 +466,7 @@ new Array()输出耗时: 600
 
 # 九、prototype 和 hasOwnProperty
 
-```
+```js
 Array.prototype.arr = function(){console.log('print arr')};
 var a = [1,2,3];
 a.arr(); // 'print arr'
@@ -483,7 +483,7 @@ Array.hasOwnProperty('arr'); // false
 
 - Object.getOwnPropertyNames
 
-```
+```js
 var obj = {
 	a: 1,
 	b: 2

@@ -2,7 +2,7 @@
 
 # 一、使用getter与setter控制属性访问
 
-```
+```js
 function Ninja() {
     let skillLevel;
     this.getSkillLevel = () => {
@@ -26,7 +26,7 @@ console.log(nijia, nijia.getSkillLevel() == 100);
 1. 通过对象字面量定义，或在`ES6`的`class`中定义。
 2. 通过使用内置的`Object.defineProperty`方法。
 
-```
+```js
 const ninjaCollection = {
     ninjas: ['a','b','c'],
     get firstNinja(){
@@ -43,7 +43,7 @@ console.log(ninjaCollection);
 
 ### 【1.1在ES6的class中使用getter和setter
 
-```
+```js
 class NinjoCollection {
     constructor(){
         this.ninjas = ['a','b','c'];
@@ -87,7 +87,7 @@ console.log(typeof ninja._skillLevel);
 
 ## 【2】使用getter与setter检验属性
 
-```
+```js
 function Ninja() {
     let _skillLevel = 0;
     Object.defineProperty(this, 'skillLevel', {
@@ -115,7 +115,7 @@ try {
 
 ## 【3】使用getter与setter定义如何计算属性值
 
-```
+```js
 const nameObj = {
     name: 'a',
     clan: 'b',
@@ -136,7 +136,7 @@ console.log(nameObj.name == 'a');
 
 通过`Proxy`构造器创建代理
 
-```
+```js
 const emperor = {name: 'pdd'};
 const representative = new Proxy(emperor, {
     get : (target, key) => {
@@ -174,7 +174,7 @@ function isPrime(number){
 ```
 写完后如果要检测该函数的性能，执行了多久，这时就要修改代码，加上`console.time`和`console.timeEnd`，**不利于代码的复用**，如下：
 
-```
+```js
 function isPrime(number){
     console.time('isPrime');
     if(number < 2) {
@@ -189,7 +189,7 @@ function isPrime(number){
 
 或
 
-```
+```js
 function isPrime(number){
     if(number < 2) {
         return false;
@@ -219,7 +219,7 @@ test2(23); // test: 2001.0390625 ms
 
 **用代理解决**：
 
-```
+```js
 function isPrime(number){
     if(number < 2) {
         return false;
@@ -255,7 +255,7 @@ isPrime2(23); // isPrime: 2001.0390625 ms
 
 **apply方法拦截函数的调用、call和apply操作**。
 
-```
+```js
 function sum (a,b) { return a+b };
 var proxy = new Proxy(sum, {
     apply(target, thisArg, args) {
@@ -273,7 +273,7 @@ Reflect.apply(proxy, null, [32,10]); // 84
 
 ## 【4】apply实现负数组
 
-```
+```js
 function createNegativeArrayProxy(array) {
     return new Proxy(array, {
         get: (target, index) => {

@@ -8,7 +8,7 @@
 
 1. 计算页面加载完成所需要的总时间
 
-```
+```js
 performance.timing.loadEventEnd - performance.timing.navigationStart
 ```
 
@@ -35,7 +35,7 @@ performance.timing.loadEventEnd - performance.timing.navigationStart
 
 ## 【1】属性
 
-```
+```js
 {
     "href":"http://0.0.0.0:8080/elder/checkInEdit?elderId=579&amp;nursingLevel=5",
     "origin":"http://0.0.0.0:8080",
@@ -58,7 +58,7 @@ performance.timing.loadEventEnd - performance.timing.navigationStart
 
 用 `Object.fromEntries` 和 `URLSearchParams` 可变为普通对象
 
-```
+```js
 window.location.search = '?roomId=9&status=1&taskId=7&serviceId=1109';
 var str = window.location.search.substr(1);
 var p = new URLSearchParams(str);
@@ -69,7 +69,7 @@ var param = Object.fromEntries(p);
 
 1. `navigator.userAgent`：当前浏览器
 
-```
+```js
 export function detectiveBrowse() {
   var ua = navigator.userAgent.toLowerCase();
   var s;
@@ -95,7 +95,7 @@ export function detectiveBrowse() {
 - 浏览器距离 Left：`screenLeft` / `screenX`
 - 浏览器距离 Top：`screenTop` / `screenY`
 
-```
+```js
 let clientScreenMsg =
 `窗口可见区域宽（控制台不算）：window.innerWidth：${window.innerWidth}\n` +
 `窗口可见区域高（控制台不算）：window.innerHeight：${window.innerHeight}\n` +
@@ -140,7 +140,7 @@ console.log(clientScreenMsg);
 
 # 八、英文 base64 转码：`btoa` 和 `atob` 实现
 
-```
+```js
 var string = 'Hello World!';
 btoa(string) // "SGVsbG8gV29ybGQh"
 atob('SGVsbG8gV29ybGQh') // "Hello World!"
@@ -148,7 +148,7 @@ atob('SGVsbG8gV29ybGQh') // "Hello World!"
 
 # 九、中文 base64 转码：`escape`、`encodeURI` 和 `encodeURIComponent` 实现
 
-```
+```js
 function b64Encode(str) {
   return btoa(encodeURIComponent(str));
 }
@@ -160,7 +160,7 @@ function b64Decode(str) {
 b64Encode('你好') // "JUU0JUJEJUEwJUU1JUE1JUJE"
 b64Decode('JUU0JUJEJUEwJUU1JUE1JUJE') // "你好"
 
-```
+```js
 
 其中，`encodeURIComponent`换成`escape`和`encodeURI`都可以实现此功能
 
@@ -194,7 +194,7 @@ b64Decode('JUU0JUJEJUEwJUU1JUE1JUJE') // "你好"
 
 # 十三、打印：print
 
-```
+```js
 window.print();
 ```
 
@@ -202,7 +202,7 @@ window.print();
 
 ## 【1】MessageChannel 的基本使用
 
-```
+```js
 const {port1, port2} = new MessageChannel();
 port1.onmessage = function(d) {
     console.log(`port1接收的消息是：${d.data}`);
@@ -220,7 +220,7 @@ port1 发送的由 port2 接收，port2 发送的由 port1 接收。
 
 ## 【2】使用 MessageChannel 实现深拷贝
 
-```
+```js
 var obj = {id:1,name:{a:'xx'}};
 
 function structuralClone(obj) {
@@ -242,7 +242,7 @@ structuralClone(obj).then(res=>{
 
 ## 【3】MessageChannel 实现 vue.$nexttick
 
-```
+```js
 <!DOCTYPE html>
 
 <html lang="en-zh">
@@ -291,7 +291,7 @@ structuralClone(obj).then(res=>{
   })
 </script>
 
-```
+```js
 
 ---
 
@@ -308,7 +308,7 @@ structuralClone(obj).then(res=>{
 
 页面 A：
 
-```
+```js
 <button onClick="test()">open</button>
 
 ...
@@ -329,7 +329,7 @@ structuralClone(obj).then(res=>{
 
 页面 B：
 
-```
+```js
 window.postMessage("hi there!", location.origin);
 ```
 
@@ -351,7 +351,7 @@ window.postMessage("hi there!", location.origin);
 
 所有的事件都可以由 window 监听：
 
-```
+```js
 window.addEventListener('storage', (e) => {})
 ```
 

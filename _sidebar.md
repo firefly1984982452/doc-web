@@ -25,6 +25,7 @@
   - [JavaScript之RegExp正则表达式](/docs/JavaScript-Object/JavaScript之RegExp正则表达式.md)
   - [JavaScript之Function函数](/docs/JavaScript-Object/JavaScript之Function函数.md)
   - [JavaScript之HTTP对象](/docs/JavaScript-Object/JavaScript之HTTP对象.md)
+  - [JavaScript之ES6总结](/docs/JavaScript-Object/JavaScript之ES6总结.md)
 
 - JavaScript进阶
   - [JavaScrip专业名词](docs/JavaScript/JavaScrip专业名词.md)
@@ -34,7 +35,6 @@
   - [JavaScript之面向对象](/docs/JavaScript/JavaScript之面向对象.md)
   - [JavaScript之进阶总结](/docs/JavaScript/JavaScript之进阶总结.md)
   - [JavaScript深拷贝浅拷贝全析](/docs/JavaScript/JavaScript深拷贝浅拷贝全析.md)
-  - [ES6总结](/docs/JavaScript/JavaScript之ES6总结.md)
   - [JavaScript 异步操作解决方案](/docs/JavaScript/JavaScript异步操作解决方案.md)
   - [JavaScript 之运行机制](/docs/JavaScript/JavaScript之运行机制.md)
 

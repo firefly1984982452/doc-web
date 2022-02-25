@@ -12,34 +12,34 @@
 
 ## 【1】`push`：向末尾添加若干元素
 
-```
+```js
 var arr = [1,2,3];
 arr.push(4); // [1, 2, 3, 4]
 ```
 
 ## 【2】`pop`：删除最后一个元素
 
-```
+```js
 var arr = [1,2,3];
 arr.pop();           //[1,2]
 ```
 
 ## 【3】`shift`：删除第一个元素
 
-```
+```js
 var arr = [1,2,3];
 arr.shift();           //[2,3]
 ```
 ## 【4】`unshift`：添加到第一个
 
-```
+```js
 var arr = [1,2,3];
 arr.unshift(0);           //[0,1,2,3]
 ```
 
 ## 【5】`concat`：合并2个数组
 
-```
+```js
 var a = ['a','b'];
 var b = ['c','d']
 var c = a.concat(b);
@@ -48,13 +48,13 @@ c //(4) ["a", "b", "c", "d"]
 
 ## 【6】`join`：转化为指定字符串
 
-```
+```js
 ["a", "b", "c", "d"].join(',');       //"a,b,c,d"
 ```
 
 ## 【7】`copyWithin`：复制指定值（数组中的值）到指定位置
 
-```
+```js
 //  将 3 号位复制到 0 号位
 [1, 2, 3, 4, 5].copyWithin(0, 3, 4)
 // [4, 2, 3, 4, 5]
@@ -75,7 +75,7 @@ c //(4) ["a", "b", "c", "d"]
 
 **不会改变原数组**
 
-```
+```js
 var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 arr.slice(1,3);      //(2) ["B", "C"]
 
@@ -87,27 +87,27 @@ arr.slice(1,3);      //(2) ["B", "C"]
 
 **会改变原数组**
 
-```
+```js
 var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 arr.splice(1,3);     //(3) ["B", "C", "D"]
 ```
 
 插入数据：
 
-```
+```js
 myArray.splice(2,0,'插入数据');
 ```
 
 ## 【3】`split`：分隔数组
 
-```
+```js
 'a,b,c'.split(','); // [ "a", "b", "c" ]
 '1234567890'.split(''); // [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" ]
 ```
 
 ## 【4】`length`：返回或设置数组长度
 
-```
+```js
 [1,2,3,4,5,6,7].length = 2; // [1,2]
 ```
 
@@ -122,14 +122,14 @@ myArray.splice(2,0,'插入数据');
 
 按 `ascii` 码排序
 
-```
+```js
 var arr = [23,122,1,53,231]
 arr.sort(); // [1, 122, 23, 231, 53]
 ```
 
 升序
 
-```
+```js
 var arr = [23,122,1,53,231];
 arr.sort((a,b) =>  a - b); //[1, 23, 53, 122, 231]
 
@@ -153,7 +153,7 @@ Chrome 浏览器（`Webkit`）：`插入排序`和`快速排序`（如果数组�
 
 ## `reverse`：倒序
 
-```
+```js
 var arr = [23,122,1,53,231]
 arr.reverse();       //(5) [53, 231, 23, 122, 1]
 ```
@@ -171,27 +171,27 @@ arr.reverse();       //(5) [53, 231, 23, 122, 1]
 
 ## 【1】`every`：检查数组的每个元素是否符合条件
 
-```
+```js
 [12, 54, 18, 130, 44].every(val => val > 10); // true
 [12, 5, 8, 130, 44].every(val => val > 10); // false
 ```
 
 ## 【2】`some`：检查是否有 1 个达到条件
 
-```
+```js
 [12, 54, 18, 130, 44].some(val => val > 10); // true
 [2, 5, 8, 3, 4].some(val => val > 10); // false
 ```
 
 ## 【3】`filter`：找出所有符合条件的元素
 
-```
+```js
 [12, 5, 8, 130, 44].filter( num => num >10); // (3) [12, 130, 44]
 ```
 
 例：过滤所有为 false 的值
 
-```
+```js
 const myArray = [1, undefined, NaN, 2, null, '@denicmarko', true, 3, false];
 console.log(myArray.filter(Boolean)); // [1, 2, "@denicmarko", true, 3]
 ```
@@ -200,7 +200,7 @@ console.log(myArray.filter(Boolean)); // [1, 2, "@denicmarko", true, 3]
 
 与`String`类似，`Array`也可以通过`indexOf()`来搜索一个指定的元素的位置：
 
-```
+```js
 var arr = [123,124,'124'];
 arr.indexOf(124);    //1
 ```
@@ -209,14 +209,14 @@ arr.indexOf(124);    //1
 
 ## 【5】`find`和`findIndex`：搜索指定的元素
 
-```
+```js
 [12, 5, 8, 130, 44].find(ele => ele>10); // 12
 [12, 5, 8, 130, 44].findIndex(ele => ele === 8}); // 2
 ```
 
 ## 【6】`includes`：返回是否有这个值
 
-```
+```js
 [1,2,3].includes(2); // true
 ```
 
@@ -241,27 +241,27 @@ arr.indexOf(124);    //1
 
 ## 【2】`fromEntries`：将键值对数组转为对象
 
-```
+```js
 const map = new Map().set('foo', true).set('bar', false);
 Object.fromEntries(map)
 ```
 
 ## 【3】`values`：返回数组里的值的迭代器
 
-```
+```js
 [...['a', 'b', 'c'].values()]; // ['a', 'b', 'c']
 ```
 
 ## 【4】`keys`：返回数组里的下标的迭代器
 
-```
+```js
 [...['a', 'b', 'c'].keys()]; // [0, 1, 2]
 ```
 
 ## 【5】`map`：遍历，返回新数据，对原数组不影响
 
 
-```
+```js
 var newList = list.map(item => {
     item.type = 1;
     return item;
@@ -278,7 +278,7 @@ var newList = list;
 
 当数组是数字时：
 
-```
+```js
 var arr = [4, 9, 16, 25];
 var brr = arr.map(val => val+1);
 brr; // [5, 10, 17, 26]
@@ -287,7 +287,7 @@ arr; // [4, 9, 16, 25]
 
 当数组是对象时：
 
-```
+```js
 var arr = [{name:'小明'},{name:'小红'}];
 var brr = arr.map(val=> val.sex = 1);
 var crr = arr.map(val => {val.age = 18;return val});
@@ -300,7 +300,7 @@ crr; // [{name:'小明', sex: 1, age: 18},{name:'小红', sex: 1, age: 18}]
 
 **合并 2 个对象**
 
-```
+```js
 var arr = [{id:1,val: 3},{id:2,val: 5},{id:3,val:9}];
 var brr = [{id:1,val: 13},{id:2,val: 15}];
 arr.map( v => {
@@ -319,7 +319,7 @@ arr.map( v => {
 
 **forEach 跳出循环**
 
-```
+```js
 var BreakException= {};
 
 try {
@@ -332,14 +332,14 @@ try {
 }
 ```
 
-`forEach`是函数，不是语法，因此没有直接`break`的语法。如果要中止，可使用 `Array.every` 或 `Array.some`。
+!> `forEach`是函数，不是语法，因此没有直接`break`的语法。如果要中止，可使用 `Array.every` 或 `Array.some`。
 
 普通的`for`循环可以用`break`终止。
 
 ## 【7】`reduce`：将数组计算为一个值
 
 
-```
+```js
 var numbers = [15.5, 2.3, 1.1, 4.7];
 function getSum(total, num) {
     return total + num;
@@ -349,13 +349,13 @@ console.log(getSum,0); // 23.6
 
 或：
 
-```
+```js
 [15.5, 2.3, 1.1, 4.7].reduce((x,y) => x+y) // 23.6
 ```
 
 reduce 计算数组对象的和：
 
-```
+```js
 var arr = [{id:1,num:3},{id:2,num:5},{id:5,num: 8}];
 var total = arr.reduce((total,next) =>{
     return total + next.num;
@@ -377,13 +377,13 @@ total; // 16
 
 ## 【1】`fill`：填充
 
-```
+```js
 var arr = new Array(8).fill('2'); // ["2", "2", "2", "2", "2", "2", "2", "2"]
 ```
 
 ## 【2】`of`：生成
 
-```
+```js
 new Array(3); // [empty × 3]
 Array.of(3); // [3]
 Array.of(1,2,3); // [1,2,3]
@@ -410,7 +410,7 @@ Array.of(1,2,3); // [1,2,3]
 
 拉平数组，默认一层，填几就拉平几层嵌套，如果想拉平所有的，用`Infinity`
 
-```
+```js
 [1, 2, [3, [4, 5]]].flat(); // [1, 2, 3, [4, 5]]
 [1, 2, [3, [4, 5]]].flat(2); // [1, 2, 3, 4, 5]
 [1, [2, [3]]].flat(Infinity); // [1, 2, 3]
@@ -420,13 +420,13 @@ Array.of(1,2,3); // [1,2,3]
 
 与 `map` 类似，不同的是可以在拉平的同时写函数方法，但只能拉平一层，不能多层。
 
-```
+```js
 [1,[2,[3],4,5],6,[7],8].flatMap(v => v*2); // (5) [2, NaN, 12, 14, 16]
 ```
 
 ## 【2】序列化后正则
 
-```
+```js
 const arr = [1, [1,2], [1,2,3]];
 var str = JSON.stringify(arr).replace(/(\[|\])/g,'');
 var list = `[${str}]`;
@@ -435,7 +435,7 @@ var result = JSON.parse(list);
 
 ## 【3】递归
 
-```
+```js
 const arr = [1, [1,2], [1,2,3],[1,2,[3,4]]];
 function flat(arr) {
     let result = [];
@@ -449,7 +449,7 @@ flat(arr);
 
 ## 【4】`reduce()`递归
 
-```
+```js
 const arr = [1, [1,2], [1,2,3],[1,2,[3,4]]];
 function flat(arr) {
     return arr.reduce((prev,cur) => {
@@ -461,7 +461,7 @@ flat(arr);
 
 ## 【5】迭代 + 展开运算符
 
-```
+```js
 let arr = [1, [1,2], [1,2,3,[4,4,4]]]
 while (arr.some(Array.isArray)) {
   arr = [].concat(...arr);
@@ -471,7 +471,7 @@ console.log(arr)
 
 ## 【6】`toString()`
 
-```
+```js
 const arr = [1, [1,2], [1,2,3,[4,4,4]]];
 var strArr = arr.toString().split(',');
 ```
@@ -483,7 +483,7 @@ var strArr = arr.toString().split(',');
 
 # 八、判断[1,2]是否为数组的方法
 
-**typeof 不能验证[1,2]是否为数组，返回的是'object'**
+!> typeof 不能验证[1,2]是否为数组，返回的是'object'
 
 1. `Array.isArray`
 2. `instanceof`
@@ -493,19 +493,19 @@ var strArr = arr.toString().split(',');
 
 ## 【1】Array.isArray
 
-```
+```js
 Array.isArray([1,2]) // true
 ```
 
 ## 【2】instanceof
 
-```
+```js
 [1,2] instanceof Array
 ```
 
 来一下`instanceof`的具体实现方法
 
-```
+```js
 function instanceof(left, right) {
     // 获得类型的原型
     let prototype = right.prototype
@@ -530,7 +530,7 @@ function instanceof(left, right) {
 
 ## 【4】constructor
 
-```
+```js
 [1,2].constructor === Array
 ```
 
@@ -538,7 +538,7 @@ function instanceof(left, right) {
 
 ## 【5】apply、call、bind
 
-```
+```js
 ({}).toString.apply([1,2]) === '[object Array]'
 ({}).toString.call([1,2]) === '[object Array]'
 ({}).toString.bind([1,2])() === '[object Array]'
@@ -549,14 +549,14 @@ function instanceof(left, right) {
 ## 【1】toString
 
 
-```
+```js
 [1,2,3,4,5].String()
 "1,2,3,4,5"
 ```
 
 ## 【2】toLocalString
 
-```
+```js
 [1,2,3,4,5].toLocaleString()
 "1,2,3,4,5"
 ```
@@ -572,7 +572,7 @@ function instanceof(left, right) {
 
 ## 【1】用法
 
-```
+```js
 let arrayLike = {
 0: 'tom',
 1: '65',
@@ -594,19 +594,19 @@ Array.from('1234567890'); // ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
 ## 【2】将 `Set对象` 变为数组
 
-```
+```js
 Array.from(new Set([1,3,3,4])) //[1, 3, 4]
 ```
 
 还能带参数
 
-```
+```js
 Array.from(new Set([1,3,3,4]), item => item + 1) //[2, 4, 5]
 ```
 
 ## 【3】将字符串变为数组
 
-```
+```js
 Array.from('hello') // ["h", "e", "l", "l", "o"]
 ```
 
@@ -615,13 +615,13 @@ Array.from('hello') // ["h", "e", "l", "l", "o"]
 # 十一、扩展运算符（`...`）：将数组变为参数序列
 
 
-```
+```js
 console.log(...[1,2,3]); // 1,2,3
 ```
 
 ## 代替 apply
 
-```
+```js
 // ES5 的写法
 Math.max.apply(null, [14, 3, 77])
 
@@ -634,7 +634,7 @@ Math.max(14, 3, 77);
 
 ## 替换 push
 
-```
+```js
 // ES5的 写法
 var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
@@ -656,7 +656,7 @@ arr1.push(...arr2);
 
 **【3】与解构赋值结合**
 
-```
+```js
 const [first, ...rest] = [1, 2, 3, 4, 5];
 first // 1
 rest  // [2, 3, 4, 5]
@@ -664,7 +664,7 @@ rest  // [2, 3, 4, 5]
 
 **【4】字符串变为数组**
 
-```
+```js
 [...'hello']; // [ "h", "e", "l", "l", "o" ]
 ```
 
@@ -682,7 +682,7 @@ rest  // [2, 3, 4, 5]
 
 ## 【1】递增数组的值
 
-```
+```js
 var arr = [1,2,3,4,5]
 arr[arr.length] = arr.length+1
 arr ; // 6
@@ -700,7 +700,7 @@ arr ; // 6
 
 3. `[...arguments]`
 
-```
+```js
 var test3 = function(){
     console.log(arguments);
     var list1 = Array.prototype.slice.apply(arguments);

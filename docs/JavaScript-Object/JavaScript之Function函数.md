@@ -4,7 +4,7 @@
 
 ## 【1】function
 
-```
+```js
 var str = (()=> {
     var count = 0;
     function sum () { return ++count; };
@@ -19,7 +19,7 @@ var str = (()=> {
 
 简化下：
 
-```
+```js
 var str = (()=> {
     var count = 0;
     return {
@@ -33,7 +33,7 @@ str.sum(); // 1
 
 ## 【2】Object
 
-```
+```js
 var obj = {
     count:0,
     sum : ()=>{return ++obj.count;},
@@ -70,7 +70,7 @@ JS有4种方式调用函数
 
 ## 【1】函数调用
 
-```
+```js
 function fn(){
     console.log(this);
 }
@@ -79,7 +79,7 @@ fn(); // window
 
 严格模式下：
 
-```
+```js
 function fn(){
     "use strict"
     console.log(this);
@@ -89,7 +89,7 @@ fn(); // undefined
 
 ## 【2】方法调用
 
-```
+```js
 var obj = {
     fn : function(){
         console.log(this);
@@ -100,7 +100,7 @@ obj.fn() // 返回obj对象：{fn: ƒ}
 
 ## 【3】构造函数调用
 
-```
+```js
 function Cat(x,y){
     this.x = x;
     this.y = y;
@@ -113,7 +113,7 @@ c // Cat{x:1,y:2} 指向c对象
 
 es6写法
 
-```
+```js
 class Point{
     constructor(x,y){
         this.x = x;
@@ -128,7 +128,7 @@ p // Point{x:1,y:2} 指向p对象
 
 ## 【4】aplly或call
 
-```
+```js
 var name = '张三';
 var age = '24';
 var obj = {
@@ -159,14 +159,14 @@ obj.fun.bind(pd,['长沙','上海'])(); // 彭丹 年龄18 来自长沙上海 �
 
 普通生成
 
-```
+```js
 var p = new Function('x','y','return x+y');
 p(2,3)
 ```
 
 动态生成
 
-```
+```js
 createFunction(){
     let arr = Array.from(arguments);
     var params = arr.splice(0,arr.length-1);
@@ -185,7 +185,7 @@ test(){
 
 # 四、`generator`：函数生成器
 
-```
+```js
 function* test(){
     console.log(1);
     yield;
@@ -196,6 +196,9 @@ item.next();
 setTimeout(()=>{
     item.next();
 },3000)
+```
+结果：
+```
 1
 隔3秒后
 2

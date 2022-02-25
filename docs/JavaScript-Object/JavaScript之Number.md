@@ -9,7 +9,7 @@
 
 之前判断一个值是否为数字类型都是用`typeof`，此处的 `isFinite`也有同样的效果
 
-```
+```js
 typeof 1.2 ; // 'number'
 Number.isFinite(1.2) ; // true
 ```
@@ -17,13 +17,13 @@ Number.isFinite(1.2) ; // true
 ## 【2】`Number.isInteger`：是否为整数
 
 
-```
+```js
 Number.isInteger(13)
 ```
 
 ## 【3】`Number.isNaN`：是否为`NaN`
 
-```
+```js
 
 console.log(Number.isNaN(NaN));       //true
 ```
@@ -33,7 +33,7 @@ console.log(Number.isNaN(NaN));       //true
 - `window.isNaN`：能否转换为数字
 - `Number.isNaN`：是否`NaN`
 
-```
+```js
 //isNaN
 console.log(isNaN(null));            //false
 console.log(isNaN(true));            //false
@@ -79,14 +79,14 @@ console.log(Number.isNaN(NaN));       //true
 
 ◆ `Number()`和`parseInt()`的区别
 
-```
+```js
 Number('3e'); // NaN
 parseInt('3e'); // 3
 ```
 
 ◆ `parseInt()`对其它进制进行取整转换
 
-```
+```js
 // 0X默认解读为16进制
 parseInt('0x10'); // 16
 ```
@@ -95,13 +95,13 @@ parseInt('0x10'); // 16
 
 1. 四舍五入
 
-```
+```js
 parseFloat((a).toFixed(2));//toFixed只能针对数字类型才能使用
 ```
 
 2. 非四舍五入
 
-```
+```js
 var b = parseFloat(price).toFixed(3);
 this.all_price = b.substring(0,b.toString().length - 1);
 ```
@@ -119,13 +119,13 @@ this.all_price = b.substring(0,b.toString().length - 1);
 
 ◆ `..`的用法：**转换 Number 类型**：
 
-```
+```js
 123..toString(2); // "1111011"
 ```
 
 相当于：
 
-```
+```js
 (123).toString(2)
 Number(123).toString(2)
 ```
@@ -134,7 +134,7 @@ Number(123).toString(2)
 
 # 五、toLocaleString：金钱格式化
 
-```
+```js
 Number(123456789).toLocaleString(); // '123,456,789'
 ```
 ---
@@ -143,13 +143,13 @@ Number(123456789).toLocaleString(); // '123,456,789'
 
 十进制转二进制：
 
-```
+```js
 Number(99).toString(2); // "1100011"
 ```
 
 二进制转十进制：
 
-```
+```js
 parseInt(101110,2); // 46
 ```
 
@@ -157,7 +157,7 @@ parseInt(101110,2); // 46
 
 # 七、数字分隔符`_`
 
-```
+```js
 const largeNumber = 1_000_000_000;
 
 console.log(largeNumber); // 1000000000"
@@ -170,7 +170,7 @@ console.log(largeNumber); // 1000000000"
 
 大整数会自动转为科学计数法，这时使用`BigInt`可以避免这种情况。
 
-```
+```js
 (BigInt(9007199254740991)*BigInt(9007199254740991)).toString();
 
 // "81129638414606663681390495662081"

@@ -3,14 +3,14 @@
 
 ## 【1】增/改
 
-```
+```js
 var obj = {};
 obj.id = 1;
 ```
 
 ## 【2】删
 
-```
+```js
 delete obj.id;
 ```
 
@@ -18,13 +18,13 @@ delete obj.id;
 
 ◆ 1. 普通的查询
 
-```
+```js
 obj.id; // 1
 ```
 
 ◆ 2. 用可选链操作符`?.`查
 
-```
+```js
 let obj =  {
   attr: {
       name: 'kingsaj'
@@ -34,20 +34,20 @@ let obj =  {
 
 获取 name 的值
 
-```
+```js
 let n_val = obj.attr.name
 ```
 
 如果这样直接获取可能会报错，导致程序异常，所以我们需要对 obj 、attr 此次验证
 即：
 
-```
+```js
 let n_val = obj && obj.attr && obj.attr.name
 ```
 
 **用可选链操作符`?.`**
 
-```
+```js
 let n_val = obj?.attr?.name
 ```
 
@@ -58,7 +58,7 @@ let n_val = obj?.attr?.name
 
 ## 【1】用`Object.assign`
 
-```
+```js
 let obj = Object.assign({a:3},{b:4},{c:5});
 obj; // {a: 3, b: 4, c: 5}
 ```
@@ -66,7 +66,7 @@ obj; // {a: 3, b: 4, c: 5}
 ## 【2】用`(```)`可以合并多个对象
 
 
-```
+```js
 let obj = {...{a:3},...{b:4},...{c:5}}
 obj; // {a: 3, b: 4, c: 5}
 ```
@@ -99,7 +99,7 @@ obj; // {a: 3, b: 4, c: 5}
 
 递归遍历对象用`defineProperty`实现`vue`双向绑定
 
-```
+```js
 var obj = {
 id:1,
 info:{
@@ -144,7 +144,7 @@ obj.arr.slice(1); // 修改数组监听失败
 # 六、`Object.fromEntries`：把序列化的字符串反转为对象
 
 
-```
+```js
 window.location.search = '?roomId=9&status=1&taskId=7&serviceId=1109';
 var str = window.location.search.substr(1);
 var p = new URLSearchParams(str);
@@ -167,9 +167,9 @@ var param = Object.fromEntries(p);
 
 ## 不可扩展对象`preventExtensions`
 
-**`Object.preventExtensions`**不能增，能删改
+!> `Object.preventExtensions`不能增，能删改
 
-```
+```js
 var obj = {a:1,b:2};
 Object.preventExtensions(obj);
 obj.c = 3;
@@ -184,15 +184,15 @@ console.log(obj); // {b: "hello"} 修改成功
 
 (`false`是不可扩展，`true`是正常对象)
 
-```
+```js
 Object.isExtensible(obj);// false
 ```
 
 ## 密封的对象`seal`
 
-**`Object.seal`**不能增删，能改
+!> `Object.seal`不能增删，能改
 
-```
+```js
 var obj = {a:1,b:2};
 Object.seal(obj);
 obj.c = 3;
@@ -207,15 +207,15 @@ console.log(obj); // {a:1,b: "hello"} 修改成功
 
 (`false`是正常，`true`是已经密封了)
 
-```
+```js
 Object.isSealed(obj);// true
 ```
 
 ## 冻结的对象`freeze`
 
-**`Object.freeze`**不能增删改
+!> `Object.freeze`不能增删改
 
-```
+```js
 var obj = {a:1,b:2};
 Object.freeze(obj);
 obj.c = 3;
@@ -230,7 +230,7 @@ console.log(obj); // {a:1,b:2} 修改失败
 
 (`false`是正常，`true`是已经冻结了)
 
-```
+```js
 Object.isFrozen(obj);// true
 ```
 
@@ -238,7 +238,7 @@ Object.isFrozen(obj);// true
 
 # 八、`Object.entries`：分割对象
 
-```
+```js
 const obj = { foo: 'bar', baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 ```
@@ -254,7 +254,7 @@ console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 # 十、判断对象`{}`是否为空
 
-```
+```js
 if(Object.keys(obj).length === 0){...}
 ```
 
@@ -262,14 +262,16 @@ if(Object.keys(obj).length === 0){...}
 
 # 十一、对象 key 值构建
 
-```
+```js
 var a = 'name'
 var b = {
     [a] : '小明'
 }
+```
 
 结果：
 
+```
 b = {
     name: '小明'
 }

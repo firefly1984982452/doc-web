@@ -43,7 +43,7 @@ ES6的转换大部分是用`transpiling`。
 
 **一个已经声明但没有初始化的变量**
 
-```
+```js
 console.log(b);
 let b;
 ```
@@ -82,7 +82,7 @@ let b;
 
 比如：
 
-```
+```js
 DELETE /orders/{orderId}
 
 GET /cards/886333

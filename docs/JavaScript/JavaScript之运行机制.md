@@ -9,7 +9,7 @@
 
 并行：比如进程与线程，独立运行并且能同时运行。
 
-```
+```js
 fun : function(){
 	func1();
 	func2();
@@ -69,7 +69,7 @@ fun : function(){
 
 执行顺序：先宏任务--》执行结束后--》再执行所有微任务--》渲染--》下一个宏任务
 
-```
+```js
 console.log('start');
 
 setTimeout(function() {
@@ -105,7 +105,7 @@ console.log('end');
 
 ## 【1】不使用时
 
-```
+```js
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -152,7 +152,7 @@ test.html
   </body>
 </html>
 
-```
+```js
 
 worker.js
 ```
@@ -181,7 +181,7 @@ JS引擎是单线程的，本质上还是没有改变。
 
 可以使用live-server搭建一个简单的本地服务器：
 
-```
+```js
 `npm install live-server -g`
 `live-server`
 ```

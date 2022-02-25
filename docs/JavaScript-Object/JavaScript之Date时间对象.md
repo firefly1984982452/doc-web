@@ -2,7 +2,7 @@
 
 # 一、date 获取日期时间的所有方法
 
-```
+```js
 var date = new Date();
 let print =
 `新建时间对象：new Date()：${date}\n` +
@@ -23,7 +23,7 @@ console.log(print);
 
 # 二、把时间戳转为时间（年月日时分秒）
 
-```
+```js
 var time = new Date();
 var Y = time.getFullYear();
 var m = time.getMonth() + 1;
@@ -43,7 +43,7 @@ console.log(Y + "-" + m + "-" + d + " " + H + ":" + mi + ":" + s);
 
 # 三、时间自定义格式化(如 yyyy-MM-dd)
 
-```
+```js
 var formatDatePD = function(t,str) {
   var obj = {
     yyyy:t.getFullYear(),
@@ -75,7 +75,7 @@ formatDate(new Date(1409894060000), 'yyyy-MM-dd HH:mm:ss 星期w')
 - `toLocaleString`
 - `toLocaleDateString`
 
-```
+```js
 new Date().toLocaleString(); // "2021/7/20下午2:57:36"
 new Date().toLocaleDateString(); // "2021/7/20"
 ```
@@ -84,11 +84,11 @@ new Date().toLocaleDateString(); // "2021/7/20"
 
 # 五、获取指定时间的时间戳
 
-`Math.floor(new Date(Date.UTC(2020, 0, 1, 0, 0, 0)).getTime() / 1000)` // 2020/1/1 0:0:0 --> 1577808000
-
-`Math.floor(new Date('2020-01-01 00:00:00').getTime()/1000)` // 2020/1/1 0:0:0 --> 1577808000
-
-`Date.parse('2020-01-01 00:00:00')/1000` // 2020/1/1 0:0:0 --> 1577808000
+```js
+Math.floor(new Date(Date.UTC(2020, 0, 1, 0, 0, 0)).getTime() / 1000) // 2020/1/1 0:0:0 --> 1577808000
+Math.floor(new Date('2020-01-01 00:00:00').getTime()/1000) // 2020/1/1 0:0:0 --> 1577808000
+Date.parse('2020-01-01 00:00:00')/1000 // 2020/1/1 0:0:0 --> 1577808000
+```
 
 ---
 
@@ -108,7 +108,7 @@ new Date().toLocaleDateString(); // "2021/7/20"
 
 # 七、两个时间戳相减所距时间
 
-```
+```js
 getTime(value = Math.round(Date.now() / 1000)) {
   let nowTimeStamp = Math.round(Date.now() / 1000);
   let reduceTimeStamp = nowTimeStamp - value;
@@ -129,7 +129,7 @@ getTime(value = Math.round(Date.now() / 1000)) {
 
 # 八、计算今天是今年的进度的多少
 
-```
+```js
 getPlan(){
   let now = new Date();
   let year = now.getFullYear();
@@ -171,7 +171,7 @@ getAge24Time() {
 
 # 九、国际化相对时间格式化：Intl.RelativeTimeFormat
 
-```
+```js
 const rtf = new Intl.RelativeTimeFormat("zh", { numeric: "auto" });
 console.log(rtf.format(-3.14, "second"));
 console.log(rtf.format(3, "day"));

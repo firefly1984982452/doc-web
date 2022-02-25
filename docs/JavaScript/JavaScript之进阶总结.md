@@ -24,7 +24,7 @@
 
 用`arguments.callee`实现递归
 
-```
+```js
 function test(num) {
     console.log(num)
     if(num!==0){
@@ -42,7 +42,7 @@ test(3)
 
 ## 【2】命名一个 function
 
-```
+```js
 function test(num) {
     (function fn (){
         console.log(num)
@@ -90,7 +90,7 @@ test(3)
 
 正常情况下，我希望它多久执行，假设邮箱验证正常情况是每隔 1 秒向后台发送请求，然后用户一直不停的在输入框输入，此时会不断的清除 Timeout，直到停止调用方法 1 秒后才正常去向后台发送请求。
 
-```
+```js
 // 防抖【防止多次触发滚动事件】
 var time = '';
 handleDebounce () {
@@ -110,7 +110,7 @@ handleDebounce () {
 
 假设浏览器一直在不停滚动，我不可能等停止了再请求，也不可能一直请求。
 
-```
+```js
 var flag = false;
 handleThrottle () {
   console.log('调用')
@@ -127,7 +127,7 @@ handleThrottle () {
 
 高阶节流：`闭包` + `return数据` + `传参`
 
-```
+```js
 <script>
   var resultValue = "1";
   /**
@@ -182,7 +182,7 @@ handleThrottle () {
 
 如下代码：因为`li`的点击事件一定会事件冒泡到`ul`上，所以将点击事件写在`ul`上即可委托。
 
-```
+```js
 <ul id="ul">
   <li>1</li>
   <li>2</li>
@@ -200,7 +200,7 @@ handleThrottle () {
 
 vue 中使用
 
-```
+```js
 <div  @click="handleClick">
     <span
         v-for="(item,index) of 10000"
@@ -230,7 +230,7 @@ handleClick(e){
 
 **用 var 时**
 
-```
+```js
 console.log(str);
 var str = 'hello';
 ```
@@ -239,7 +239,7 @@ var str = 'hello';
 
 相当于
 
-```
+```js
 var str ;
 console.log(str);
 str = 'hello';
@@ -249,7 +249,7 @@ str = 'hello';
 
 **用 let 时**
 
-```
+```js
 console.log(str);
 let str = 'hello';
 ```
@@ -262,7 +262,7 @@ let str = 'hello';
 
 假设我们想每隔 1 秒分别打印 1、2、3、4、5。
 
-```
+```js
 for (var i = 1; i < 6; i++) {
     console.log(i)
     setTimeout(() => {
@@ -277,7 +277,7 @@ for (var i = 1; i < 6; i++) {
 
 用 let 可以劫持 i 的作用域。
 
-```
+```js
 for (var i = 1; i < 6; i++) {
     let j = i;
     console.log(j)
@@ -289,7 +289,7 @@ for (var i = 1; i < 6; i++) {
 
 此时就是先打印 1、2、3、4、5，然后每隔 1 秒打印'print1'、'print2'...'print5'。但是，每次都会有新的 j 替代原来的 j，所以可以直接在 for 循环里面定义 let i = 1;
 
-```
+```js
 for (let i = 1; i < 6; i++) {
     console.log(i)
     setTimeout(() => {
@@ -304,7 +304,7 @@ for (let i = 1; i < 6; i++) {
 
 ## 【1】直接 return
 
-```
+```js
 var a = 0;
 function fn(){
     var a = 12;
@@ -316,7 +316,7 @@ console.log(a); // 0
 
 ## 【2】return function
 
-```
+```js
 var a = 0;
 function fn() {
     var a = 12;
@@ -330,7 +330,7 @@ console.log(a); // 0
 
 ## 【3】return 闭包
 
-```
+```js
 var a = 0;
 function fn() {
     var a = 12;
@@ -358,7 +358,7 @@ console.log(a); // 0
 
 如果有 valueOf 和 toString 时，valueOf 的优先级高：
 
-```
+```js
 let a = {
     valueOf() {
         return 1;
@@ -374,7 +374,7 @@ console.log( a + '10'); // 110
 
 当只有 toString 时，才会调用它：
 
-```
+```js
 let a = {
     toString() {
         return '2';
@@ -387,7 +387,7 @@ console.log(a+203); // 2203
 
 优先级最高，还可根据不同的类型转换成 Number 类型和 String 类型：
 
-```
+```js
 
 let obj = {
     [Symbol.toPrimitive](hint) {
@@ -424,7 +424,7 @@ console.log(String(obj)); /// str
 
 新建一个普通对象
 
-```
+```js
 var settings = {
   username: 'lydiahallie',
   level: 19,
@@ -434,21 +434,20 @@ var settings = {
 
 ◆ 普通用法
 
-```
+```js
 var data = JSON.stringify(settings); // "{"username":"lydiahallie","level":19,"health":90}"
 ```
 
 ◆ 参数 2：参数过滤
 
-```
+```js
 var data = JSON.stringify(settings, ['level', 'health']); // "{"level":19,"health":90}"
 ```
 
 ◆ 参数 3：参数排版
 
-```
+```js
 var data = JSON.stringify(settings, undefined, 2);
-
 ```
 
 打印出来：
@@ -467,13 +466,13 @@ var data = JSON.stringify(settings, undefined, 2);
 
 ## 【3】参数 1：普通用法
 
-```
+```js
 JSON.parse('{"p": 5}'); // {p: 5}
 ```
 
 ## 【4】参数 2：过滤函数
 
-```
+```js
 JSON.parse('{"p": 5}',((key,value)=>{
     console.log(key,value);
     return value*20;
@@ -504,13 +503,15 @@ p 5
 
 ## 【2】相等（`==`）规则
 
-**Boolean 规则：Boolean(val)**：如果有一个操作数是`Boolean`值，则在比较前先将其转换为数值——`false`为`0`，`true`为`1`。 **String&Number 规则：Number(string)**：如果一个是`String`，一个是`Number`，则先将`String`转为`Number`。 **Object 规则：valueOf(obj)**：如果有一个是对象，则调用`valueOf`方法（数组调`toString()`方法）。
+- `Boolean` 规则：Boolean(val)：如果有一个操作数是`Boolean`值，则在比较前先将其转换为数值——`false`为`0`，`true`为`1`。 
+- `String&Number` 规则：Number(string)**：如果一个是`String`，一个是`Number`，则先将`String`转为`Number`。 
+- `Object` 规则：valueOf(obj)：如果有一个是对象，则调用`valueOf`方法（数组调`toString()`方法）。
 
-![](https://yck-1254263422.cos.ap-shanghai.myqcloud.com/blog/2019-06-01-043719.png)
+![image](https://yck-1254263422.cos.ap-shanghai.myqcloud.com/blog/2019-06-01-043719.png)
 
 ## 【3】问题探讨
 
-```
+```js
 [] == []; // false
 {} == {}; // false
 [] == ![]; // true
@@ -541,7 +542,7 @@ p 5
 
 ## 【1】同步代码
 
-```
+```js
 try {
     foo();
 } catch (error) {
@@ -557,7 +558,7 @@ try {
 
 ## 【2】异步代码
 
-```
+```js
 function foo(){
     setTimeout(()=>{
         bar.arr();
@@ -605,13 +606,13 @@ Uncaught ReferenceError: bar is not defined
 
 page1
 
-```
+```js
 localStorage.setItem('send','sendValue');
 ```
 
 page2
 
-```
+```js
 window.addEventListener('storage', (e) => {
     console.log(e)
 })
@@ -629,7 +630,7 @@ window.addEventListener('storage', (e) => {
 
 ## 【1】服务端
 
-```
+```js
 var ws = require("nodejs-websocket");
 console.log('开始建立连接...');
 
@@ -666,7 +667,7 @@ console.log('webSocket建立完毕！');
 
 **客户端 1：**
 
-```
+```js
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -719,7 +720,7 @@ console.log('webSocket建立完毕！');
 
 **客户端 2（将用户 1 改为用户 2）：**
 
-```
+```js
 ...
 
 var ws = new WebSocket("ws://localhost:8001?userName=2");
@@ -738,7 +739,9 @@ ws.send(
 
 ## 【3】运行服务端
 
-`node server.js`
+```bash
+$ node server.js
+```
 
 此时，一个运行在 chrome，一个运行在 firefox，就已经能实现通信。
 
@@ -746,14 +749,14 @@ ws.send(
 
 # 十五、MQTT 通信
 
-```
+```js
 client = mqttConnect.connect(MQTT_SERVICE, options)
 client.on('connect', () => {
   client.publish('/inner/web/dialog/close', JSON.stringify(this.options.obj))
 })
 ```
 
-```
+```js
 
 client.on('connect', () => {
   client.subscribe('/inner/web/dialog/close')
@@ -768,7 +771,7 @@ client.on('connect', () => {
 
 不推荐：
 
-```
+```js
 if (x) {
     function foo() {}
 }
@@ -776,7 +779,7 @@ if (x) {
 
 推荐：
 
-```
+```js
 if (x) {
     var foo = function() {}
 }
@@ -786,7 +789,7 @@ if (x) {
 
 会导致异常，如：
 
-```
+```js
 var x = new Boolean(false);
 false === false; // false
 ```
@@ -795,7 +798,7 @@ false === false; // false
 
 ◆ 只用于 `object`/`map`/`hash` 的遍历
 
-```
+```js
 var obj = {
     name: '小明'
 }
@@ -806,7 +809,7 @@ for(var i in obj) {
 
 ◆ 遍历对象时用 `hasOwnPropery`
 
-```
+```js
 for(var i in obj) {
     console.log(obj.hasOwnProperty(i))
 }
@@ -826,7 +829,7 @@ for(var i in obj) {
 
 三元操作符用于替代下面的代码:
 
-```
+```js
 if (val != 0) {
   return foo();
 } else {
@@ -836,7 +839,7 @@ if (val != 0) {
 
 你可以写成:
 
-```
+```js
 return val ? foo() : bar();
 ```
 
@@ -878,7 +881,7 @@ js 发消息给 java `window.WebViewJavaScriptBridge.send()` js 收 java 的消�
 
 ◆ 示例
 
-```
+```js
 $(".company_color").click(function(){
   var u = navigator.userAgent;
   var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
@@ -899,15 +902,13 @@ $(".company_color").click(function(){
 
 - [参考链接](https://zhuanlan.zhihu.com/p/97768916)
 
-DOM:
 
-```
+```html
 <a id="download" @click="download">下载</a>
 ```
 
-JS:
 
-```
+```js
 download(){
     var blob = new Blob(['hello world']);
     var url = window.URL.createObjectURL(blob);
@@ -923,7 +924,7 @@ download(){
 
 ## 【1】下载excel文件
 
-```
+```js
 var adom = document.createElement("a");
 adom.setAttribute("href",url);
 adom.width = "0px";
@@ -936,7 +937,7 @@ adom.remove();
 
 ## 【2】下载image文件
 
-```
+```js
 fetch(url).then(res => res.blob()).then((blob) => {
   // 创建隐藏的可下载链接
   const a = document.createElement('a');
@@ -962,10 +963,10 @@ fetch(url).then(res => res.blob()).then((blob) => {
 
 # 二十二、`lighthouse` 前端性能优化工具
 
-```
-npm install -g lighthouse
+```bash
+$ npm install -g lighthouse
 
-lighthouse https://www.cnblogs.com/
+$ lighthouse https://www.cnblogs.com/
 ```
 
 生成 html 页面
@@ -974,14 +975,13 @@ lighthouse https://www.cnblogs.com/
 
 # 二十三、用 iframe 实现 HTML 在线编辑
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
   </head>
 
   <body>
-
     <textarea name="" id="data" cols="100" rows="20">
       <!DOCTYPE html>
         <html>
@@ -1006,7 +1006,6 @@ lighthouse https://www.cnblogs.com/
         outDom.close();
       }
     </script>
-
   </body>
 </html>
 ```
@@ -1017,7 +1016,7 @@ lighthouse https://www.cnblogs.com/
 
 ## 【1】`html`版
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -1057,7 +1056,7 @@ lighthouse https://www.cnblogs.com/
 
 numberAnimation.vue
 
-```
+```js
 <template>
   <div>
     <p class="EX-Medium">{{ number }}</p>
@@ -1104,19 +1103,18 @@ export default {
   }
 }
 </script>
-
 ```
 
 main.js
 
-```
+```js
 import numberAnimation from './components/public/numberAnimation.vue'
 Vue.component('numberAnimation', numberAnimation)
 ```
 
 test.vue
 
-```
+```js
 <numberAnimation :valueNumber="53667.4" />
 ```
 
@@ -1124,7 +1122,7 @@ test.vue
 
 # 二十五、全屏
 
-```
+```js
 document.querySelector('body').requestFullscreen(); // 全屏
 document.exitFullscreen(); // 退出全屏
 ```
@@ -1133,7 +1131,7 @@ document.exitFullscreen(); // 退出全屏
 
 # 二十六、`{变量}`方法可以快速使变量变成对象
 
-```
+```js
 const num = 123;
 var a = {num};
 console.log(a); // {num:123}
@@ -1143,7 +1141,7 @@ console.log(a); // {num:123}
 
 # 二十七、`event.getModifierState('CapsLock')`检测到当前开启了大写键盘，而不是用`shift`生成的大写字母
 
-```
+```js
 const passwordInput = document.getElementById('password');
 passwordInput.addEventListener('keyup', function (event) {
   if (event.getModifierState('CapsLock')) {
@@ -1156,7 +1154,7 @@ passwordInput.addEventListener('keyup', function (event) {
 
 # 二十八、可终止条件`true && doSomething();`
 
-```
+```js
 // 原来的：
 if (true) {
     doSomething();
@@ -1169,7 +1167,7 @@ true && doSomething();
 
 # 二十九、空值合并：`??`
 
-```
+```js
 // 原来的：
 let x = (foo !== null && foo !== undefined)
     ? foo
@@ -1189,7 +1187,7 @@ let x = foo ?? bar();
 
 css animation：
 
-```
+```js
 .item1 {
   width: 100px;
   height: 100px;
@@ -1213,7 +1211,7 @@ css animation：
 
 用 Web Animation API：
 
-```
+```js
 <div class="item1"></div>
 <script>
   var ani1 = [
@@ -1232,7 +1230,7 @@ css animation：
 
 Web Animation API 更多的操作方法：
 
-```
+```js
 rotateAni.play() //播放
 rotateAni.pause() //暂停
 rotateAni.finish()  //对于有限次的动画而言，直接停止动画，且跳到动画结束位置
@@ -1242,19 +1240,20 @@ rotateAni.reverse() //让动画反向执行到动画执行的原点,会将playba
 
 Web Animation API 的事件监听：
 
-```
+event方式：
 
-// event方式：
-
+```js
 rotateAni.oncancel = function(){
     doSomething();
 }
 rotateAni.onfinish = function(){
     doSomething();
 }
+```
 
-// promise方式
+promise方式：
 
+```js
 rotateAni.finished.then(() => {
   console.log(rotateApi);
 })
@@ -1266,7 +1265,7 @@ rotateAni.finished.then(() => {
 
 `undefined`在闭包时可更改：
 
-```
+```js
 (() => { let undefined = 1; console.log(undefined) })()
 ```
 

@@ -2,7 +2,7 @@
 
 >需求是这样的：`for`循环13次一个接口请求，请求完之后再遍历所有的数据，用另一个数组接收部分数据
 
-```
+```js
 getFloor(){
 	for(let i = 1; i < 14; i++) {
     this.$ajax.post(this.$httpConfig.homefLoor + '?page=' + i).then((res) => {
@@ -25,7 +25,7 @@ getFloor(){
 
 - 语法
 
-```
+```js
 async function(){
 	await ajax...
 }
@@ -33,7 +33,7 @@ async function(){
 
 - 实现
 
-```
+```js
 async getFloor(){
 	for(let i = 1; i < 14; i++) {
     await this.$ajax.post(this.$httpConfig.homefLoor + '?page=' + i).then((res) => {
@@ -52,7 +52,7 @@ async getFloor(){
 
 - 语法
 
-```
+```js
 function f1(callback) {
   // ...
   callback();
@@ -67,7 +67,7 @@ f1(f2);
 
 - 实现
 
-```
+```js
 this.setback(this.setArr);
 
 setback(callback){

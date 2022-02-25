@@ -12,7 +12,7 @@
 
 # 代码：
 
-```
+```js
 <template>
     <div class="page">null</div>
 </template>
