@@ -71,7 +71,7 @@
 
 ---
 
-## ◆ addEventListener
+## 【1】 addEventListener
 
 **addEventListener 的第 3 个参数**
 
@@ -89,7 +89,7 @@
 
 ◆ `once`例子：
 
-```
+```javascript
 window.addEventListener('click', () => {
   console.log('click')
 }, { once: true })
@@ -97,7 +97,7 @@ window.addEventListener('click', () => {
 
 ◆ `passive`例子：
 
-```
+```javascript
 <script>
 document.getElementById("myAnchor").addEventListener("click", function (event) {
 	event.preventDefault()
@@ -116,9 +116,9 @@ document.getElementById("myAnchor").addEventListener("click", function (event) {
 
 `passive` 的默认值为 `false` 时，性能会降低，所以某些浏览器（特别是 Chrome 和 Firefox）已经将 `passive` 的默认值改为了 `true`。这可以防止事件监听器，所以滚动页面时无法阻止页面呈现。
 
-## ◆ visibilityState 和 hidden：页面隐藏状态
+## 【2】 visibilityState 和 hidden：页面隐藏状态
 
-```
+```javascript
 addEventListener('visibilitychange', function () {
   console.log(hidden,visibilityState)
   // 用户离开了当前页面
@@ -138,13 +138,13 @@ addEventListener('visibilitychange', function () {
 - `hidden`：是否隐藏，只返回`true`和`false`；
 - `visibilityState`：具体状态，有`hidden`、`visible`、`prerender`（正在渲染中）
 
-## ◆ referrer：上一页地址
+## 【3】 referrer：上一页地址
 
 返回上一页的地址，可以处理如移动端直接进入到详情页时，用`history.go(-1)`和`history.back()`无效时可用`referrer`
 
 [直接进入此详情页时点返回会返回到首页](https://m.qidian.com/author/402631776)
 
-```
+```javascript
 if(document.referrer === '') {
   window.location.href = 'https://www.baidu.com/'
 } else {
@@ -237,11 +237,11 @@ if(document.referrer === '') {
 - `setIdAttribute()`：
 - `setIdAttributeNode()`：
 
-## ◆ scrollLeft
+## 【1】 scrollLeft
 
 js 设置向左滑动
 
-```
+```javascript
 this.$refs.ref.scrollLeft = 100
 ```
 
@@ -279,7 +279,7 @@ this.$refs.ref.scrollLeft = 100
 
 ## 源码
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 

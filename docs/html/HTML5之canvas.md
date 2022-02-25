@@ -28,7 +28,7 @@
 
 ## 【2】使用
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head></head>
@@ -53,18 +53,18 @@
 
 canvas 代码都放在顶层标签`<canvas>`之中，由 JS 生成内容，一般情况下没有内层标签。
 
-```
+```html
 <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
 </canvas>
 ```
 
 ## 【2】`rect`矩形
 
-```
+```html
 <canvas class="box" id="rect"> </canvas>
+```
 
-...
-
+```javascript
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");
@@ -75,11 +75,11 @@ function rectFn() {
 
 ## 【3】`moveTo`矩形
 
-```
+```html
 <canvas class="box" id="moveTo"> </canvas>
+```
 
-...
-
+```javascript
 function rectFn() {
   let c = document.querySelector("#moveTo");
   let ctx = c.getContext("2d");
@@ -91,11 +91,11 @@ function rectFn() {
 
 ## 【4】`arc`圆形
 
-```
+```html
 <canvas class="box" id="arc"> </canvas>
+```
 
-...
-
+```javascript
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");
@@ -107,11 +107,11 @@ function rectFn() {
 
 ## 【5】text【文本】
 
-```
+```html
 <canvas class="box" id="text"> </canvas>
+```
 
-...
-
+```javascript
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");
@@ -123,11 +123,11 @@ function rectFn() {
 
 ## 【6】gradient【渐变】
 
-```
+```html
 <canvas class="box" id="gradient"> </canvas>
+```
 
-...
-
+```javascript
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");
@@ -142,7 +142,7 @@ function rectFn() {
 
 ## 【7】image【图像】
 
-```
+```html
 <img
   class="box"
   id="scream"
@@ -152,9 +152,9 @@ function rectFn() {
   style="display: none"
 />
 <canvas class="box" id="image"> </canvas>
+```
 
-...
-
+```javascript
 function rectFn() {
   let c = document.querySelector("#rect");
   let ctx = c.getContext("2d");
@@ -173,7 +173,7 @@ function rectFn() {
 
 - 源码：
 
-```
+```html
 <html lang="en">
 
 <head>
@@ -233,7 +233,7 @@ function rectFn() {
 
 - vue组件版源码：
 
-```
+```html
 <template>
   <div class="box" ref="container">
     <canvas ref="canvas"></canvas>

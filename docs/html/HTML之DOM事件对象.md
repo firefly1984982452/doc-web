@@ -1,6 +1,5 @@
 # HTML之DOM事件对象
 
-
 - [菜鸟教程](https://www.runoob.com/jsref/dom-obj-event.html)
 - [MDN-事件参考](https://developer.mozilla.org/zh-CN/docs/Web/Events)
 
@@ -10,9 +9,11 @@
 
 1. 在`<body>`中直接使用`onbeforeunload`
 
-```
+```html
 <body onbeforeunload="return myFunction()">
+```
 
+```javascript
 <script>
 function myFunction() {
 	return "我在这写点东西...";
@@ -22,7 +23,7 @@ function myFunction() {
 
 2. 绑定 `window`对象
 
-```
+```javascript
 window.onbeforeunload = function (e) {
   e = e || window.event;
   // 兼容IE8和Firefox 4之前的版本
@@ -36,7 +37,7 @@ window.onbeforeunload = function (e) {
 
 3. 在 `addEventListener` 中监听 `beforeunload`
 
-```
+```javascript
 window.addEventListener("beforeunload", function (event) {
 	event.returnValue = "我在这写点东西...";
 });
@@ -71,13 +72,15 @@ window.addEventListener("beforeunload", function (event) {
 
 ◆ 区别样式及代码
 
-<p style="font-size:20px;color:#f00;" onmousedown="console.log(1)" onmouseup="console.log(2)" onclick="console.log(3)">
-  点击后勿松开，然后松开后查看先后顺序
-</p>
+<div class="example-box">
+	<p style="font-size:20px;color:#f00;" onmousedown="console.log(1)" onmouseup="console.log(2)" onclick="console.log(3)">
+		先打开控制台，点击此文字后勿松开，然后松开后查看先后顺序
+	</p>
+</div>
 
-```
+```html
 <p onmousedown="console.log(1)" onmouseup="console.log(2)" onclick="console.log(3)">
-  点击后勿松开，然后松开后查看先后顺序
+  先打开控制台，点击此文字后勿松开，然后松开后查看先后顺序
 </p>
 ```
 
@@ -93,7 +96,7 @@ window.addEventListener("beforeunload", function (event) {
 
 ◆ 区别样式及代码
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
@@ -171,14 +174,14 @@ window.addEventListener("beforeunload", function (event) {
 
 ◆ 区别样式及代码
 
-<p style="font-size:20px;color:#f00;">
-在输入框中按下普通键盘，再按下<kbd>Delete</kbd><kbd>Ctrl</kbd><kbd>Shift</kbd>和<kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd><kbd>←</kbd>键查看变化，再查看输入中英文时的变化
-</p>
-<input type="text" onkeydown="console.log(1)" onkeypress="console.log(2)" onkeyup="console.log(3)">
-<br />
-<br />
+<div class="example-box">
+	<p style="font-size:20px;color:#f00;">
+	在输入框中按下普通键盘，再按下<kbd>Delete</kbd><kbd>Ctrl</kbd><kbd>Shift</kbd>和<kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd><kbd>←</kbd>键查看变化，再查看输入中英文时的变化
+	</p>
+	<input type="text" onkeydown="console.log(1)" onkeypress="console.log(2)" onkeyup="console.log(3)">
+</div>
 
-```
+```html
 <input type="text" onkeydown="console.log(1)" onkeypress="console.log(2)" onkeyup="console.log(3)">
 ```
 
@@ -200,7 +203,7 @@ window.addEventListener("beforeunload", function (event) {
 
 ## 【1】`onerror`用法
 
-```
+```html
 <img src="image.gif" onerror="myFunction()">
 <p id="demo"></p>
 <p>如果在加载图片时发生错误则触发函数 myFunction() 函数会弹出提示窗口。</p>
@@ -214,7 +217,7 @@ function myFunction() {
 
 ## 【2】`onhashchange`用法
 
-```
+```html
 <a href="#id1">id1</a>
 <a href="#id2">id2</a>
 <h1 id="id1">第一个</h1>
@@ -230,7 +233,7 @@ function myFunction() {
 
 **电脑如果点关闭按钮后直接关闭了，可刷新时点取消重新加载网站后重试。**
 
-```
+```javascript
 window.addEventListener("beforeunload", function (event) {
      event.returnValue = "我在这写点东西...";
 });
@@ -250,7 +253,7 @@ window.addEventListener("beforeunload", function (event) {
 
 关闭时速度太快，看不到 `console` 信息，所以加上 `debugger` 来辅助查看信息。
 
-```
+```html
 <a href="http://www.baidu.com">跳转到百度</a>
 <script>
 	// 页面完成加载
@@ -301,16 +304,14 @@ window.addEventListener("beforeunload", function (event) {
 2. `onfocusin`
 3. `onfocusout`
 
-◆ 区别样式及代码
+<div class="example-box">
+	<p style="font-size:20px;color:#f00;">
+	打开<kbd>F12</kbd>查看获取焦点前后的信息
+	</p>
+	<input type="text" onfocus="console.log(1)" onfocusin="console.log(2)" onfocusout="console.log(3)" />
+</div>
 
-<p style="font-size:20px;color:#f00;">
- 打开<kbd>F12</kbd>查看获取焦点前后的信息
-</p>
-<input type="text" onfocus="console.log(1)" onfocusin="console.log(2)" onfocusout="console.log(3)" />
-<br />
-<br />
-
-```
+```html
 <input type="text" onfocus="console.log(1)" onfocusin="console.log(2)" onfocusout="console.log(3)" />
 ```
 
@@ -380,13 +381,10 @@ window.addEventListener("beforeunload", function (event) {
 - `onwaiting` 等待中，正在缓冲
 
 
-
 <div class="example-box">
-
 	<p style="font-size:20px;color:#f00;">
 	打开<kbd>F12</kbd>查看视频播放信息
 	</p>
-
 	<video 
 		autoplay 
 		muted 
@@ -411,11 +409,9 @@ window.addEventListener("beforeunload", function (event) {
 		ontimeupdate="console.log('播放位置发生改变')" 
 		onvolumechange="console.log('音量发生改变')" 
 		onwaiting="console.log('等待中，正在缓冲')"> <source src="https://www.w3school.com.cn/i/movie.mp4" type="video/mp4"> </video> <br /> <br />
-
 </div>
 
-
-```
+```html
 <video
 	autoplay
 	muted
@@ -508,7 +504,7 @@ window.addEventListener("beforeunload", function (event) {
 
 ◆ 事件对象的源码
 
-```
+```html
 <html>
 
 <head>

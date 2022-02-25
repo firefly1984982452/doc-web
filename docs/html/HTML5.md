@@ -6,7 +6,6 @@
 
 - [《HTML5 权威指南》](https://book.douban.com/subject/25786074/)
 
-
 !> 我只记录了冷门的不常用的信息，其它基础的没有记录。
 
 # 一、URL 部分
@@ -16,7 +15,6 @@
 作用：有`href`和`target`属性。
 
 用法：
-
 
 ```html
 <head>
@@ -55,7 +53,7 @@
 
 相当于`tooltip`。
 
-```
+```html
 <h1 title="版权说明">版权项：XXX</h1>
 ```
 
@@ -64,7 +62,6 @@
 </div>
 
 ## 【3】`tabindex`：按<kbd>tab</kbd>键之后按顺序遍历
-
 
 属性值：
 
@@ -82,7 +79,7 @@
 
 ## 【4】`accessKey`：使用自定义键来聚焦
 
-```
+```html
 <button accesskey="s">提交</button>
 ```
 
@@ -96,7 +93,7 @@
 
 作用：不渲染这个 DOM 元素，相当于`display:none`。
 
-```
+```html
 <p hidden>本句不会显示在页面上。</p>
 ```
 
@@ -112,7 +109,7 @@
 
 ## 【7】`contenteditable`：允许修改内容
 
-```
+```html
 <p contenteditable="true">阅读时是正常模式，鼠标点击后，本句内容可修改。</p>
 ```
 
@@ -122,7 +119,7 @@
 
 ## 【8】`spellcheck`：打开拼写检查
 
-```
+```html
 <p contenteditable="true" spellcheck="true">
 英语单词 separate 容易写错成 seperate。
 </p>
@@ -134,19 +131,19 @@
   </p>
 </div>
 
-?> 点击鼠标后可看到写错的单词seperate下面有黄色的标识
+?> 点击鼠标后可看到写错的单词seperate下面有错误的标识
 
 ## 【9】`data-`：放置自定义数据
 
-```
+```css
 <style>
   h1[data-yeah]::before {
     content: attr(data-yeah);
   }
 </style>
+```
 
-...
-
+```html
 <h1 data-yeah='显示信息：'>data-yeah</h1>
 ```
 
@@ -154,7 +151,7 @@
 
 # 三、网页的语义结构
 
-```
+```html
 <body>
   <header>页眉</header>
   <main>
@@ -173,7 +170,7 @@
 
 `emmet` 速记：
 
-```
+```emmet
 body>header{页眉}+(main>article>h1{文章标题}+section>h2{第一章}+p{文章内容})+(aside{侧边栏})+footer{页脚}
 ```
 
@@ -202,7 +199,7 @@ body>header{页眉}+(main>article>h1{文章标题}+section>h2{第一章}+p{文�
 
 `<wbr>`标签可以自动断行。如果一行的宽度足够，则不断行；如果宽度不够，需要断行，就在`<wbr>`的位置的断行。
 
-```
+```html
 <p>
 Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </p>
@@ -222,7 +219,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `<var>`标签表示代码或数学公式的变量。
 
-```
+```html
 <p>勾股定理是
   <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>
 。</p>
@@ -256,7 +253,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `datetime`：表示删改发生的时间。
 
-```
+```html
 <ins cite="./why.html" datetime="2018-05">
   <p>项目比原定时间提前两周结束。</p>
 </ins>
@@ -275,12 +272,12 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 `<code>`表示代码，如果需要显示多行代码，需要放在`<pre>`标签里面。
 
-```
+```html
 <pre>
-<code>
-  let a = 1;
-  console.log(a);
-</code>
+  <code>
+    let a = 1;
+    console.log(a);
+  </code>
 </pre>
 ```
 
@@ -288,8 +285,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `<kbd>`：键盘代码；
 
-
-```
+```html
 <p>Windows 可以按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Del</kbd> 
 重启。</p>
 ```
@@ -301,9 +297,9 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `<samp>`：示例。
 
-```
+```html
 <p>如果使用没有定义的变量，浏览器会报错：
-<samp>Uncaught ReferenceError: foo is not defined</samp>。
+  <samp>Uncaught ReferenceError: foo is not defined</samp>。
 </p>
 ```
 
@@ -327,11 +323,11 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `<data>`：数据。
 
-```
+```html
 <p>运动会预定<time datetime="2015-06-10">下周三</time>举行。</p>
 ```
 
-```
+```html
 <p>本次马拉松比赛第一名是<data value="39">张三</data>。</p>
 ```
 
@@ -340,14 +336,13 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   <p>本次马拉松比赛第一名是<data value="39">张三</data>。</p>
 </div>
 
-
 ## 【13】`<address>`：联系方式
 
 ## 【14】`<abbr>`：缩写
 
 它的`title`属性可以把缩写展示全。
 
-```
+```html
 <abbr title="HyperText Markup Language">HTML</abbr>
 ```
 
@@ -357,7 +352,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【15】`<dfn>`：术语
 
-```
+```html
 <p>
 通过 TCP/IP 协议连接的全球性计算机网络，叫做
 <dfn title="全球性计算机网络">Internet</dfn>。
@@ -373,7 +368,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【16】`<ruby>`：文字的语音注释
 
-```
+```html
 <ruby>
 汉<rp>(</rp><rt>han</rt><rp>)</rp>
 字<rp>(</rp><rt>zi</rt><rp>)</rp>
@@ -393,17 +388,19 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【1】`<ol>`：有序列表
 
-```
-1. 列表项 A
-2. 列表项 B
-3. 列表项 C
-```
+<div class="example-box">
+  <ol >
+    <li>列表项 A</li>
+    <li>列表项 B</li>
+    <li>列表项 C</li>
+  </ol>
+</div>
 
 属性：
 
 ### 【1.1】reversed：倒序
 
-```
+```html
 <ol reversed>
   <li>列表项 A</li>
   <li>列表项 B</li>
@@ -419,10 +416,9 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   </ol>
 </div>
 
-
 ### 【1.2】start：起始编号
 
-```
+```html
 <ol start="5">
   <li>列表项 A</li>
   <li>列表项 B</li>
@@ -437,7 +433,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
     <li>列表项 C</li>
   </ol>
 </div>
-
 
 ### 【1.3】type：样式
 
@@ -457,7 +452,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `<dd>`：解释。
 
-```
+```html
 <dl>
   <dt>CPU</dt>
   <dd>中央处理器</dd>
@@ -481,7 +476,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   </dl>
 </div>
 
-
 多个术语（`<dt>`）对应一个解释（`<dd>`），或者多个解释（`<dd>`）对应一个术语（`<dt>`），都是合法的。
 
 ### 【2.1】更多应用
@@ -497,7 +491,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 **代码：**
 
-```
+```css
 <style>
   dl {
     columns: 3;
@@ -519,8 +513,9 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   }
 </style>
 
-...
+```
 
+```html
 <dl>
   <div>
     <dt>姓名1</dt>
@@ -577,7 +572,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 图片不显示时，图片的位置会显示该文本。
 
-```
+```html
 <img src="foo.jpg" alt="示例图片">
 ```
 
@@ -595,7 +590,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 有如下属性：
 
-- `anonymous`：跨域请求不带有用户凭证（通常是 Cookie）。
+- `anonymous`：跨域请求不带有用户凭证（通常是 `Cookie`）。
 
 - `use-credentials`：跨域请求带有用户凭证。
 
@@ -611,7 +606,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【6】响应式-`srcset`：设置不同像素时的图片地址
 
-```
+```html
 <img srcset="foo-320w.jpg,
              foo-480w.jpg 1080w,
              foo-640w.jpg 1920w"
@@ -622,7 +617,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 须与`srcset`属性一起使用。
 
-```
+```html
 <img srcset="foo-160.jpg 160w,
              foo-320.jpg 320w,
              foo-640.jpg 640w,
@@ -635,7 +630,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【8】响应式-`<picture>`：指定不同情况加载的图片
 
-```
+```html
 <picture>
   <source media="(max-width: 500px)" srcset="cat-vertical.jpg">
   <source media="(min-width: 501px)" srcset="cat-horizontal.jpg">
@@ -649,7 +644,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `<figcapt>`：说明。
 
-```
+```html
 <figure>
   <img src="https://example.com/foo.jpg">
   <figcaption>示例图片</figcaption>
@@ -680,7 +675,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ◆ `poster`：视频预览图
 
-```
+```html
 <video controls poster="/images/w3school.gif">
    <source src="movie.mp4" type="video/mp4">
    <source src="movie.ogg" type="video/ogg">
@@ -692,7 +687,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - [链接](https://blog.csdn.net/weixin_43392489/article/details/114642055)
 
-```
+```html
 <video controls src="./assets/demo.mp4" width="400" height="300" id="video">
   Sorry, your browser doesn't support embedded videos.
 </video>
@@ -725,7 +720,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【1】`<a>`：超级链接
 
-
 ### 【1.1】`href`
 
 值：
@@ -738,7 +732,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ### 【1.1.1】内容：`data:,`
 
-```
+```html
 <a href="data:,hello,world" download="hello.txt">下载hello.txt</a>
 ```
 
@@ -748,7 +742,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ### 【1.1.2】邮件：`mailto:`
 
-```
+```html
 <a href="mailto:contact@example.com">联系我们</a>
 ```
 
@@ -768,7 +762,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ### 【1.1.3】电话:`tel:`
 
-```
+```html
 <a href="tel:13312345678">13312345678</a>
 ```
 
@@ -778,7 +772,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【1.2】`download`：下载
 
-```
+```html
 <a href="data:,hello,world" download="hello.txt">下载hello.txt</a>
 ```
 
@@ -796,7 +790,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 这时候`rel="noopener"`闪亮登场，打开链接后你会发现`window.opener`已经被置为了`null`。
 
-```
+```html
 <a href="https://baidu.com/" target="_blank" rel="noopener">
 	baidu.com
 </a>
@@ -821,20 +815,20 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 提供不同分辨率的图标文件：
 
-```
+```html
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
 ```
 
 使用 emoji 作为 Favicon
 
-```
+```html
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💩</text></svg>">
 ```
 
 ## 【2.1】media
 
-```
+```html
 <link rel="preload" as="image" href="map.png" media="(max-width: 600px)">
 <link rel="preload" as="script" href="map.js" media="(min-width: 601px)">
 ```
@@ -845,7 +839,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 `type`属性也可以设成`module`，表示这是一个 `ES6` 模块，不是传统脚本。
 
-```
+```javascript
 <script type="module" src="main.js"></script>
 ```
 
@@ -853,7 +847,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 不支持 `ES6` 模块时，应使用`nomodule`属性。
 
-```
+```javascript
 <script type="module" src="main.js"></script>
 <script nomodule src="fallback.js"></script>
 ```
@@ -862,7 +856,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 不支持`sciprt`时
 
-```
+```javascript
 <noscript>
   您的浏览器不能执行 JavaScript 语言，页面无法正常显示。
 </noscript>
@@ -874,7 +868,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 **`<thead>`、`<tbody>`、`<tfoot>`** `<thead>`、`<tbody>`、`<tfoot>`都是块级容器元素，且都是`<table>`的一级子元素，分别表示表头、表体和表尾。
 
-```
+```html
 <table>
   <thead>... ...</thead>
   <tbody>... ...</tbody>
@@ -892,7 +886,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `<legend>`：控件组的标题。
 
-```
+```html
 <fieldset>
   <legend>学生情况登记</legend>
   <p>年龄：<input type="text" name="age"></p>
@@ -910,7 +904,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【2】`<datalist>`：容器标签
 
-```
+```html
 <label for="ice-cream-choice">冰淇淋：</label>
 <input type="text" list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
 
@@ -936,14 +930,13 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   </datalist>
 </div>
 
-
 ## 【3】`<input>`和`<output>`：输入输出标签
 
 - `<input>`：输入；
 
 - `<output>`：输出。
 
-```
+```html
 <input type="number" name="a" value="10"> +
 <input type="number" name="b" value="10"> =
 <output name="result">20</output>
@@ -961,7 +954,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - `<meter>`：指示器。
 
-```
+```html
 <progress id="file" max="100" value="70"> 70% </progress>
 <meter id="file" max="100" value="70"> 70% </meter>
 ```
@@ -1033,7 +1026,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【1】`<dialog>`：对话框
 
-```
+```html
 <dialog open>
   Hello world
 </dialog>
@@ -1041,7 +1034,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 JS 操作：
 
-```
+```javascript
 const modal = document.querySelector('dialog');
 
 // 对话框显示，相当于增加 open 属性
@@ -1059,7 +1052,7 @@ modal.close();
 
 - `<summary>`：折叠内容的显示部分
 
-```
+```html
 <details open>
   <summary>这是标题</summary>
   这是一段解释文本。
@@ -1079,10 +1072,9 @@ modal.close();
   }
 </style>
 
-
 **设置三角箭头样式**
 
-```
+```css
 summary::-webkit-details-marker {
   background: url(https://example.com/foo.svg);
   color: transparent;
@@ -1091,13 +1083,12 @@ summary::-webkit-details-marker {
 
 或
 
-```
+```css
 summary::-webkit-details-marker {
   background: url(https://example.com/foo.svg);
   color: transparent;
 }
 ```
-
 
 ---
 
@@ -1111,7 +1102,7 @@ summary::-webkit-details-marker {
 
 - [MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure)
 
-```
+```html
 <figure>
 		<figcaption>Get browser details using <code>navigator</code>.</figcaption>
 		<pre>
@@ -1141,7 +1132,6 @@ summary::-webkit-details-marker {
 
 `&#9;`代表的 Tab 格只有在`<pre></pre>`中才生效。
 
-
 ---
 
 # 十六、已废弃但可以了解一下的标签元素
@@ -1150,11 +1140,10 @@ summary::-webkit-details-marker {
 
 兼容性在各大浏览器都挺好，但MDN不推荐使用，以后也可能会删除。
 
-```
+```html
 <marquee >hello world , your canvas is good.</marquee>
 ```
 
 <div class="example-box">
   <marquee>hello world , your canvas is good.</marquee>
 </div>
-
