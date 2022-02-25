@@ -256,6 +256,14 @@ box-shadow: 50px 50px 0 20px #ffb;
 
 `border-image-repeat`: 重复（`repeat`）、拉伸（`stretch`）或铺满（`round`）。
 
+<div class="example-box">
+  <div style="
+              width:250px;
+              height:250px;
+              border: solid 50px;
+              border-image: url(https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg) 90 round;"></div>
+</div>
+
 ```css
 border-image: url(border.png) 30 round;
 ```
@@ -264,10 +272,20 @@ border-image: url(border.png) 30 round;
 
 `rgba`或`hsla`
 
+
+<div class="example-box">
+  <div style="
+              width:100px;
+              height:100px;
+              border: solid 30px;
+              border-color: rgba(0,0,0,.2);
+              background: #fbb;"></div>
+</div>
+
 ```css
-color: hsla(1,0%,100%,.2);
-border: solid 3px;
+border: solid 50px;
 border-color: rgba(255,255,0,.2);
+background: #fbb;
 ```
 
 ## 【4】多重边框
@@ -280,7 +298,8 @@ border-color: rgba(255,255,0,.2);
   width:100px;
   height:100px;
   background: #fbfb;
-  box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;">内容</div>
+  box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;
+  margin:20px;">内容</div>
 </div>
 
 
@@ -298,7 +317,8 @@ box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;
   height:100px;
   background: #fbfb;
   outline: 5px solid #ff0;
-  border: 5px solid #f00;">内容</div>
+  border: 5px solid #f00;
+  margin:10px;">内容</div>
 </div>
 
 ```css
@@ -321,7 +341,8 @@ border: 5px solid #f00;
   outline: 5px solid #ff0;
   border: 5px solid #f00;
   border-radius: 50%;
-  outline-offset: 10px;">内容</div>
+  outline-offset: 10px;
+  margin:20px;">内容</div>
 </div>
 
 区别的代码
@@ -1665,7 +1686,6 @@ overflow: hidden;
 如果父元素的 z-index 很低，并且被其它元素遮住，那子元素的 z-index 再大也不会显示在最上面。
 
 ```css
-
 .A{
   z-index:1;
   .a{
@@ -1865,7 +1885,7 @@ img{
 
 - [链接 2](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 
-目前我测试 chrome、firefox、safari 浏览器兼容性均不能实现这个功能。
+!> 目前测试 chrome、firefox、safari 浏览器兼容性均不能实现这个功能。
 
 ## 【6】prefers-reduced-motion：减少动画
 
