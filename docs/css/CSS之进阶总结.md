@@ -204,7 +204,6 @@ p{
 
 ## 【4】`min-inline-size`、`max-inline-size`：最小/最大直列大小
 
-最小/最大直列大小
 
 ```html
 <!DOCTYPE html>
@@ -352,20 +351,17 @@ Table 表格中，定了 width，如果其它的内容很高，内容少的可�
 ## 【5】内联元素
 
 - `display: inline-block;`会控制当前元素以自己的内容为长度，不受父元素影响。
-
 - 内联元素如果`display`改为了`block`，不用再设置`width:100%`。
 
 ## 【6】让元素 heigth 支持 100%的方法
 
-◆ 方法一
+◆ 方法一：设置`html`和`body`
 
 ```css
 html,body{heigth:100%}
 ```
 
-◆ 方法二
-
-使用绝对定位
+◆ 方法二：使用绝对定位
 
 ```css
 height: 100%;
@@ -404,16 +400,12 @@ max-width: 350px;
 
 ## 【9】line-height 深入理解
 
-行高的几种值：`px`、`normal`、`%`、`number`、`inherit`
 
-默认：
-
-```css
-line-height: 20px;
-line-height: normal;
-line-height: 150%;
-line-height: 1.5; // 资料上都是1，但chrome和firfox上应该都是1.5
-```
+- `line-height: 20px;`：像素
+- `line-height: normal;`：常规
+- `line-height: inherit;`默认
+- `line-height: 150%;`：百分比
+- `line-height: 1.5;`：倍数
 
 ---
 
@@ -432,15 +424,15 @@ line-height: 1.5; // 资料上都是1，但chrome和firfox上应该都是1.5
 # 九、文字相关
 
 1. 文字渐变
-2. 抗锯齿渲染：-webkit-font-smoothing
-3. 文字描边：-webkit-text-stroke
-4. 文字阴影：text-shadow
-5. 文字颜色：-webkit-text-fill-color
-6. font-size:10px
-7. 自定义字体：font-face
+2. `-webkit-font-smoothing`：抗锯齿渲染
+3. `-webkit-text-stroke`：文字描边
+4. `text-shadow`：文字阴影
+5. `-webkit-text-fill-color`：文字颜色
+6. `font-size:10px`：
+7. `font-face`：自定义字体
 8. 垂直排版
-9. 断行规则：line-break
-10. 优化字体性能：font-display
+9. `line-break`：断行规则
+10. `font-display`：优化字体性能
 
 ## 【1】文字渐变
 
@@ -455,7 +447,7 @@ background: linear-gradient(to bottom, #8AF0FF,#3780E6);;
 color: transparent;
 ```
 
-## 【2】抗锯齿渲染：-webkit-font-smoothing
+## 【2】`-webkit-font-smoothing`：抗锯齿渲染
 
 `-webkit-font-smoothing`有 3 个属性值：
 
@@ -471,7 +463,7 @@ body{-webkit-font-smoothing: antialiased;}
 
 `-moz-osx-font-smoothing: inherit | grayscale;`这个属性也是更清晰的作用。
 
-## 【3】文字描边：-webkit-text-stroke
+## 【3】`-webkit-text-stroke`：文字描边
 
 
 <div class="example-box">
@@ -482,7 +474,7 @@ body{-webkit-font-smoothing: antialiased;}
 -webkit-text-stroke: 1px #ff0;
 ```
 
-## 【4】文字阴影：text-shadow
+## 【4】`text-shadow`：文字阴影
 
 <div class="example-box">
   <p style="text-shadow: 5px 5px 5px #f00;">文字阴影</p>
@@ -492,7 +484,7 @@ body{-webkit-font-smoothing: antialiased;}
 text-shadow: 5px 5px 5px #f00;
 ```
 
-## 【5】文字颜色：-webkit-text-fill-color
+## 【5】`-webkit-text-fill-color`：文字颜色
 
 <div class="example-box">
   <p style="-webkit-text-fill-color: red;color: green;">文字颜色</p>
@@ -507,11 +499,11 @@ a{
 
 它们俩同样都是设置文字颜色，但就算`color`在下面，也是`-webkit-text-fill-color`的权重更高，优先级更高。
 
-## 【6】font-size:10px
+## 【6】`font-size:10px`
 
 字体如果需求是小于`12px`的话，可以先设置字体为`20px`，再使用`transfrom:scale(0.5)`进行缩放。（也可以使用图片，但不推荐）
 
-## 【7】自定义字体：font-face
+## 【7】`font-face`：自定义字体
 
 ```css
 @font-face {
@@ -548,17 +540,15 @@ p span{
 }
 ```
 
-## 【9】断行规则：line-break
+## 【9】`line-break`：断行规则
 
-```css
-line-break: auto; // 默认
-line-break: loose; // 限制最小
-line-break: normal; // 常规
-line-break: strict; // 限制最大
-line-break: anywhere; // 任意位置标点都可以换行
-```
+- `line-break: auto;`：默认
+- `line-break: loose;`：限制最小
+- `line-break: normal;`：常规
+- `line-break: strict;`：限制最大
+- `line-break: anywhere;`：任意位置标点都可以换行
 
-## 【10】优化字体性能：font-display
+## 【10】`font-display`：优化字体性能
 
 - [链接](https://zhuanlan.zhihu.com/p/28369304)
 

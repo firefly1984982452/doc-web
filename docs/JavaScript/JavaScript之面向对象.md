@@ -30,7 +30,7 @@ xm.age = 15;
 
 # 三、JavaScript 面向对象
 
-- [参考](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)
+- [参考](http://www.ruanyifeng.com/blog/2010/05/object-oriented_JavaScript_encapsulation.html)
 
 ## 【1】封装
 
@@ -249,7 +249,7 @@ Object.prototype.__proto__ === null ; // true 为了不指向自身的Object.pro
   </head>
   <body>
     <div id="test">test dom</div>
-    <script type="text/javascript">
+    <script type="text/JavaScript">
       HTMLElement.prototype.hello = function(){
         console.log(this);
       }

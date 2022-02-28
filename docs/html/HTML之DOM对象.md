@@ -71,9 +71,8 @@
 
 ---
 
-## 【1】 addEventListener
+## 【1】 addEventListener的第 3 个参数
 
-**addEventListener 的第 3 个参数**
 
 - [MDN 链接](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
 
@@ -237,9 +236,7 @@ if(document.referrer === '') {
 - `setIdAttribute()`：
 - `setIdAttributeNode()`：
 
-## 【1】 scrollLeft
-
-js 设置向左滑动
+## 【1】 `scrollLeft`：js 设置向左滑动
 
 ```js
 this.$refs.ref.scrollLeft = 100

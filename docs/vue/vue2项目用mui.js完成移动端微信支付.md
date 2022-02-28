@@ -10,7 +10,7 @@
 
 # 引入 mui.js
 
-将`mui.js`放到根目录下的`js文件夹`里，然后在`index.html`中引入 `<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>`
+将`mui.js`放到根目录下的`js文件夹`里，然后在`index.html`中引入 `<script src="js/mui.js" type="text/JavaScript" charset="utf-8"></script>`
 
 # 代码
 

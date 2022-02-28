@@ -231,7 +231,7 @@ function myFunction() {
 
 ## 【3】`onbeforeunload` 用法
 
-**电脑如果点关闭按钮后直接关闭了，可刷新时点取消重新加载网站后重试。**
+!> 电脑如果点关闭按钮后直接关闭了，可刷新时点取消重新加载网站后重试。
 
 ```js
 window.addEventListener("beforeunload", function (event) {
@@ -251,7 +251,7 @@ window.addEventListener("beforeunload", function (event) {
 
 ◆ 区别样式及代码
 
-关闭时速度太快，看不到 `console` 信息，所以加上 `debugger` 来辅助查看信息。
+?> 关闭时速度太快，看不到 `console` 信息，所以加上 `debugger` 来辅助查看信息。
 
 ```html
 <a href="http://www.baidu.com">跳转到百度</a>
@@ -351,7 +351,6 @@ window.addEventListener("beforeunload", function (event) {
 6. `ondrop`
 7. `ondragend`
 
-◆ 示例
 
 - [菜鸟教程-示例](https://www.runoob.com/try/try.php?filename=tryjsref_ondrag_all)
 
@@ -446,7 +445,6 @@ window.addEventListener("beforeunload", function (event) {
 - `animationiteration`：`CSS动画`重复播放
 - `animationstart`：`CSS动画`开始播放
 
-◆ 示例
 
 - [菜鸟教程-示例](https://www.runoob.com/try/try.php?filename=tryjsref_animationstart)
 
@@ -512,7 +510,7 @@ window.addEventListener("beforeunload", function (event) {
 
 <body>
 	<p id="elementID">click</p>
-	<script type="text/javascript">
+	<script type="text/JavaScript">
 		// 创建事件.
 		var event = document.createEvent('Event');
 

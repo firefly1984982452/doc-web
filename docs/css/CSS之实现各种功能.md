@@ -1221,7 +1221,7 @@ animation: anmiteX 12s linear -6s infinite alternate,/* 叠加上6秒时间差 *
 
     <div class="area">
     </div>
-    <script type="text/javascript">
+    <script type="text/JavaScript">
         // nameArr 球的名称，runtime 运行一圈的时间.warmballArr 爆满的球素组
         function addBall(num, runtime) {
             let _parentbox = document.getElementsByClassName('area')[0];

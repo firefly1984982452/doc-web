@@ -152,9 +152,8 @@ B.vue
 ```js
 this.$route.params
 ```
-!> A.vue使用的是`$router`，B.vue使用的是`$route`，极易混淆。
-
-!> 此处push的必须是name，不能是path，如果要用path的话，可以用query
+!> A.vue使用的是`$router`，B.vue使用的是`$route`，极易混淆。<br />
+ 此处push的必须是name，不能是path，如果要用path的话，可以用query
 
 ## 【2】地址栏'/'传参
 

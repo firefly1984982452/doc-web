@@ -60,7 +60,7 @@
 ```js
 <script>
   var script = document.createElement('script');
-  script.type = 'text/javascript';
+  script.type = 'text/JavaScript';
 
   // 传参一个回调函数名给后端，方便后端返回时执行这个在前端定义的回调函数
   script.src = 'http://www.domain2.com:8080/login?user=admin&callback=handleCallback';

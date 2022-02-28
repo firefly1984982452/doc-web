@@ -4,7 +4,7 @@
 
 - [链接](https://www.imooc.com/article/262083)
 
-rollup.js是Javascript的ES模块打包器，我们熟知的Vue、React等诸多知名框架或类库都通过rollup.js进行打包。
+rollup.js是JavaScript的ES模块打包器，我们熟知的Vue、React等诸多知名框架或类库都通过rollup.js进行打包。
 
 # 安装
 

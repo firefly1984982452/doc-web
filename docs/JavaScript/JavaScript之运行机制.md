@@ -91,11 +91,9 @@ console.log('end');
 
 
 
-!> promise是立即执行的，创建的时候就会执行，不存在将promise推入微任务；
-
-!> resolve()是表示promise的状态为fullfilled，相当于只是定义了一个有状态的promise，并没有调用它；
-
-!> promise调用then的前提是promise的状态为fullfilled；
+!> promise是立即执行的，创建的时候就会执行，不存在将promise推入微任务；<br />
+ resolve()是表示promise的状态为fullfilled，相当于只是定义了一个有状态的promise，并没有调用它；<br />
+ promise调用then的前提是promise的状态为fullfilled；<br />
 只有promise调用then的时候，then里面的函数才会被推入微任务中。
 
 
@@ -115,7 +113,7 @@ console.log('end');
 <body>
     <p>打印1-9999的数：
       <div id="result"></div></p>
-    <script type="text/javascript">
+    <script type="text/JavaScript">
         var n = 0;
         while (n < 9999) 
         {

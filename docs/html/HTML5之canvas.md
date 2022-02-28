@@ -2,9 +2,7 @@
 # 一、学习链接
 
 - [阮一峰-canvas 教程](https://wangdoc.com/webapi/canvas.html)
-
 - [菜鸟教程-canvas 教程](https://www.runoob.com/html/html5-canvas.html)
-
 - [菜鸟教程-canvas 实例](https://www.runoob.com/w3cnote/html5-canvas-intro.html)
 
 ---
@@ -16,7 +14,6 @@
 ![image](https://wx4.sinaimg.cn/large/0069qZtTgy1godp89sf40j31pl0u0kjl.jpg)
 
 - [在线观看](https://firefly1984982452.github.io/my-web-page/canvas.html)
-
 - [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/canvas.html)
 
 ## 【1】canvas 的通用标准语法
@@ -171,7 +168,7 @@ function rectFn() {
 
 - [效果预览](https://firefly1984982452.github.io/my-web-page/canvas-dataflow.html)
 
-- 源码：
+源码：
 
 ```html
 <html lang="en">

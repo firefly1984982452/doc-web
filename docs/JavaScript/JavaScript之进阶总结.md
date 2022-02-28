@@ -490,10 +490,9 @@ p 5
 
 # 九、JavaScript 相等操作符（==）
 
-参考： 
-- [链接 1](https://www.cnblogs.com/wisewrong/p/10396002.html) 
-- [链接 2](https://blog.csdn.net/magic_xiang/article/details/83686224) 
-- [链接 3](https://yuchengkai.cn/docs/frontend/#%E6%93%8D%E4%BD%9C%E7%AC%A6)
+- [参考链接 1](https://www.cnblogs.com/wisewrong/p/10396002.html) 
+- [参考链接 2](https://blog.csdn.net/magic_xiang/article/details/83686224) 
+- [参考链接 3](https://yuchengkai.cn/docs/frontend/#%E6%93%8D%E4%BD%9C%E7%AC%A6)
 
 ## 【1】两组操作符
 
@@ -875,7 +874,7 @@ js 与 android 的通信
 
 java 发消息给 js： `webview.send()` java 收 js 的消息 `webview.registerHander('name',new Bridge(){})`
 
-◆ javaScript 代码：
+◆ JavaScript 代码：
 
 js 发消息给 java `window.WebViewJavaScriptBridge.send()` js 收 java 的消息 `document.addEventListener('WebViewJavaScriptBridgeReady',()=>{})`
 

@@ -9,7 +9,7 @@
 
 # 代码
 
-!> 示例中的`<script />`中的`src`省略了`https:`，应写全`<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=0OWWSRyoeYuDcFPIdUN1aCupU0m2eAzZ"></script>`。
+!> 示例中的`<script />`中的`src`省略了`https:`，应写全`<script type="text/JavaScript" src="https://api.map.baidu.com/api?v=3.0&ak=0OWWSRyoeYuDcFPIdUN1aCupU0m2eAzZ"></script>`。
 
 ```html
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
 		font-family:"微软雅黑"; 
 	}
 	</style>
-	<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=0OWWSRyoeYuDcFPIdUN1aCupU0m2eAzZ"></script>
+	<script type="text/JavaScript" src="https://api.map.baidu.com/api?v=3.0&ak=0OWWSRyoeYuDcFPIdUN1aCupU0m2eAzZ"></script>
 	<title>Warm heart map</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
 </body>
 </html>
  
-<script type="text/javascript">
+<script type="text/JavaScript">
 	// 百度地图API功能
 	var map = new BMap.Map("allmap");    // 创建Map实例
 	var point = new BMap.Point(121.405196, 31.073719)

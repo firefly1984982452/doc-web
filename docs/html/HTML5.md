@@ -1,14 +1,12 @@
 # HTML5
 
-参考：
-
 - [阮一峰](https://wangdoc.com/html/)
 
 - [《HTML5 权威指南》](https://book.douban.com/subject/25786074/)
 
-!> 我只记录了冷门的不常用的信息，其它基础的没有记录。
+!> 只记录了冷门的不常用的信息，其它基础的没有记录。
 
-# 一、URL 部分
+# 一、`<head>` 部分
 
 ## 【1】`<base>`：设置相对 URL 的基础
 
@@ -44,14 +42,13 @@
 7. `contenteditable`：允许修改内容
 8. `spellcheck`：打开拼写检查
 9. `data-`：放置自定义数据
+10. `translate`：是否翻译
 
 ## 【1】id 中的`#`锚点
 
 代码中有`<h1 id="test">测试</h1>`时，在浏览器直接后缀加上`#test`即可精准定位到指定 ID 地方。
 
 ## 【2】`title`：鼠标悬停时有提示文字
-
-相当于`tooltip`。
 
 ```html
 <h1 title="版权说明">版权项：XXX</h1>
@@ -65,7 +62,7 @@
 
 属性值：
 
-- 负整数：可以获取焦点（如 javaScript 中的`focus()`方法），但按<kbd>tab</kbd>键之后不会参与遍历。这个值通常是`-1`。
+- 负整数：可以获取焦点（如 JavaScript 中的`focus()`方法），但按<kbd>tab</kbd>键之后不会参与遍历。这个值通常是`-1`。
 - `0`：参与遍历，如果都是 0，按顺序遍历。
 - 正整数：参与遍历，按顺序遍历。
 
@@ -89,6 +86,10 @@
 
 - macbook：使用<kbd>control</kbd> + <kbd>option</kbd> + `accessKey`。
 
+<div class="example-box">
+  <button accesskey="s">按组合键+s聚焦</button>
+</div>
+
 ## 【5】`hidden`：不渲染这个 DOM 元素
 
 作用：不渲染这个 DOM 元素，相当于`display:none`。
@@ -106,6 +107,21 @@
 - `auto`：浏览器根据内容的解析结果，自行决定。
 
 `rtl`从右到左阅读时，效果相当于`text-align:right`，起作用的属性是：`direction:rtl`。
+
+```
+  <p dir="ltr">hello world.【dir="ltr"】</p>
+  <p dir="rtl">【dir="rtl"】hello world.</p>
+  <p dir="auto">hello world.【dir="auto"】</p>
+  <p style="text-align: right">【text-align: right】hello world.</p>
+```
+
+<div class="example-box">
+  <p dir="ltr">hello world.【dir="ltr"】</p>
+  <p dir="rtl">【dir="rtl"】hello world.</p>
+  <p dir="auto">hello world.【dir="auto"】</p>
+  <p style="text-align: right">【text-align: right】hello world.</p>
+</div>
+
 
 ## 【7】`contenteditable`：允许修改内容
 
@@ -131,7 +147,7 @@
   </p>
 </div>
 
-?> 点击鼠标后可看到写错的单词seperate下面有错误的标识
+?> 鼠标点击上方示例后可看到写错的单词seperate下面有错误的标识
 
 ## 【9】`data-`：放置自定义数据
 
@@ -145,6 +161,27 @@
 
 ```html
 <h1 data-yeah='显示信息：'>data-yeah</h1>
+```
+
+
+<style>
+  .example-box h1[data-yeah]::before {
+    content: attr(data-yeah);
+    font-size: .7em;
+    color: #f0f;
+  }
+</style>
+<div class="example-box">
+  <h1 data-yeah='显示信息：'>data-yeah</h1>
+</div>
+
+## 【10】`translate`：是否翻译
+
+!> 暂无浏览器支持此属性
+
+```
+<p translate="no">请勿翻译本段。</p>
+<p>本段可被译为任意语言。</p>
 ```
 
 ---
@@ -205,6 +242,17 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </p>
 ```
 
+<div class="example-box">
+  <b>width: 300px时：</b>
+  <p style="border: 1px solid;width: 300px;">
+  Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
+  </p>
+  <b>width: 100px时：</b>
+  <p style="border: 1px solid;width: 100px;">
+  Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
+  </p>
+</div>
+
 ## 【2】`<pre>`：保留换行与空格
 
 ## 【3】`<strong>`和`<b>`：加粗
@@ -214,9 +262,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【5】`<sub>`、`<sup>`和`<var>`：下标、上标、代码或数学公式的变量
 
 - `<sub>`标签将内容变为下标。
-
 - `<sup>`标签将内容变为上标。
-
 - `<var>`标签表示代码或数学公式的变量。
 
 ```html
@@ -232,7 +278,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【6】`<u>`和`<s>`：下划线和删除线
 
 - `<u>`：下划线；
-
 - `<s>`：删除线。
 
 <div class="example-box">
@@ -244,13 +289,11 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【7】`<ins>`和`<del>`：下划线和删除线
 
 - `<ins>`：下划线；
-
 - `<del>`：删除线。
 
 这两个标签都有以下属性。
 
 - `cite`：该属性的值是一个 `URL`，表示该网址可以解释本次删改。
-
 - `datetime`：表示删改发生的时间。
 
 ```html
@@ -280,6 +323,15 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   </code>
 </pre>
 ```
+
+<div class="example-box">
+  <pre>
+    <code>
+      let a = 1;
+      console.log(a);
+    </code>
+  </pre>
+</div>
 
 ## 【9】`<kbd>`和`<samp>`：键盘代码和示例
 
@@ -320,14 +372,10 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【12】`<time>`和`<data>`：时间和数据
 
 - `<time>`：时间；
-
 - `<data>`：数据。
 
 ```html
 <p>运动会预定<time datetime="2015-06-10">下周三</time>举行。</p>
-```
-
-```html
 <p>本次马拉松比赛第一名是<data value="39">张三</data>。</p>
 ```
 
@@ -386,6 +434,9 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 # 五、列表标签
 
+1. `<ol>`：有序列表
+2. `<dl>`、`<dt>`和`<dd>`
+
 ## 【1】`<ol>`：有序列表
 
 <div class="example-box">
@@ -398,7 +449,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 属性：
 
-### 【1.1】reversed：倒序
+### 【1.1】`reversed`：倒序
 
 ```html
 <ol reversed>
@@ -416,7 +467,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   </ol>
 </div>
 
-### 【1.2】start：起始编号
+### 【1.2】`start`：起始编号
 
 ```html
 <ol start="5">
@@ -434,7 +485,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   </ol>
 </div>
 
-### 【1.3】type：样式
+### 【1.3】`type`：样式
 
 - `a`：小写字母
 - `A`：大写字母
@@ -442,14 +493,20 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 - `I`：大写罗马数字
 - `1`：整数（默认值）
 
-**即使编号是字母，`start`属性也依然使用整数。**
+!> 即使编号是字母，`start`属性也依然使用整数。
+
+<div class="example-box">
+  <ol start="5" type="I">
+    <li>列表项 A</li>
+    <li>列表项 B</li>
+    <li>列表项 C</li>
+  </ol>
+</div>
 
 ## 【2】`<dl>`、`<dt>`和`<dd>`
 
 - `<dl>`：列表；
-
 - `<dt>`：术语名；
-
 - `<dd>`：解释。
 
 ```html
@@ -588,20 +645,17 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ## 【4】`crossorigin`：是否采用跨域的形式下载图片
 
-有如下属性：
+属性：
 
 - `anonymous`：跨域请求不带有用户凭证（通常是 `Cookie`）。
-
 - `use-credentials`：跨域请求带有用户凭证。
 
 ## 【5】`loading`：懒加载
 
-有如下属性：
+属性：
 
-- `auto`：默认值，相当于没有使用`loading`属性。
-
+- `auto`：默认值，相当于没有使用`loading`属性
 - `lazy`：启动懒加载。
-
 - `eager`：立即加载资源，无论它在页面的哪个位置。
 
 ## 【6】响应式-`srcset`：设置不同像素时的图片地址
@@ -647,14 +701,14 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ```html
 <figure>
   <img src="https://example.com/foo.jpg">
-  <figcaption>示例图片</figcaption>
+  <figcaption>说明图片的文字。</figcaption>
 </figure>
 ```
 
 <div class="example-box">
   <figure>
     <img src="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg">
-    <figcaption>示例图片</figcaption>
+    <figcaption>说明图片的文字。</figcaption>
   </figure>
 </div>
 
@@ -674,17 +728,31 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 - `src`：要播放的视频的 URL。
 - `width`：设置视频播放器的宽度。
 
-◆ `poster`：视频预览图
+## 【2】自动循环播放视频
+
+!> 需要静音
 
 ```html
-<video controls poster="/images/w3school.gif">
-   <source src="movie.mp4" type="video/mp4">
-   <source src="movie.ogg" type="video/ogg">
-   Your browser does not support the video tag.
-</video>
+<div class="example-box">
+  <video 
+  controls 
+  autoplay 
+  controls 
+  loop 
+  muted  
+  poster="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg" 
+  src="https://www.w3school.com.cn/i/movie.mp4">
+  </video>
+</div>
 ```
 
-## 【2】用 canvas 实现 video 视频截图功能
+<div class="example-box">
+  <video controls autoplay controls loop muted  poster="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg" src="https://www.w3school.com.cn/i/movie.mp4">
+  </video>
+</div>
+
+
+## 【3】用 canvas 实现 video 视频截图功能
 
 - [链接](https://blog.csdn.net/weixin_43392489/article/details/114642055)
 
@@ -711,13 +779,17 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </script>
 ```
 
-!> 1. 浏览器需要一个服务器环境，否则 `canvas` 的 `toDataURL` 方法会报错。该方法是将其转换为 base64 格式的图片地址。
-
-!> 2. 可使用本地视频和 flv 格式的监控视频。
+!> 1. 浏览器需要一个服务器环境，否则 `canvas` 的 `toDataURL` 方法会报错。该方法是将其转换为 base64 格式的图片地址。<br />
+2. 可使用本地视频和 flv 格式的监控视频。
 
 ---
 
 # 八、链接标签
+
+1. `<a>`：超级链接
+2. `<link>`
+3. `<script>`
+4. `<noscript>`
 
 ## 【1】`<a>`：超级链接
 
@@ -726,12 +798,10 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 值：
 
 - `URL`；
-
 - `#id`锚点；
-
 - 其它
 
-### 【1.1.1】内容：`data:,`
+### 【1】内容：`data:,`
 
 ```html
 <a href="data:,hello,world" download="hello.txt">下载hello.txt</a>
@@ -741,7 +811,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   <a href="data:,hello,world" download="hello.txt">下载hello.txt</a>
 </div>
 
-### 【1.1.2】邮件：`mailto:`
+### 【2】邮件：`mailto:`
 
 ```html
 <a href="mailto:contact@example.com">联系我们</a>
@@ -754,14 +824,11 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 邮件协议还允许指定其他几个邮件要素。
 
 - `subject`：主题
-
 - `cc`：抄送
-
 - `bcc`：密送
-
 - `body`：邮件内容
 
-### 【1.1.3】电话:`tel:`
+### 【3】电话:`tel:`
 
 ```html
 <a href="tel:13312345678">13312345678</a>
@@ -784,7 +851,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【1.3】`rel` 属性
 
 - noopener
-
 - [noopener](https://www.xinshouzhanzhang.com/rel-noopener.html):
 
 当你使用`target="_blank"`打开一个新的标签页时，新页面的 window 对象上有一个属性`opener`，它指向的是前一个页面的 `window`对象，这样，后一个页面就获得了前一个页面的控制权，可以使用`window.opener.location.replace`更改前一个页面的`url`。简单来说就是，用户点击了一个超链接，该链接在新窗口打开的同时，竟然更改了前一个页面的链接。
@@ -804,7 +870,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 </div>
 
 - nofollow
-
 - [nofollow](https://blog.csdn.net/qq_33981438/article/details/80909881)
 
 不跟踪链接，利于 SEO 优化。
@@ -884,7 +949,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【1】`<fieldset>`和`<legend>`：控制标签
 
 - `<fieldset>`：控件组；
-
 - `<legend>`：控件组的标题。
 
 ```html
@@ -934,7 +998,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【3】`<input>`和`<output>`：输入输出标签
 
 - `<input>`：输入；
-
 - `<output>`：输出。
 
 ```html
@@ -952,7 +1015,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【4】`<progress>`和`<meter>`：进度和指示器标签
 
 - `<progress>`：进度；
-
 - `<meter>`：指示器。
 
 ```html
@@ -972,7 +1034,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## HTML5 input 标签所有 type
 
 - [预览效果](https://firefly1984982452.github.io/my-web-page/input-type.html)
-
 - [源码](https://github.com/firefly1984982452/my-web-page/blob/master/input-type.html)
 
 元素
@@ -1005,6 +1066,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 - [链接](https://www.runoob.com/tags/tag-input.html)
 
+属性：
 - maxlength：最大输入长度
 - minlength：最小输入长度
 - autocomplete：自动补全
@@ -1037,10 +1099,8 @@ JS 操作：
 
 ```js
 const modal = document.querySelector('dialog');
-
 // 对话框显示，相当于增加 open 属性
 modal.showModal();
-
 // 对话框关闭，相当于移除 open 属性
 modal.close();
 ```
@@ -1050,7 +1110,6 @@ modal.close();
 ## 【2】`<details>`和`<summary>`：折叠内容与展开显示
 
 - `<details>`：折叠内容
-
 - `<summary>`：折叠内容的显示部分
 
 ```html
