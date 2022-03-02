@@ -173,7 +173,6 @@ A.vue
 
 获取：`this.$route.params.order_id`
 
-
 ## 【3】地址栏'?'传参
 
 地址：`http://localhost:8080/#/success?id=257`
@@ -250,7 +249,6 @@ assetsPublicPath: './',
 npm run build
 ```
 
-
 ---
 
 # 限制input、el-input只能输入数字
@@ -275,7 +273,6 @@ npm run build
 - `<input type="number" class="el-input__inner" v-model="value"/>`
 
 - `oninput="value=value.replace(/[^0-9.]/g,'')"`是input触发
-
 
 ## 方法二：自定义指令
 
@@ -450,9 +447,7 @@ sendData() {
 
 # EventBus
 
-
 新建`bus.js`
-
 
 ```js
 import Vue from "vue"
@@ -522,7 +517,6 @@ window.$eventBus.$on('residenceData',v=>{
 
 ---
 
-
 # filter访问data数据
 
 ```js
@@ -581,7 +575,6 @@ activated(){
 
 ```
 
-
 ## beforeRouteEnter访问data里面的数据
 
 ```js
@@ -599,7 +592,6 @@ beforeRouteEnter(to, from, next) {
 ```js
 next(vm=>{vm.show=true;})
 ```
-
 
 
 ## beforeRouteUpdate
@@ -787,7 +779,6 @@ this.$message.success('info');
 `v-show`：用`display:none`；适用于频繁切换。
 
 ---
-
 
 # vue下swiper的使用
 
@@ -980,7 +971,6 @@ changeTest(){
 ```
 
 ---
-
 
 
 # 消息无缝滚动

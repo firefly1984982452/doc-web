@@ -16,7 +16,6 @@ Number.isFinite(1.2) ; // true
 
 ## 【2】`Number.isInteger`：是否为整数
 
-
 ```js
 Number.isInteger(13)
 ```
@@ -106,7 +105,6 @@ var b = parseFloat(price).toFixed(3);
 this.all_price = b.substring(0,b.toString().length - 1);
 ```
 
-
 ---
 
 # 四、toString：转为字符串/转换进制
@@ -164,7 +162,6 @@ console.log(largeNumber); // 1000000000"
 ```
 
 ---
-
 
 # 八、BigInt：大整数
 

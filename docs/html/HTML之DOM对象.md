@@ -73,7 +73,6 @@
 
 ## 【1】 addEventListener的第 3 个参数
 
-
 - [MDN 链接](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
 
 第 3 个参数可为`useCapture`（`Boolean`），也可为`options`（`Object`）：
@@ -105,7 +104,6 @@ document.getElementById("myAnchor").addEventListener("click", function (event) {
 	passive: true
 });
 </script>
-
 
 <a id="myAnchor" href="https://w3school.com.cn/" target="blank">访问 W3School.com.cn</a>
 
@@ -345,7 +343,6 @@ this.$refs.ref.scrollLeft = 100
 		console.timeEnd("时间差");
 		console.log('\n');
 		console.log('\n');
-
 
 		console.log('%c 【group】', 'font-size: 2em;color:#f00');
 		console.group('father')

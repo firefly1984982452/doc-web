@@ -131,7 +131,6 @@ const nameObj = {
 console.log(nameObj.name == 'a');
 ```
 
-
 # 二、使用代理控制`Proxy`访问
 
 通过`Proxy`构造器创建代理
@@ -298,7 +297,6 @@ console.log(arr[1],arr[-2]); // b c
 
 - [JS Proxy 的优势以及使用场景](https://www.suibianlu.com/c/p/14220.html)
 
-
 # 三、总结
 
 1. 使用访问器方法（`getter`和`setter`）可以控制对象
@@ -309,17 +307,14 @@ console.log(arr[1],arr[-2]); // b c
 - 读取对象时会隐式调用`get`，写入对象时会隐式调用`set`
 - `get`可以定义计算属性，`set`可以实现数据验证与日志记录
 
-
 2. 使用代理（`proxy`）可以控制对象
 - 代理可以定义对象交互时的行为
 - 所有的交互行为必须通过代理
-
 
 3. 使用代理（`proxy`）可以实现以下内容
 - 日志记录
 - 性能测量
 - 数据校验
 - 数组负索引
-
 
 4. 使用代理（`proxy`）效率不高，需进行性能测验

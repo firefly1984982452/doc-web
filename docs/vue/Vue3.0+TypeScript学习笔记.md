@@ -130,11 +130,9 @@ const data: DataProps = ...
 
 ## 【3】用 toRefs 优化 DOM 中的对象
 
-
 ```js
 import { reactive, toRefs } from "vue";
 ```
-
 
 ```js
 export default {

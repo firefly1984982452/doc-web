@@ -107,7 +107,6 @@ li {
 - justify-content: space-around; // 两端间隙相等，项目中间的间隙比较大
 - justify-content: space-evenly; // 两端与项目中间的间隙一样大
 
-
 ◆ 区别：
 
 ![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gidesq1po8j30970c4mxc.jpg)
@@ -209,7 +208,6 @@ right: 30px;
 ```
 
 ## sticky：粘性布局
-
 
 ```css
 position: sticky;

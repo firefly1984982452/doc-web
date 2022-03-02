@@ -194,16 +194,13 @@ p{
 
 ## 【3】视口的相对单位
 
-
 - `vm`：1/100的视口宽度；
 - `vh`：1/100的视口高度；
 - `vmax`：当前`vw`和`vh`中较大的一个值；
 - `vmin`：当前`vw`和`vh`中较小的一个值；
 - `vmin`、`vmax`的作用：在做移动端页面开发时，会使得文字大小在横竖屏下保持一致。
 
-
 ## 【4】`min-inline-size`、`max-inline-size`：最小/最大直列大小
-
 
 ```html
 <!DOCTYPE html>
@@ -381,7 +378,6 @@ position: absolute;
 img{min-width: 400px;}
 ```
 
-
 - 特性2：`min-width` 覆盖 `max-width`。
 
 如果`min-width`和`max-width`冲突时，取`min-width`的值。
@@ -399,7 +395,6 @@ max-width: 350px;
 - `min-content`：内容最小宽度。比如图片是 200px，文字是 300px，就取 200px。
 
 ## 【9】line-height 深入理解
-
 
 - `line-height: 20px;`：像素
 - `line-height: normal;`：常规
@@ -436,20 +431,18 @@ max-width: 350px;
 
 ## 【1】文字渐变
 
-
-<div class="example-box">
-  <h1 style="background: linear-gradient(to bottom, #8AF0FF,#3780E6);-webkit-background-clip: text;color: transparent;">文字渐变</h1>
-</div>
-
 ```css
 background: linear-gradient(to bottom, #8AF0FF,#3780E6);;
 -webkit-background-clip: text;
 color: transparent;
 ```
+<div class="example-box">
+  <h1 style="background: linear-gradient(to bottom, #8AF0FF,#3780E6);-webkit-background-clip: text;color: transparent;">文字渐变</h1>
+</div>
 
 ## 【2】`-webkit-font-smoothing`：抗锯齿渲染
 
-`-webkit-font-smoothing`有 3 个属性值：
+属性值：
 
 - `none`: 对像素低的文本好，会有严重的锯齿；
 - `subpixel-antialiased`: 默认值，有轻微锯齿；
@@ -465,37 +458,31 @@ body{-webkit-font-smoothing: antialiased;}
 
 ## 【3】`-webkit-text-stroke`：文字描边
 
-
+```css
+-webkit-text-stroke: 1px #ff0;
+```
 <div class="example-box">
   <p style="-webkit-text-stroke:1px #ff0;">文字描边</p>
 </div>
 
-```css
--webkit-text-stroke: 1px #ff0;
-```
-
 ## 【4】`text-shadow`：文字阴影
-
-<div class="example-box">
-  <p style="text-shadow: 5px 5px 5px #f00;">文字阴影</p>
-</div>
 
 ```css
 text-shadow: 5px 5px 5px #f00;
 ```
+<div class="example-box">
+  <p style="text-shadow: 5px 5px 5px #f00;">文字阴影</p>
+</div>
 
 ## 【5】`-webkit-text-fill-color`：文字颜色
 
+```css
+-webkit-text-fill-color: red;
+color: green;
+```
 <div class="example-box">
   <p style="-webkit-text-fill-color: red;color: green;">文字颜色</p>
 </div>
-
-```css
-a{
-  -webkit-text-fill-color: red;
-  color: green;
-}
-```
 
 它们俩同样都是设置文字颜色，但就算`color`在下面，也是`-webkit-text-fill-color`的权重更高，优先级更高。
 
@@ -518,18 +505,6 @@ a{
 
 ## 【8】垂直排版
 
-
-<div class="example-box" style="font-size:.8em;">
-  <p style="writing-mode: vertical-lr;text-orientation: upright;">数字横向123</p>
-  <hr />
-  <p style="writing-mode: vertical-lr;">竖向2021排版</p>
-  <hr />
-  <p style="writing-mode: vertical-lr;">竖向<span style="text-combine-upright: all;">2021</span>排版</p>
-</div>
-
-
-
-
 ```css
 p{
   text-orientation: upright; // 数字横向显示
@@ -539,6 +514,13 @@ p span{
   text-combine-upright: all; // 数字联排
 }
 ```
+<div class="example-box" style="font-size:.8em;">
+  <p style="writing-mode: vertical-lr;text-orientation: upright;">数字横向123</p>
+  <hr />
+  <p style="writing-mode: vertical-lr;">竖向2021排版</p>
+  <hr />
+  <p style="writing-mode: vertical-lr;">竖向<span style="text-combine-upright: all;">2021</span>排版</p>
+</div>
 
 ## 【9】`line-break`：断行规则
 
@@ -547,6 +529,13 @@ p span{
 - `line-break: normal;`：常规
 - `line-break: strict;`：限制最大
 - `line-break: anywhere;`：任意位置标点都可以换行
+
+<div class="example-box">
+  <b>除line-break: anywhere;以外的任意值：</b>
+  <p style="width:200px;border:1px solid;">一二三四五六七八。九十</p>
+  <b>line-break: anywhere;：</b>
+  <p style="width:200px;border:1px solid;line-break: anywhere;">一二三四五六七八。九十</p>
+</div>
 
 ## 【10】`font-display`：优化字体性能
 
@@ -567,27 +556,22 @@ p span{
 - `grid`
 - `content`：不产生边框、背景、颜色，只显示内容。
 
-## 【1】inline
+## 【1】inline：不会独占一行
 
-- 不会独占一行
 - `width`和`height`无效
 - `margin`和`padding`中的`left/right`有效，`top/bottom`无效
 
-## 【2】block
+## 【2】block：独占一行
 
-- 独占一行
 - `width`和`height`正常
 - `marin`和`padding`正常
-
 
 ---
 
 # 十一、CSS 关键字：initial、inherit、unset、revert 和 all
 
 - [区别预览](https://firefly1984982452.github.io/my-web-page/css-keyword.html)
-
 - [区别源码](https://github.com/firefly1984982452/my-web-page/blob/master/css-keyword.html)
-
 - [学习博客链接](https://www.cnblogs.com/xiaohuochai/p/5464456.html)
 
 ## 【1】初始值：initial
@@ -816,7 +800,7 @@ table {
 
 当浏览器支持`text-overflow: '***';`时末尾便显示`'***'`，不支持时显示`'...'`。
 
-（仅火狐支持`text-overflow: '***';`，其它浏览均会显示`'...'`）
+!> 仅火狐支持`text-overflow: '***';`，其它浏览均会显示`'...'`
 
 ```css
 .info {
@@ -1121,6 +1105,10 @@ overflow-anchor: none; // 禁止滚动锚点
 input.custom { caret-color: #0f0; }
 ```
 
+<div class="example-box">
+  <input type="text" value="info" style="caret-color: #0f0" />
+</div>
+
 ---
 
 # 二十一、user-select：用户选择
@@ -1130,6 +1118,10 @@ user-select: auto | text | none | contain | all;
 ```
 
 有时候用`<p>`标签默认鼠标能选中文字，这时可以使用`user-select: none`来禁止点击文字之后处于选中状态，也能避免复制能操作。
+
+<div class="example-box">
+  <p style="user-select: none">无法选中</p>
+</div>
 
 ---
 
@@ -1159,7 +1151,6 @@ user-select: auto | text | none | contain | all;
 ```
 
 ---
-
 
 # CSS 其它案例
 

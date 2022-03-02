@@ -17,9 +17,7 @@
 JAVA环境参考这个：[链接](https://www.runoob.com/java/java-environment-setup.html#win-install)
 
 
-
 ## 创建签名文件
-
 
 ### 生成 
 	
@@ -36,7 +34,6 @@ keytool -genkey -keystore key.jks  -alias key1 -keyalg RSA -validity 10000
 根据弹出框中的提示信息写相关信息即可
 
 !> 输入密码是不会显示出明文，也不会显示`*****`，神马都不会显示，没关系，输入完后按回车键就行
-
 
 ### 查看
 
@@ -77,6 +74,5 @@ npm install
 - 配置文件里面要有所用到的权限
 - appID要一致
 - 第三方授权要一致
-
 
 

@@ -351,7 +351,6 @@ window.addEventListener("beforeunload", function (event) {
 6. `ondrop`
 7. `ondragend`
 
-
 - [菜鸟教程-示例](https://www.runoob.com/try/try.php?filename=tryjsref_ondrag_all)
 
 # 八、多媒体（Media）事件
@@ -378,7 +377,6 @@ window.addEventListener("beforeunload", function (event) {
 - `ontimeupdate` 播放位置发生改变
 - `onvolumechange` 音量发生改变
 - `onwaiting` 等待中，正在缓冲
-
 
 <div class="example-box">
 	<p style="font-size:20px;color:#f00;">
@@ -444,7 +442,6 @@ window.addEventListener("beforeunload", function (event) {
 - `animationend`：`CSS动画`结束播放
 - `animationiteration`：`CSS动画`重复播放
 - `animationstart`：`CSS动画`开始播放
-
 
 - [菜鸟教程-示例](https://www.runoob.com/try/try.php?filename=tryjsref_animationstart)
 

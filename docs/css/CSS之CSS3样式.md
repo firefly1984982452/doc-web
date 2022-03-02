@@ -7,7 +7,6 @@
 ## 【1】伪元素、伪类选择器
 
 - [预览效果](https://firefly1984982452.github.io/my-web-page/select-page.html)
-
 - [源码](https://github.com/firefly1984982452/my-web-page/blob/master/select-page.html)
 
 ### 【1.1】伪元素
@@ -192,19 +191,18 @@ article h1 {
 
 # 二、边框
 
-- `text-emphasis`
+- `text-emphasis`：强调文字
 - `border-radius`
-- `box-shadow`
-- `border-image`
+- `box-shadow`：边框阴影
+- `border-image`：边框图片
 - `border-style`
+- `rgba`或`hsla`：半透明边框
 
 ## 【0】`text-emphasis`：强调文字
-
 
 <div class="example-box">
   <p style="text-emphasis: open green;-webkit-text-emphasis: open green;">你好，hello world.</p>
 </div>
-
 
 ```css
 text-emphasis: 'x';
@@ -223,24 +221,18 @@ text-emphasis: filled sesame #555;
 -webkit-text-emphasis-position: under;
 ```
 
-## 【1】box-shadow
+## 【1】`box-shadow`：边框阴影
 
 ```css
 box-shadow: 50px 50px 0 20px #ffb;
 ```
-
-<style>
-  .box-shadow{
+<div class="example-box" style="height:150px">
+  <div style="
     width:100px;
     heigth: 100px;
     background: #fbb;
-    box-shadow: 50px 50px 0 20px #ffb;
-  }
-</style>
-<div class="example-box">
-  <div class="box-shadow">hello</div>
+    box-shadow: 50px 50px 0 20px #ffb;">hello</div>
 </div>
-
 
 ◆ 解析：
 
@@ -252,10 +244,13 @@ box-shadow: 50px 50px 0 20px #ffb;
 参数4：颜色。
 ```
 
-## 【2】border-image
+## 【2】`border-image`：边框图片
 
 `border-image-repeat`: 重复（`repeat`）、拉伸（`stretch`）或铺满（`round`）。
 
+```css
+border-image: url(border.png) 30 round;
+```
 <div class="example-box">
   <div style="
               width:250px;
@@ -264,15 +259,13 @@ box-shadow: 50px 50px 0 20px #ffb;
               border-image: url(https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg) 90 round;"></div>
 </div>
 
+## 【3】`rgba`或`hsla`：半透明边框
+
 ```css
-border-image: url(border.png) 30 round;
+border: solid 50px;
+border-color: rgba(255,255,0,.2);
+background: #fbb;
 ```
-
-## 【3】半透明边框
-
-`rgba`或`hsla`
-
-
 <div class="example-box">
   <div style="
               width:100px;
@@ -282,17 +275,14 @@ border-image: url(border.png) 30 round;
               background: #fbb;"></div>
 </div>
 
-```css
-border: solid 50px;
-border-color: rgba(255,255,0,.2);
-background: #fbb;
-```
-
 ## 【4】多重边框
 
 ### 【4.1】用 box-shadow
 
-
+```css
+background: #fbfb;
+box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;
+```
 <div class="example-box">
   <div style="
   width:100px;
@@ -302,15 +292,13 @@ background: #fbb;
   margin:20px;">内容</div>
 </div>
 
+### 【4.2】用 outline
 
 ```css
 background: #fbfb;
-box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;
+outline: 5px solid #ff0;
+border: 5px solid #f00;
 ```
-
-### 【4.2】用 outline
-
-
 <div class="example-box">
   <div style="
   width:100px;
@@ -320,12 +308,6 @@ box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;
   border: 5px solid #f00;
   margin:10px;">内容</div>
 </div>
-
-```css
-background: #fbfb;
-outline: 5px solid #ff0;
-border: 5px solid #f00;
-```
 
 `outline` 和 `border` 的区别
 
@@ -364,7 +346,7 @@ outline-offset: -10px;
 
 ## 【5】border-style 属性
 
-- [效果](https://www.w3school.com.cn/tiy/t.asp?f=csse_border-style)
+[效果](https://www.w3school.com.cn/tiy/t.asp?f=csse_border-style)
 
 - `none`：无；
 - `hidden`：同“`none`”，在 `table` 中能解决边框冲突；
@@ -379,6 +361,16 @@ outline-offset: -10px;
 
 ## 【6】信封边框
 
+```css
+.box {
+  width: 200px;
+  height: 100px;
+  padding: 1em;
+  border: 10px solid transparent;
+  background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%);
+  background-size: 0.6em 0.6em;
+}
+```
 <div class="example-box">
   <div
     style="
@@ -391,18 +383,6 @@ outline-offset: -10px;
     "
   ></div>
 </div>
-
-
-```css
-.box {
-  width: 200px;
-  height: 100px;
-  padding: 1em;
-  border: 10px solid transparent;
-  background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%);
-  background-size: 0.6em 0.6em;
-}
-```
 
 ## 【7】重复边框背景图片
 
@@ -417,24 +397,17 @@ border-image: 33.3% url("./test.jpg") round;
 
 ◆ 自适应椭圆
 
-<div class="example-box">
-  <div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 20% / 50%"></div>
-</div>
-
-
 ```css
 width: 300px;
 height: 100px;
 background-color: #fbb;
 border-radius: 20% / 50%;
 ```
-
-◆ 半圆
-
 <div class="example-box">
-  <div class="box" style="width: 50px; height: 100px; background-color: #fbb; border-radius: 0 100% 100% 0 / 50%"></div>
+  <div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 20% / 50%"></div>
 </div>
 
+◆ 半圆
 
 ```css
 width: 50px;
@@ -442,13 +415,11 @@ height: 100px;
 background-color: #fbb;
 border-radius: 0 100% 100% 0 / 50%
 ```
-
-◆ 其它形状
-
 <div class="example-box">
-  <div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 10% 50% / 50% 10%"></div>
+  <div class="box" style="width: 50px; height: 100px; background-color: #fbb; border-radius: 0 100% 100% 0 / 50%"></div>
 </div>
 
+◆ 其它形状
 
 ```css
 width: 300px;
@@ -456,16 +427,21 @@ height: 100px;
 background-color: #fbb;
 border-radius: 10% 50% / 50% 10%;
 ```
+<div class="example-box">
+  <div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 10% 50% / 50% 10%"></div>
+</div>
 
 ◆ 斜杠`/`的用法
 
 - [链接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius)
 
-```cs
+```css
 border-radius: 1em/5em;
+```
 
-/* 等价于： */
+等价于：
 
+```css
 border-top-left-radius:     1em 5em;
 border-top-right-radius:    1em 5em;
 border-bottom-right-radius: 1em 5em;
@@ -478,37 +454,104 @@ border-bottom-left-radius:  1em 5em;
 
 # 三、背景：`background`
 
-## 【1】区域起源：background-origin
+- `background-origin`：区域起源
+- `background-clip`：区域剪辑
+- `background-image`：图片
+- `background-position`：位置
+- `background-attachment`：背景依附
+- `background-repeat`：背景重复
 
-背景区域的位置，有如下属性：
+## 【1】`background-origin`：区域起源
+
+属性：
 
 - `content-box`：`padding`值会起效，以`padding`开始的单位开始显示背景；
-
 - `padding-box`：`padding`不会影响背影，直接从`border`里面开始显示背影；
-
 - `border-box`：`border`不会影响背景，直接把`border`的内容也算在背影里面，背景会减去`border`的长度。
 
-![image](https://wx3.sinaimg.cn/large/0069qZtTgy1gmojvywhjdj30nj09q0vi.jpg)
+```html
+<div class="box" style="background-origin: content-box;">内容文字</div>
+<div class="box" style="background-origin: padding-box;">内容文字</div>
+<div class="box" style="background-origin: border-box;">内容文字</div>
+```
 
-## 【2】区域剪辑：background-clip
+<style>
+  .background-origin-box{
+    height: 230px;
+  }
+  .background-origin-box .box {
+    width: 100%;
+    height: 180px;
+    border: 10px dashed #8f8a8c;
+    padding: 5px 20px;
+    background-color: #f8d2cf;
+    color: #f00;
+    background-image: url('../../assets/images/check.png') ;
+    background-repeat: no-repeat;
+  }
+</style>
 
-背景区域的位置，有如下属性：
+<div class="example-box" style="height: 260px;">
+  <div class="grid-box background-origin-box">
+    <div class="item">
+      <p>padding-box【默认】</p>
+      <div class="box padding" style="background-origin: padding-box;">内容文字</div>
+    </div>
+    <div class="item">
+      <p>border-box</p>
+      <div class="box" style="background-origin: border-box;">内容文字</div>
+    </div>
+    <div class="item">
+      <p>content-box</p>
+      <div class="box" style="background-origin: content-box;">内容文字</div>
+    </div>
+  </div>
+</div>
 
-- `content-box`：`padding`值会起效，以`padding`开始的单位开始显示背景，**`padding`的部分会被剪掉**；
+## 【2】`background-clip`：区域剪辑
 
+属性：
+
+- `content-box`：`padding`值会起效，以`padding`开始的单位开始显示背景，`padding`的部分会被剪掉；
 - `padding-box`：`padding`不会影响背影，直接从`border`里面开始显示背影；
+- `border-box`：`border`会影响背景，和`padding-box`的效果一样。
 
-- `border-box`：`border`**会**影响背景，和`padding-box`的效果一样。
+<style>
+  .background-clip-box{
+    height: 230px;
+  }
+  .background-clip-box .box {
+    width: 100%;
+    height: 180px;
+    border: 10px dashed #8f8a8c;
+    padding: 5px 20px;
+    background-color: #f8d2cf;
+    color: #f00;
+    background-image: url('../../assets/images/check.png') ;
+    background-repeat: no-repeat;
+  }
+</style>
 
-![image](https://wx4.sinaimg.cn/large/0069qZtTgy1gmojw61vn4j30nr0arq4z.jpg)
+<div class="example-box" style="height: 260px;">
+  <div class="grid-box background-clip-box">
+    <div class="item">
+      <p>padding-box</p>
+      <div class="box padding" style="background-clip: padding-box;">内容文字</div>
+    </div>
+    <div class="item">
+      <p>border-box【默认】</p>
+      <div class="box" style="background-clip: border-box;">内容文字</div>
+    </div>
+    <div class="item">
+      <p>content-box</p>
+      <div class="box" style="background-clip: content-box;">内容文字</div>
+    </div>
+  </div>
+</div>
 
-**对比：**
+## 【3】`background-image`：图片
 
-![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gmojwa6l61j30re0iv79f.jpg)
-
-## 【3】图片：background-image
-
-背景图，有如下属性：
+属性：
 
 - `url()`：图片地址
 - `linear-gradient()`渐变背景
@@ -516,7 +559,7 @@ border-bottom-left-radius:  1em 5em;
 背景图片可以有多个，可以摆放在任意位置
 
 ```css
-background: url('1.png'),
+background-image: url('1.png'),
             url('2.png'),
             url('3.png'),
             url('4.png');
@@ -527,7 +570,20 @@ background-position: 0 0, 100% 0, 0 100%, 100% 100%;
 background-position: top left, top right, bottom left, bottom right;
 ```
 
-## 【4】位置：background-position
+<div class="example-box">
+  <div class="item" style="
+  width: 100px;
+  height: 100px;
+  background-image: url('../../assets/images/check.png') ,
+            url('../../assets/images/logo-jd.png') ,
+            url('../../assets/images/robot.png') ,
+            url('../../assets/images/center.png') ;
+background-repeat: no-repeat;
+background-size: 20px 20px;
+background-position: 0 0, 100% 0, 0 100%, 100% 100%;">文字</div>
+</div>
+
+## 【4】`background-position`：位置
 
 让背景图在距离右边和底部都是 20px，如图：
 
@@ -551,7 +607,7 @@ background-position: bottom right;
 background-origin: content-box;
 ```
 
-`background-origin:content-box;`和`padding:20px`结合起来的效果和方法一一样。
+`background-origin: content-box;`和`padding:20px`结合起来的效果和方法一一样。
 
 ### 【4.2】calc
 
@@ -560,7 +616,7 @@ background: url(img_url) no-repeat;
 background-position: calc(100% - 20px, 100% - 20px);
 ```
 
-## 【5】背景依附：background-attachment
+## 【5】`background-attachment`：背景依附
 
 背景依附，默认为`scroll`，随背景滚动
 
@@ -579,9 +635,9 @@ background-size: 100% 15px;
 background-attachment: local, scroll;
 ```
 
-## 【6】背景重复：background-repeat
+## 【6】`background-repeat`：背景重复
 
-◆ **属性**
+◆ 属性
 
 - `repeat`【默认】：平铺满整个容器，可能会造成背景图片显示不全。
 - `repeat-x`： 背景图片沿容器的 X 轴平铺。
@@ -590,7 +646,7 @@ background-attachment: local, scroll;
 - `round`：升缩背景图片适应容器大小。
 - `space`：平均分配相邻图片之间的空间。
 
-◆ **示例**
+◆ 示例
 
 ![image](https://wx3.sinaimg.cn/large/0069qZtTgy1gnbbuxfn3aj31hb0sk154.jpg)
 
@@ -700,13 +756,14 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 
 ## 【3】`perspective`：梯形效果
 
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gj0mzj9rt8j307o041t8i.jpg)
-
 ```css
 transform: perspective(30px)rotateX(5deg);
 ```
+<div class="example-box">
+  <div class="item" style="width: 200px;transform: perspective(30px)rotateX(5deg); font-size:2em;background:#fbb;">文字内容</div>
+</div>
 
-同样会导致内容变成梯形，所以用伪元素生成
+这样会导致文字内容变成梯形，所以用伪元素生成
 
 ```css
 .border{
@@ -726,6 +783,27 @@ transform: perspective(30px)rotateX(5deg);
   transform: perspective(30px)rotateX(5deg);
 }
 ```
+<style>
+
+.perspective{
+  position: relative;
+  font-size:2em;
+}
+.perspective::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background:#fbb;
+  transform: perspective(30px)rotateX(5deg);
+}
+</style>
+<div class="example-box">
+  <div class="item perspective" style="width: 200px;">文字内容</div>
+</div>
 
 ## 【4】`matrix`：矩阵
 
@@ -757,12 +835,11 @@ clip-path:inset(上右下左 round 圆角); // 值+圆角【border-radius】
 
 ◆ 示例：
 
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gnbaa0b9f5j30ok09oaa8.jpg)
-
 ```css
 clip-path: inset(10px 20px 0px 5px); // 矩形
 clip-path: inset(25% 5px round 5px 25%);// 其它
 ```
+![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gnbaa0b9f5j30ok09oaa8.jpg)
 
 ## 【2】圆形：circle
 
@@ -774,13 +851,13 @@ clip-path:circle(半径 at x y);
 
 ◆ 示例：
 
-![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gnaii751tlj30kk08l0st.jpg)
-
 ```css
 clip-path: circle(50% at 50% 50%); // 正圆
 clip-path: circle(); // 正圆-简写
 clip-path: circle(50% at 0 100%); // 其它形状圆
 ```
+
+![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gnaii751tlj30kk08l0st.jpg)
 
 ## 【3】椭圆：ellipse
 
@@ -792,12 +869,11 @@ clip-path:ellipse(x y at 圆心x 圆心y);
 
 ◆ 示例：
 
-![image](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gnairkejmxj30k508hjrf.jpg)
-
 ```css
 clip-path: clip-path: ellipse(30% 20% at 50% 50%);; // 正圆
 clip-path: ellipse(40% 20% at 20% 70%); // 其它形状
 ```
+![image](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gnairkejmxj30k508hjrf.jpg)
 
 ## 【4】多边形：polygon
 
@@ -811,19 +887,17 @@ clip-path:polygon(x1 y1, x2 y2, x3 y3,...);
 
 1. 多边形
 
-![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gnai8f18pkj309605nt8m.jpg)
-
 ```css
 clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 85%);
 ```
+![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gnai8f18pkj309605nt8m.jpg)
 
 2. 三角形
-
-![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gnai8jg39zj308e05nwed.jpg)
 
 ```css
 clip-path: (0 100%, 50% 0, 100% 100%);
 ```
+![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gnai8jg39zj308e05nwed.jpg)
 
 三角形原理：
 
@@ -833,15 +907,22 @@ clip-path: (0 100%, 50% 0, 100% 100%);
 
 # 六、各种阴影
 
-## 【1】边框阴影：box-shadow
+- `box-shadow`：边框阴影
+- `text-shadow`：文字阴影
+- `drop-shadow`：多边形阴影
+- 通过阴影弱化背景
+
+## 【1】`box-shadow`：边框阴影
 
 ### 【1.1】单侧阴影
-
-![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gj0ob24z97j306y03qmwy.jpg)
 
 ```css
 box-shadow: 15px 0 5px -10px #000;
 ```
+
+<div class="example-box">
+  <div class="item" style="box-shadow: 15px 0 5px -10px #000;">文字内容</div>
+</div>
 
 | `h-shadow` | `v-shadow` | `blur` | `spread` | `color` |     `insect`     |
 | :--------: | :--------: | :----: | :------: | :-----: | :--------------: |
@@ -849,19 +930,21 @@ box-shadow: 15px 0 5px -10px #000;
 
 ### 【1.2】多侧阴影
 
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gj0ob7xfq6j307d03sjr7.jpg)
-
 ```css
 box-shadow: 15px 0 5px -10px #000, -15px 0 5px -10px #000;
 ```
+<div class="example-box">
+  <div class="item" style="box-shadow: 15px 0 5px -10px #000, -15px 0 5px -10px #000;">文字内容</div>
+</div>
 
-## 【2】文字阴影：text-shadow
-
-![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gj0ojj9giyj305602i3yg.jpg)
+## 【2】`text-shadow`：文字阴影
 
 ```css
-text-shadow: 5px 5px 5px #f00;
+text-shadow: 5px 5px 5px #f0f;
 ```
+<div class="example-box">
+  <p style="text-shadow: 5px 5px 5px #f0f;">文字内容</p>
+</div>
 
 参数：x 轴、y 轴、阴影、颜色。
 
@@ -876,27 +959,57 @@ text-shadow: 0 0 0.1rem, 0 0 0.3rem;
 text-shadow: 0 1px hsl(0, 0%, 85%), 0 2px hsl(0, 0%, 80%), 0 3px hsl(0, 0%, 75%), 0 4px hsl(0, 0%, 70%);
 ```
 
-## 【3】多边形阴影：drop-shadow
+## 【3】`drop-shadow`：多边形阴影
 
-◆ 文字也会有阴影
-
-![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gj0ol4gog9j305l03amx2.jpg)
+!> 文字也会有阴影
 
 ```css
 width: 0;
 height: 0;
 border: 100px solid ;
-border-color: transparent transparent red;
+border-color: transparent transparent #338fff;
 filter: drop-shadow(5px 5px 5px #000);
 ```
+<div class="example-box">
+  <div style="width: 0;
+height: 0;
+border: 100px solid ;
+border-color: transparent transparent #338fff;
+filter: drop-shadow(5px 5px 5px #000);"></div>
+  <p style="filter: drop-shadow(5px 5px 5px #000);">文字内容</p>
+</div>
 
 参数：x 轴、y 轴、阴影、颜色。
 
-◆ 图标换色
+◆ 实例：图标换色
 
 ```css
-filter: drop-shadow(#f00 20px 0)
+filter: drop-shadow(#f00 20px 0);
+transform: translate(-20px, 0);
 ```
+<style>
+.icon{ 
+  width:100px; 
+  margin:0 auto; 
+  position:relative; 
+  overflow:hidden;
+}
+.icon img{ 
+  display:block; 
+  margin:0 auto; 
+  position:relative; 
+  filter: drop-shadow(100px 0 #f00); 
+}
+.icon:hover img{
+  transform: translate(-100px, 0);
+}
+</style>
+<div class="example-box">
+  <p>鼠标悬浮变色</p>
+  <div class="icon">
+    <img src="../../assets/images/check.png" style="" />
+  </div>
+</div>
 
 ## 【4】通过阴影弱化背景
 
@@ -941,47 +1054,38 @@ box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
 # 七、渐变：`gradient`
 
 1. `line-gradient`：线性渐变
-
 2. `radial-gradient`：径向渐变
-
 3. `conic-gradient`：圆锥形渐变
-
 4. `repeating-line-gradient`：重复线性渐变
-
 5. `repeating-radial-gradient`：重复径向渐变
 
 与`background-size`组合的话，可以生成条纹背景。
 
-## 【1】linear-gradient
+## 【1】`line-gradient`：线性渐变
 
-### 【1.1】linear-gradient：条纹背景
+### 【1.1】`linear-gradient`：条纹背景
 
-#### 背景为上下 2 色分割
+- 例1：背景为上下 2 色分割
 
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gj0f2emiabj308x05lq2r.jpg)
+```css
+background-image: linear-gradient(#ff0 50%, #f00 50%)
+```
 
-`background-image: linear-gradient(#ff0 50%, #f00 50%)`
+<div class="example-box">
+  <div class="item" style="background-image: linear-gradient(#ff0 50%, #f00 50%)"></div>
+</div>
 
-#### 背景 2 色平铺
-
-![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gj0f2jukxkj308v05pt8r.jpg)
+- 例2：背景 2 色平铺
 
 ```css
 background: linear-gradient(#ff0 50%, #f00 50%);
 background-size: 100% 50%;
 ```
-
-#### 背景 2 色任意角度平铺
-
-![image](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gj0f30zb6bj308t05nn04.jpg)
-
-```css
-background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,green 10%);
-```
+<div class="example-box">
+  <div class="item" style="background: linear-gradient(#ff0 50%, #f00 50%);background-size: 100% 50%;"></div>
+</div>
 
 ### 【1.2】linear-gradient：切角效果
-
-![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gj0m36t5cij306q068web.jpg)
 
 ```css
 width: 200px;
@@ -994,16 +1098,26 @@ background: linear-gradient(135deg, transparent 15px,#fbb 0) top left,
 background-size:50% 50%;
 background-repeat:no-repeat;
 ```
+<div class="example-box">
+  <div class="item" style="background:#ffb;
+background: linear-gradient(135deg, transparent 15px,#fbb 0) top left,
+      linear-gradient(-135deg, transparent 15px,#fbb 0) top right,
+      linear-gradient(-45deg, transparent 15px, #fbb 0) bottom right,
+      linear-gradient(45deg, transparent 15px, #fbb 0) bottom left;
+background-size:50% 50%;
+background-repeat:no-repeat;"></div>
+</div>
 
 ## 【2】repeating-linear-gradient
 
-背景 2 色任意角度平铺
-
-![image](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gj0f30zb6bj308t05nn04.jpg)
+- 例：背景 2 色任意角度平铺
 
 ```css
 background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,green 10%);
 ```
+<div class="example-box">
+  <div class="item" style="background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,green 10%);"></div>
+</div>
 
 ## 【3】radial-gradient 与 linear-gradient 类似
 
@@ -1011,49 +1125,45 @@ background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,g
 
 ### 【4.1】饼图
 
+```css
+background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
+```
 <div class="example-box">
-  <div
+  <div class="item"
     style="
-      width: 200px;
-      height: 200px;
       border-radius: 50%;
       background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
     "
   ></div>
 </div>
 
+### 【4.2】伪圆环效果
 
+外元素
 ```css
 background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 ```
 
-### 【4.2】伪圆环效果
+内元素
+```css
+background-color: #fff;
+```
 
+        
 <div class="example-box">
-
-  <div
-    style="
-      width: 200px;
-      height: 200px;
+  <div class="item" style="
       border-radius: 50%;
       background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    "
-  >
-    <div
-      style="
-        width: 150px;
-        height: 150px;
+      display: flex;">
+    <div style="
+        width: 50px;
+        height: 50px;
+        margin: auto;
         border-radius: 50%;
-        background-color: #fff;
-      "
-    >
+        background-color: #fff;">
     </div>
   </div>
 </div>
-
 
 ---
 
@@ -1079,15 +1189,11 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 - text-transform: uppercase | lowercase | capitaliza; // 文字转换大小写
 - text-rendering: optimizeSpeed; // 连字形式【英文的 fi 会分开】
 
-
-
 ### 【1.2】font
-
 
 - font-variant: small-caps(小型大写字母字体); // 字体变体
 - font-variant-ligatures: no-common-ligatures; // 连字形式【英文的 fi 会分开】
 - font-variant-numeric: slashed-zero; // 数字 0 显示为中间有斜杠，好和 o 区分
-
 
 ◆ `font-variant: small-caps`
 
@@ -1107,13 +1213,6 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ## 【2】行内元素文字间距自动调整
 
-
-<div class="example-box">
-  <p style="width: 200px; text-align: justify; text-align-last: justify">姓名</p>
-  <p style="width: 200px; text-align: justify; text-align-last: justify">家庭住址</p>
-</div>
-
-
 ```html
 <style>
   div {
@@ -1127,6 +1226,11 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
   <div>家庭住址</div>
 </body>
 ```
+<div class="example-box">
+  <p style="width: 200px; text-align: justify; text-align-last: justify">姓名</p>
+  <p style="width: 200px; text-align: justify; text-align-last: justify">家庭住址</p>
+</div>
+
 
 ## 【2】文字从右到左效果
 
@@ -1135,19 +1239,6 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 - text-align: right
 - direction: rtl
 - unicode-bidi: bidi-override【依赖于 direction】
-
-
-<div class="example-box">
-  <p style="text-align: right">
-    我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
-  </p>
-  <p style="direction: rtl">
-    我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
-  </p>
-  <p style="direction: rtl; unicode-bidi: bidi-override">
-    我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
-  </p>
-</div>
 
 
 ```html
@@ -1161,6 +1252,17 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
   我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
 </p>
 ```
+<div class="example-box">
+  <p style="text-align: right">
+    我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
+  </p>
+  <p style="direction: rtl">
+    我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
+  </p>
+  <p style="direction: rtl; unicode-bidi: bidi-override">
+    我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
+  </p>
+</div>
 
 ## 【3】文字换行与截断
 
@@ -1168,7 +1270,6 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 - overflow-wrap: break-word; // 功能上同，W3C 新写法。
 - overflow-wrap: anywhere; // 任何地方都可以换行[功能参考](https://www.zhangxinxu.com/wordpress/2020/03/css-overflow-wrap-anywhere/)
 - white-space: nowrap; // 段落中的文本不换行（会截断）。
-
 - word-break: keep-all; //【默认】单词放不下会自动换行【文字截断】。
 - word-break: break-all; // 单词放不下会折断换行，铺满元素【文字截断】。
 
@@ -1177,7 +1278,6 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 ![image](https://wx1.sinaimg.cn/mw2000/0069qZtTgy1gx43wj1frpj32ko0ts1kx.jpg)
 
 - [效果预览](https://firefly1984982452.github.io/my-web-page/word-break.html)
-
 - [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/word-break.html)
 
 ## 【4】盒装饰器中断
@@ -1190,7 +1290,6 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 ![image](https://wx2.sinaimg.cn/orj360/0069qZtTgy1gx43neotd9j30ju0g0dm6.jpg)
 
 - [效果预览](https://firefly1984982452.github.io/my-web-page/box-decoration-break.html)
-
 - [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/box-decoration-break.html)
 
 ## 【5】文字间距
@@ -1198,14 +1297,13 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 - word-spacing:30px; // 单词与单词之间的距离。
 - letter-spacing:-3px; // 字母与字母之间的距离。
 
-
 <div class="example-box">
   <p >默认：I am a programer</p>
   <p  style="word-spacing:30px;">间距：I am a programer</p>
   <p  style="letter-spacing:-3px;">间距：I am a programer</p>
 </div>
 
-## 【6】文字连字符换行：`hyphens`
+## 【6】`hyphens`：文字连字符换行
 
 ◆ 功能：连字符换行
 
@@ -1221,7 +1319,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 <p style="width: 100px; text-align: justify; text-align-last: justify;border:1px solid">An extreme ly long English word</p>
 ```
 
-## 【7】line-clamp：限制文本行数
+## 【7】`line-clamp`：限制文本行数
 
 必须加上`-webkit-`
 
@@ -1231,7 +1329,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ---
 
-# 九、文字环绕：shape
+# 九、文字环绕：`shape`
 
 `shape-outside`属性使得行内（`inline`）的内容，围绕`outside`指定的曲线排列，可以用多边形``里面的属性。
 
@@ -1240,8 +1338,6 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 `shape-image-threshold`属性指定[透明度值](https://developer.mozilla.org/zh-CN/docs/Web/CSS/shape-image-threshold)。
 
 【1】圆形文字环绕
-
-![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gnadz5a2rlj30ih06kt9g.jpg)
 
 ```css
 .circle {
@@ -1254,9 +1350,10 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 }
 ```
 
-【2】三角形文字环绕
+![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gnadz5a2rlj30ih06kt9g.jpg)
 
-![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gnadzmmpw3j30j406oaas.jpg)
+
+【2】三角形文字环绕
 
 ```css
 .circle {
@@ -1269,6 +1366,9 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
   shape-outside: polygon(0 100%, 50% 0, 100% 100%);
 }
 ```
+
+![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gnadzmmpw3j30j406oaas.jpg)
+
 
 ---
 
@@ -1348,7 +1448,7 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 
 ### 【2.3】填充模式
 
-- [学习链接](https://www.w3cplus.com/css3/understanding-css-animation-fill-mode-property.html)
+ [学习链接](https://www.w3cplus.com/css3/understanding-css-animation-fill-mode-property.html)
 
 - `none`：【默认】无改变。
 - `forwards`：保留最后一帧，不回到初始状态。
@@ -1472,10 +1572,9 @@ window.requestAnimationFrame(() => {
 ◆ 常用：
 
 - blur：高斯模糊
-
 - drop-shadow：阴影
 
-多个`filter`滤镜一起使用：**加空格**
+!> 多个`filter`滤镜一起使用：**加空格**
 
 ```css
 filter: blur(4px) brightness(0.3);
@@ -1621,15 +1720,29 @@ img {
   object-position: top 70px;
 }
 ```
+<div class="example-box">
+  <div class="item" style="width:200px;height:150px;">
+    <img src="../../assets/images/sport.png" style="
+      object-fit: none;
+      object-position: 15px 10%;"/>
+  </div>
+</div>
+
+[实例链接](https://www.runoob.com/try/try.php?filename=trycss3_object-position)
 
 ## 【5】`vertical-align`：文字对齐图片方式
-
 
 - vertical-align: text-top; // 文字对齐图片顶部
 - vertical-align: text-bottom; // 默认文字对齐图片底部
 
 
-
+```html
+<p>
+  文字与图片对齐
+  <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
+  设置为顶部对齐
+</p>
+```
 <div class="example-box">
   <p>
     文字与图片对齐
@@ -1643,23 +1756,39 @@ img {
   </p>
 </div>
 
-```html
-<p>
-  文字与图片对齐
-  <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
-  设置为顶部对齐
-</p>
-```
-
 ## 【6】`image-orientation`：纠正图片的方向
 
-## 【7】`image-rendering`：增强图像渲染
+## 【7】`image-rendering`：像素化图片像素
 
 ```css
 image-rendering: auto;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
 ```
+<div class="example-box">
+  <div class="grid-box">
+    <div class="item">
+      <p>原图：</p>
+      <img src="../../assets/images/arrow.png"/>
+    </div>
+    <div class="item">
+      <p>放大后：</p>
+      <img style="width:100px;height:100px;" src="../../assets/images/arrow.png"/>
+    </div>
+    <div class="item">
+      <p>image-rendering: auto;</p>
+      <img style="width:100px;height:100px;image-rendering: auto;" src="../../assets/images/arrow.png"/>
+    </div>
+    <div class="item">
+      <p>image-rendering: crisp-edges;</p>
+      <img style="width:100px;height:100px;image-rendering: crisp-edges;" src="../../assets/images/arrow.png"/>
+    </div>
+    <div class="item">
+      <p>image-rendering: pixelated;</p>
+      <img style="width:100px;height:100px;image-rendering: pixelated;" src="../../assets/images/arrow.png"/>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -1667,19 +1796,17 @@ image-rendering: pixelated;
 
 ## 【1】`resize` 属性
 
-<div class="example-box">
-  <p style="resize:both;overflow: hidden;">resize属性规定是否由用户调整元素大小</p>
-</div>
 
 ```css
 resize:both;
 overflow: hidden;
 ```
+<div class="example-box">
+  <p style="border:1px solid;resize:both;overflow: hidden;">resize属性规定是否由用户调整元素大小，拖动鼠标调整大小。</p>
+</div>
 
-条件：
-
-- 子元素要比父元素大；
-- 一定要写上`overflow: hidden;`
+!> 子元素要比父元素大；<br />
+一定要写上`overflow: hidden;`
 
 ## 【2】z-index 属性
 
@@ -1703,20 +1830,18 @@ overflow: hidden;
 
 - [MDN](https://developer.mozilla.org/de/docs/Web/CSS/-webkit-box-reflect)
 
-
-
-<div class="example-box" style="height:250px">
-  <img style="-webkit-box-reflect: below;" height="100px" src="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg">
-</div>
-
+!> 仅 chrome 生效
 
 ```css
 img{
   -webkit-box-reflect: below;
 }
 ```
+<div class="example-box" style="height:250px">
+  <img style="-webkit-box-reflect: below;" height="100px" src="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg">
+</div>
 
-!> 仅 chrome 生效
+
 
 ---
 
@@ -1782,7 +1907,6 @@ img{
 
 在 PC 端 hover 时背景会变色，在不具备 hover 的设备上（如移动端）下划线会消失。
 
-
 ```css
 @media (any-hover: hover) {
   a:hover{
@@ -1795,7 +1919,6 @@ img{
   }
 }
 ```
-
 
 ```html
 <a href="#">在PC端hover时背景会变色，在不具备hover的设备上（如移动端）下划线会消失。</a>
@@ -1882,7 +2005,6 @@ img{
 ## 【5】prefers-color-scheme：适配主题
 
 - [链接 1](https://zhuanlan.zhihu.com/p/374506516)
-
 - [链接 2](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 
 !> 目前测试 chrome、firefox、safari 浏览器兼容性均不能实现这个功能。
@@ -1896,13 +2018,6 @@ img{
 ## 【1】更改`<button />`的默认样式为无
 
 
-<div class="example-box">
-    <button>button 样式</button>
-    <br />
-    <button style="appearance:none;">文本样式</button>
-</div>
-
-
 ```css
 button {
 appearance:none;
@@ -1911,13 +2026,28 @@ appearance:none;
 }
 ```
 
-```html
-<button>一些文本。</button>
-```
+<div class="example-box">
+    <button>button 样式</button>
+    <br />
+    <button style="appearance:none;">文本样式</button>
+</div>
 
 ## 【2】更改`<input />`默认的大小和边框样式
 
+```css
+input#test {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid red;
+}
+```
 
+```html
+<input id="test" type="checkbox" />
+```
 <style>
 
 input#test {
@@ -1936,21 +2066,6 @@ input#test {
   <input id="test" type="checkbox" />更改默认复选框
 </div>
 
-
-```css
-input#test {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 30px;
-  height: 30px;
-  border: 2px solid red;
-}
-```
-
-```html
-<input id="test" type="checkbox" />
-```
 
 ---
 

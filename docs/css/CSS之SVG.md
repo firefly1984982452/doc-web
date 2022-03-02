@@ -58,7 +58,6 @@
 </div>
 
 
-
 **stroke-dasharray：**
 
 <div class="example-box">
@@ -70,7 +69,6 @@
     </g>
   </svg>
 </div>
-
 
 ```html
 <svg>
@@ -156,7 +154,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg>
   <rect x="0" y="0" height="100" width="200" style="stroke: #70d5dd; fill: #dd524b" />
@@ -174,7 +171,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
   </svg>
 </div>
-
 
 ```html
 <svg>
@@ -194,7 +190,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
     <ellipse cx="300" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"/>
   </svg>
 </div>
-
 
 
 ```html
@@ -217,7 +212,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </div>
 
 
-
 ```html
 <svg>
   <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"/>
@@ -231,7 +225,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
     <polygon points="220,10 300,210 170,250 123,234" style="fill:lime;stroke:purple;stroke-width:1" />
   </svg>
 </div>
-
 
 
 ```html
@@ -250,7 +243,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </div>
 
 
-
 ```html
 <svg>
   <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:none;stroke:black;stroke-width:3" />
@@ -259,7 +251,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 ```
 
 ## 【8】`<path>`路径
-
 
 - M = moveto【函数】
 - L = lineto【画线】
@@ -272,13 +263,11 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 - A = elliptical Arc【椭圆弧】
 - Z = closepath【闭合路径】
 
-
 <div class="example-box">
   <svg>
       <path d="M150 0 L75 200 L225 200 Z" />
   </svg>
 </div>
-
 
 
 ```html
@@ -299,7 +288,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
     </text>
   </svg>
 </div>
-
 
 
 ```html
@@ -337,7 +325,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 </div>
 
-
 ```html
 <svg>
   <defs>
@@ -369,7 +356,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </div>
 
 
-
 ```html
 <svg>
   <defs>
@@ -399,7 +385,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </div>
 
 
-
 ```html
 <svg>
   <defs>
@@ -426,7 +411,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
     <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad2)" />
   </svg>
 </div>
-
 
 
 ```html
@@ -483,7 +467,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg width="500" height="500">
   <defs>
@@ -503,7 +486,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
       width="100%" height="100%"/>
   </svg>
 </div>
-
 
 ```html
 <svg viewBox="0 0 100 100" width="200" height="200">
@@ -527,7 +509,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
     </rect>
   </svg>
 </div>
-
 
 ```html
 <svg width="500px" height="100px">

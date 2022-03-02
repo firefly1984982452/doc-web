@@ -1,8 +1,6 @@
 # JavaScript之运行机制
 
-
 - [链接](https://www.cnblogs.com/cangqinglang/p/8963557.html)
-
 
 - **异步**：现在和将来的时间间隙
 - **并行**：能够同时发生的事情
@@ -90,12 +88,10 @@ console.log('end');
 这里的执行顺序就是`start-->2-->end-->4-->1-->3`
 
 
-
 !> promise是立即执行的，创建的时候就会执行，不存在将promise推入微任务；<br />
  resolve()是表示promise的状态为fullfilled，相当于只是定义了一个有状态的promise，并没有调用它；<br />
  promise调用then的前提是promise的状态为fullfilled；<br />
 只有promise调用then的时候，then里面的函数才会被推入微任务中。
-
 
 ---
 

@@ -68,7 +68,6 @@ modal.toast({
 
 `const stream = weex.requireModule('stream');`
 
-
 **fetch请求在电脑端浏览器会被提醒跨域，请求被拦截，直接用手机测试**
 
 如果要一进入页面就请求数据，在`created(){}`或`mounted(){}`中写

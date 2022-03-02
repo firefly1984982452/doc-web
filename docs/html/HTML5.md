@@ -122,7 +122,6 @@
   <p style="text-align: right">【text-align: right】hello world.</p>
 </div>
 
-
 ## 【7】`contenteditable`：允许修改内容
 
 ```html
@@ -162,7 +161,6 @@
 ```html
 <h1 data-yeah='显示信息：'>data-yeah</h1>
 ```
-
 
 <style>
   .example-box h1[data-yeah]::before {
@@ -750,7 +748,6 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   <video controls autoplay controls loop muted  poster="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg" src="https://www.w3school.com.cn/i/movie.mp4">
   </video>
 </div>
-
 
 ## 【3】用 canvas 实现 video 视频截图功能
 

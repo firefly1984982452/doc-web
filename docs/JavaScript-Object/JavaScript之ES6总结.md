@@ -472,7 +472,6 @@ console.log(a,temp); // 1 [2, 3, 4]
 
 # 五、数值的扩展
 
-
 - 参考[JavaScript之Number](docs/JavaScript-Object/JavaScript之Number.md)
 - 参考[JavaScript之Math](docs/JavaScript-Object/JavaScript之Math.md)
 

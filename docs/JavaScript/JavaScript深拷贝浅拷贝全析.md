@@ -43,7 +43,6 @@ console.log(obj1,obj2);
 
 obj1对象中的一级对象a:2并没有受影响，但二级对象b已经受影响。所以`Object.create`克隆的对象也只能实现一级对象的深拷贝。
 
-
 ## 【2】数组用concat
 
 **用法：**
@@ -72,7 +71,6 @@ console.log(arr[0],brr[0])
 **结论：**
 
 arr的一级对象(id)和对象里面的对象(other.sex)都是引用同一个指针，不能实现深拷贝。
-
 
 ## 【3】对象用assign
 
@@ -148,12 +146,10 @@ obj的一级对象(id)的确不受影响，但对象里面的对象(name.a)还�
 
 ## 【1】JSON.parse(JSON.stringify())
 
-
 ```js
 var obj1 = {a: 1}
 obj2 = JSON.parse(JSON.stringify(obj1))
 ```
-
 
 ## 【2】MessageChannel
 
@@ -194,7 +190,6 @@ var obj2 = _.cloneDeep(obj);
 obj2.name.a = 'obj2';
 console.log(obj,obj2)
 ```
-
 
 
 结果：

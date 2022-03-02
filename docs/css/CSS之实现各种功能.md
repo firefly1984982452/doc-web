@@ -1,7 +1,6 @@
 # CSS之实现各种功能
 # 【1】单行居中显示文字，多行居左显示，最多两行超过用省略号结尾
 
-
 <style>
 .line-clamp{
   width: 400px;
@@ -85,7 +84,6 @@ h2{
 <h2><p><em>单行居中，多行居左<em></p></h2>
 ```
 
-
 ```html
 <style>
 .line-clamp{
@@ -115,7 +113,6 @@ h2{
   <h2><p>老人主诉头晕多日，饭后胸闷，结合体检情况，考虑为交感神经。</p></h2>
 </div>
 ```
-
 
 ---
 
@@ -348,7 +345,6 @@ table-layout: fixed;
 
 # 【12】`background-clip: padding-box;`实现半透明边框
 
-
 <div class="example-box">
 
   <div style="height:100px;border: 10px solid rgba(255, 255, 255, 0.5);
@@ -362,7 +358,6 @@ table-layout: fixed;
   </div>
 
 </div>
-
 
 ```css
 border: 10px solid rgba(255, 255, 255, 0.5);
@@ -690,11 +685,9 @@ li:not(:last-child)...
 }
 </style>
 
-
 <div class="example-box">
   <div class="flex-box">这是定宽比例</div>
 </div>
-
 
 ```css
 .box{
@@ -817,7 +810,6 @@ li:not(:last-child)...
 
 # 【22】整块文本溢出省略
 
-
 <div class="example-box">
   <section style="width: 300px; height: 80px; border: 1px solid #bbf">
     <p
@@ -847,7 +839,6 @@ li:not(:last-child)...
     </p>
   </section>
 </div>
-
 
 ```html
 <style>
@@ -893,7 +884,6 @@ li:not(:last-child)...
 # 【23】上下左右箭头
 
 
-
 <style>
   .arrow{
     width: 20px;
@@ -911,7 +901,6 @@ li:not(:last-child)...
   <br />
   <div class="arrow" style="transform: rotate(45deg);"></div>
 </div>
-
 
 ```css
 width: 20px;
@@ -955,7 +944,6 @@ background-position: 0 1.1em;
 ---
 
 # 【25】自定义复选框
-
 
 
 <style>
@@ -1006,7 +994,6 @@ background-position: 0 1.1em;
 </div>
 
 
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -1053,7 +1040,6 @@ background-position: 0 1.1em;
   </body>
 </html>
 ```
-
 
 ---
 

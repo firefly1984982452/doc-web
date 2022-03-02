@@ -41,7 +41,6 @@
 
 运行结果是报错，找不到节点。也就是说，当你执行到isShow=true时，此时dom节点尚未更新，只能等待dom更新后，你才能执行下面的focus。
 
-
 # 用MessageChannel实现
 
 ```html

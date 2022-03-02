@@ -2,7 +2,6 @@
 
 ---
 
-
 # 一、链接
 
 - [官方 API 链接](https://echarts.apache.org/zh/option.html)
@@ -361,7 +360,6 @@ option = {
     yAxis: {
         type: 'category',
     },
-
 
     // 区域缩放
     dataZoom: [

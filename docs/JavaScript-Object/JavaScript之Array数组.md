@@ -260,7 +260,6 @@ Object.fromEntries(map)
 
 ## 【5】`map`：遍历，返回新数据，对原数组不影响
 
-
 ```js
 var newList = list.map(item => {
     item.type = 1;
@@ -338,7 +337,6 @@ try {
 
 ## 【7】`reduce`：将数组计算为一个值
 
-
 ```js
 var numbers = [15.5, 2.3, 1.1, 4.7];
 function getSum(total, num) {
@@ -368,7 +366,6 @@ total; // 16
 用法上同，区别是从后往前。
 
 ---
-
 
 # 六、生成数组
 
@@ -480,7 +477,6 @@ var strArr = arr.toString().split(',');
 
 ---
 
-
 # 八、判断[1,2]是否为数组的方法
 
 !> typeof 不能验证[1,2]是否为数组，返回的是'object'
@@ -548,7 +544,6 @@ function instanceof(left, right) {
 
 ## 【1】toString
 
-
 ```js
 [1,2,3,4,5].String()
 "1,2,3,4,5"
@@ -562,7 +557,6 @@ function instanceof(left, right) {
 ```
 
 ---
-
 
 # 十、`Array.from`：将类数组对象或可遍历对象变成真正的数组对象
 
@@ -613,7 +607,6 @@ Array.from('hello') // ["h", "e", "l", "l", "o"]
 ---
 
 # 十一、扩展运算符（`...`）：将数组变为参数序列
-
 
 ```js
 console.log(...[1,2,3]); // 1,2,3
@@ -677,7 +670,6 @@ rest  // [2, 3, 4, 5]
 ---
 
 
-
 # 其它例子
 
 ## 【1】递增数组的值
@@ -716,5 +708,4 @@ test3(1,2,3,4);
 ![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1ghdl1udru0j309o068dfy.jpg)
 
 ---
-
 

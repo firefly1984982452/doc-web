@@ -51,7 +51,6 @@ let n_val = obj && obj.attr && obj.attr.name
 let n_val = obj?.attr?.name
 ```
 
-
 ---
 
 # 二、合并多个对象
@@ -64,7 +63,6 @@ obj; // {a: 3, b: 4, c: 5}
 ```
 
 ## 【2】用`(```)`可以合并多个对象
-
 
 ```js
 let obj = {...{a:3},...{b:4},...{c:5}}
@@ -142,7 +140,6 @@ obj.arr.slice(1); // 修改数组监听失败
 ---
 
 # 六、`Object.fromEntries`：把序列化的字符串反转为对象
-
 
 ```js
 window.location.search = '?roomId=9&status=1&taskId=7&serviceId=1109';
@@ -244,7 +241,6 @@ console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 ```
 
 ---
-
 
 # 九、`Object.is()`：对象比较
 

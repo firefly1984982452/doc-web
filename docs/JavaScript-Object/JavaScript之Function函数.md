@@ -49,7 +49,6 @@ obj.sum(); // 1
 - `Function`只有`return`的方法才能获取到（闭包）
 - `Function`执行后返回的是对象
 
-
 # 二、JavaScript函数调用及this参数
 
 JS有4种方式调用函数

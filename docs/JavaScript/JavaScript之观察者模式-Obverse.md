@@ -8,7 +8,6 @@
 - `PerformanceObserver`：监测性能
 - `ReportingObserver`：汇报
 
-
 # 一、ResizeObserver：resize监听
 
 `window.resize`下监听某`DOM`的改变：
@@ -163,14 +162,12 @@ io.disconnect();
 
 每个属性的含义如下。
 
-
 - time：可见性发生变化的时间，是一个高精度时间戳，单位为毫秒
 - target：被观察的目标元素，是一个 DOM 节点对象
 - rootBounds：根元素的矩形区域的信息，getBoundingClientRect()方法的返回值，如果没有根元素（即直接相对于视口滚动），则返回null
 - boundingClientRect：目标元素的矩形区域的信息
 - intersectionRect：目标元素与视口（或根元素）的交叉区域的信息
 - intersectionRatio：目标元素的可见比例，即intersectionRect占boundingClientRect的比例，完全可见时为1，完全不可见时小于等于0
-
 
 ## 【3】懒加载图片实例
 

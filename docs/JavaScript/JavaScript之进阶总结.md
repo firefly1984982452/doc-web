@@ -8,13 +8,11 @@
 
 ## 【2】`<script>`中的`async`和`defer`
 
-
 1. `<script src="script.js"></script>`：读到就立即执行。
 
 2. `<script async src="script.js"></script>`：和DOM并行进行（异步）。
 
 3. `<script defer src="script.js"></script>`：和DOM并行进行（异步），但在所有`script.js`的执行解析完后，`DOMContentLoaded`事件触发完成之前。
-
 
 ---
 
@@ -223,7 +221,6 @@ handleClick(e){
 
 ---
 
-
 # 五、let 和闭包
 
 ## 【1】let 劫持作用域
@@ -403,7 +400,6 @@ let obj = {
         case 'default':
             return 'default';
             break;
-
 
         default:
             break;
@@ -901,11 +897,9 @@ $(".company_color").click(function(){
 
 - [参考链接](https://zhuanlan.zhihu.com/p/97768916)
 
-
 ```html
 <a id="download" @click="download">下载</a>
 ```
-
 
 ```js
 download(){

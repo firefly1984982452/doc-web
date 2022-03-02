@@ -1013,7 +1013,6 @@ const obj2 : {
 }
 console.log(addObj(obj1,obj2)) // 0
 
-
 // 当是NumberObj对象时
 const obj3 = new NumberObj();
 obj3.count = 45;
