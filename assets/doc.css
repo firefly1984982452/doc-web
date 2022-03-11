@@ -3,13 +3,13 @@ div.example-box {
   border: 1px solid ;
   border-image: linear-gradient(325deg, rgba(41, 254, 255, 0), rgba(255, 0, 0, 1), rgba(255, 0, 0, .1)) 2 2;
   color: #ee2746;
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding: 5px 20px;
 }
 
 div.example-box::before {
   content: '◆ 示例效果：';
-  color: #96c24e;
+  color: #339933;
   font-size: .3em;
   display: block;
   font-weight: bold;
@@ -24,7 +24,7 @@ div.example-box>div.item{
 }
 
 div.example-box p {
-  margin: 10px;
+  margin: 5px;
 }
 
 div.example-box .grid-box {
