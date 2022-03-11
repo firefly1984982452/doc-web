@@ -1085,6 +1085,18 @@ background-size: 100% 50%;
   <div class="item" style="background: linear-gradient(#ff0 50%, #f00 50%);background-size: 100% 50%;"></div>
 </div>
 
+- 例3：四边虚化
+
+```css
+background-image: 
+  linear-gradient(to bottom, #000, rgba(36,54,78,0) 15%,rgba(36,54,78,0) 85%, #000),
+  linear-gradient(to right, #000, rgba(36,54,78,0) 15%,rgba(36,54,78,0) 85%, #000);
+```
+
+<div class="example-box">
+  <div class="item" style="background-image: linear-gradient(to bottom, #000, rgba(36,54,78,0) 15%,rgba(36,54,78,0) 85%, #000),linear-gradient(to right, #000, rgba(36,54,78,0) 15%,rgba(36,54,78,0) 85%, #000);"></div>
+</div>
+
 ### 【1.2】linear-gradient：切角效果
 
 ```css
@@ -1739,7 +1751,8 @@ img {
 ```html
 <p>
   文字与图片对齐
-  <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
+  <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" 
+  width="100" height="100" />
   设置为顶部对齐
 </p>
 ```
@@ -1896,6 +1909,12 @@ img{
   </body>
 </html>
 ```
+<div class="example-box" style="height:250px">
+  <img style="-webkit-mask-image: url('https://firefly1984982452.github.io/my-web-page/animation.png');
+  mask-image: url('https://firefly1984982452.github.io/my-web-page/animation.png');" 
+  height="100px" 
+  src="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg">
+</div>
 
 ---
 

@@ -15,10 +15,8 @@ div.example-box::before {
   height: 20px;
 }
 div.example-box>div.item{
-  min-width: 100px;
-  min-height: 100px;
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 100px;
   line-height: 100px;
   border: 1px solid rgba(255, 0, 0, .1);
   text-align: center;
@@ -35,10 +33,6 @@ div.example-box .grid-box {
 }
 
 div.example-box .grid-box .item {
-  min-width: 100px;
-  min-height: 100px;
-  width: auto;
-  height: auto;
   border: 2px solid;
   border-image: linear-gradient(325deg, rgba(41, 254, 255, 0), rgba(41, 254, 255, 1), rgba(41, 254, 255, 0)) 2 2;
 }

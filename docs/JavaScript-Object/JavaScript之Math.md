@@ -88,7 +88,7 @@ Math.floor(Math.random() * number)
 
 `Math.pow(2, 3)`代表 2 的 3 次方
 
-同等于`2 ** 3`
+可简写为`2 ** 3`
 
 ## 【2】`%`：取余
 

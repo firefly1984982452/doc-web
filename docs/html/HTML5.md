@@ -241,12 +241,8 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ```
 
 <div class="example-box">
-  <b>width: 300px时：</b>
-  <p style="border: 1px solid;width: 300px;">
-  Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
-  </p>
-  <b>width: 100px时：</b>
-  <p style="border: 1px solid;width: 100px;">
+  <b>拖动改变width大小看效果：</b>
+  <p style="resize:both;overflow:hidden;border: 1px solid;width: 300px;">
   Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   </p>
 </div>
