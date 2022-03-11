@@ -143,7 +143,7 @@ function rectFn() {
 <img
   class="box"
   id="scream"
-  src="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg"
+  src="https://s1.ax1x.com/2022/03/11/bI6bE8.png"
   width="250"
   height="300"
   style="display: none"

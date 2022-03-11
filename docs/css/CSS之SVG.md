@@ -482,14 +482,14 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 <div class="example-box">
   <svg viewBox="0 0 100 100" width="200" height="200">
-    <image xlink:href="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg"
+    <image xlink:href="https://s1.ax1x.com/2022/03/11/bI6bE8.png"
       width="100%" height="100%"/>
   </svg>
 </div>
 
 ```html
 <svg viewBox="0 0 100 100" width="200" height="200">
-  <image xlink:href="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg"
+  <image xlink:href="https://s1.ax1x.com/2022/03/11/bI6bE8.png"
     width="100%" height="100%"/>
 </svg>
 ```

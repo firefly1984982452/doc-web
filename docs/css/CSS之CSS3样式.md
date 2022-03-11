@@ -256,7 +256,7 @@ border-image: url(border.png) 30 round;
               width:250px;
               height:250px;
               border: solid 50px;
-              border-image: url(https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg) 90 round;"></div>
+              border-image: url(https://s1.ax1x.com/2022/03/11/bI6bE8.png) 90 round;"></div>
 </div>
 
 ## 【3】`rgba`或`hsla`：半透明边框
@@ -692,7 +692,7 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 
 <div class="example-box">
   <div class="box" style="margin: 60px 0 0 60px; width: 300px; border: 1px solid #bbf; transform: rotate(45deg); overflow: hidden">
-    <img src="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg" style="width: 100%; transform: rotate(-45deg) scale(1.5)" />
+    <img src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" style="width: 100%; transform: rotate(-45deg) scale(1.5)" />
   </div>
 </div>
 
@@ -1851,7 +1851,7 @@ img{
 }
 ```
 <div class="example-box" style="height:250px">
-  <img style="-webkit-box-reflect: below;" height="100px" src="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg">
+  <img style="-webkit-box-reflect: below;" height="100px" src="https://s1.ax1x.com/2022/03/11/bI6bE8.png">
 </div>
 
 
@@ -1905,7 +1905,7 @@ img{
     </style>
   </head>
   <body>
-    <img src="https://wx1.sinaimg.cn/mw690/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg" alt="" srcset="" />
+    <img src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" alt="" srcset="" />
   </body>
 </html>
 ```
@@ -1913,7 +1913,7 @@ img{
   <img style="-webkit-mask-image: url('https://firefly1984982452.github.io/my-web-page/animation.png');
   mask-image: url('https://firefly1984982452.github.io/my-web-page/animation.png');" 
   height="100px" 
-  src="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg">
+  src="https://s1.ax1x.com/2022/03/11/bI6bE8.png">
 </div>
 
 ---

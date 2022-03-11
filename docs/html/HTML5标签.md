@@ -1,10 +1,9 @@
-# HTML5
+# HTML5标签
 
-- [阮一峰](https://wangdoc.com/html/)
-
+- [阮一峰的HTML 教程](https://wangdoc.com/html/)
 - [《HTML5 权威指南》](https://book.douban.com/subject/25786074/)
 
-!> 只记录了冷门的不常用的信息，其它基础的没有记录。
+!> 只记录了冷门的不常用的知识，其它基础的没有记录。
 
 # 一、`<head>` 部分
 
@@ -624,11 +623,11 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 图片不显示时，图片的位置会显示该文本。
 
 ```html
-<img src="foo.jpg" alt="示例图片">
+<img src="a.jpg" alt="示例图片">
 ```
 
 <div class="example-box">
-  <img src="foo.jpg" alt="示例图片">
+  <img src="https://s1.ax1x.com/2022/03/11/bI6bE.png" alt="示例图片">
 </div>
 
 ## 【2】`width`，`height`：宽度和高度
@@ -701,7 +700,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 <div class="example-box">
   <figure>
-    <img src="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg">
+    <img src="https://s1.ax1x.com/2022/03/11/bI6bE8.png">
     <figcaption>说明图片的文字。</figcaption>
   </figure>
 </div>
@@ -734,14 +733,14 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
   controls 
   loop 
   muted  
-  poster="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg" 
+  poster="https://s1.ax1x.com/2022/03/11/bI6bE8.png" 
   src="https://www.w3school.com.cn/i/movie.mp4">
   </video>
 </div>
 ```
 
 <div class="example-box">
-  <video controls autoplay controls loop muted  poster="https://wx1.sinaimg.cn/orj360/0069qZtTgy1go96k54t3lj30ru0rqx6p.jpg" src="https://www.w3school.com.cn/i/movie.mp4">
+  <video controls autoplay controls loop muted  poster="https://s1.ax1x.com/2022/03/11/bI6bE8.png" src="https://www.w3school.com.cn/i/movie.mp4">
   </video>
 </div>
 

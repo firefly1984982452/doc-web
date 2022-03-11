@@ -203,7 +203,7 @@ div{
 
 # 【6】自定义图片对比控件
 
-- [效果预览地址](https://firefly1984982452.github.io/my-web-page/image-contrast.html)
+- [效果预览地址](https://codepen.io/firefly1984982452/pen/abEopNz)
 
 ```html
 <!DOCTYPE html>
@@ -252,9 +252,9 @@ div{
     <div class="box">
       <div class="img-box">
         <div class="bg-box" id="show">
-          <img class="bottom" src="./test.png" alt="" srcset="" />
+          <img class="bottom" src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" alt="" srcset="" />
         </div>
-        <img class="top" src="./test3.png" alt="" srcset="" />
+        <img class="top" src="https://s1.ax1x.com/2022/03/11/bIszGj.png" alt="" srcset="" />
         <input id="slider" type="range" onmousemove="changeSlider()" />
       </div>
     </div>

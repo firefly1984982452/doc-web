@@ -1,17 +1,18 @@
 div.example-box {
   height: auto;
   border: 1px solid ;
-  border-image: linear-gradient(325deg, c, rgba(255, 0, 0, 1), rgba(255, 0, 0, .1)) 2 2;
-  color: #f00;
+  border-image: linear-gradient(325deg, rgba(41, 254, 255, 0), rgba(255, 0, 0, 1), rgba(255, 0, 0, .1)) 2 2;
+  color: #ee2746;
   font-size: 1.5em;
   padding: 5px 20px;
 }
 
 div.example-box::before {
   content: '◆ 示例效果：';
-  color: #f00;
+  color: #96c24e;
   font-size: .3em;
   display: block;
+  font-weight: bold;
   height: 20px;
 }
 div.example-box>div.item{
