@@ -12,7 +12,7 @@
 
 ## 【0】SVG 效果预览
 
-![image](https://wx1.sinaimg.cn/large/0069qZtTgy1go955d2dz9j31kc0u0dsj.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOeJ4f.jpg)
 
 - [在线观看](https://firefly1984982452.github.io/my-web-page/svg.html)
 
