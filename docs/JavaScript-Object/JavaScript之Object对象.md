@@ -73,22 +73,18 @@ obj; // {a: 3, b: 4, c: 5}
 
 # 三、深拷贝
 
-- [链接](https://firefly1984982452.github.io/2020/07/31/JavaScript%E6%B7%B1%E6%8B%B7%E8%B4%9D%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%85%A8%E6%9E%90/)
+[链接](docs/JavaScript/JavaScript深拷贝浅拷贝全析.md)
 
-方法 1：`JSON.parse(JSON.stringify())`
-
-方法 2：`MessageChannel`
-
-方法 3：`lodash.cloneDeep`
+- 方法 1：`JSON.parse(JSON.stringify())`
+- 方法 2：`MessageChannel`
+- 方法 3：`lodash.cloneDeep`
 
 ---
 
 # 四、遍历
 
 - `Object.keys()`
-
 - `Object.values()`
-
 - `for...in`
 
 ---
@@ -177,7 +173,7 @@ obj.b = 'hello'
 console.log(obj); // {b: "hello"} 修改成功
 ```
 
-检测是否不可扩展**`Object.isExtensible(obj)`**
+检测是否不可扩展**Object.isExtensible(obj)`**
 
 (`false`是不可扩展，`true`是正常对象)
 

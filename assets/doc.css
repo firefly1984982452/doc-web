@@ -10,7 +10,7 @@ div.example-box {
 div.example-box::before {
   content: '◆ 示例效果：';
   color: #339933;
-  font-size: .3em;
+  font-size: 13px;
   display: block;
   font-weight: bold;
   height: 20px;

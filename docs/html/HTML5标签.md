@@ -71,7 +71,7 @@
 2. 地址栏`url`；
 3. `tabindex`为正整数。
 
-**`tabindex`为负数时不参与**
+**tabindex为负数时不参与**
 
 ## 【4】`accessKey`：使用自定义键来聚焦
 
@@ -145,7 +145,7 @@
   </p>
 </div>
 
-?> 鼠标点击上方示例后可看到写错的单词seperate下面有错误的标识
+?> chrome浏览器下，鼠标点击上方示例后可看到写错的单词seperate下面有错误的标识
 
 ## 【9】`data-`：放置自定义数据
 
@@ -530,7 +530,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ### 【2.1】更多应用
 
-**`<dl>`、`<dt>`和`<dd>`应用于属性列表并换行**
+!> `<dl>`、`<dt>`和`<dd>`应用于属性列表并换行
 
 **示例：** ![image](https://wx4.sinaimg.cn/large/0069qZtTly1gqgsd0k45sj31g207g0tu.jpg)
 
