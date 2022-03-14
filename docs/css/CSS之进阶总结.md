@@ -152,7 +152,7 @@ $(document).ready(function(){
 }
 ```
 
-![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gij2iyzdf5j31hb0twu0x.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOuGU1.jpg)
 
 ---
 
@@ -330,11 +330,11 @@ p{
 
 Table 表格中，定了 width，如果其它的内容很高，内容少的可能会撑成一列高。
 
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gj589b1p14j30aa08z75k.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOuEEn.jpg)
 
 ## 【2】不适合用 width:100%的情况
 
-![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gj589e73jxj308i0bl3yn.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOup38.jpg)
 
 子元素`width:100%`会获取父元素长度，如果设置了`width:100%`反而适得其反。
 
@@ -1032,7 +1032,7 @@ counters(name, string, style) string
 
 结果：
 
-![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gnru0idw6rj308n094q31.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOufKg.jpg)
 
 ## 【3】其它
 

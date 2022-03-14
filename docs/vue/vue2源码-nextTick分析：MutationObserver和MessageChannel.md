@@ -149,7 +149,7 @@
 
 # 为何弃用MessageChannel使用MutationObserver
 
-![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gkr7tz3w2mj31al0pwn9d.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOMy1f.jpg)
 
 vue2中在2018年12月20号用MutationObser替换了MessageChannel（有很多博客说是相反的，但查git上的时间线是这样的），把2个都使用下对比便知结果：
 

@@ -149,7 +149,7 @@ Chrome 浏览器（`Webkit`）：`插入排序`和`快速排序`（如果数组�
 
 `[23,122,1,53,231].sort((a,b) => a - b); //[1, 23, 53, 122, 231]`里面`return`的值是`a-b`，也就是**正数**和**负数**，不是`true/false`与`1/0`这样的`boolean`值。
 
-![image](https://wx3.sinaimg.cn/large/0069qZtTgy1gnu39jl3cnj30fn0lf3zz.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOQHPI.jpg)
 
 ## `reverse`：倒序
 
@@ -705,7 +705,10 @@ var test3 = function(){
 test3(1,2,3,4);
 ```
 
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1ghdl1udru0j309o068dfy.jpg)
+结果：
+```
+[1,2,3,4]
+```
 
 ---
 

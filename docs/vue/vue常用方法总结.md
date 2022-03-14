@@ -513,7 +513,7 @@ window.$eventBus.$on('residenceData',v=>{
 })
 ```
 
-![image](https://wx3.sinaimg.cn/large/0069qZtTgy1gij1jm6zqjj30zw0han25.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOMM79.jpg)
 
 ---
 

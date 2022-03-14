@@ -11,7 +11,7 @@
 
 ## 【0】canvas 效果预览
 
-![image](https://wx4.sinaimg.cn/large/0069qZtTgy1godp89sf40j31pl0u0kjl.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOetC8.jpg)
 
 - [在线观看](https://firefly1984982452.github.io/my-web-page/canvas.html)
 - [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/canvas.html)

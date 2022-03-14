@@ -161,7 +161,6 @@ console.log(arr);
 
 # 别人写的
 
-![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gi6oba2y5ej30qu064q6r.jpg)
 
 ```js
 var ary = list.reduce((item, next) => {

@@ -13,7 +13,7 @@
 
 基础条形图
 
-![image](https://wx4.sinaimg.cn/mw1024/0069qZtTgy1gikkhg5ipwj30rg0gk3ze.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOQU2V.jpg)
 
 ```html
 <!DOCTYPE html>
@@ -93,7 +93,7 @@
 
 基础条形图-滚动条
 
-![image](https://wx1.sinaimg.cn/mw1024/0069qZtTgy1gikkgwc35qj30r40fvwf0.jpg)
+![image](https://s1.ax1x.com/2022/03/14/bOQavT.jpg)
 
 ```html
 <!DOCTYPE html>
