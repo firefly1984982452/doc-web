@@ -1,6 +1,8 @@
 # CSS之网页布局
 # 一、正常布局流
 
+略
+
 ---
 
 # 二、弹性盒子：flex
@@ -248,6 +250,19 @@ section{
 }
 ```
 
+<div class="example-box">
+  <div class="container" style="columns: 3;">
+  <h1>Simple multicol example</h1>
+
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
+  Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
+  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
+  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+
+</div>
+
+</div>
+
 ---
 
 # 七、BFC、IFC、GFC、FFC
@@ -260,7 +275,7 @@ section{
 ## 【1】BFC
 
 - [CSDN 学习链接](https://blog.csdn.net/weixin_41819731/article/details/88594489)
-- [张鑫旭学习链接](https://www.zhangxinxu.com/wordpress/2015/02/css-deep-understand-flow-bfc-column-two-auto-layout/))
+- [张鑫旭学习链接](https://www.zhangxinxu.com/wordpress/2015/02/css-deep-understand-flow-bfc-column-two-auto-layout/)
 
 ### 【1.1】原则
 

@@ -8,6 +8,9 @@
 }
 .line-clamp h2{
   text-align: center;
+  margin: 0!important;
+  color: #ee2746!important;
+  font-size: 1.3em!important;
 }
 .line-clamp p{
   display: inline-block;
@@ -28,7 +31,7 @@
   <div class="line-clamp">
     <h2><p><b>单行居中显示文字。<b></p></h2>
     <h2><p>单行居中显示文字，多行居左显示。</p></h2>
-    <h2><p>单行居中显示文字，多行居左显示，最多两行超过用省略号结尾。</p></h2>
+    <h2><p>单行居中显示文字，多行居左显示，最多两行，超过用省略号结尾。</p></h2>
   </div>
 </div>
 
