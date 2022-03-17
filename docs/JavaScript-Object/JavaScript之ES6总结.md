@@ -759,7 +759,7 @@ console.log(m.get({id:1}));
 
 结果：
 
-![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1ghel895idrj309k05i3yo.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9DDAO.jpg)
 
 ## 【2】delete 删除
 
@@ -799,7 +799,7 @@ console.log(mm2,mm);
 
 **结果：**
 
-![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1ghelkmlwaxj30a80340st.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9Dc3d.jpg)
 
 两个 value 值都是对象，互不影响。
 

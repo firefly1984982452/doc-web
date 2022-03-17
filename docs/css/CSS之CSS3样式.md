@@ -404,7 +404,7 @@ background-color: #fbb;
 border-radius: 20% / 50%;
 ```
 <div class="example-box">
-  <div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 20% / 50%"></div>
+  <div class="box bg-color-red" style="width: 300px; height: 100px; border-radius: 20% / 50%"></div>
 </div>
 
 ◆ 半圆
@@ -416,7 +416,7 @@ background-color: #fbb;
 border-radius: 0 100% 100% 0 / 50%
 ```
 <div class="example-box">
-  <div class="box" style="width: 50px; height: 100px; background-color: #fbb; border-radius: 0 100% 100% 0 / 50%"></div>
+  <div class="box bg-color-red" style="width: 50px; height: 100px; border-radius: 0 100% 100% 0 / 50%"></div>
 </div>
 
 ◆ 其它形状
@@ -428,7 +428,7 @@ background-color: #fbb;
 border-radius: 10% 50% / 50% 10%;
 ```
 <div class="example-box">
-  <div class="box" style="width: 300px; height: 100px; background-color: #fbb; border-radius: 10% 50% / 50% 10%"></div>
+  <div class="box bg-color-red" style="width: 300px; height: 100px; border-radius: 10% 50% / 50% 10%"></div>
 </div>
 
 ◆ 斜杠`/`的用法
@@ -587,7 +587,7 @@ background-position: 0 0, 100% 0, 0 100%, 100% 100%;">文字</div>
 
 让背景图在距离右边和底部都是 20px，如图：
 
-![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gizlk17h0ej303b03i74d.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9sy6A.jpg)
 
 ### 【4.1】background-position
 
@@ -626,7 +626,7 @@ background-attachment: fixed; // 背景不会随内容滚动
 
 用`background-attachment`实现滚动提示
 
-![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gmf5vn5ch4j307l07igln.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9shtS.jpg)
 
 ```css
 background-image: radial-gradient(at top, rgba(0,0,0,0.2), rgba(0,0,0,0));
@@ -648,7 +648,7 @@ background-attachment: local, scroll;
 
 ◆ 示例
 
-![image](https://wx3.sinaimg.cn/large/0069qZtTgy1gnbbuxfn3aj31hb0sk154.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9yS1J.jpg)
 
 - [效果预览](https://firefly1984982452.github.io/my-web-page/background-repeat.html)
 
@@ -760,7 +760,7 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 transform: perspective(30px)rotateX(5deg);
 ```
 <div class="example-box">
-  <div class="item" style="width: 200px;transform: perspective(30px)rotateX(5deg); font-size:2em;background:#fbb;">文字内容</div>
+  <div class="item bg-color-red" style="width: 200px;transform: perspective(30px)rotateX(5deg); font-size:2em;">文字内容</div>
 </div>
 
 这样会导致文字内容变成梯形，所以用伪元素生成
@@ -839,7 +839,13 @@ clip-path:inset(上右下左 round 圆角); // 值+圆角【border-radius】
 clip-path: inset(10px 20px 0px 5px); // 矩形
 clip-path: inset(25% 5px round 5px 25%);// 其它
 ```
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gnbaa0b9f5j30ok09oaa8.jpg)
+
+<div class="example-box">
+  <p>矩形</p>
+  <div class="item bg-color-red" style="clip-path: inset(10px 20px 0px 5px);"></div> 
+  <p>其它</p>
+  <div class="item bg-color-red" style="clip-path: inset(25% 5px round 5px 25%);"></div>
+</div>
 
 ## 【2】圆形：circle
 
@@ -857,7 +863,12 @@ clip-path: circle(); // 正圆-简写
 clip-path: circle(50% at 0 100%); // 其它形状圆
 ```
 
-![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gnaii751tlj30kk08l0st.jpg)
+<div class="example-box">
+  <p>正圆</p>
+  <div class="item bg-color-red" style="clip-path: circle();"></div> 
+  <p>其它形状圆</p>
+  <div class="item bg-color-red" style="clip-path: circle(50% at 0 100%);"></div>
+</div>
 
 ## 【3】椭圆：ellipse
 
@@ -870,10 +881,16 @@ clip-path:ellipse(x y at 圆心x 圆心y);
 ◆ 示例：
 
 ```css
-clip-path: clip-path: ellipse(30% 20% at 50% 50%);; // 正圆
+clip-path: clip-path: ellipse(30% 20% at 50% 50%); // 正圆
 clip-path: ellipse(40% 20% at 20% 70%); // 其它形状
 ```
-![image](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gnairkejmxj30k508hjrf.jpg)
+
+<div class="example-box">
+  <p>正圆</p>
+  <div class="item bg-color-red" style="clip-path: clip-path: ellipse(30% 20% at 50% 50%);"></div> 
+  <p>其它形状</p>
+  <div class="item bg-color-red" style="clip-path: ellipse(40% 20% at 20% 70%);"></div>
+</div>
 
 ## 【4】多边形：polygon
 
@@ -890,18 +907,23 @@ clip-path:polygon(x1 y1, x2 y2, x3 y3,...);
 ```css
 clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 85%);
 ```
-![image](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gnai8f18pkj309605nt8m.jpg)
+<div class="example-box">
+  <div class="item bg-color-red" style="clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 85%);"></div> 
+</div>
+
 
 2. 三角形
 
 ```css
-clip-path: (0 100%, 50% 0, 100% 100%);
+clip-path: polygon(0 100%, 50% 0, 100% 100%);
 ```
-![image](https://wx3.sinaimg.cn/mw690/0069qZtTgy1gnai8jg39zj308e05nwed.jpg)
+<div class="example-box">
+  <div class="item bg-color-red" style="clip-path: polygon(0 100%, 50% 0, 100% 100%);"></div> 
+</div>
 
 三角形原理：
 
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gnai89f7bqj30hk0dxt94.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9yjbt.jpg)
 
 ---
 
@@ -1287,7 +1309,7 @@ background-color: #fff;
 
 ◆ 效果图：
 
-![image](https://wx1.sinaimg.cn/mw2000/0069qZtTgy1gx43wj1frpj32ko0ts1kx.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9ylHP.jpg)
 
 - [效果预览](https://firefly1984982452.github.io/my-web-page/word-break.html)
 - [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/word-break.html)
@@ -1299,7 +1321,7 @@ background-color: #fff;
 
 ◆ 效果图：
 
-![image](https://wx2.sinaimg.cn/orj360/0069qZtTgy1gx43neotd9j30ju0g0dm6.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9yt3Q.jpg)
 
 - [效果预览](https://firefly1984982452.github.io/my-web-page/box-decoration-break.html)
 - [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/box-decoration-break.html)
@@ -1362,24 +1384,44 @@ background-color: #fff;
 }
 ```
 
-![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gnadz5a2rlj30ih06kt9g.jpg)
+<div class="example-box" style="width: 50%">
+  <div class="item bg-color-red" style="width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle();"></div>
+  <p>Sometimes a web page's text content appears to be
+    funneling your attention towards a spot on the page
+    to drive you to follow a particular link. Sometimes
+    you don't notice.</p>
+</div>
+
 
 
 【2】三角形文字环绕
 
 ```css
-.circle {
+.item {
   width: 250px;
   height: 250px;
   background-color: #fbb;
-  border-radius: 50%;
   float: left;
   clip-path: polygon(0 100%, 50% 0, 100% 100%);
   shape-outside: polygon(0 100%, 50% 0, 100% 100%);
 }
 ```
 
-![image](https://wx2.sinaimg.cn/large/0069qZtTgy1gnadzmmpw3j30j406oaas.jpg)
+<div class="example-box" style="width: 50%">
+  <div class="item bg-color-red" style="width: 100px;
+  height: 100px;
+  float: left;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  shape-outside: polygon(0 100%, 50% 0, 100% 100%);"></div>
+  <p>Sometimes a web page's text content appears to be
+    funneling your attention towards a spot on the page
+    to drive you to follow a particular link. Sometimes
+    you don't notice.</p>
+</div>
 
 
 ---
@@ -1691,7 +1733,7 @@ isolation: isolate;
 
 ◆ **示例**
 
-![image](https://wx3.sinaimg.cn/large/0069qZtTgy1gnbgsxvddej31hb0ng1b9.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9ybgH.jpg)
 
 ## 【2】`image-set`
 
@@ -1751,20 +1793,19 @@ img {
 ```html
 <p>
   文字与图片对齐
-  <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" 
-  width="100" height="100" />
+  <img style="vertical-align: text-top;" src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" width="100" height="100" />
   设置为顶部对齐
 </p>
 ```
 <div class="example-box">
   <p>
     文字与图片对齐
-    <img style="vertical-align: text-top;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
+    <img style="vertical-align: text-top;" src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" width="100" height="100" />
     设置为顶部对齐
   </p>
   <p>
     文字与图片对齐
-    <img style="vertical-align: text-bottom;" src="https://wx2.sinaimg.cn/mw2000/0069qZtTgy1gqmp3kbrbsj30dw0dwt9o.jpg" width="100" height="100" />
+    <img style="vertical-align: text-bottom;" src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" width="100" height="100" />
     设置为底部对齐
   </p>
 </div>

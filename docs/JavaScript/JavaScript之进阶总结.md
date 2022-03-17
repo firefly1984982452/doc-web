@@ -102,7 +102,7 @@ handleDebounce () {
 },
 ```
 
-![image.png](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gho47acnm9j303q03ndfo.jpg)
+![image.png](https://s1.ax1x.com/2022/03/17/q9rRG4.jpg)
 
 2、节流
 
@@ -121,7 +121,7 @@ handleThrottle () {
 }
 ```
 
-![image.png](https://wx4.sinaimg.cn/mw690/0069qZtTgy1gho487f7lnj305904omx1.jpg)
+![image.png](https://s1.ax1x.com/2022/03/17/q9r7dK.jpg)
 
 高阶节流：`闭包` + `return数据` + `传参`
 
@@ -574,7 +574,7 @@ Uncaught ReferenceError: bar is not defined
 
 ## 【3】对比图
 
-![image](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gho3yuu5lpj30au09n74t.jpg)
+![image](https://s1.ax1x.com/2022/03/17/q9rvQA.jpg)
 
 ---
 
@@ -621,7 +621,7 @@ window.addEventListener('storage', (e) => {
 - [学习链接-多人通信(ws)](https://www.cnblogs.com/lihaohua/p/12410511.html) 
 - [学习链接-多人通信(nodejs-websocket)](https://zhuanlan.zhihu.com/p/64906193)
 
-![效果](https://wx2.sinaimg.cn/large/0069qZtTgy1gls4a0l7fej30ge0agtap.jpg)
+![效果](https://s1.ax1x.com/2022/03/17/q9sFJg.jpg)
 
 ## 【1】服务端
 

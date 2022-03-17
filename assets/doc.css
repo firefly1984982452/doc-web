@@ -1,3 +1,4 @@
+/* 最外层的示例盒子 */
 div.example-box {
   height: auto;
   border: 1px solid ;
@@ -7,6 +8,7 @@ div.example-box {
   padding: 5px 20px;
 }
 
+/* 示例效果的文字 */
 div.example-box::before {
   content: '◆ 示例效果：';
   color: #339933;
@@ -15,6 +17,7 @@ div.example-box::before {
   font-weight: bold;
   height: 20px;
 }
+/* 盒子里面如果有子元素 */
 div.example-box>div.item{
   width: 100px;
   height: 100px;
@@ -22,19 +25,26 @@ div.example-box>div.item{
   border: 1px solid rgba(255, 0, 0, .1);
   text-align: center;
 }
-
+/* 盒子里面的文字p标签 */
 div.example-box p {
   margin: 5px;
 }
 
+/* 盒子里面有多个例子 */
 div.example-box .grid-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 
+/* 多个例子的元素 */
 div.example-box .grid-box .item {
   border: 2px solid;
   border-image: linear-gradient(325deg, rgba(41, 254, 255, 0), rgba(41, 254, 255, 1), rgba(41, 254, 255, 0)) 2 2;
 }
 
+/* 给某个元素背景色 */
+
+.bg-color-red {
+  background-color: #ed2f6a;
+}

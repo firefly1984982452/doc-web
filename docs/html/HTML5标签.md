@@ -15,14 +15,14 @@
 
 ```html
 <head>
-  <base href="https://wx3.sinaimg.cn/" target="_blank">
+  <base href="https://www.baidu.cn/" target="_blank">
 </head>
 
 <body>
   <a href="https://www.baidu.com/">打开默认网址以外的网址：写全称</a>
-  <a href="mw690/0069qZtTgy1gnbgsxvddej31hb0ng1b9.jpg">打开默认网址下的页面：写后缀</a>
-  <img src="mw690/0069qZtTgy1gnbgsxvddej31hb0ng1b9.jpg" alt="" srcset="">
-  <img src="https://wx3.sinaimg.cn/mw690/0069qZtTgy1gnbgsxvddej31hb0ng1b9.jpg" alt="" srcset="">
+  <a href="img/PCfb_5bf082d29588c07f842ccde3f97243ea.png">打开默认网址下的页面：写后缀</a>
+  <img src="img/PCfb_5bf082d29588c07f842ccde3f97243ea.png" alt="" srcset="">
+  <img src="https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png" alt="" srcset="">
 </body>
 ```
 
@@ -532,7 +532,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 !> `<dl>`、`<dt>`和`<dd>`应用于属性列表并换行
 
-**示例：** ![image](https://wx4.sinaimg.cn/large/0069qZtTly1gqgsd0k45sj31g207g0tu.jpg)
+**示例：** ![image](https://s1.ax1x.com/2022/03/17/q903rV.jpg)
 
 **方法：**
 
@@ -627,7 +627,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ```
 
 <div class="example-box">
-  <img src="https://s1.ax1x.com/2022/03/11/bI6bE.png" alt="示例图片">
+  <img src="xx" alt="示例图片">
 </div>
 
 ## 【2】`width`，`height`：宽度和高度

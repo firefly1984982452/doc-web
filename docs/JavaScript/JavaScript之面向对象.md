@@ -280,7 +280,7 @@ console.log(pdd); // Pd [3] __proto__:Array(0)直接就是真正的数组的__pr
 
 效果：
 
-![image.png](https://wx2.sinaimg.cn/mw690/0069qZtTgy1gho48t4y6vj30970i275q.jpg)
+![image.png](https://s1.ax1x.com/2022/03/17/q9DxET.jpg)
 
 此时打印`Array.prototype.constructor`会发现变成了`undefined`，已经改动了原生的`Array`.
 
@@ -298,7 +298,7 @@ console.log(pdd); // Pd [3] __proto__:Array[__proto__:Array(0)]就是__proto__�
 
 效果：
 
-![image.png](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gho49dgk5zj30d30irjt4.jpg)
+![image.png](https://s1.ax1x.com/2022/03/17/q9DjbV.jpg)
 
 ### 区别
 
@@ -363,7 +363,7 @@ console.log(obj1); // {a:2,b:{name:'小红'}};
 
 obj2 的具体值：
 
-![image.png](https://wx1.sinaimg.cn/mw690/0069qZtTgy1gho49w7kobj306102wjra.jpg)
+![image.png](https://s1.ax1x.com/2022/03/17/q9DXD0.jpg)
 
 ---
 
