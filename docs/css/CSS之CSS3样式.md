@@ -760,7 +760,7 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 transform: perspective(30px)rotateX(5deg);
 ```
 <div class="example-box">
-  <div class="item bg-color-red" style="width: 200px;transform: perspective(30px)rotateX(5deg); font-size:2em;">文字内容</div>
+  <div class="item bg-color-green" style="width: 200px;transform: perspective(30px)rotateX(5deg); font-size:2em;">文字内容</div>
 </div>
 
 这样会导致文字内容变成梯形，所以用伪元素生成
