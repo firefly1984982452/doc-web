@@ -486,7 +486,7 @@ border-bottom-left-radius:  1em 5em;
     padding: 5px 20px;
     background-color: #f8d2cf;
     color: #f00;
-    background-image: url('../../assets/images/check.png') ;
+    background-image: url('https://s1.ax1x.com/2022/03/17/qC38je.png') ;
     background-repeat: no-repeat;
   }
 </style>
@@ -527,7 +527,7 @@ border-bottom-left-radius:  1em 5em;
     padding: 5px 20px;
     background-color: #f8d2cf;
     color: #f00;
-    background-image: url('../../assets/images/check.png') ;
+    background-image: url('https://s1.ax1x.com/2022/03/17/qC38je.png') ;
     background-repeat: no-repeat;
   }
 </style>
@@ -574,10 +574,10 @@ background-position: top left, top right, bottom left, bottom right;
   <div class="item" style="
   width: 100px;
   height: 100px;
-  background-image: url('../../assets/images/check.png') ,
-            url('../../assets/images/logo-jd.png') ,
-            url('../../assets/images/robot.png') ,
-            url('../../assets/images/center.png') ;
+  background-image: url('https://s1.ax1x.com/2022/03/17/qC38je.png') ,
+            url('https://s1.ax1x.com/2022/03/17/qC3JnH.png') ,
+            url('https://s1.ax1x.com/2022/03/17/qC311O.png') ,
+            url('https://s1.ax1x.com/2022/03/17/qC3YBd.png') ;
 background-repeat: no-repeat;
 background-size: 20px 20px;
 background-position: 0 0, 100% 0, 0 100%, 100% 100%;">文字</div>
@@ -624,9 +624,10 @@ background-position: calc(100% - 20px, 100% - 20px);
 background-attachment: fixed; // 背景不会随内容滚动
 ```
 
-用`background-attachment`实现滚动提示
+◆ 例子：用`background-attachment`实现滚动提示
 
-![image](https://s1.ax1x.com/2022/03/17/q9shtS.jpg)
+[codepen地址](https://codepen.io/firefly1984982452/pen/JjMYQzz)
+
 
 ```css
 background-image: radial-gradient(at top, rgba(0,0,0,0.2), rgba(0,0,0,0));
@@ -634,6 +635,8 @@ background-repeat: no-repeat;
 background-size: 100% 15px;
 background-attachment: local, scroll;
 ```
+
+![image](https://s1.ax1x.com/2022/03/17/q9shtS.jpg)
 
 ## 【6】`background-repeat`：背景重复
 
@@ -1029,7 +1032,7 @@ transform: translate(-20px, 0);
 <div class="example-box">
   <p>鼠标悬浮变色</p>
   <div class="icon">
-    <img src="../../assets/images/check.png" style="" />
+    <img src="https://s1.ax1x.com/2022/03/17/qC38je.png" style="" />
   </div>
 </div>
 
@@ -1776,7 +1779,7 @@ img {
 ```
 <div class="example-box">
   <div class="item" style="width:200px;height:150px;">
-    <img src="../../assets/images/sport.png" style="
+    <img src="https://s1.ax1x.com/2022/03/11/bIszGj.png" style="
       object-fit: none;
       object-position: 15px 10%;"/>
   </div>
@@ -1823,23 +1826,23 @@ image-rendering: pixelated;
   <div class="grid-box">
     <div class="item">
       <p>原图：</p>
-      <img src="../../assets/images/arrow.png"/>
+      <img src="https://s1.ax1x.com/2022/03/17/qC3YBd.png"/>
     </div>
     <div class="item">
       <p>放大后：</p>
-      <img style="width:100px;height:100px;" src="../../assets/images/arrow.png"/>
+      <img style="width:100px;height:100px;" src="https://s1.ax1x.com/2022/03/17/qC3YBd.png"/>
     </div>
     <div class="item">
       <p>image-rendering: auto;</p>
-      <img style="width:100px;height:100px;image-rendering: auto;" src="../../assets/images/arrow.png"/>
+      <img style="width:100px;height:100px;image-rendering: auto;" src="https://s1.ax1x.com/2022/03/17/qC3YBd.png"/>
     </div>
     <div class="item">
       <p>image-rendering: crisp-edges;</p>
-      <img style="width:100px;height:100px;image-rendering: crisp-edges;" src="../../assets/images/arrow.png"/>
+      <img style="width:100px;height:100px;image-rendering: crisp-edges;" src="https://s1.ax1x.com/2022/03/17/qC3YBd.png"/>
     </div>
     <div class="item">
       <p>image-rendering: pixelated;</p>
-      <img style="width:100px;height:100px;image-rendering: pixelated;" src="../../assets/images/arrow.png"/>
+      <img style="width:100px;height:100px;image-rendering: pixelated;" src="https://s1.ax1x.com/2022/03/17/qC3YBd.png"/>
     </div>
   </div>
 </div>
