@@ -1,4 +1,4 @@
-#  echarts超全超详情配置项
+# echarts 超全超详情配置项
 
 ---
 
@@ -14,7 +14,7 @@
 
 ---
 
-# 二、在vue中如何使用
+# 二、在 vue 中如何使用
 
 ## 【1】下载
 
@@ -22,7 +22,7 @@
 npm install echarts --save
 ```
 
-!> 如果 echarts 用的是 5.0以上，对应的其它插件也要更新到最新版。
+!> 如果 echarts 用的是 5.0 以上，对应的其它插件也要更新到最新版。
 
 ## 【2】写 echarts 组件
 
@@ -222,23 +222,19 @@ export default {
 
 ```js
 // 引入echarts公用组件
-import Ehcart from '@/components/echarts';
-Vue.component('ehcart', Ehcart);
+import Ehcart from "@/components/echarts";
+Vue.component("ehcart", Ehcart);
 ```
 
 ## 【4】在 vue 里面使用
 
 ```js
-<ehcart
-  ref="echarts_nevel"
-  config='test'
-  height="3.58rem"
-  width='100%'/>
+<ehcart ref="echarts_nevel" config="test" height="3.58rem" width="100%" />;
 
 let echart = this.$refs.echarts_nevel;
 let resData = res.data;
-echart.option.xAxis.data = resData.map(v => v.lx);
-echart.option.series[0].data = resData.map(v => v.vx);
+echart.option.xAxis.data = resData.map((v) => v.lx);
+echart.option.series[0].data = resData.map((v) => v.vx);
 echart.resizeB(); // 如果要后期改变大小
 echart.refresh();
 ```
@@ -246,48 +242,48 @@ echart.refresh();
 ## 【5】配置 echarts 具体内容
 
 ```js
-import {getAdapterFont} from '../../assets/js/common'
+import { getAdapterFont } from "../../assets/js/common";
 export const option = {
-    tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b}: {c} ({d}%)'
+  tooltip: {
+    trigger: "item",
+    formatter: "{a} <br/>{b}: {c} ({d}%)",
+  },
+  legend: {
+    orient: "vertical",
+    left: 10,
+    data: ["直接访问", "邮件营销", "联盟广告", "视频广告", "搜索引擎"],
+    fontSize: getAdapterFont(20),
+  },
+  series: [
+    {
+      name: "访问来源",
+      type: "pie",
+      radius: ["50%", "70%"],
+      avoidLabelOverlap: false,
+      label: {
+        show: false,
+        position: "center",
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontSize: "30",
+          fontWeight: "bold",
+        },
+      },
+      labelLine: {
+        show: false,
+      },
+      data: [
+        { value: 335, name: "直接访问" },
+        { value: 310, name: "邮件营销" },
+        { value: 234, name: "联盟广告" },
+        { value: 135, name: "视频广告" },
+        { value: 1548, name: "搜索引擎" },
+      ],
     },
-    legend: {
-        orient: 'vertical',
-        left: 10,
-        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎'],
-        fontSize: getAdapterFont(20)
-    },
-    series: [
-        {
-            name: '访问来源',
-            type: 'pie',
-            radius: ['50%', '70%'],
-            avoidLabelOverlap: false,
-            label: {
-                show: false,
-                position: 'center'
-            },
-            emphasis: {
-                label: {
-                    show: true,
-                    fontSize: '30',
-                    fontWeight: 'bold'
-                }
-            },
-            labelLine: {
-                show: false
-            },
-            data: [
-                {value: 335, name: '直接访问'},
-                {value: 310, name: '邮件营销'},
-                {value: 234, name: '联盟广告'},
-                {value: 135, name: '视频广告'},
-                {value: 1548, name: '搜索引擎'}
-            ]
-        }
-    ]
-}
+  ],
+};
 ```
 
 ## 【6】echarts 其它公用方法 common.js
@@ -299,24 +295,24 @@ common.js
 生成guid
 */
 export const guid = function () {
-    let guid = ''
-    for (let i = 1; i <= 32; i++) {
-      let n = Math.floor(Math.random() * 16.0).toString(16)
-      guid += n
-    }
-    return guid
+  let guid = "";
+  for (let i = 1; i <= 32; i++) {
+    let n = Math.floor(Math.random() * 16.0).toString(16);
+    guid += n;
   }
+  return guid;
+};
 
 // 适配分辨率的echarts-一般字体
 export const getAdapterFont = (e = 7) => {
-    e = e || 0
-    let wid = document.body.clientWidth
-    if (wid < 3000) {
-      return document.body.clientWidth / 1000 * e
-    } else {
-      return 1920 / 1000 * e * 1.5
-    }
-}
+  e = e || 0;
+  let wid = document.body.clientWidth;
+  if (wid < 3000) {
+    return (document.body.clientWidth / 1000) * e;
+  } else {
+    return (1920 / 1000) * e * 1.5;
+  }
+};
 ```
 
 ---
@@ -325,125 +321,125 @@ export const getAdapterFont = (e = 7) => {
 
 ```js
 option = {
-    // 标题组件，包含主标题和副标题
-    title: {
-        text: '世界人口总量',
-        subtext: '数据来自网络'
-    },
+  // 标题组件，包含主标题和副标题
+  title: {
+    text: "世界人口总量",
+    subtext: "数据来自网络",
+  },
 
-    // 图例组件
-    legend: {
-        data: ['2011年', '2012年']
-    },
+  // 图例组件
+  legend: {
+    data: ["2015", "2016", "2017"],
+  },
 
-    // 上下左右及大小-设置图表占总面积的地方
-    grid:{x: '5%', y: '2%', width: '80%', height: '90%'},
+  // 上下左右及大小-设置图表占总面积的地方
+  grid: { x: "5%", y: "2%", width: "80%", height: "90%" },
 
-    dataset: {
-        // 用 dimensions 指定了维度的顺序。直角坐标系中，
-        // 默认把第一个维度映射到 X 轴上，第二个维度映射到 Y 轴上。
-        // 如果不指定 dimensions，也可以通过指定 series.encode
-        // 完成映射，参见后文。
-        dimensions: ['product', '2015', '2016', '2017'],
-        source: [
-            {product: 'Matcha Latte', '2015': 43.3, '2016': 85.8, '2017': 93.7},
-            {product: 'Milk Tea', '2015': 83.1, '2016': 73.4, '2017': 55.1},
-            {product: 'Cheese Cocoa', '2015': 86.4, '2016': 65.2, '2017': 82.5},
-            {product: 'Walnut Brownie', '2015': 72.4, '2016': 53.9, '2017': 39.1}
-        ]
-    },
-    // grid坐标系的x轴
-    xAxis: {
-        type: 'category',
-    },
-    // grid坐标系的y轴
-    yAxis: {
-        type: 'category',
-    },
-
-    // 区域缩放
-    dataZoom: [
-        {
-            type: 'slider',
-            show: true,
-            start: 0,
-            end: 100,
-            handleSize: 8
-        },
+  dataset: {
+    // 用 dimensions 指定了维度的顺序。直角坐标系中，
+    // 默认把第一个维度映射到 X 轴上，第二个维度映射到 Y 轴上。
+    // 如果不指定 dimensions，也可以通过指定 series.encode
+    // 完成映射，参见后文。
+    dimensions: ["product", "2015", "2016", "2017"],
+    source: [
+      { product: "Matcha Latte", 2015: 43.3, 2016: 85.8, 2017: 93.7 },
+      { product: "Milk Tea", 2015: 83.1, 2016: 73.4, 2017: 55.1 },
+      { product: "Cheese Cocoa", 2015: 86.4, 2016: 65.2, 2017: 82.5 },
+      { product: "Walnut Brownie", 2015: 72.4, 2016: 53.9, 2017: 39.1 },
     ],
+  },
+  // grid坐标系的x轴
+  xAxis: {
+    type: "category",
+  },
+  // grid坐标系的y轴
+  yAxis: {
+    type: "category",
+  },
 
-    // 提示框组件
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: {
-            type: 'shadow'
-        }
+  // 区域缩放
+  dataZoom: [
+    {
+      type: "slider",
+      show: true,
+      start: 0,
+      end: 100,
+      handleSize: 8,
     },
+  ],
 
-    //工具栏。内置有导出图片，数据视图，动态类型切换，数据区域缩放，重置五个工具。
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
+  // 提示框组件
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "shadow",
     },
+  },
 
-    // 单独的数据集声明
-    dataset: {
-        // 用 dimensions 指定了维度的顺序。直角坐标系中，
-        // 默认把第一个维度映射到 X 轴上，第二个维度映射到 Y 轴上。
-        // 如果不指定 dimensions，也可以通过指定 series.encode
-        // 完成映射，参见后文。
-        dimensions: ['product', '2015', '2016', '2017'],
-        source: [
-            {product: 'Matcha Latte', '2015': 43.3, '2016': 85.8, '2017': 93.7},
-            {product: 'Milk Tea', '2015': 83.1, '2016': 73.4, '2017': 55.1},
-            {product: 'Cheese Cocoa', '2015': 86.4, '2016': 65.2, '2017': 82.5},
-            {product: 'Walnut Brownie', '2015': 72.4, '2016': 53.9, '2017': 39.1}
-        ]
+  //工具栏。内置有导出图片，数据视图，动态类型切换，数据区域缩放，重置五个工具。
+  toolbox: {
+    feature: {
+      dataZoom: {
+        yAxisIndex: "none",
+      },
+      restore: {},
+      saveAsImage: {},
     },
+  },
 
-    // 系列列表。每个系列通过 type 决定自己的图表类型
-    series: [
-        {
-            type: 'bar',
-            startAngle: 300,
-            minAngle: 15,
-            radius: ['100%', '60%'],
-            center: ['50%', '50%'],
-            barWidth: 20
-        },
-        {
-            type: 'bar',
-            startAngle: 300,
-            minAngle: 15,
-            radius: ['100%', '60%'],
-            center: ['50%', '50%'],
-            barWidth: 20
-        },
-        {
-            type: 'bar',
-            startAngle: 300,
-            minAngle: 15,
-            radius: ['100%', '60%'],
-            center: ['50%', '50%'],
-            barWidth: 20
-        }
+  // 单独的数据集声明
+  dataset: {
+    // 用 dimensions 指定了维度的顺序。直角坐标系中，
+    // 默认把第一个维度映射到 X 轴上，第二个维度映射到 Y 轴上。
+    // 如果不指定 dimensions，也可以通过指定 series.encode
+    // 完成映射，参见后文。
+    dimensions: ["product", "2015", "2016", "2017"],
+    source: [
+      { product: "Matcha Latte", 2015: 43.3, 2016: 85.8, 2017: 93.7 },
+      { product: "Milk Tea", 2015: 83.1, 2016: 73.4, 2017: 55.1 },
+      { product: "Cheese Cocoa", 2015: 86.4, 2016: 65.2, 2017: 82.5 },
+      { product: "Walnut Brownie", 2015: 72.4, 2016: 53.9, 2017: 39.1 },
     ],
+  },
 
-    // 调色盘颜色列表。如果系列没有设置颜色，则会依次循环从该列表中取颜色作为系列颜色。
-    color:['#4181E4','#5CCED4'],
+  // 系列列表。每个系列通过 type 决定自己的图表类型
+  series: [
+    {
+      type: "bar",
+      startAngle: 300,
+      minAngle: 15,
+      radius: ["100%", "60%"],
+      center: ["50%", "50%"],
+      barWidth: 20,
+    },
+    {
+      type: "bar",
+      startAngle: 300,
+      minAngle: 15,
+      radius: ["100%", "60%"],
+      center: ["50%", "50%"],
+      barWidth: 20,
+    },
+    {
+      type: "bar",
+      startAngle: 300,
+      minAngle: 15,
+      radius: ["100%", "60%"],
+      center: ["50%", "50%"],
+      barWidth: 20,
+    },
+  ],
 
-    // 背景色，默认无背景。
-    backgroundColor:'#eee',
+  // 调色盘颜色列表。如果系列没有设置颜色，则会依次循环从该列表中取颜色作为系列颜色。
+  color: ["#4181E4", "#5CCED4"],
 
-    // 全局的字体样式。
-    textStyle:{
-      color:'#f00'
-    }
+  // 背景色，默认无背景。
+  backgroundColor: "#eee",
+
+  // 全局的字体样式。
+  textStyle: {
+    color: "#f00",
+  },
 };
 ```
 
@@ -501,7 +497,7 @@ main.js
 
 ```js
 // 引入eventBus
-import EventBus from './bus/eventBus';
+import EventBus from "./bus/eventBus";
 Vue.prototype.$eventBus = EventBus;
 
 if (window) {
@@ -512,16 +508,19 @@ if (window) {
 page.vue
 
 ```js
-window.$eventBus.$emit('residenceData', resData.map(v => v.lx));
+window.$eventBus.$emit(
+  "residenceData",
+  resData.map((v) => v.lx)
+);
 ```
 
 index.js
 
 ```js
 var attackSourcesName = [];
-window.$eventBus.$on('residenceData',v=>{
-    attackSourcesName = v;
-})
+window.$eventBus.$on("residenceData", (v) => {
+  attackSourcesName = v;
+});
 ```
 
 ![image](https://s1.ax1x.com/2022/03/14/bOMM79.jpg)
@@ -580,20 +579,21 @@ resizeB: function () {
 
 ```js
 option = {
-    xAxis: {
-        type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  xAxis: {
+    type: "category",
+    data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  },
+  yAxis: {
+    type: "value",
+  },
+  series: [
+    {
+      areaStyle: {}, // 添加区域表示有面积
+      data: [820, 932, 901, 934, 1290, 1330, 1320],
+      type: "line",
     },
-    yAxis: {
-        type: 'value'
-    },
-    series: [{
-        areaStyle:{}, // 添加区域表示有面积
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: 'line'
-    }]
+  ],
 };
-
 ```
 
 ## 【1.1】折线图最高值显示
@@ -650,25 +650,25 @@ yAxis: {
 
 ```js
 series: [
-    {
-        name: '联盟广告',
-        type: 'bar',
-        stack: '总量',
-        data: [220, 182, 191, 234, 290, 330, 310]
-    },
-    {
-        name: '视频广告',
-        type: 'bar',
-        stack: '总量',
-        data: [150, 212, 201, 154, 190, 330, 410]
-    },
-    {
-        name: '搜索引擎',
-        type: 'bar',
-        stack: '总量',
-        data: [820, 832, 901, 934, 1290, 1330, 1320]
-    }
-]
+  {
+    name: "联盟广告",
+    type: "bar",
+    stack: "总量",
+    data: [220, 182, 191, 234, 290, 330, 310],
+  },
+  {
+    name: "视频广告",
+    type: "bar",
+    stack: "总量",
+    data: [150, 212, 201, 154, 190, 330, 410],
+  },
+  {
+    name: "搜索引擎",
+    type: "bar",
+    stack: "总量",
+    data: [820, 832, 901, 934, 1290, 1330, 1320],
+  },
+];
 ```
 
 ## 【3】饼图-pie
@@ -679,19 +679,19 @@ series: [
 
 ```js
 series: [
-    {
-        name: '访问来源',
-        type: 'pie',
-        radius: '55%',
-        data: [
-            {value: 335, name: '直接访问'},
-            {value: 310, name: '邮件营销'},
-            {value: 234, name: '联盟广告'},
-            {value: 135, name: '视频广告'},
-            {value: 1548, name: '搜索引擎'}
-        ],
-    }
-]
+  {
+    name: "访问来源",
+    type: "pie",
+    radius: "55%",
+    data: [
+      { value: 335, name: "直接访问" },
+      { value: 310, name: "邮件营销" },
+      { value: 234, name: "联盟广告" },
+      { value: 135, name: "视频广告" },
+      { value: 1548, name: "搜索引擎" },
+    ],
+  },
+];
 ```
 
 ### 【3.2】圆环饼图
@@ -700,19 +700,19 @@ series: [
 
 ```js
 series: [
-    {
-        name: '访问来源',
-        type: 'pie',
-        radius: ['50%', '70%'],
-        data: [
-            {value: 335, name: '直接访问'},
-            {value: 310, name: '邮件营销'},
-            {value: 234, name: '联盟广告'},
-            {value: 135, name: '视频广告'},
-            {value: 1548, name: '搜索引擎'}
-        ]
-    }
-]
+  {
+    name: "访问来源",
+    type: "pie",
+    radius: ["50%", "70%"],
+    data: [
+      { value: 335, name: "直接访问" },
+      { value: 310, name: "邮件营销" },
+      { value: 234, name: "联盟广告" },
+      { value: 135, name: "视频广告" },
+      { value: 1548, name: "搜索引擎" },
+    ],
+  },
+];
 ```
 
 ---

@@ -626,7 +626,7 @@ background-attachment: fixed; // 背景不会随内容滚动
 
 ◆ 例子：用`background-attachment`实现滚动提示
 
-[codepen地址](https://codepen.io/firefly1984982452/pen/JjMYQzz)
+[codepen代码地址](https://codepen.io/firefly1984982452/pen/JjMYQzz)
 
 
 ```css
@@ -1044,30 +1044,22 @@ box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
 
 重点：用伪元素设置 blur
 
+[codepen代码地址](https://codepen.io/firefly1984982452/pen/mdpVdyo)
+
+重点代码：
+
 ```css
 .cover{
-  width: 600px;
-  height: 500px;
   position: relative;
 }
 .cover::before{
-  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 600px;
-  height: 500px;
   filter: blur(5px);
   background: url('./floor.jpeg') center center no-repeat;
   z-index: -1;
 }
 .content{
   position: absolute;
-  left: 30%;
-  top: 50%;
-  width: 300px;
-  height: 100px;
-  border: 1px solid #fbb;
 }
 <div class="cover">
   <div class="content">我是内容</div>
@@ -1267,6 +1259,8 @@ background-color: #fff;
   <p style="width: 200px; text-align: justify; text-align-last: justify">姓名</p>
   <p style="width: 200px; text-align: justify; text-align-last: justify">家庭住址</p>
 </div>
+
+!> `text-align-last:justify;`火狐浏览器下无效！
 
 
 ## 【2】文字从右到左效果
@@ -1536,34 +1530,7 @@ p{
 
 ### 【4.1】backface-visibility：背面向屏幕时是否可见
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-    div
-    {
-      width:100px;
-      height:100px;
-      background: url('https://image.youbankeji.com/test/12/2021/01/05/6970b7294f674d6eb6a32425fdaca066.jpeg!avatar');
-      background-size:100% 100%;
-      animation:myfirst 15s;
-      backface-visibility: hidden;
-    }
-
-    @keyframes myfirst
-    {
-      from {transform:rotateY(0deg);}
-      to {transform:rotateY(360deg);}
-    }
-
-    </style>
-  </head>
-  <body>
-  	<div>文字</div>
-  </body>
-</html>
-```
+[codepen代码地址](https://codepen.io/firefly1984982452/pen/WNdrNow)
 
 ## 【5】使用 requestAnimationFrame 手动反复调用动画
 
@@ -1661,46 +1628,7 @@ backdrop-filter: saturate(80%);
 
 ◆ 方法二：在`::before`里面加传统`filter`
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body,
-      main::before {
-        background: url("./test.jpg") no-repeat;
-        background-size: 500px 500px;
-      }
-
-      main {
-        position: relative;
-        background: rgba(0, 0, 0, 0.2);
-        width: 300px;
-        height: 300px;
-      }
-
-      main::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        filter: blur(20px);
-      }
-    </style>
-  </head>
-  <body>
-    <main>hello world</main>
-  </body>
-</html>
-
-```
+[codepen代码地址](https://codepen.io/firefly1984982452/pen/XWVXJmy)
 
 ---
 
@@ -1916,43 +1844,20 @@ img{
 - mask-size：面具大小
 - mask-composite：面具复合
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <style>
-      img {
-        width: 100%;
-        height: 100%;
-        border: 20px solid #f00;
-        -webkit-mask-image: url("https://firefly1984982452.github.io/my-web-page/animation.png");
-        mask-image: url("https://firefly1984982452.github.io/my-web-page/animation.png");
+[codepen代码地址](https://codepen.io/firefly1984982452/pen/YzYwPpw)
 
-        /* firefox 可用 */
-        mask-mode: luminance;
-
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-
-        -webkit-mask-position: right top;
-        mask-position: right top;
-
-        -webkit-mask-clip: border-box;
-        mask-clip: border-box;
-
-        -webkit-mask-size: 40% 50%;
-        mask-size: 40% 50%;
-
-        /* firefox 可用 */
-        mask-composite: exclude;
-      }
-    </style>
-  </head>
-  <body>
-    <img src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" alt="" srcset="" />
-  </body>
-</html>
+```css
+img {
+  width: 100%;
+  height: 100%;
+  border: 20px solid #f00;
+  -webkit-mask-image: url("https://firefly1984982452.github.io/my-web-page/animation.png");
+}
 ```
+```html
+    <img src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" alt="" srcset="" />
+```
+
 <div class="example-box" style="height:250px">
   <img style="-webkit-mask-image: url('https://firefly1984982452.github.io/my-web-page/animation.png');
   mask-image: url('https://firefly1984982452.github.io/my-web-page/animation.png');" 
