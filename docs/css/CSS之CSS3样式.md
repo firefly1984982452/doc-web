@@ -1,4 +1,4 @@
-# CSS之CSS3样式
+# CSS 之 CSS3 样式
 
 - [MDN 全元素](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
@@ -88,45 +88,51 @@
 ![image](https://user-images.githubusercontent.com/8554143/43560900-2ef72358-9647-11e8-8123-ecfc45828c3d.gif)
 
 ```css
-img{
+img {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
 }
-.g-container{
+.g-container {
   margin: 200px 0 0 0;
 }
-.g-username:focus-within img{
+.g-username:focus-within img {
   display: block;
 }
-.g-password:focus-within img{
+.g-password:focus-within img {
   display: block;
 }
 ```
 
 ```html
 <div class="g-container">
-    <h2>登录</h2>
-    <div class="g-username">
-        <input name="loginPhoneOrEmail" maxlength="64" placeholder="请输入手机号或邮箱" class="input">
-        <img src="https://b-gold-cdn.xitu.io/v3/static/img/greeting.1415c1c.png" class="g-username">
-    </div>
+  <h2>登录</h2>
+  <div class="g-username">
+    <input name="loginPhoneOrEmail" maxlength="64" placeholder="请输入手机号或邮箱" class="input" />
+    <img src="https://b-gold-cdn.xitu.io/v3/static/img/greeting.1415c1c.png" class="g-username" />
+  </div>
 
-    <div class="g-password">
-        <input name="loginPassword" type="password" maxlength="64" placeholder="请输入密码" class="input">
-        <img src="https://b-gold-cdn.xitu.io/v3/static/img/blindfold.58ce423.png" class="g-password">
-    </div>
+  <div class="g-password">
+    <input
+      name="loginPassword"
+      type="password"
+      maxlength="64"
+      placeholder="请输入密码"
+      class="input"
+    />
+    <img src="https://b-gold-cdn.xitu.io/v3/static/img/blindfold.58ce423.png" class="g-password" />
+  </div>
 </div>
 ```
 
 ## 【3】`:root`选择器
 
 ```css
-:root{
+:root {
   color: red;
 }
-html{
+html {
   color: green;
 }
 ```
@@ -154,7 +160,7 @@ video::backdrop {
 ## 【5】`:fullscreen`：全屏样式
 
 ```css
-div:fullscreen{
+div:fullscreen {
   color: #ff0;
 }
 ```
@@ -174,7 +180,7 @@ article h1 {
 使用`:is`优化后的写法：
 
 ```css
-:is(section,article) :is(h1,h2){
+:is(section, article) :is(h1, h2) {
   color: #f00;
 }
 ```
@@ -205,11 +211,11 @@ article h1 {
 </div>
 
 ```css
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
-text-emphasis: 'foo';
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
+text-emphasis: "foo";
 
 text-emphasis: filled;
 text-emphasis: open;
@@ -226,6 +232,7 @@ text-emphasis: filled sesame #555;
 ```css
 box-shadow: 50px 50px 0 20px #ffb;
 ```
+
 <div class="example-box" style="height:150px">
   <div style="
     width:100px;
@@ -251,6 +258,7 @@ box-shadow: 50px 50px 0 20px #ffb;
 ```css
 border-image: url(border.png) 30 round;
 ```
+
 <div class="example-box">
   <div style="
               width:250px;
@@ -263,9 +271,10 @@ border-image: url(border.png) 30 round;
 
 ```css
 border: solid 50px;
-border-color: rgba(255,255,0,.2);
+border-color: rgba(255, 255, 0, 0.2);
 background: #fbb;
 ```
+
 <div class="example-box">
   <div style="
               width:100px;
@@ -283,6 +292,7 @@ background: #fbb;
 background: #fbfb;
 box-shadow: 0 0 0 5px #f00, 0 0 0 10px #ff0, 0 0 0 15px #00f;
 ```
+
 <div class="example-box">
   <div style="
   width:100px;
@@ -299,6 +309,7 @@ background: #fbfb;
 outline: 5px solid #ff0;
 border: 5px solid #f00;
 ```
+
 <div class="example-box">
   <div style="
   width:100px;
@@ -367,10 +378,17 @@ outline-offset: -10px;
   height: 100px;
   padding: 1em;
   border: 10px solid transparent;
-  background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%);
+  background: linear-gradient(white, white) padding-box, repeating-linear-gradient(
+      -45deg,
+      black 0,
+      black 25%,
+      white 0,
+      white 50%
+    );
   background-size: 0.6em 0.6em;
 }
 ```
+
 <div class="example-box">
   <div
     style="
@@ -403,6 +421,7 @@ height: 100px;
 background-color: #fbb;
 border-radius: 20% / 50%;
 ```
+
 <div class="example-box">
   <div class="box bg-color-red" style="width: 300px; height: 100px; border-radius: 20% / 50%"></div>
 </div>
@@ -413,8 +432,9 @@ border-radius: 20% / 50%;
 width: 50px;
 height: 100px;
 background-color: #fbb;
-border-radius: 0 100% 100% 0 / 50%
+border-radius: 0 100% 100% 0 / 50%;
 ```
+
 <div class="example-box">
   <div class="box bg-color-red" style="width: 50px; height: 100px; border-radius: 0 100% 100% 0 / 50%"></div>
 </div>
@@ -427,6 +447,7 @@ height: 100px;
 background-color: #fbb;
 border-radius: 10% 50% / 50% 10%;
 ```
+
 <div class="example-box">
   <div class="box bg-color-red" style="width: 300px; height: 100px; border-radius: 10% 50% / 50% 10%"></div>
 </div>
@@ -442,10 +463,10 @@ border-radius: 1em/5em;
 等价于：
 
 ```css
-border-top-left-radius:     1em 5em;
-border-top-right-radius:    1em 5em;
+border-top-left-radius: 1em 5em;
+border-top-right-radius: 1em 5em;
 border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius:  1em 5em;
+border-bottom-left-radius: 1em 5em;
 ```
 
 `border-top-left-radius: 1em 5em;`意思是：`top`为`1em`，`left`为`5em`。
@@ -559,10 +580,7 @@ border-bottom-left-radius:  1em 5em;
 背景图片可以有多个，可以摆放在任意位置
 
 ```css
-background-image: url('1.png'),
-            url('2.png'),
-            url('3.png'),
-            url('4.png');
+background-image: url("1.png"), url("2.png"), url("3.png"), url("4.png");
 background-repeat: no-repeat;
 background-size: 0.2rem 0.2rem;
 background-position: 0 0, 100% 0, 0 100%, 100% 100%;
@@ -626,11 +644,10 @@ background-attachment: fixed; // 背景不会随内容滚动
 
 ◆ 例子：用`background-attachment`实现滚动提示
 
-[codepen代码地址](https://codepen.io/firefly1984982452/pen/JjMYQzz)
-
+[codepen 代码地址](https://codepen.io/firefly1984982452/pen/JjMYQzz)
 
 ```css
-background-image: radial-gradient(at top, rgba(0,0,0,0.2), rgba(0,0,0,0));
+background-image: radial-gradient(at top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 background-repeat: no-repeat;
 background-size: 100% 15px;
 background-attachment: local, scroll;
@@ -673,16 +690,15 @@ transform: perspective(45deg);
 /* 平移 */
 transform: translate(20px, 10px);
 /* 缩放 */
-transform: scale(.5);
+transform: scale(0.5);
 /* 椭圆 */
 transform: rotate3d(1, 0, 0, 83deg);
-
 ```
 
 也可以所有属性合并：
 
 ```css
-transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
+transform: rotate(45deg) translate(20px, 10px) scale(0.5) skew(45deg);
 ```
 
 ◆ 使用`transform: translateZ(0)` 用 GPU 硬件加速提升性能
@@ -702,16 +718,16 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 ### 【1.1】菱形
 
 ```css
-.lin{
+.lin {
   width: 200px;
   height: 200px;
   overflow: hidden;
   transform: rotate(45deg);
 }
-.lin > img{
+.lin > img {
   width: 100%;
   height: 100%;
-  transform: rotate(-45deg)scale(1.5);
+  transform: rotate(-45deg) scale(1.5);
 }
 ```
 
@@ -720,12 +736,12 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 ### 【1.2】长方形
 
 ```css
-.lin-long > img{
+.lin-long > img {
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   transition: ls clip-path;
 }
-.lin-long > img:hover{
-  clip-path: polygon(0 0 , 100% 0, 100% 100%, 0 100%);
+.lin-long > img:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 ```
 
@@ -736,7 +752,7 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 **skewX 默认会把字体内容也旋转，解决方式是加伪元素**
 
 ```css
-.box{
+.box {
   position: relative;
   width: 100px;
   height: 50px;
@@ -744,8 +760,8 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
   line-height: 50px;
   z-index: 0;
 }
-.box::before{
-  content: '';
+.box::before {
+  content: "";
   position: absolute;
   bottom: 0;
   top: 0;
@@ -760,8 +776,9 @@ transform: rotate(45deg) translate(20px, 10px) scale(.5) skew(45deg);
 ## 【3】`perspective`：梯形效果
 
 ```css
-transform: perspective(30px)rotateX(5deg);
+transform: perspective(30px) rotateX(5deg);
 ```
+
 <div class="example-box">
   <div class="item bg-color-green" style="width: 200px;transform: perspective(30px)rotateX(5deg); font-size:2em;">文字内容</div>
 </div>
@@ -769,23 +786,24 @@ transform: perspective(30px)rotateX(5deg);
 这样会导致文字内容变成梯形，所以用伪元素生成
 
 ```css
-.border{
+.border {
   width: 200px;
   height: 100px;
   position: relative;
 }
-.border::before{
-  content: '';
+.border::before {
+  content: "";
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
   z-index: -1;
-  background:#fbb;
-  transform: perspective(30px)rotateX(5deg);
+  background: #fbb;
+  transform: perspective(30px) rotateX(5deg);
 }
 ```
+
 <style>
 
 .perspective{
@@ -829,18 +847,18 @@ transform: matrix(2, 2, 0, 2, 45, 0);
 ◆ 语法：
 
 ```css
-clip-path:inset(上 右 下 左); // 4个值
-clip-path:inset(上右下左); // 1个值
-clip-path:inset(上 左右 下); // 3个值
-clip-path:inset(下 左右); // 2个值
-clip-path:inset(上右下左 round 圆角); // 值+圆角【border-radius】
+clip-path: inset(上 右 下 左); // 4个值
+clip-path: inset(上右下左); // 1个值
+clip-path: inset(上 左右 下); // 3个值
+clip-path: inset(下 左右); // 2个值
+clip-path: inset(上右下左 round 圆角); // 值+圆角【border-radius】
 ```
 
 ◆ 示例：
 
 ```css
 clip-path: inset(10px 20px 0px 5px); // 矩形
-clip-path: inset(25% 5px round 5px 25%);// 其它
+clip-path: inset(25% 5px round 5px 25%); // 其它
 ```
 
 <div class="example-box">
@@ -855,7 +873,7 @@ clip-path: inset(25% 5px round 5px 25%);// 其它
 ◆ 语法：
 
 ```css
-clip-path:circle(半径 at x y);
+clip-path: circle(半径 at x y);
 ```
 
 ◆ 示例：
@@ -878,7 +896,7 @@ clip-path: circle(50% at 0 100%); // 其它形状圆
 ◆ 语法：
 
 ```css
-clip-path:ellipse(x y at 圆心x 圆心y);
+clip-path: ellipse(x y at 圆心x 圆心y);
 ```
 
 ◆ 示例：
@@ -900,7 +918,7 @@ clip-path: ellipse(40% 20% at 20% 70%); // 其它形状
 ◆ 语法：
 
 ```css
-clip-path:polygon(x1 y1, x2 y2, x3 y3,...);
+clip-path: polygon(x1 y1, x2 y2, x3 y3, ...);
 ```
 
 ◆ 示例：
@@ -910,16 +928,17 @@ clip-path:polygon(x1 y1, x2 y2, x3 y3,...);
 ```css
 clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 85%);
 ```
+
 <div class="example-box">
   <div class="item bg-color-red" style="clip-path: polygon(0 0, 90% 0, 100% 25%, 100% 100%, 10% 100%, 0 85%);"></div> 
 </div>
-
 
 2. 三角形
 
 ```css
 clip-path: polygon(0 100%, 50% 0, 100% 100%);
 ```
+
 <div class="example-box">
   <div class="item bg-color-red" style="clip-path: polygon(0 100%, 50% 0, 100% 100%);"></div> 
 </div>
@@ -958,6 +977,7 @@ box-shadow: 15px 0 5px -10px #000;
 ```css
 box-shadow: 15px 0 5px -10px #000, -15px 0 5px -10px #000;
 ```
+
 <div class="example-box">
   <div class="item" style="box-shadow: 15px 0 5px -10px #000, -15px 0 5px -10px #000;">文字内容</div>
 </div>
@@ -967,6 +987,7 @@ box-shadow: 15px 0 5px -10px #000, -15px 0 5px -10px #000;
 ```css
 text-shadow: 5px 5px 5px #f0f;
 ```
+
 <div class="example-box">
   <p style="text-shadow: 5px 5px 5px #f0f;">文字内容</p>
 </div>
@@ -991,10 +1012,11 @@ text-shadow: 0 1px hsl(0, 0%, 85%), 0 2px hsl(0, 0%, 80%), 0 3px hsl(0, 0%, 75%)
 ```css
 width: 0;
 height: 0;
-border: 100px solid ;
+border: 100px solid;
 border-color: transparent transparent #338fff;
 filter: drop-shadow(5px 5px 5px #000);
 ```
+
 <div class="example-box">
   <div style="width: 0;
 height: 0;
@@ -1012,6 +1034,7 @@ filter: drop-shadow(5px 5px 5px #000);"></div>
 filter: drop-shadow(#f00 20px 0);
 transform: translate(-20px, 0);
 ```
+
 <style>
 .icon{ 
   width:100px; 
@@ -1039,12 +1062,12 @@ transform: translate(-20px, 0);
 ## 【4】通过阴影弱化背景
 
 ```css
-box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
+box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.8);
 ```
 
 重点：用伪元素设置 blur
 
-[codepen代码地址](https://codepen.io/firefly1984982452/pen/mdpVdyo)
+[codepen 代码地址](https://codepen.io/firefly1984982452/pen/mdpVdyo)
 
 重点代码：
 
@@ -1082,32 +1105,37 @@ box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
 
 ### 【1.1】`linear-gradient`：条纹背景
 
-- 例1：背景为上下 2 色分割
+- 例 1：背景为上下 2 色分割
 
 ```css
-background-image: linear-gradient(#ff0 50%, #f00 50%)
+background-image: linear-gradient(#ff0 50%, #f00 50%);
 ```
 
 <div class="example-box">
   <div class="item" style="background-image: linear-gradient(#ff0 50%, #f00 50%)"></div>
 </div>
 
-- 例2：背景 2 色平铺
+- 例 2：背景 2 色平铺
 
 ```css
 background: linear-gradient(#ff0 50%, #f00 50%);
 background-size: 100% 50%;
 ```
+
 <div class="example-box">
   <div class="item" style="background: linear-gradient(#ff0 50%, #f00 50%);background-size: 100% 50%;"></div>
 </div>
 
-- 例3：四边虚化
+- 例 3：四边虚化
 
 ```css
-background-image: 
-  linear-gradient(to bottom, #000, rgba(36,54,78,0) 15%,rgba(36,54,78,0) 85%, #000),
-  linear-gradient(to right, #000, rgba(36,54,78,0) 15%,rgba(36,54,78,0) 85%, #000);
+background-image: linear-gradient(
+    to bottom,
+    #000,
+    rgba(36, 54, 78, 0) 15%,
+    rgba(36, 54, 78, 0) 85%,
+    #000
+  ), linear-gradient(to right, #000, rgba(36, 54, 78, 0) 15%, rgba(36, 54, 78, 0) 85%, #000);
 ```
 
 <div class="example-box">
@@ -1119,14 +1147,20 @@ background-image:
 ```css
 width: 200px;
 height: 200px;
-background:#ffb;
-background: linear-gradient(135deg, transparent 15px,#fbb 0) top left,
-      linear-gradient(-135deg, transparent 15px,#fbb 0) top right,
-      linear-gradient(-45deg, transparent 15px, #fbb 0) bottom right,
-      linear-gradient(45deg, transparent 15px, #fbb 0) bottom left;
-background-size:50% 50%;
-background-repeat:no-repeat;
+background: #ffb;
+background: linear-gradient(135deg, transparent 15px, #fbb 0) top left, linear-gradient(
+      -135deg,
+      transparent 15px,
+      #fbb 0
+    ) top right, linear-gradient(-45deg, transparent 15px, #fbb 0) bottom right, linear-gradient(
+      45deg,
+      transparent 15px,
+      #fbb 0
+    ) bottom left;
+background-size: 50% 50%;
+background-repeat: no-repeat;
 ```
+
 <div class="example-box">
   <div class="item" style="background:#ffb;
 background: linear-gradient(135deg, transparent 15px,#fbb 0) top left,
@@ -1142,8 +1176,9 @@ background-repeat:no-repeat;"></div>
 - 例：背景 2 色任意角度平铺
 
 ```css
-background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,green 10%);
+background-image: repeating-linear-gradient(60deg, yellow 0%, yellow 5%, green 0%, green 10%);
 ```
+
 <div class="example-box">
   <div class="item" style="background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,green 10%);"></div>
 </div>
@@ -1157,6 +1192,7 @@ background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,g
 ```css
 background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 ```
+
 <div class="example-box">
   <div class="item"
     style="
@@ -1169,16 +1205,17 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 ### 【4.2】伪圆环效果
 
 外元素
+
 ```css
 background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 ```
 
 内元素
+
 ```css
 background-color: #fff;
 ```
 
-        
 <div class="example-box">
   <div class="item" style="
       border-radius: 50%;
@@ -1246,8 +1283,8 @@ background-color: #fff;
 <style>
   div {
     width: 100px;
-    text-align:justify;
-    text-align-last:justify;
+    text-align: justify;
+    text-align-last: justify;
   }
 </style>
 <body>
@@ -1255,13 +1292,13 @@ background-color: #fff;
   <div>家庭住址</div>
 </body>
 ```
+
 <div class="example-box">
   <p style="width: 200px; text-align: justify; text-align-last: justify">姓名</p>
   <p style="width: 200px; text-align: justify; text-align-last: justify">家庭住址</p>
 </div>
 
 !> `text-align-last:justify;`火狐浏览器下无效！
-
 
 ## 【2】文字从右到左效果
 
@@ -1270,7 +1307,6 @@ background-color: #fff;
 - text-align: right
 - direction: rtl
 - unicode-bidi: bidi-override【依赖于 direction】
-
 
 ```html
 <p style="text-align: right">
@@ -1283,6 +1319,7 @@ background-color: #fff;
   我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
 </p>
 ```
+
 <div class="example-box">
   <p style="text-align: right">
     我向来是不惮以最坏的恶意来推测中国人的,然而我还不料,也不信竟会下劣凶残到这地步。
@@ -1347,7 +1384,9 @@ background-color: #fff;
 
 ```html
 <p style="width: 100px; hyphens: auto;border:1px solid">An extreme ly long English word</p>
-<p style="width: 100px; text-align: justify; text-align-last: justify;border:1px solid">An extreme ly long English word</p>
+<p style="width: 100px; text-align: justify; text-align-last: justify;border:1px solid">
+  An extreme ly long English word
+</p>
 ```
 
 ## 【7】`line-clamp`：限制文本行数
@@ -1393,8 +1432,6 @@ background-color: #fff;
     you don't notice.</p>
 </div>
 
-
-
 【2】三角形文字环绕
 
 ```css
@@ -1419,7 +1456,6 @@ background-color: #fff;
     to drive you to follow a particular link. Sometimes
     you don't notice.</p>
 </div>
-
 
 ---
 
@@ -1477,7 +1513,7 @@ background-color: #fff;
 ```
 
 ```html
-<div> content </div>
+<div>content</div>
 ```
 
 ## 【2】属性解析
@@ -1499,7 +1535,7 @@ background-color: #fff;
 
 ### 【2.3】填充模式
 
- [学习链接](https://www.w3cplus.com/css3/understanding-css-animation-fill-mode-property.html)
+[学习链接](https://www.w3cplus.com/css3/understanding-css-animation-fill-mode-property.html)
 
 - `none`：【默认】无改变。
 - `forwards`：保留最后一帧，不回到初始状态。
@@ -1518,7 +1554,7 @@ background-color: #fff;
     width: 0;
   }
 }
-p{
+p {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -1530,17 +1566,17 @@ p{
 
 ### 【4.1】backface-visibility：背面向屏幕时是否可见
 
-[codepen代码地址](https://codepen.io/firefly1984982452/pen/WNdrNow)
+[codepen 代码地址](https://codepen.io/firefly1984982452/pen/WNdrNow)
 
 ## 【5】使用 requestAnimationFrame 手动反复调用动画
 
 ```js
-this.$refs.ref_trademark.className = 'trademark'
+this.$refs.ref_trademark.className = "trademark";
 window.requestAnimationFrame(() => {
   window.requestAnimationFrame(() => {
-    this.$refs.ref_trademark.className = 'trademark animation'
-  })
-})
+    this.$refs.ref_trademark.className = "trademark animation";
+  });
+});
 ```
 
 ---
@@ -1628,7 +1664,7 @@ backdrop-filter: saturate(80%);
 
 ◆ 方法二：在`::before`里面加传统`filter`
 
-[codepen代码地址](https://codepen.io/firefly1984982452/pen/XWVXJmy)
+[codepen 代码地址](https://codepen.io/firefly1984982452/pen/XWVXJmy)
 
 ---
 
@@ -1669,7 +1705,7 @@ isolation: isolate;
 ## 【2】`image-set`
 
 ```css
-background-image: -webkit-image-set(url('./cute.png') 2x, url('./yellow.jpeg') 3x);
+background-image: -webkit-image-set(url("./cute.png") 2x, url("./yellow.jpeg") 3x);
 ```
 
 选取移动端符合响应式条件的图片。
@@ -1682,7 +1718,7 @@ background-image: -webkit-image-set(url('./cute.png') 2x, url('./yellow.jpeg') 3
 
 ```css
 background-image: url(...g);
-background-color: #51B7D3;
+background-color: #51b7d3;
 background-blend-mode: luminosity;
 ```
 
@@ -1705,6 +1741,7 @@ img {
   object-position: top 70px;
 }
 ```
+
 <div class="example-box">
   <div class="item" style="width:200px;height:150px;">
     <img src="https://s1.ax1x.com/2022/03/11/bIszGj.png" style="
@@ -1720,14 +1757,19 @@ img {
 - vertical-align: text-top; // 文字对齐图片顶部
 - vertical-align: text-bottom; // 默认文字对齐图片底部
 
-
 ```html
 <p>
   文字与图片对齐
-  <img style="vertical-align: text-top;" src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" width="100" height="100" />
+  <img
+    style="vertical-align: text-top;"
+    src="https://s1.ax1x.com/2022/03/11/bI6bE8.png"
+    width="100"
+    height="100"
+  />
   设置为顶部对齐
 </p>
 ```
+
 <div class="example-box">
   <p>
     文字与图片对齐
@@ -1750,6 +1792,7 @@ image-rendering: auto;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
 ```
+
 <div class="example-box">
   <div class="grid-box">
     <div class="item">
@@ -1781,31 +1824,30 @@ image-rendering: pixelated;
 
 ## 【1】`resize` 属性
 
-
 ```css
-resize:both;
+resize: both;
 overflow: hidden;
 ```
+
 <div class="example-box">
   <p style="border:1px solid;resize:both;overflow: hidden;">resize属性规定是否由用户调整元素大小，拖动鼠标调整大小。</p>
 </div>
 
-!> 子元素要比父元素大；<br />
-一定要写上`overflow: hidden;`
+!> 子元素要比父元素大；<br /> 一定要写上`overflow: hidden;`
 
 ## 【2】z-index 属性
 
 如果父元素的 z-index 很低，并且被其它元素遮住，那子元素的 z-index 再大也不会显示在最上面。
 
 ```css
-.A{
-  z-index:1;
-  .a{
-    z-index:99;
+.A {
+  z-index: 1;
+  .a {
+    z-index: 99;
   }
 }
-.B{
-  z-index:2;
+.B {
+  z-index: 2;
 }
 ```
 
@@ -1818,15 +1860,14 @@ overflow: hidden;
 !> 仅 chrome 生效
 
 ```css
-img{
+img {
   -webkit-box-reflect: below;
 }
 ```
+
 <div class="example-box" style="height:250px">
   <img style="-webkit-box-reflect: below;" height="100px" src="https://s1.ax1x.com/2022/03/11/bI6bE8.png">
 </div>
-
-
 
 ---
 
@@ -1844,7 +1885,7 @@ img{
 - mask-size：面具大小
 - mask-composite：面具复合
 
-[codepen代码地址](https://codepen.io/firefly1984982452/pen/YzYwPpw)
+[codepen 代码地址](https://codepen.io/firefly1984982452/pen/YzYwPpw)
 
 ```css
 img {
@@ -1854,8 +1895,9 @@ img {
   -webkit-mask-image: url("https://firefly1984982452.github.io/my-web-page/animation.png");
 }
 ```
+
 ```html
-    <img src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" alt="" srcset="" />
+<img src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" alt="" srcset="" />
 ```
 
 <div class="example-box" style="height:250px">
@@ -1877,7 +1919,7 @@ img {
 
 ```css
 @media (any-hover: hover) {
-  a:hover{
+  a:hover {
     background: yellow;
   }
 }
@@ -1959,7 +2001,6 @@ img {
 ## 【4】display-mode：全屏样式
 
 ```css
-
 @media all and (display-mode: fullscreen) {
   body {
     color: #fff;
@@ -1985,12 +2026,11 @@ img {
 
 ## 【1】更改`<button />`的默认样式为无
 
-
 ```css
 button {
-appearance:none;
--webkit-appearance:none;
--moz-appearance:none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 ```
 
@@ -2016,6 +2056,7 @@ input#test {
 ```html
 <input id="test" type="checkbox" />
 ```
+
 <style>
 
 input#test {
@@ -2034,7 +2075,6 @@ input#test {
   <input id="test" type="checkbox" />更改默认复选框
 </div>
 
-
 ---
 
 # 二十、css 比较函数：`min()`、`max()`、`clamp()`
@@ -2044,41 +2084,39 @@ input#test {
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body > * {
+        color: #fff;
+        height: 100px;
+        background-color: #f00;
+        margin: 10px 0;
+        text-align: center;
+      }
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<style>
-		body>* {
-			color: #fff;
-			height: 100px;
-			background-color: #f00;
-			margin: 10px 0;
-			text-align: center;
-		}
+      header {
+        width: min(50%, 500px);
+      }
 
-		header {
-			width: min(50%, 500px);
-		}
+      main {
+        width: max(50%, 500px);
+      }
 
-		main {
-			width: max(50%, 500px);
-		}
+      footer {
+        width: clamp(100px, 50%, 500px);
+      }
+    </style>
+  </head>
 
-		footer {
-			width: clamp(100px, 50%, 500px);
-		}
-	</style>
-</head>
-
-<body>
-	<header>min(50%, 500px)</header>
-	<main>mxn(50%, 500px)</main>
-	<footer>clamp(100px,50%, 500px)</footer>
-</body>
-
+  <body>
+    <header>min(50%, 500px)</header>
+    <main>mxn(50%, 500px)</main>
+    <footer>clamp(100px,50%, 500px)</footer>
+  </body>
 </html>
 ```
 
@@ -2093,65 +2131,66 @@ input#test {
 ```html
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <style>
+      #myDIV {
+        margin: 25px;
+        width: 550px;
+        height: 100px;
+        background: orange;
+        position: relative;
+        font-size: 20px;
+        will-change: transform, opacity;
+      }
 
-<head>
-	<meta charset="utf-8">
-	<title>test</title>
-	<style>
-		#myDIV {
-			margin: 25px;
-			width: 550px;
-			height: 100px;
-			background: orange;
-			position: relative;
-			font-size: 20px;
-			will-change: transform, opacity;
-		}
+      @keyframes mymove {
+        from {
+          top: 0px;
+          transform: scale(1);
+          opacity: 1;
+        }
 
-		@keyframes mymove {
-			from {
-				top: 0px;
-				transform: scale(1);
-				opacity: 1;
-			}
+        to {
+          top: 200px;
+          transform: scale(0.7);
+          opacity: 0.7;
+        }
+      }
+    </style>
+  </head>
 
-			to {
-				top: 200px;
-				transform: scale(.7);
-				opacity: .7;
-			}
-		}
-	</style>
-</head>
-
-<body>
-	<p>该实例使用了addEventListener() 方法为 DIV 元素添加"animationstart", "animationiteration" 和 "animationend" 事件。</p>
-	<p>该实例使用了will-change优化性能。</p>
-	<div id="myDIV" onclick="myFunction()">点我开始动画</div>
-	<script>
-		var x = document.getElementById("myDIV")
-		function myFunction() {
-			x.style.animation = "mymove 4s 2";
-		}
-		x.addEventListener("animationstart", myStartFunction);
-		x.addEventListener("animationiteration", myIterationFunction);
-		x.addEventListener("animationend", myEndFunction);
-		function myStartFunction() {
-			this.innerHTML = "animationstart 事件触发 - 动画已经开始";
-			this.style.backgroundColor = "pink";
-		}
-		function myIterationFunction() {
-			this.innerHTML = "animationiteration 事件触发 - 动画重新播放";
-			this.style.backgroundColor = "lightblue";
-		}
-		function myEndFunction() {
-			this.innerHTML = "animationend 事件触发 - 动画已经完成";
-			this.style.willChange = 'auto'
-			this.style.backgroundColor = "lightgray";
-		}
-	</script>
-</body>
-
+  <body>
+    <p>
+      该实例使用了addEventListener() 方法为 DIV 元素添加"animationstart", "animationiteration" 和
+      "animationend" 事件。
+    </p>
+    <p>该实例使用了will-change优化性能。</p>
+    <div id="myDIV" onclick="myFunction()">点我开始动画</div>
+    <script>
+      var x = document.getElementById("myDIV");
+      function myFunction() {
+        x.style.animation = "mymove 4s 2";
+      }
+      x.addEventListener("animationstart", myStartFunction);
+      x.addEventListener("animationiteration", myIterationFunction);
+      x.addEventListener("animationend", myEndFunction);
+      function myStartFunction() {
+        this.innerHTML = "animationstart 事件触发 - 动画已经开始";
+        this.style.backgroundColor = "pink";
+      }
+      function myIterationFunction() {
+        this.innerHTML = "animationiteration 事件触发 - 动画重新播放";
+        this.style.backgroundColor = "lightblue";
+      }
+      function myEndFunction() {
+        this.innerHTML = "animationend 事件触发 - 动画已经完成";
+        this.style.willChange = "auto";
+        this.style.backgroundColor = "lightgray";
+      }
+    </script>
+  </body>
 </html>
 ```
 
@@ -2163,8 +2202,10 @@ input#test {
 
 1. transform-style: preserve-3d; // 子元素将保留其 3D 位置。
 2. perspective-origin: x-axis y-axis; // 设置位置
+
 - x-axis : 定义该视图在 x 轴上的位置。默认值：50%
 - y-axis : 定义该视图在 y 轴上的位置。默认值：50%
+
 3. perspective: number|none;
 
 # 二十三、移动端环境变量函数 `env()`和`constant()`
@@ -2179,12 +2220,12 @@ input#test {
 H5 网页设置`viewport-fit=cover`的时候才生效，小程序里的`viewport-fit`默认是`cover`
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 ```
 
 ```css
-height: calc(96rpx+ constant(safe-area-inset-bottom));//兼容 IOS<11.2
-height: calc(96rpx + env(safe-area-inset-bottom));//兼容 IOS>11.2
-padding-bottom: constant(safe-area-inset-bottom);//兼容 IOS<11.2
-padding-bottom: env(safe-area-inset-bottom);//兼容 IOS>11.2
+height: calc(96rpx+ constant(safe-area-inset-bottom)); //兼容 IOS<11.2
+height: calc(96rpx + env(safe-area-inset-bottom)); //兼容 IOS>11.2
+padding-bottom: constant(safe-area-inset-bottom); //兼容 IOS<11.2
+padding-bottom: env(safe-area-inset-bottom); //兼容 IOS>11.2
 ```
