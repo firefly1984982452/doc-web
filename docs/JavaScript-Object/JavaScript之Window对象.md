@@ -1,4 +1,4 @@
-#  JavaScript之Window对象
+# JavaScript 之 Window 对象
 
 ---
 
@@ -9,7 +9,7 @@
 1. 计算页面加载完成所需要的总时间
 
 ```js
-performance.timing.loadEventEnd - performance.timing.navigationStart
+performance.timing.loadEventEnd - performance.timing.navigationStart;
 ```
 
 # 二、history：历史记录
@@ -59,7 +59,7 @@ performance.timing.loadEventEnd - performance.timing.navigationStart
 用 `Object.fromEntries` 和 `URLSearchParams` 可变为普通对象
 
 ```js
-window.location.search = '?roomId=9&status=1&taskId=7&serviceId=1109';
+window.location.search = "?roomId=9&status=1&taskId=7&serviceId=1109";
 var str = window.location.search.substr(1);
 var p = new URLSearchParams(str);
 var param = Object.fromEntries(p);
@@ -73,11 +73,17 @@ var param = Object.fromEntries(p);
 export function detectiveBrowse() {
   var ua = navigator.userAgent.toLowerCase();
   var s;
-  (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1]:
-    (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
-    (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
-    (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
-    (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+  (s = ua.match(/msie ([\d.]+)/))
+    ? (Sys.ie = s[1])
+    : (s = ua.match(/firefox\/([\d.]+)/))
+    ? (Sys.firefox = s[1])
+    : (s = ua.match(/chrome\/([\d.]+)/))
+    ? (Sys.chrome = s[1])
+    : (s = ua.match(/opera.([\d.]+)/))
+    ? (Sys.opera = s[1])
+    : (s = ua.match(/version\/([\d.]+).*safari/))
+    ? (Sys.safari = s[1])
+    : 0;
 }
 ```
 
@@ -97,26 +103,24 @@ export function detectiveBrowse() {
 
 ```js
 let clientScreenMsg =
-`窗口可见区域宽（控制台不算）：window.innerWidth：${window.innerWidth}\n` +
-`窗口可见区域高（控制台不算）：window.innerHeight：${window.innerHeight}\n` +
-`网页可见区域宽(body)：document.body.clientWidth：${document.body.clientWidth}\n` +
-`网页可见区域高(body)：document.body.clientHeight：${document.body.clientHeight}\n` +
-`网页可见区域宽(body)，包括border、margin等：document.body.offsetWidth：${document.body.offsetWidth}\n` +
-`网页可见区域高(body)，包括border、margin等：document.body.offsetHeight：${document.body.offsetHeight}\n` +
-`网页正文全文宽，包括有滚动条时的未见区域：document.body.scrollWidth：${document.body.scrollWidth}\n` +
-`网页正文全文高，包括有滚动条时的未见区域：document.body.scrollHeight：${document.body.scrollHeight}\n\n\n` +
-
-`窗口总区域宽（控制台算）：window.outerWidth：${window.outerWidth}\n` +
-`窗口总区域高（控制台算）：window.outerHeight：${window.outerHeight}\n\n\n` +
-
-`网页被卷去的Top(滚动条)：document.documentElement.scrollTop：${document.documentElement.scrollTop}\n` +
-`网页被卷去的Left(滚动条)：document.documentElement.scrollLeft：${document.documentElement.scrollLeft}\n` +
-`浏览器距离Left：window.screenLeft / screenX：${window.screenLeft}、${window.screenX}\n` +
-`浏览器距离Top：window.screenTop / screenY：${window.screenTop}、${window.screenY}\n` +
-`屏幕分辨率的宽：window.screen.width：${window.screen.width}\n` +
-`屏幕分辨率的高：window.screen.height：${window.screen.height}\n` +
-`屏幕可用工作区的宽：window.screen.availWidth：${window.screen.availWidth}\n` +
-`屏幕可用工作区的高：window.screen.availHeight：${window.screen.availHeight}\n`;
+  `窗口可见区域宽（控制台不算）：window.innerWidth：${window.innerWidth}\n` +
+  `窗口可见区域高（控制台不算）：window.innerHeight：${window.innerHeight}\n` +
+  `网页可见区域宽(body)：document.body.clientWidth：${document.body.clientWidth}\n` +
+  `网页可见区域高(body)：document.body.clientHeight：${document.body.clientHeight}\n` +
+  `网页可见区域宽(body)，包括border、margin等：document.body.offsetWidth：${document.body.offsetWidth}\n` +
+  `网页可见区域高(body)，包括border、margin等：document.body.offsetHeight：${document.body.offsetHeight}\n` +
+  `网页正文全文宽，包括有滚动条时的未见区域：document.body.scrollWidth：${document.body.scrollWidth}\n` +
+  `网页正文全文高，包括有滚动条时的未见区域：document.body.scrollHeight：${document.body.scrollHeight}\n\n\n` +
+  `窗口总区域宽（控制台算）：window.outerWidth：${window.outerWidth}\n` +
+  `窗口总区域高（控制台算）：window.outerHeight：${window.outerHeight}\n\n\n` +
+  `网页被卷去的Top(滚动条)：document.documentElement.scrollTop：${document.documentElement.scrollTop}\n` +
+  `网页被卷去的Left(滚动条)：document.documentElement.scrollLeft：${document.documentElement.scrollLeft}\n` +
+  `浏览器距离Left：window.screenLeft / screenX：${window.screenLeft}、${window.screenX}\n` +
+  `浏览器距离Top：window.screenTop / screenY：${window.screenTop}、${window.screenY}\n` +
+  `屏幕分辨率的宽：window.screen.width：${window.screen.width}\n` +
+  `屏幕分辨率的高：window.screen.height：${window.screen.height}\n` +
+  `屏幕可用工作区的宽：window.screen.availWidth：${window.screen.availWidth}\n` +
+  `屏幕可用工作区的高：window.screen.availHeight：${window.screen.availHeight}\n`;
 console.log(clientScreenMsg);
 ```
 
@@ -124,7 +128,7 @@ console.log(clientScreenMsg);
 
 一般的电脑显示器都是 1 倍，但有部分笔记本电脑的分辨率是 2 倍。
 
-# 七、Number和window通用的属性
+# 七、Number 和 window 通用的属性
 
 1. `window.isFinite`：是否为数字型
 2. `window.isInteger`：是否为整数
@@ -141,14 +145,14 @@ console.log(clientScreenMsg);
 # 八、英文 base64 转码：`btoa` 和 `atob` 实现
 
 ```js
-var string = 'Hello World!';
-btoa(string) // "SGVsbG8gV29ybGQh"
-atob('SGVsbG8gV29ybGQh') // "Hello World!"
+var string = "Hello World!";
+btoa(string); // "SGVsbG8gV29ybGQh"
+atob("SGVsbG8gV29ybGQh"); // "Hello World!"
 ```
 
 # 九、中文 base64 转码：`escape`、`encodeURI` 和 `encodeURIComponent` 实现
 
-```js
+````js
 function b64Encode(str) {
   return btoa(encodeURIComponent(str));
 }
@@ -196,22 +200,22 @@ b64Decode('JUU0JUJEJUEwJUU1JUE1JUJE') // "你好"
 
 ```js
 window.print();
-```
+````
 
 # 十四、MessageChannel：管道通信
 
 ## 【1】MessageChannel 的基本使用
 
 ```js
-const {port1, port2} = new MessageChannel();
-port1.onmessage = function(d) {
-    console.log(`port1接收的消息是：${d.data}`);
-}
-port2.onmessage = function(d) {
-    console.log(`port2接收的消息是：${d.data}`);
-}
-port1.postMessage('port1发送的消息');
-port2.postMessage('port2发送的消息');
+const { port1, port2 } = new MessageChannel();
+port1.onmessage = function (d) {
+  console.log(`port1接收的消息是：${d.data}`);
+};
+port2.onmessage = function (d) {
+  console.log(`port2接收的消息是：${d.data}`);
+};
+port1.postMessage("port1发送的消息");
+port2.postMessage("port2发送的消息");
 ```
 
 port1 发送的由 port2 接收，port2 发送的由 port1 接收。
@@ -242,7 +246,7 @@ structuralClone(obj).then(res=>{
 
 ## 【3】MessageChannel 实现 vue.$nexttick
 
-```js
+````js
 <!DOCTYPE html>
 
 <html lang="en-zh">
@@ -261,7 +265,7 @@ structuralClone(obj).then(res=>{
   </body>
 </html>
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
   var app = new Vue({
     el: '#app',
@@ -325,7 +329,7 @@ structuralClone(obj).then(res=>{
         op.addEventListener("message", receiveMessage, false); //监听新开窗口发来的消息
     }
 </script>
-```
+````
 
 页面 B：
 
@@ -352,7 +356,7 @@ window.postMessage("hi there!", location.origin);
 所有的事件都可以由 window 监听：
 
 ```js
-window.addEventListener('storage', (e) => {})
+window.addEventListener("storage", (e) => {});
 ```
 
 # `windows.copy`
