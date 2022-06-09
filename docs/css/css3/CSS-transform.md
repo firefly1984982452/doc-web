@@ -33,11 +33,11 @@ transform: rotate(45deg) translate(20px, 10px) scale(0.5) skew(45deg);
 
 **rotate(10turn)代表转 10 圈**
 
-<div class="example-box">
-  <div class="box" style="margin: 60px 0 0 60px; width: 300px; border: 1px solid #bbf; transform: rotate(45deg); overflow: hidden">
-    <img src="https://s1.ax1x.com/2022/03/11/bI6bE8.png" style="width: 100%; transform: rotate(-45deg) scale(1.5)" />
-  </div>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="CSS rotate：旋转" src="https://codepen.io/firefly1984982452/embed/OJQBvKO?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/OJQBvKO">
+  CSS rotate：旋转</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ### 【1.1】菱形
 
@@ -103,9 +103,11 @@ transform: rotate(45deg) translate(20px, 10px) scale(0.5) skew(45deg);
 transform: perspective(30px) rotateX(5deg);
 ```
 
-<div class="example-box">
-  <div class="item bg-color-green" style="width: 200px;transform: perspective(30px)rotateX(5deg); font-size:2em;">文字内容</div>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="CSS perspective：梯形效果" src="https://codepen.io/firefly1984982452/embed/YzeJLzp?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/YzeJLzp">
+  CSS perspective：梯形效果</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 这样会导致文字内容变成梯形，所以用伪元素生成
 
@@ -128,24 +130,8 @@ transform: perspective(30px) rotateX(5deg);
 }
 ```
 
-<style>
-
-.perspective{
-  position: relative;
-  font-size:2em;
-}
-.perspective::before{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  background:#fbb;
-  transform: perspective(30px)rotateX(5deg);
-}
-</style>
-<div class="example-box">
-  <div class="item perspective" style="width: 200px;">文字内容</div>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="优化后的perspective：梯形效果" src="https://codepen.io/firefly1984982452/embed/VwQExLm?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/VwQExLm">
+  优化后的perspective：梯形效果</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>

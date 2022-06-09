@@ -18,20 +18,12 @@
 background-image: linear-gradient(#ff0 50%, #f00 50%);
 ```
 
-<div class="example-box">
-  <div class="item" style="background-image: linear-gradient(#ff0 50%, #f00 50%)"></div>
-</div>
-
 - 例 2：背景 2 色平铺
 
 ```css
 background: linear-gradient(#ff0 50%, #f00 50%);
 background-size: 100% 50%;
 ```
-
-<div class="example-box">
-  <div class="item" style="background: linear-gradient(#ff0 50%, #f00 50%);background-size: 100% 50%;"></div>
-</div>
 
 - 例 3：四边虚化
 
@@ -45,38 +37,19 @@ background-image: linear-gradient(
   ), linear-gradient(to right, #000, rgba(36, 54, 78, 0) 15%, rgba(36, 54, 78, 0) 85%, #000);
 ```
 
-<div class="example-box">
-  <div class="item" style="background-image: linear-gradient(to bottom, #000, rgba(36,54,78,0) 15%,rgba(36,54,78,0) 85%, #000),linear-gradient(to right, #000, rgba(36,54,78,0) 15%,rgba(36,54,78,0) 85%, #000);"></div>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="linear-gradient：条纹背景" src="https://codepen.io/firefly1984982452/embed/WNMaJwg?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/WNMaJwg">
+  linear-gradient：条纹背景</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ### 【1.2】linear-gradient：切角效果
 
-```css
-width: 200px;
-height: 200px;
-background: #ffb;
-background: linear-gradient(135deg, transparent 15px, #fbb 0) top left, linear-gradient(
-      -135deg,
-      transparent 15px,
-      #fbb 0
-    ) top right, linear-gradient(-45deg, transparent 15px, #fbb 0) bottom right, linear-gradient(
-      45deg,
-      transparent 15px,
-      #fbb 0
-    ) bottom left;
-background-size: 50% 50%;
-background-repeat: no-repeat;
-```
-
-<div class="example-box">
-  <div class="item" style="background:#ffb;
-background: linear-gradient(135deg, transparent 15px,#fbb 0) top left,
-      linear-gradient(-135deg, transparent 15px,#fbb 0) top right,
-      linear-gradient(-45deg, transparent 15px, #fbb 0) bottom right,
-      linear-gradient(45deg, transparent 15px, #fbb 0) bottom left;
-background-size:50% 50%;
-background-repeat:no-repeat;"></div>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="linear-gradient：切角效果" src="https://codepen.io/firefly1984982452/embed/qBxJYPq?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/qBxJYPq">
+  linear-gradient：切角效果</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## 【2】repeating-linear-gradient
 
@@ -86,9 +59,11 @@ background-repeat:no-repeat;"></div>
 background-image: repeating-linear-gradient(60deg, yellow 0%, yellow 5%, green 0%, green 10%);
 ```
 
-<div class="example-box">
-  <div class="item" style="background-image: repeating-linear-gradient(60deg,yellow 0%,yellow 5%,green 0%,green 10%);"></div>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="repeating-linear-gradient" src="https://codepen.io/firefly1984982452/embed/YzeJLYr?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/YzeJLYr">
+  repeating-linear-gradient</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## 【3】radial-gradient 与 linear-gradient 类似
 
@@ -99,15 +74,6 @@ background-image: repeating-linear-gradient(60deg, yellow 0%, yellow 5%, green 0
 ```css
 background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 ```
-
-<div class="example-box">
-  <div class="item"
-    style="
-      border-radius: 50%;
-      background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
-    "
-  ></div>
-</div>
 
 ### 【4.2】伪圆环效果
 
@@ -123,17 +89,8 @@ background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
 background-color: #fff;
 ```
 
-<div class="example-box">
-  <div class="item" style="
-      border-radius: 50%;
-      background: conic-gradient(pink 0 30%, yellow 0 70%, lime 0 100%);
-      display: flex;">
-    <div style="
-        width: 50px;
-        height: 50px;
-        margin: auto;
-        border-radius: 50%;
-        background-color: #fff;">
-    </div>
-  </div>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="conic-gradient" src="https://codepen.io/firefly1984982452/embed/KKQGRRj?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/KKQGRRj">
+  conic-gradient</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>

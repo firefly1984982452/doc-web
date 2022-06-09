@@ -1,8 +1,14 @@
 /* 最外层的示例盒子 */
 div.example-box {
   height: auto;
-  border: 1px solid ;
-  border-image: linear-gradient(325deg, rgba(41, 254, 255, 0), rgba(255, 0, 0, 1), rgba(255, 0, 0, .1)) 2 2;
+  border: 1px solid;
+  border-image: linear-gradient(
+      325deg,
+      rgba(41, 254, 255, 0),
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 0, 0.1)
+    )
+    2 2;
   color: #ee2746;
   font-size: 1.3em;
   padding: 5px 20px;
@@ -10,7 +16,7 @@ div.example-box {
 
 /* 示例效果的文字 */
 div.example-box::before {
-  content: '◆ 示例效果：';
+  content: "◆ 示例效果：";
   color: #339933;
   font-size: 13px;
   display: block;
@@ -18,11 +24,11 @@ div.example-box::before {
   height: 20px;
 }
 /* 盒子里面如果有子元素 */
-div.example-box>div.item{
+div.example-box > div.item {
   width: 100px;
   height: 100px;
   line-height: 100px;
-  border: 1px solid rgba(255, 0, 0, .1);
+  border: 1px solid rgba(255, 0, 0, 0.1);
   text-align: center;
 }
 /* 盒子里面的文字p标签 */
@@ -40,7 +46,13 @@ div.example-box .grid-box {
 /* 多个例子的元素 */
 div.example-box .grid-box .item {
   border: 2px solid;
-  border-image: linear-gradient(325deg, rgba(41, 254, 255, 0), rgba(41, 254, 255, 1), rgba(41, 254, 255, 0)) 2 2;
+  border-image: linear-gradient(
+      325deg,
+      rgba(41, 254, 255, 0),
+      rgba(41, 254, 255, 1),
+      rgba(41, 254, 255, 0)
+    )
+    2 2;
 }
 
 /* 给某个元素背景色 */
