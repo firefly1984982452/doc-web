@@ -1,4 +1,5 @@
-# CSS之网页布局
+# CSS 之网页布局
+
 # 一、正常布局流
 
 略
@@ -18,7 +19,7 @@
 ## 示例
 
 ```css
-.box{
+.box {
   width: 400px;
   height: 400px;
   border: 1px solid #f7b2bb;
@@ -26,10 +27,10 @@
   /*flex-direction: row;//方向
   flex-wrap: wrap; //换行 */
   flex-flow: row wrap;
-  justify-content: space-between;//内容
-  align-content: space-between;//
+  justify-content: space-between; //内容
+  align-content: space-between; //
 }
-.item{
+.item {
   width: 100px;
   height: 100px;
   background: #f7b2bb;
@@ -56,10 +57,10 @@
 ## flex 中最后一个元素右对齐
 
 ```css
-.father{
-  justify-content:space-between;
+.father {
+  justify-content: space-between;
 }
-.child{
+.child {
   margin-left: auto;
 }
 ```
@@ -116,17 +117,17 @@ li {
 ◆ **IOS 之类的兼容性用 before 和 after**
 
 ```css
-container{
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: space-between;
-       //justify-content: space-evenly;
-      &:before,
-      &:after {
-          content: '';
-          display: block;
-    }
+container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  //justify-content: space-evenly;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+  }
 }
 ```
 
@@ -240,11 +241,11 @@ columns: 3;
   /* 间隙样式 */
   column-rule: 1px dotted #000;
 }
-h1{
+h1 {
   /* 跨越所有的列【一般用于标题】 */
   column-span: all;
 }
-section{
+section {
   /* 一整段内容不换页 */
   break-inside: avoid;
 }
@@ -315,9 +316,9 @@ section{
 父元素：
 
 ```css
-.content-box::after{
+.content-box::after {
   clear: both;
-  content: '';
+  content: "";
   display: block;
 }
 ```
@@ -325,10 +326,10 @@ section{
 邻近元素：
 
 ```css
-.left{
+.left {
   float: left;
 }
-.right{
+.right {
   clear: both;
 }
 ```
@@ -384,12 +385,16 @@ Flexbox 定义了伸缩容器内伸缩项目该如何布局
 
 ## 【1】空间居中布局
 
-- [CodePen](https://codepen.io/una/pen/YzyYbBx) 示例
+<iframe height="300" style="width: 100%;" scrolling="no" title="01. Centered AF" src="https://codepen.io/una/embed/YzyYbBx?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/una/pen/YzyYbBx">
+  01. Centered AF</a> by Una Kravets (<a href="https://codepen.io/una">@una</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ```css
 .container {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 ```
 
@@ -397,59 +402,101 @@ Flexbox 定义了伸缩容器内伸缩项目该如何布局
 
 核心：`flex: 0 1 150px;`
 
-- [CodePen](https://codepen.io/una/pen/WNQdBza) 示例
+<iframe height="300" style="width: 100%;" scrolling="no" title="02. Deconstructed Pancake" src="https://codepen.io/una/embed/WNQdBza?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/una/pen/WNQdBza">
+  02. Deconstructed Pancake</a> by Una Kravets (<a href="https://codepen.io/una">@una</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ```css
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.item{
-   flex: 0 1 150px;
-   margin: 5px;
+.item {
+  flex: 0 1 150px;
+  margin: 5px;
 }
 ```
 
 ## 【3】两栏式布局
 
-- [CodePen](https://codepen.io/una/pen/gOaNeWL) 示例
+<iframe height="300" style="width: 100%;" scrolling="no" title="03. Sidebar Says" src="https://codepen.io/una/embed/gOaNeWL?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/una/pen/gOaNeWL">
+  03. Sidebar Says</a> by Una Kravets (<a href="https://codepen.io/una">@una</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: minmax(150px, 25%) 1fr;
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
 }
 ```
 
 ## 【4】三明治布局
 
-- [CodePen](https://codepen.io/una/pen/bGVXPWB) 示例
+<iframe height="300" style="width: 100%;" scrolling="no" title="04: Pancake Stack (Header, Main, Footer)" src="https://codepen.io/una/embed/bGVXPWB?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/una/pen/bGVXPWB">
+  04: Pancake Stack (Header, Main, Footer)</a> by Una Kravets (<a href="https://codepen.io/una">@una</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ```css
 .container {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 ```
 
 ## 【5】圣杯布局
 
-- [CodePen](https://codepen.io/una/pen/mdVbdBy) 示例
+<iframe height="300" style="width: 100%;" scrolling="no" title="05: Holy Grail" src="https://codepen.io/una/embed/mdVbdBy?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/una/pen/mdVbdBy">
+  05: Holy Grail</a> by Una Kravets (<a href="https://codepen.io/una">@una</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ```html
 <div class="container">
-    <header/>
-    <div/>
-    <main/>
-    <div/>
-    <footer/>
+  <header />
+  <div />
+  <main />
+  <div />
+  <footer />
 </div>
 ```
 
 ```css
 .container {
-    display: grid;
-    grid-template: auto 1fr auto / auto 1fr auto;
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
 }
 ```
+
+---
+
+# 左边定宽，右边自适应
+
+- 使用`flex`
+- 右边的`width: calc(100% - 100px)`
+- 使用`float`
+
+---
+
+# 满屏背景和固定宽度
+
+```css
+main {
+  width: 1000px; // 可不写
+  margin: 0 calc(50% - 500px;);
+}
+```
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="不写width来居中内容" src="https://codepen.io/firefly1984982452/embed/rNJqJVW?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/rNJqJVW">
+  不写width来居中内容</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+---

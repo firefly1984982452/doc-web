@@ -95,6 +95,32 @@
   </div>
 </div>
 
+### `background-clip: padding-box;`实现半透明边框
+
+<div class="example-box">
+
+  <div style="height:100px;border: 10px solid rgba(255, 255, 255, 0.5);
+  background: #fbb;">
+  默认
+  </div>
+
+  <div style="height:100px;border: 10px solid rgba(255, 255, 255, 0.5);
+  background: #fbb;background-clip: content-box;">
+  background-clip: padding-box;或background-clip: content-box;
+  </div>
+
+</div>
+
+```css
+border: 10px solid rgba(255, 255, 255, 0.5);
+background: #fbb;
+background-clip: padding-box;
+```
+
+实现： `background-clip: padding-box;`或`background-clip: content-box;`，因为默认是：`background-clip: border-box;`，边框的颜色与背景重合，所以无效。
+
+---
+
 ## 【3】`background-image`：图片
 
 属性：
@@ -169,7 +195,11 @@ background-attachment: fixed; // 背景不会随内容滚动
 
 ◆ 例子：用`background-attachment`实现滚动提示
 
-[codepen 代码地址](https://codepen.io/firefly1984982452/pen/JjMYQzz)
+<iframe height="300" style="width: 100%;" scrolling="no" title="background-attachment" src="https://codepen.io/firefly1984982452/embed/JjMYQzz?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/JjMYQzz">
+  background-attachment</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ```css
 background-image: radial-gradient(at top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));

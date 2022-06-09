@@ -116,7 +116,11 @@ box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.8);
 
 重点：用伪元素设置 blur
 
-[codepen 代码地址](https://codepen.io/firefly1984982452/pen/mdpVdyo)
+<iframe height="300" style="width: 100%;" scrolling="no" title="用伪元素设置 blur" src="https://codepen.io/firefly1984982452/embed/mdpVdyo?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/mdpVdyo">
+  用伪元素设置 blur</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 重点代码：
 

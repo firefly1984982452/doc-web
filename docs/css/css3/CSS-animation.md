@@ -105,7 +105,11 @@ p {
 
 ### 【4.1】backface-visibility：背面向屏幕时是否可见
 
-[codepen 代码地址](https://codepen.io/firefly1984982452/pen/WNdrNow)
+<iframe height="300" style="width: 100%;" scrolling="no" title="backface-visibility: hidden;" src="https://codepen.io/firefly1984982452/embed/WNdrNow?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/WNdrNow">
+  backface-visibility: hidden;</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## 【5】使用 requestAnimationFrame 手动反复调用动画
 

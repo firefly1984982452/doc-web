@@ -37,4 +37,8 @@ backdrop-filter: saturate(80%);
 
 ◆ 方法二：在`::before`里面加传统`filter`
 
-[codepen 代码地址](https://codepen.io/firefly1984982452/pen/XWVXJmy)
+<iframe height="300" style="width: 100%;" scrolling="no" title="::before里面的filter效果" src="https://codepen.io/firefly1984982452/embed/XWVXJmy?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/XWVXJmy">
+  ::before里面的filter效果</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
