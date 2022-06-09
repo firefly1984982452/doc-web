@@ -8,9 +8,11 @@
 
 - [官方实例链接](https://echarts.apache.org/examples/zh/index.html)
 
-- [官方 Gallery 更多实例链接](https://gallery.echartsjs.com/explore.html#sort=rank~timeframe=all~author=all)
+- [官方 Gallery 更多实例链接（已失效）](https://gallery.echartsjs.com/explore.html#sort=rank~timeframe=all~author=all)
 
-- [Echarts-实现过的图](https://www.makeapie.com/explore.html?u=obd-oMh8dOJBM1AU_feLTKJcUeQxYXqhc2a&type=work#sort=rank~timeframe=all~author=all)
+- [Echarts-实现过的图（已失效）](https://www.makeapie.com/explore.html?u=obd-oMh8dOJBM1AU_feLTKJcUeQxYXqhc2a&type=work#sort=rank~timeframe=all~author=all)
+
+- [isqqw](https://www.isqqw.com/)
 
 ---
 
@@ -711,3 +713,23 @@ series: [
 ```js
 hoverAnimation:false,
 ```
+
+---
+
+# 七、水波图
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="echarts-liquidfill Demo" src="https://codepen.io/firefly1984982452/embed/VwQEzxM?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/VwQEzxM">
+  echarts-liquidfill Demo</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+---
+
+# 八、雷达图
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="echarts-radar Demo" src="https://codepen.io/firefly1984982452/embed/yLvRoQy?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/yLvRoQy">
+  echarts-radar Demo</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>

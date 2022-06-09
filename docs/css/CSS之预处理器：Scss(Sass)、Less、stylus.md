@@ -1,4 +1,24 @@
-# CSS之预处理器：Scss(Sass)、Less、stylus
+# CSS 之预处理器：Scss(Sass)、Less、stylus
+
+# 前言：CSS 的进化历史
+
+- `Scss(Sass)`、`Less`、`stylus` 和 `PostCSS` 等 CSS 预处理器
+
+  提供了变量，函数，运算，继承等。扩展性，复用性都有了很大的提升，解决了一些样式重用冗余的问题，但是对于命名混乱和全局污染问题的效果不大。
+
+- `BEM` (`.block\_\_element–modifier`) 规范
+
+  比较流行的 `class` 命名规则，部分解决了命名混乱的问题，但 `className` 定义起来比较冗长，要想用的好，还是有一定难度的。
+
+- `CSS Modules`
+
+  模块化 `CSS`，将依赖的 `CSS` 文件以模块的形式注入到 `JavaScript` 里，基本上解决了全局污染、命名混乱、样式重用和冗余的问题，但是还是以文档方式组织，维护起来比较麻烦。
+
+- `CSS in JS`
+
+  组件化，方便开发维护和测试
+
+  `JavaScript` 和 `CSS` 可以方便的共享变量和方法
 
 # 一、链接
 
@@ -23,11 +43,11 @@
 `Scss`靠花括号表示嵌套关系
 
 ```css
-.father{
-    width:100px;
-    .son{
-        width:50px;
-    }
+.father {
+  width: 100px;
+  .son {
+    width: 50px;
+  }
 }
 ```
 
@@ -55,16 +75,16 @@ stylus test.scss
 
 ```html
 <link rel="stylesheet/less" type="text/css" href="styles.less" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js"></script>
 ```
 
 # 四、常用语法
 
-|       语法        |             Less             |         Scss         | Stylus | 备注 |
-| :---------------: | :--------------------------: | :------------------: | :----: | :--: |
-| 变量（Variables） |             `@`              |         `$`          | 直接写 |      |
-|  混合（Mixins）   |         `.class();`          | `@mixin`和`@include` | 直接写 |      |
-|  嵌套（Nesting）  |            `{ { } }`            |        `{ { } }`        |  缩进  |      |
+|       语法        |            Less            |         Scss         | Stylus | 备注 |
+| :---------------: | :------------------------: | :------------------: | :----: | :--: |
+| 变量（Variables） |            `@`             |         `$`          | 直接写 |      |
+|  混合（Mixins）   |        `.class();`         | `@mixin`和`@include` | 直接写 |      |
+|  嵌套（Nesting）  |         `{ { } }`          |      `{ { } }`       |  缩进  |      |
 |  函数(Functions)  | `.name {@functions ~IFFE}` |   `@function name`   |  缩进  |      |
 
 ## 【1】变量
@@ -150,8 +170,8 @@ p
 - Less 和 Scss：`{ { } }`
 
 ```css
-header{
-  p{
+header {
+  p {
     color: #f00;
   }
 }
@@ -192,15 +212,15 @@ body{
 
 ```css
 .test {
-    color: ~`palette()`;
+  color: ~`palette() `;
 }
 ```
 
 - Scss：`@function name`
 
 ```css
-@function add(a,b) {
-    @return a + b;
+@function add(a, b) {
+  @return a + b;
 }
 ```
 

@@ -1,4 +1,4 @@
-# JavaScript之进阶总结
+# JavaScript 之进阶总结
 
 # 一、`<script>`标签
 
@@ -10,9 +10,9 @@
 
 1. `<script src="script.js"></script>`：读到就立即执行。
 
-2. `<script async src="script.js"></script>`：和DOM并行进行（异步）。
+2. `<script async src="script.js"></script>`：和 DOM 并行进行（异步）。
 
-3. `<script defer src="script.js"></script>`：和DOM并行进行（异步），但在所有`script.js`的执行解析完后，`DOMContentLoaded`事件触发完成之前。
+3. `<script defer src="script.js"></script>`：和 DOM 并行进行（异步），但在所有`script.js`的执行解析完后，`DOMContentLoaded`事件触发完成之前。
 
 ---
 
@@ -24,16 +24,16 @@
 
 ```js
 function test(num) {
-    console.log(num)
-    if(num!==0){
-        --num;
-        arguments.callee(num)
-    }
+  console.log(num);
+  if (num !== 0) {
+    --num;
+    arguments.callee(num);
+  }
 }
-test(3)
-3
-2
-1
+test(3);
+3;
+2;
+1;
 ```
 
 但是`arguments.callee`已经被弃用了，所以可以尝试其它方法。
@@ -42,22 +42,22 @@ test(3)
 
 ```js
 function test(num) {
-    (function fn (){
-        console.log(num)
-        if(num !== 0) {
-            --num;
-            fn();
-        }
-    })();
+  (function fn() {
+    console.log(num);
+    if (num !== 0) {
+      --num;
+      fn();
+    }
+  })();
 }
-test(3)
+test(3);
 ```
 
 ---
 
 # 三、防抖和节流
 
-- [可视化在线 demo](http://demo.nimius.net/debounce_throttle/) 
+- [可视化在线 demo](http://demo.nimius.net/debounce_throttle/)
 
 - [滚动栏在线 demo](https://wall-wxk.github.io/blogDemo/2017/02/15/throttleAndDebounce.html)
 
@@ -229,7 +229,7 @@ handleClick(e){
 
 ```js
 console.log(str);
-var str = 'hello';
+var str = "hello";
 ```
 
 打印出`undefined`。
@@ -237,9 +237,9 @@ var str = 'hello';
 相当于
 
 ```js
-var str ;
+var str;
 console.log(str);
-str = 'hello';
+str = "hello";
 ```
 
 用 var 的话，变量名会提升，但并不会赋值。
@@ -248,7 +248,7 @@ str = 'hello';
 
 ```js
 console.log(str);
-let str = 'hello';
+let str = "hello";
 ```
 
 报错`VM67161:1 Uncaught ReferenceError: str is not defined`
@@ -261,10 +261,10 @@ let str = 'hello';
 
 ```js
 for (var i = 1; i < 6; i++) {
-    console.log(i)
-    setTimeout(() => {
-        console.log('print'+i)
-    }, 1000 * i)
+  console.log(i);
+  setTimeout(() => {
+    console.log("print" + i);
+  }, 1000 * i);
 }
 ```
 
@@ -276,11 +276,11 @@ for (var i = 1; i < 6; i++) {
 
 ```js
 for (var i = 1; i < 6; i++) {
-    let j = i;
-    console.log(j)
-    setTimeout(() => {
-        console.log('print'+j)
-    }, 1000 * j)
+  let j = i;
+  console.log(j);
+  setTimeout(() => {
+    console.log("print" + j);
+  }, 1000 * j);
 }
 ```
 
@@ -288,10 +288,10 @@ for (var i = 1; i < 6; i++) {
 
 ```js
 for (let i = 1; i < 6; i++) {
-    console.log(i)
-    setTimeout(() => {
-        console.log('print'+i)
-    }, 1000 * i)
+  console.log(i);
+  setTimeout(() => {
+    console.log("print" + i);
+  }, 1000 * i);
 }
 ```
 
@@ -303,9 +303,9 @@ for (let i = 1; i < 6; i++) {
 
 ```js
 var a = 0;
-function fn(){
-    var a = 12;
-    return a;
+function fn() {
+  var a = 12;
+  return a;
 }
 console.log(fn()); // 12
 console.log(a); // 0
@@ -316,10 +316,10 @@ console.log(a); // 0
 ```js
 var a = 0;
 function fn() {
-    var a = 12;
-    return function(){
-        return a
-    };
+  var a = 12;
+  return function () {
+    return a;
+  };
 }
 console.log(fn()()); // 12
 console.log(a); // 0
@@ -330,10 +330,10 @@ console.log(a); // 0
 ```js
 var a = 0;
 function fn() {
-    var a = 12;
-    return (function(){
-        return a
-    })();
+  var a = 12;
+  return (function () {
+    return a;
+  })();
 }
 console.log(fn()); // 12
 console.log(a); // 0
@@ -357,14 +357,14 @@ console.log(a); // 0
 
 ```js
 let a = {
-    valueOf() {
-        return 1;
-    },
-    toString() {
-        return '2';
-    },
-}
-console.log( a + '10'); // 110
+  valueOf() {
+    return 1;
+  },
+  toString() {
+    return "2";
+  },
+};
+console.log(a + "10"); // 110
 ```
 
 ## 【2】toString
@@ -373,11 +373,11 @@ console.log( a + '10'); // 110
 
 ```js
 let a = {
-    toString() {
-        return '2';
-    },
-}
-console.log(a+203); // 2203
+  toString() {
+    return "2";
+  },
+};
+console.log(a + 203); // 2203
 ```
 
 ## 【3】Symbol.toPrimitive
@@ -385,30 +385,29 @@ console.log(a+203); // 2203
 优先级最高，还可根据不同的类型转换成 Number 类型和 String 类型：
 
 ```js
-
 let obj = {
-    [Symbol.toPrimitive](hint) {
-        switch (hint) {
-        case 'number':
-            return 1234;
-            break;
+  [Symbol.toPrimitive](hint) {
+    switch (hint) {
+      case "number":
+        return 1234;
+        break;
 
-        case 'string':
-            return 'str';
-            break;
+      case "string":
+        return "str";
+        break;
 
-        case 'default':
-            return 'default';
-            break;
+      case "default":
+        return "default";
+        break;
 
-        default:
-            break;
-        }
+      default:
+        break;
     }
-}
+  },
+};
 console.log(2 * obj); // 2468
 console.log(2 + obj); // 2default
-console.log('default' === obj); // false
+console.log("default" === obj); // false
 console.log(String(obj)); /// str
 ```
 
@@ -422,7 +421,7 @@ console.log(String(obj)); /// str
 
 ```js
 var settings = {
-  username: 'lydiahallie',
+  username: "lydiahallie",
   level: 19,
   health: 90,
 };
@@ -437,7 +436,7 @@ var data = JSON.stringify(settings); // "{"username":"lydiahallie","level":19,"h
 ◆ 参数 2：参数过滤
 
 ```js
-var data = JSON.stringify(settings, ['level', 'health']); // "{"level":19,"health":90}"
+var data = JSON.stringify(settings, ["level", "health"]); // "{"level":19,"health":90}"
 ```
 
 ◆ 参数 3：参数排版
@@ -469,10 +468,10 @@ JSON.parse('{"p": 5}'); // {p: 5}
 ## 【4】参数 2：过滤函数
 
 ```js
-JSON.parse('{"p": 5}',((key,value)=>{
-    console.log(key,value);
-    return value*20;
-}))
+JSON.parse('{"p": 5}', (key, value) => {
+  console.log(key, value);
+  return value * 20;
+});
 ```
 
 返回：
@@ -486,8 +485,8 @@ p 5
 
 # 九、JavaScript 相等操作符（==）
 
-- [参考链接 1](https://www.cnblogs.com/wisewrong/p/10396002.html) 
-- [参考链接 2](https://blog.csdn.net/magic_xiang/article/details/83686224) 
+- [参考链接 1](https://www.cnblogs.com/wisewrong/p/10396002.html)
+- [参考链接 2](https://blog.csdn.net/magic_xiang/article/details/83686224)
 - [参考链接 3](https://yuchengkai.cn/docs/frontend/#%E6%93%8D%E4%BD%9C%E7%AC%A6)
 
 ## 【1】两组操作符
@@ -498,8 +497,8 @@ p 5
 
 ## 【2】相等（`==`）规则
 
-- `Boolean` 规则：Boolean(val)：如果有一个操作数是`Boolean`值，则在比较前先将其转换为数值——`false`为`0`，`true`为`1`。 
-- `String&Number` 规则：Number(string)**：如果一个是`String`，一个是`Number`，则先将`String`转为`Number`。 
+- `Boolean` 规则：Boolean(val)：如果有一个操作数是`Boolean`值，则在比较前先将其转换为数值——`false`为`0`，`true`为`1`。
+- `String&Number` 规则：Number(string)\*\*：如果一个是`String`，一个是`Number`，则先将`String`转为`Number`。
 - `Object` 规则：valueOf(obj)：如果有一个是对象，则调用`valueOf`方法（数组调`toString()`方法）。
 
 ![image](https://yck-1254263422.cos.ap-shanghai.myqcloud.com/blog/2019-06-01-043719.png)
@@ -539,9 +538,9 @@ p 5
 
 ```js
 try {
-    foo();
+  foo();
 } catch (error) {
-    console.log('异常是：'+error)
+  console.log("异常是：" + error);
 }
 ```
 
@@ -554,15 +553,15 @@ try {
 ## 【2】异步代码
 
 ```js
-function foo(){
-    setTimeout(()=>{
-        bar.arr();
-    },100);
-};
+function foo() {
+  setTimeout(() => {
+    bar.arr();
+  }, 100);
+}
 try {
-    foo();
+  foo();
 } catch (error) {
-    console.log(error)
+  console.log(error);
 }
 ```
 
@@ -602,23 +601,23 @@ Uncaught ReferenceError: bar is not defined
 page1
 
 ```js
-localStorage.setItem('send','sendValue');
+localStorage.setItem("send", "sendValue");
 ```
 
 page2
 
 ```js
-window.addEventListener('storage', (e) => {
-    console.log(e)
-})
+window.addEventListener("storage", (e) => {
+  console.log(e);
+});
 ```
 
 ---
 
 # 十四、webSocekt 多人通信
 
-- [学习链接-基础通信](http://www.imooc.com/article/286001) 
-- [学习链接-多人通信(ws)](https://www.cnblogs.com/lihaohua/p/12410511.html) 
+- [学习链接-基础通信](http://www.imooc.com/article/286001)
+- [学习链接-多人通信(ws)](https://www.cnblogs.com/lihaohua/p/12410511.html)
 - [学习链接-多人通信(nodejs-websocket)](https://zhuanlan.zhihu.com/p/64906193)
 
 ![效果](https://s1.ax1x.com/2022/03/17/q9sFJg.jpg)
@@ -627,35 +626,37 @@ window.addEventListener('storage', (e) => {
 
 ```js
 var ws = require("nodejs-websocket");
-console.log('开始建立连接...');
+console.log("开始建立连接...");
 
 // 向所有连接的客户端广播
 function boardcast(obj) {
-    server.connections.forEach(function (conn) {
-        conn.sendText(JSON.stringify(obj));
-    })
+  server.connections.forEach(function (conn) {
+    conn.sendText(JSON.stringify(obj));
+  });
 }
-var server = ws.createServer(function (conn) {
-    conn.on('text', function (str) {
-        var obj = JSON.parse(str);
-        console.log("message: " + str);
-        boardcast({
-            type: 2,
-            msg: obj.msg,
-            uid: obj.uid,
-            nickname: obj.nickname
-        });
-    })
+var server = ws
+  .createServer(function (conn) {
+    conn.on("text", function (str) {
+      var obj = JSON.parse(str);
+      console.log("message: " + str);
+      boardcast({
+        type: 2,
+        msg: obj.msg,
+        uid: obj.uid,
+        nickname: obj.nickname,
+      });
+    });
 
-    conn.on('close', function (code, reason) {
-        console.log('关闭连接!');
-    })
+    conn.on("close", function (code, reason) {
+      console.log("关闭连接!");
+    });
 
-    conn.on('error', function (code, reason) {
-        console.log('异常关闭！');
-    })
-}).listen(8001);
-console.log('webSocket建立完毕！');
+    conn.on("error", function (code, reason) {
+      console.log("异常关闭！");
+    });
+  })
+  .listen(8001);
+console.log("webSocket建立完毕！");
 ```
 
 ## 【2】客户端
@@ -745,10 +746,10 @@ $ node server.js
 # 十五、MQTT 通信
 
 ```js
-client = mqttConnect.connect(MQTT_SERVICE, options)
-client.on('connect', () => {
-  client.publish('/inner/web/dialog/close', JSON.stringify(this.options.obj))
-})
+client = mqttConnect.connect(MQTT_SERVICE, options);
+client.on("connect", () => {
+  client.publish("/inner/web/dialog/close", JSON.stringify(this.options.obj));
+});
 ```
 
 ```js
@@ -768,7 +769,7 @@ client.on('connect', () => {
 
 ```js
 if (x) {
-    function foo() {}
+  function foo() {}
 }
 ```
 
@@ -776,7 +777,7 @@ if (x) {
 
 ```js
 if (x) {
-    var foo = function() {}
+  var foo = function () {};
 }
 ```
 
@@ -795,18 +796,18 @@ false === false; // false
 
 ```js
 var obj = {
-    name: '小明'
-}
-for(var i in obj) {
-    console.log(obj.hasOwnProperty(i))
+  name: "小明",
+};
+for (var i in obj) {
+  console.log(obj.hasOwnProperty(i));
 }
 ```
 
 ◆ 遍历对象时用 `hasOwnPropery`
 
 ```js
-for(var i in obj) {
-    console.log(obj.hasOwnProperty(i))
+for (var i in obj) {
+  console.log(obj.hasOwnProperty(i));
 }
 ```
 
@@ -877,18 +878,18 @@ js 发消息给 java `window.WebViewJavaScriptBridge.send()` js 收 java 的消�
 ◆ 示例
 
 ```js
-$(".company_color").click(function(){
+$(".company_color").click(function () {
   var u = navigator.userAgent;
-  var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+  var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Linux") > -1; //android终端或者uc浏览器
   var isIos = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
   var company_name = $(this).text();
-  if(isAndroid) {
-    var msg = window.mrlou.androidIs("2",company_name);
-  } else if(isIos) {
+  if (isAndroid) {
+    var msg = window.mrlou.androidIs("2", company_name);
+  } else if (isIos) {
     //iosPhone()这个方法，ios会自动监听，并接收我传过来的值，用msg接收它传给我的值
-    broker("2",company_name);
+    broker("2", company_name);
   }
-})
+});
 ```
 
 ---
@@ -915,33 +916,35 @@ download(){
 
 # 二十、打开下载后立马关闭
 
-## 【1】下载excel文件
+## 【1】下载 excel 文件
 
 ```js
 var adom = document.createElement("a");
-adom.setAttribute("href",url);
+adom.setAttribute("href", url);
 adom.width = "0px";
 adom.height = "0px";
-adom.setAttribute("target","_blank")
-document.body.appendChild(adom)
+adom.setAttribute("target", "_blank");
+document.body.appendChild(adom);
 adom.click();
 adom.remove();
 ```
 
-## 【2】下载image文件
+## 【2】下载 image 文件
 
 ```js
-fetch(url).then(res => res.blob()).then((blob) => {
-  // 创建隐藏的可下载链接
-  const a = document.createElement('a');
-  a.style.display = 'none';
-  a.href = URL.createObjectURL(blob);
-  a.download = this.peopleList[i].peopleName;
-  document.body.appendChild(a);
-  a.click();
-  // 移除元素
-  document.body.removeChild(a);
-})
+fetch(url)
+  .then((res) => res.blob())
+  .then((blob) => {
+    // 创建隐藏的可下载链接
+    const a = document.createElement("a");
+    a.style.display = "none";
+    a.href = URL.createObjectURL(blob);
+    a.download = this.peopleList[i].peopleName;
+    document.body.appendChild(a);
+    a.click();
+    // 移除元素
+    document.body.removeChild(a);
+  });
 ```
 
 ---
@@ -971,8 +974,7 @@ $ lighthouse https://www.cnblogs.com/
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
+  <head> </head>
 
   <body>
     <textarea name="" id="data" cols="100" rows="20">
@@ -994,7 +996,7 @@ $ lighthouse https://www.cnblogs.com/
       function run() {
         var outDom = window.hello.document;
         outDom.open();
-        var inDom = document.getElementById('data');
+        var inDom = document.getElementById("data");
         outDom.write(inDom.value);
         outDom.close();
       }
@@ -1101,8 +1103,8 @@ export default {
 main.js
 
 ```js
-import numberAnimation from './components/public/numberAnimation.vue'
-Vue.component('numberAnimation', numberAnimation)
+import numberAnimation from "./components/public/numberAnimation.vue";
+Vue.component("numberAnimation", numberAnimation);
 ```
 
 test.vue
@@ -1116,7 +1118,7 @@ test.vue
 # 二十五、全屏
 
 ```js
-document.querySelector('body').requestFullscreen(); // 全屏
+document.querySelector("body").requestFullscreen(); // 全屏
 document.exitFullscreen(); // 退出全屏
 ```
 
@@ -1126,7 +1128,7 @@ document.exitFullscreen(); // 退出全屏
 
 ```js
 const num = 123;
-var a = {num};
+var a = { num };
 console.log(a); // {num:123}
 ```
 
@@ -1135,10 +1137,10 @@ console.log(a); // {num:123}
 # 二十七、`event.getModifierState('CapsLock')`检测到当前开启了大写键盘，而不是用`shift`生成的大写字母
 
 ```js
-const passwordInput = document.getElementById('password');
-passwordInput.addEventListener('keyup', function (event) {
-  if (event.getModifierState('CapsLock')) {
-    console.log('检测到当前开启了大写键盘，而不是用shift生成的大写字母');
+const passwordInput = document.getElementById("password");
+passwordInput.addEventListener("keyup", function (event) {
+  if (event.getModifierState("CapsLock")) {
+    console.log("检测到当前开启了大写键盘，而不是用shift生成的大写字母");
   }
 });
 ```
@@ -1150,7 +1152,7 @@ passwordInput.addEventListener('keyup', function (event) {
 ```js
 // 原来的：
 if (true) {
-    doSomething();
+  doSomething();
 }
 // 优化成：
 true && doSomething();
@@ -1162,9 +1164,7 @@ true && doSomething();
 
 ```js
 // 原来的：
-let x = (foo !== null && foo !== undefined)
-    ? foo
-    : bar();
+let x = foo !== null && foo !== undefined ? foo : bar();
 
 // 优化后：
 let x = foo ?? bar();
@@ -1224,32 +1224,32 @@ css animation：
 Web Animation API 更多的操作方法：
 
 ```js
-rotateAni.play() //播放
-rotateAni.pause() //暂停
-rotateAni.finish()  //对于有限次的动画而言，直接停止动画，且跳到动画结束位置
-rotateAni.cancel()  //取消动画过程，直接跳到动画的开始位置
-rotateAni.reverse() //让动画反向执行到动画执行的原点,会将playbackTate从1变成-1
+rotateAni.play(); //播放
+rotateAni.pause(); //暂停
+rotateAni.finish(); //对于有限次的动画而言，直接停止动画，且跳到动画结束位置
+rotateAni.cancel(); //取消动画过程，直接跳到动画的开始位置
+rotateAni.reverse(); //让动画反向执行到动画执行的原点,会将playbackTate从1变成-1
 ```
 
 Web Animation API 的事件监听：
 
-event方式：
+event 方式：
 
 ```js
-rotateAni.oncancel = function(){
-    doSomething();
-}
-rotateAni.onfinish = function(){
-    doSomething();
-}
+rotateAni.oncancel = function () {
+  doSomething();
+};
+rotateAni.onfinish = function () {
+  doSomething();
+};
 ```
 
-promise方式：
+promise 方式：
 
 ```js
 rotateAni.finished.then(() => {
   console.log(rotateApi);
-})
+});
 ```
 
 ---
@@ -1259,7 +1259,20 @@ rotateAni.finished.then(() => {
 `undefined`在闭包时可更改：
 
 ```js
-(() => { let undefined = 1; console.log(undefined) })()
+(() => {
+  let undefined = 1;
+  console.log(undefined);
+})();
 ```
 
 `void 任何值`永远都是`undefined`
+
+# 禁用鼠标左键
+
+```js
+$(document).ready(function () {
+  $(document).bind("contextmenu", function (e) {
+    return false;
+  });
+});
+```

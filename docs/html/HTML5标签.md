@@ -1,6 +1,6 @@
-# HTML5标签
+# HTML5 标签
 
-- [阮一峰的HTML 教程](https://wangdoc.com/html/)
+- [阮一峰的 HTML 教程](https://wangdoc.com/html/)
 - [《HTML5 权威指南》](https://book.douban.com/subject/25786074/)
 
 !> 只记录了冷门的不常用的知识，其它基础的没有记录。
@@ -15,18 +15,40 @@
 
 ```html
 <head>
-  <base href="https://www.baidu.cn/" target="_blank">
+  <base href="https://www.baidu.cn/" target="_blank" />
 </head>
 
 <body>
   <a href="https://www.baidu.com/">打开默认网址以外的网址：写全称</a>
   <a href="img/PCfb_5bf082d29588c07f842ccde3f97243ea.png">打开默认网址下的页面：写后缀</a>
-  <img src="img/PCfb_5bf082d29588c07f842ccde3f97243ea.png" alt="" srcset="">
-  <img src="https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png" alt="" srcset="">
+  <img src="img/PCfb_5bf082d29588c07f842ccde3f97243ea.png" alt="" srcset="" />
+  <img src="https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png" alt="" srcset="" />
 </body>
 ```
 
 这时`<a>`标签不用再写`target="_blank"`也能直接新标签页打写，`<img>`标签不用再写网址前缀也可以直接获取到地址。如果想用默认地址以外的地址：**写全称**。
+
+## 【1】禁止缓存
+
+```html
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+```
+
+## 【2】添加标签栏 logo
+
+```html
+<link rel="shortcut icon" type="image/x-icon" href="./static/logo.ico" rel="shortcut icon" />
+```
+
+!> `vue-cli` 项目中，要把`.ico` 文件放在 `static` 文件中，并重新编译运行
+
+## 【3】自适应手机
+
+```html
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+```
 
 ---
 
@@ -71,7 +93,7 @@
 2. 地址栏`url`；
 3. `tabindex`为正整数。
 
-**tabindex为负数时不参与**
+**tabindex 为负数时不参与**
 
 ## 【4】`accessKey`：使用自定义键来聚焦
 
@@ -81,7 +103,7 @@
 
 使用：
 
-- window：使用<kbd>Alt</kbd> + `accessKey` (或者 <kbd>Shift</kbd> + <kbd>Alt</kbd> + `accessKey`) 
+- window：使用<kbd>Alt</kbd> + `accessKey` (或者 <kbd>Shift</kbd> + <kbd>Alt</kbd> + `accessKey`)
 
 - macbook：使用<kbd>control</kbd> + <kbd>option</kbd> + `accessKey`。
 
@@ -134,9 +156,7 @@
 ## 【8】`spellcheck`：打开拼写检查
 
 ```html
-<p contenteditable="true" spellcheck="true">
-英语单词 separate 容易写错成 seperate。
-</p>
+<p contenteditable="true" spellcheck="true">英语单词 separate 容易写错成 seperate。</p>
 ```
 
 <div class="example-box">
@@ -145,7 +165,7 @@
   </p>
 </div>
 
-?> chrome浏览器下，鼠标点击上方示例后可看到写错的单词seperate下面有错误的标识
+?> chrome 浏览器下，鼠标点击上方示例后可看到写错的单词 seperate 下面有错误的标识
 
 ## 【9】`data-`：放置自定义数据
 
@@ -158,7 +178,7 @@
 ```
 
 ```html
-<h1 data-yeah='显示信息：'>data-yeah</h1>
+<h1 data-yeah="显示信息：">data-yeah</h1>
 ```
 
 <style>
@@ -234,9 +254,7 @@ body>header{页眉}+(main>article>h1{文章标题}+section>h2{第一章}+p{文�
 `<wbr>`标签可以自动断行。如果一行的宽度足够，则不断行；如果宽度不够，需要断行，就在`<wbr>`的位置的断行。
 
 ```html
-<p>
-Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
-</p>
+<p>Fernstraßen<wbr />bau<wbr />privat<wbr />finanzierungs<wbr />gesetz</p>
 ```
 
 <div class="example-box">
@@ -259,9 +277,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 - `<var>`标签表示代码或数学公式的变量。
 
 ```html
-<p>勾股定理是
-  <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>
-。</p>
+<p>勾股定理是 <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup> 。</p>
 ```
 
 <div class="example-box">
@@ -331,8 +347,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 - `<kbd>`：键盘代码；
 
 ```html
-<p>Windows 可以按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Del</kbd> 
-重启。</p>
+<p>Windows 可以按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Del</kbd> 重启。</p>
 ```
 
 <div class="example-box">
@@ -343,8 +358,8 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 - `<samp>`：示例。
 
 ```html
-<p>如果使用没有定义的变量，浏览器会报错：
-  <samp>Uncaught ReferenceError: foo is not defined</samp>。
+<p>
+  如果使用没有定义的变量，浏览器会报错： <samp>Uncaught ReferenceError: foo is not defined</samp>。
 </p>
 ```
 
@@ -395,8 +410,8 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ```html
 <p>
-通过 TCP/IP 协议连接的全球性计算机网络，叫做
-<dfn title="全球性计算机网络">Internet</dfn>。
+  通过 TCP/IP 协议连接的全球性计算机网络，叫做
+  <dfn title="全球性计算机网络">Internet</dfn>。
 </p>
 ```
 
@@ -410,10 +425,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【16】`<ruby>`：文字的语音注释
 
 ```html
-<ruby>
-汉<rp>(</rp><rt>han</rt><rp>)</rp>
-字<rp>(</rp><rt>zi</rt><rp>)</rp>
-</ruby>
+<ruby> 汉<rp>(</rp><rt>han</rt><rp>)</rp> 字<rp>(</rp><rt>zi</rt><rp>)</rp> </ruby>
 ```
 
 <div class="example-box">
@@ -623,7 +635,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 图片不显示时，图片的位置会显示该文本。
 
 ```html
-<img src="a.jpg" alt="示例图片">
+<img src="a.jpg" alt="示例图片" />
 ```
 
 <div class="example-box">
@@ -654,10 +666,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【6】响应式-`srcset`：设置不同像素时的图片地址
 
 ```html
-<img srcset="foo-320w.jpg,
-             foo-480w.jpg 1080w,
-             foo-640w.jpg 1920w"
-     src="foo-640w.jpg">
+<img srcset="foo-320w.jpg, foo-480w.jpg 1080w, foo-640w.jpg 1920w" src="foo-640w.jpg" />
 ```
 
 ## 【7】响应式-`sizes`：适配不同屏幕时的图片
@@ -665,23 +674,22 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 须与`srcset`属性一起使用。
 
 ```html
-<img srcset="foo-160.jpg 160w,
-             foo-320.jpg 320w,
-             foo-640.jpg 640w,
-             foo-1280.jpg 1280w"
-     sizes="(max-width: 440px) 100vw,
+<img
+  srcset="foo-160.jpg 160w, foo-320.jpg 320w, foo-640.jpg 640w, foo-1280.jpg 1280w"
+  sizes="(max-width: 440px) 100vw,
             (max-width: 900px) 33vw,
             254px"
-     src="foo-1280.jpg">
+  src="foo-1280.jpg"
+/>
 ```
 
 ## 【8】响应式-`<picture>`：指定不同情况加载的图片
 
 ```html
 <picture>
-  <source media="(max-width: 500px)" srcset="cat-vertical.jpg">
-  <source media="(min-width: 501px)" srcset="cat-horizontal.jpg">
-  <img src="cat.jpg" alt="cat">
+  <source media="(max-width: 500px)" srcset="cat-vertical.jpg" />
+  <source media="(min-width: 501px)" srcset="cat-horizontal.jpg" />
+  <img src="cat.jpg" alt="cat" />
 </picture>
 ```
 
@@ -693,7 +701,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ```html
 <figure>
-  <img src="https://example.com/foo.jpg">
+  <img src="https://example.com/foo.jpg" />
   <figcaption>说明图片的文字。</figcaption>
 </figure>
 ```
@@ -727,15 +735,15 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ```html
 <div class="example-box">
-  <video 
-  controls 
-  autoplay 
-  controls 
-  loop 
-  muted  
-  poster="https://s1.ax1x.com/2022/03/11/bI6bE8.png" 
-  src="https://www.w3school.com.cn/i/movie.mp4">
-  </video>
+  <video
+    controls
+    autoplay
+    controls
+    loop
+    muted
+    poster="https://s1.ax1x.com/2022/03/11/bI6bE8.png"
+    src="https://www.w3school.com.cn/i/movie.mp4"
+  ></video>
 </div>
 ```
 
@@ -755,24 +763,23 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 <button onclick="screenShot()">Screenshot</button>
 <script>
   function screenShot() {
-    const video = document.getElementById('video');
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
+    const video = document.getElementById("video");
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     ctx.drawImage(video, 0, 0);
 
     // download picture
-    const a = document.createElement('a');
-    a.href = canvas.toDataURL('image/png');
+    const a = document.createElement("a");
+    a.href = canvas.toDataURL("image/png");
     a.download = `${Date.now()}`;
     a.click();
   }
 </script>
 ```
 
-!> 1. 浏览器需要一个服务器环境，否则 `canvas` 的 `toDataURL` 方法会报错。该方法是将其转换为 base64 格式的图片地址。<br />
-2. 可使用本地视频和 flv 格式的监控视频。
+!> 1. 浏览器需要一个服务器环境，否则 `canvas` 的 `toDataURL` 方法会报错。该方法是将其转换为 base64 格式的图片地址。<br /> 2. 可使用本地视频和 flv 格式的监控视频。
 
 ---
 
@@ -850,9 +857,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 这时候`rel="noopener"`闪亮登场，打开链接后你会发现`window.opener`已经被置为了`null`。
 
 ```html
-<a href="https://baidu.com/" target="_blank" rel="noopener">
-	baidu.com
-</a>
+<a href="https://baidu.com/" target="_blank" rel="noopener"> baidu.com </a>
 ```
 
 <div class="example-box">
@@ -874,21 +879,24 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 提供不同分辨率的图标文件：
 
 ```html
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 ```
 
 使用 emoji 作为 Favicon
 
 ```html
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💩</text></svg>">
+<link
+  rel="icon"
+  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💩</text></svg>"
+/>
 ```
 
 ## 【2.1】media
 
 ```html
-<link rel="preload" as="image" href="map.png" media="(max-width: 600px)">
-<link rel="preload" as="script" href="map.js" media="(min-width: 601px)">
+<link rel="preload" as="image" href="map.png" media="(max-width: 600px)" />
+<link rel="preload" as="script" href="map.js" media="(min-width: 601px)" />
 ```
 
 ## 【3】`<script>`
@@ -915,9 +923,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 不支持`sciprt`时
 
 ```js
-<noscript>
-  您的浏览器不能执行 JavaScript 语言，页面无法正常显示。
-</noscript>
+<noscript>您的浏览器不能执行 JavaScript 语言，页面无法正常显示。</noscript>
 ```
 
 ---
@@ -928,9 +934,15 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ```html
 <table>
-  <thead>... ...</thead>
-  <tbody>... ...</tbody>
-  <tfoot>... ...</tfoot>
+  <thead>
+    ... ...
+  </thead>
+  <tbody>
+    ... ...
+  </tbody>
+  <tfoot>
+    ... ...
+  </tfoot>
 </table>
 ```
 
@@ -946,8 +958,8 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ```html
 <fieldset>
   <legend>学生情况登记</legend>
-  <p>年龄：<input type="text" name="age"></p>
-  <p>性别：<input type="text" name="gender"></p>
+  <p>年龄：<input type="text" name="age" /></p>
+  <p>性别：<input type="text" name="gender" /></p>
 </fieldset>
 ```
 
@@ -963,14 +975,14 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 
 ```html
 <label for="ice-cream-choice">冰淇淋：</label>
-<input type="text" list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+<input type="text" list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
 
 <datalist id="ice-cream-flavors">
-  <option value="巧克力">
-  <option value="椰子">
-  <option value="薄荷">
-  <option value="草莓">
-  <option value="香草">
+  <option value="巧克力"></option>
+  <option value="椰子"></option>
+  <option value="薄荷"></option>
+  <option value="草莓"></option>
+  <option value="香草"></option>
 </datalist>
 ```
 
@@ -993,8 +1005,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 - `<output>`：输出。
 
 ```html
-<input type="number" name="a" value="10"> +
-<input type="number" name="b" value="10"> =
+<input type="number" name="a" value="10" /> + <input type="number" name="b" value="10" /> =
 <output name="result">20</output>
 ```
 
@@ -1010,8 +1021,8 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 - `<meter>`：指示器。
 
 ```html
-<progress id="file" max="100" value="70"> 70% </progress>
-<meter id="file" max="100" value="70"> 70% </meter>
+<progress id="file" max="100" value="70">70%</progress>
+<meter id="file" max="100" value="70">70%</meter>
 ```
 
 <div class="example-box">
@@ -1059,6 +1070,7 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 - [链接](https://www.runoob.com/tags/tag-input.html)
 
 属性：
+
 - maxlength：最大输入长度
 - minlength：最小输入长度
 - autocomplete：自动补全
@@ -1082,15 +1094,13 @@ Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz
 ## 【1】`<dialog>`：对话框
 
 ```html
-<dialog open>
-  Hello world
-</dialog>
+<dialog open>Hello world</dialog>
 ```
 
 JS 操作：
 
 ```js
-const modal = document.querySelector('dialog');
+const modal = document.querySelector("dialog");
 // 对话框显示，相当于增加 open 属性
 modal.showModal();
 // 对话框关闭，相当于移除 open 属性
@@ -1110,6 +1120,7 @@ modal.close();
   这是一段解释文本。
 </details>
 ```
+
 <div class="example-box">
   <details open>
     <summary>这是标题</summary>
@@ -1156,8 +1167,8 @@ summary::-webkit-details-marker {
 
 ```html
 <figure>
-		<figcaption>Get browser details using <code>navigator</code>.</figcaption>
-		<pre>
+  <figcaption>Get browser details using <code>navigator</code>.</figcaption>
+  <pre>
 	function NavigatorExample() {
 		var txt;
 		txt = "Browser CodeName: " + navigator.appCodeName;
@@ -1166,8 +1177,9 @@ summary::-webkit-details-marker {
 		txt+= "Cookies Enabled: " + navigator.cookieEnabled;
 		txt+= "Platform: " + navigator.platform;
 		txt+= "User-agent header: " + navigator.userAgent;
-	}</pre>
-	</figure>
+	}</pre
+  >
+</figure>
 ```
 
 # 十五、实体
@@ -1190,10 +1202,10 @@ summary::-webkit-details-marker {
 
 ## 【1】`<marquee>`：跑马灯
 
-兼容性在各大浏览器都挺好，但MDN不推荐使用，以后也可能会删除。
+兼容性在各大浏览器都挺好，但 MDN 不推荐使用，以后也可能会删除。
 
 ```html
-<marquee >hello world , your canvas is good.</marquee>
+<marquee>hello world , your canvas is good.</marquee>
 ```
 
 <div class="example-box">

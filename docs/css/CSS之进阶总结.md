@@ -1,4 +1,4 @@
-# CSS之进阶总结
+# CSS 之进阶总结
 
 # 一、CSS 的进化历史
 
@@ -51,17 +51,17 @@
 ## 【1】CSS 禁止鼠标点击
 
 ```css
-pointer-events:none;
+pointer-events: none;
 ```
 
 ## 【2】禁用鼠标左键
 
 ```js
-$(document).ready(function(){
-  $(document).bind('contextmenu', function(e){
+$(document).ready(function () {
+  $(document).bind("contextmenu", function (e) {
     return false;
-  })
-})
+  });
+});
 ```
 
 ## 【3】`pointer-events`实现鼠标穿透效果
@@ -72,18 +72,18 @@ $(document).ready(function(){
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title></title>
     <style>
       .top {
-          width: 100px;
-          height: 90px;
-          position: absolute;
-          top: 0;
-          left: 65px;
-          background: yellow;
-          opacity: 0.5;
-          pointer-events: none;
+        width: 100px;
+        height: 90px;
+        position: absolute;
+        top: 0;
+        left: 65px;
+        background: yellow;
+        opacity: 0.5;
+        pointer-events: none;
       }
     </style>
   </head>
@@ -91,7 +91,7 @@ $(document).ready(function(){
     <!-- 下方的链接 -->
     <ul>
       <li><a href="http://www.hangge.com">航歌</a></li>
-        <li><a href="http://www.hangge.com">hangge.com</a></li>
+      <li><a href="http://www.hangge.com">hangge.com</a></li>
     </ul>
     <!-- 上方黄色div -->
     <div class="top"></div>
@@ -107,48 +107,49 @@ $(document).ready(function(){
 
 ```html
 <template>
-	<div class="page">
-        <map1 class="map" />
-        <home class="home-content" />
-	</div>
+  <div class="page">
+    <map1 class="map" />
+    <home class="home-content" />
+  </div>
 </template>
 
 <style lang="less" scoped>
-.page {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	.map{
-		width:100%;
-		height:100%;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-	}
-	.home-content{
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-    pointer-events: none;
-    .left,.right{
-        pointer-events:all
+  .page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .map {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
     }
-	}
-}
+    .home-content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      .left,
+      .right {
+        pointer-events: all;
+      }
+    }
+  }
 </style>
-
 ```
 
 重点：`map`放在底层，`home`的`总DOM`设置为`none`，然后哪些地方需要点击就设置为`all`。
 
 ```css
-.home{
-    pointer-events: none;
-    .left,.right{
-        pointer-events:all
-    }
+.home {
+  pointer-events: none;
+  .left,
+  .right {
+    pointer-events: all;
+  }
 }
 ```
 
@@ -165,11 +166,12 @@ $(document).ready(function(){
 如：
 
 ```css
-html,body{
-	font-size: 20px;
+html,
+body {
+  font-size: 20px;
 }
-p{
-	font-size: 2em;
+p {
+  font-size: 2em;
 }
 ```
 
@@ -180,22 +182,22 @@ p{
 ## 【2】rem
 
 ```js
-(function() {
-	//首先取得当得屏幕宽度
-	var width = window.screen.width;
-	var scaleSize = 100,
-		designSize = 375;
-		//用当得宽度除以（设计尺寸除以缩放尺寸）
-	var size = width / (designSize / scaleSize);
-	//设置font-size
-	document.getElementsByTagName('html')[0].style.fontSize = (size) + 'px';
+(function () {
+  //首先取得当得屏幕宽度
+  var width = window.screen.width;
+  var scaleSize = 100,
+    designSize = 375;
+  //用当得宽度除以（设计尺寸除以缩放尺寸）
+  var size = width / (designSize / scaleSize);
+  //设置font-size
+  document.getElementsByTagName("html")[0].style.fontSize = size + "px";
 })();
 ```
 
 ## 【3】视口的相对单位
 
-- `vm`：1/100的视口宽度；
-- `vh`：1/100的视口高度；
+- `vm`：1/100 的视口宽度；
+- `vh`：1/100 的视口高度；
 - `vmax`：当前`vw`和`vh`中较大的一个值；
 - `vmin`：当前`vw`和`vh`中较小的一个值；
 - `vmin`、`vmax`的作用：在做移动端页面开发时，会使得文字大小在横竖屏下保持一致。
@@ -205,41 +207,37 @@ p{
 ```html
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>CSS | max-inline-size Property</title>
+    <style>
+      h1 {
+        color: green;
+      }
 
-<head>
-  <title>CSS | max-inline-size Property</title>
-  <style>
-    h1 {
-      color: green;
-    }
+      div {
+        background-color: green;
+        width: 200px;
+        height: 20px;
+      }
 
-    div {
-      background-color: green;
-      width: 200px;
-      height: 20px;
-    }
+      .one {
+        max-inline-size: 10px;
+        background-color: cyan;
+      }
+    </style>
+  </head>
 
-    .one {
-      max-inline-size: 10px;
-      background-color: cyan;
-    }
-  </style>
-</head>
-
-<body>
-  <center>
-    <h1>Geeksforgeeks</h1>
-    <b>CSS | max-inline-size Property</b>
-    <br>
-    <br>
-    <div>
-      <p class="one">
-        A Computer Science Portal for Geeks
-      </p>
-    </div>
-  </center>
-</body>
-
+  <body>
+    <center>
+      <h1>Geeksforgeeks</h1>
+      <b>CSS | max-inline-size Property</b>
+      <br />
+      <br />
+      <div>
+        <p class="one">A Computer Science Portal for Geeks</p>
+      </div>
+    </center>
+  </body>
 </html>
 ```
 
@@ -247,9 +245,9 @@ p{
 
 ```css
 html {
-  font-size: calc(100vw/7.5)
+  font-size: calc(100vw / 7.5);
 }
-p{
+p {
   width: 7.5rem;
 }
 ```
@@ -314,10 +312,10 @@ p{
 用`--`命名，用`val()`使用。
 
 ```css
-:root{
+:root {
   --main-color: #fbb;
 }
-p{
+p {
   color: var(--main-color);
 }
 ```
@@ -355,7 +353,10 @@ Table 表格中，定了 width，如果其它的内容很高，内容少的可�
 ◆ 方法一：设置`html`和`body`
 
 ```css
-html,body{heigth:100%}
+html,
+body {
+  heigth: 100%;
+}
 ```
 
 ◆ 方法二：使用绝对定位
@@ -367,18 +368,21 @@ position: absolute;
 
 ## 【7】max-width/min-width 和 max-height/min-height
 
-- 特性1：能超越`!important`。
+- 特性 1：能超越`!important`。
 
 如下例，最终生效的是`400px`。
 
 ```html
 <img src="./floor.jpeg" style="width: 300px!important;" />
 ```
+
 ```css
-img{min-width: 400px;}
+img {
+  min-width: 400px;
+}
 ```
 
-- 特性2：`min-width` 覆盖 `max-width`。
+- 特性 2：`min-width` 覆盖 `max-width`。
 
 如果`min-width`和`max-width`冲突时，取`min-width`的值。
 
@@ -409,7 +413,7 @@ max-width: 350px;
 设置元素的宽高比为 `10:1`：
 
 ```css
-.box{
+.box {
   aspect-ratio: 10 / 1;
 }
 ```
@@ -432,10 +436,11 @@ max-width: 350px;
 ## 【1】文字渐变
 
 ```css
-background: linear-gradient(to bottom, #8AF0FF,#3780E6);;
+background: linear-gradient(to bottom, #8af0ff, #3780e6);
 -webkit-background-clip: text;
 color: transparent;
 ```
+
 <div class="example-box">
   <h1 style="background: linear-gradient(to bottom, #8AF0FF,#3780E6);-webkit-background-clip: text;color: transparent;">文字渐变</h1>
 </div>
@@ -449,7 +454,9 @@ color: transparent;
 - `antialiased`: 抗锯齿很好。
 
 ```css
-body{-webkit-font-smoothing: antialiased;}
+body {
+  -webkit-font-smoothing: antialiased;
+}
 ```
 
 `Gecko`内核的抗锯齿效果：
@@ -461,6 +468,7 @@ body{-webkit-font-smoothing: antialiased;}
 ```css
 -webkit-text-stroke: 1px #ff0;
 ```
+
 <div class="example-box">
   <p style="-webkit-text-stroke:1px #ff0;">文字描边</p>
 </div>
@@ -470,6 +478,7 @@ body{-webkit-font-smoothing: antialiased;}
 ```css
 text-shadow: 5px 5px 5px #f00;
 ```
+
 <div class="example-box">
   <p style="text-shadow: 5px 5px 5px #f00;">文字阴影</p>
 </div>
@@ -480,6 +489,7 @@ text-shadow: 5px 5px 5px #f00;
 -webkit-text-fill-color: red;
 color: green;
 ```
+
 <div class="example-box">
   <p style="-webkit-text-fill-color: red;color: green;">文字颜色</p>
 </div>
@@ -494,26 +504,27 @@ color: green;
 
 ```css
 @font-face {
-    font-family: DIGITAL-Dream;
-    src: url("../assets/font/DIGITAL-Dream.ttf");
+  font-family: DIGITAL-Dream;
+  src: url("../assets/font/DIGITAL-Dream.ttf");
 }
 
-a{
-  font-family: 'DIGITAL-Dream';
+a {
+  font-family: "DIGITAL-Dream";
 }
 ```
 
 ## 【8】垂直排版
 
 ```css
-p{
+p {
   text-orientation: upright; // 数字横向显示
   writing-mode: vertical-lr; // 竖向排版
 }
-p span{
+p span {
   text-combine-upright: all; // 数字联排
 }
 ```
+
 <div class="example-box" style="font-size:.8em;">
   <p style="writing-mode: vertical-lr;text-orientation: upright;">数字横向123</p>
   <hr />
@@ -577,13 +588,14 @@ p span{
 ## 【1】初始值：initial
 
 ```css
-html,body{
+html,
+body {
   color: red;
 }
-p{
+p {
   color: green;
 }
-.main p{
+.main p {
   color: initial;
 }
 ```
@@ -593,13 +605,14 @@ p{
 ## 【2】继承：inherit
 
 ```css
-html,body{
+html,
+body {
   color: red;
 }
-p{
+p {
   color: green;
 }
-.main p{
+.main p {
   color: inherit;
 }
 ```
@@ -609,13 +622,14 @@ p{
 ## 【3】复原：unset
 
 ```css
-html,body{
+html,
+body {
   color: red;
 }
-p{
+p {
   color: green;
 }
-.main p{
+.main p {
   color: unset;
 }
 ```
@@ -680,9 +694,9 @@ window.print();
 
 @media print {
   /* 只对打印有效 */
-  	.noprint {
-      display: none
-    }
+  .noprint {
+    display: none;
+  }
 }
 ```
 
@@ -708,7 +722,6 @@ window.print();
 
   footer {
     display: table-footer-group;
-
   }
 }
 ```
@@ -765,7 +778,9 @@ table {
     <tr>
       <th>City</th>
       <th>Population</th>
+    </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>Sydney</td>
@@ -809,16 +824,16 @@ table {
   border: solid 1px #222;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: '***';
+  text-overflow: "***";
 }
 
-@supports (text-overflow: '***') {
+@supports (text-overflow: "***") {
   .info {
-    text-overflow: '***';
+    text-overflow: "***";
   }
 }
 
-@supports not (text-overflow: '***') {
+@supports not (text-overflow: "***") {
   .info {
     text-overflow: ellipsis;
   }
@@ -979,54 +994,55 @@ counters(name, string, style) string
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo</title>
+    <style>
+      li {
+        list-style: none;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <title>Demo</title>
-  <style>
-    li {
-      list-style: none;
-    }
+      .father {
+        padding-left: 20px;
+        counter-reset: countS;
+      }
 
-    .father {
-      padding-left: 20px;
-      counter-reset: countS;
-    }
+      .son:before {
+        content: counters(countS, "-") ".";
+        counter-increment: countS;
+      }
+    </style>
+  </head>
 
-    .son:before {
-      content: counters(countS, '-') '.';
-      counter-increment: countS;
-    }
-  </style>
-</head>
-
-<body>
-  <ul class="father">
-    <li class="son">唐代
-      <ul class="father">
-        <li class="son">李白</li>
-        <li class="son">杜甫</li>
-        <li class="son">白居易</li>
-      </ul>
-    </li>
-    <li class="son">宋代
-      <ul class="father">
-        <li class="son">苏门三父子
-          <ul class="father">
-            <li class="son">苏洵</li>
-            <li class="son" style="display: none;">苏轼</li>
-            <li class="son">苏辙</li>
-          </ul>
-        </li>
-        <li class="son">辛弃疾</li>
-        <li class="son">李清照</li>
-      </ul>
-    </li>
-    <li class="son">元代</li>
-    <li class="son">明代</li>
-  </ul>
-</body>
-
+  <body>
+    <ul class="father">
+      <li class="son">
+        唐代
+        <ul class="father">
+          <li class="son">李白</li>
+          <li class="son">杜甫</li>
+          <li class="son">白居易</li>
+        </ul>
+      </li>
+      <li class="son">
+        宋代
+        <ul class="father">
+          <li class="son">
+            苏门三父子
+            <ul class="father">
+              <li class="son">苏洵</li>
+              <li class="son" style="display: none;">苏轼</li>
+              <li class="son">苏辙</li>
+            </ul>
+          </li>
+          <li class="son">辛弃疾</li>
+          <li class="son">李清照</li>
+        </ul>
+      </li>
+      <li class="son">元代</li>
+      <li class="son">明代</li>
+    </ul>
+  </body>
 </html>
 ```
 
@@ -1102,7 +1118,9 @@ overflow-anchor: none; // 禁止滚动锚点
 - [学习链接](https://www.zhangxinxu.com/wordpress/2018/01/css-caret-color-first-line/)
 
 ```css
-input.custom { caret-color: #0f0; }
+input.custom {
+  caret-color: #0f0;
+}
 ```
 
 <div class="example-box">
@@ -1140,6 +1158,7 @@ user-select: auto | text | none | contain | all;
   }
 </style>
 ```
+
 ```html
 <section>
   <p>This is a section!</p>
@@ -1147,7 +1166,8 @@ user-select: auto | text | none | contain | all;
   <aside class="widget">
     <p>This is a little widget.</p>
   </aside>
-<section>
+  <section></section>
+</section>
 ```
 
 ---
@@ -1161,108 +1181,106 @@ user-select: auto | text | none | contain | all;
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      background-color: #25272c;
-      display: grid;
-      place-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      background-color: #eb5bec;
-      width: 300px;
-      height: 400px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .box {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      opacity: 0.5;
-      background-color: #471e45;
-      animation: grow 10s linear infinite;
-    }
-
-    .box {
-      animation-delay: 1s;
-    }
-
-    .box:nth-child(2) {
-      animation-delay: 2s;
-    }
-
-    .box:nth-child(3) {
-      animation-delay: 3s;
-    }
-
-    .box:nth-child(4) {
-      animation-delay: 4s;
-    }
-
-    .box:nth-child(5) {
-      animation-delay: 5s;
-    }
-
-    .box:nth-child(6) {
-      animation-delay: 6s;
-    }
-
-    .box:nth-child(7) {
-      animation-delay: 7s;
-    }
-
-    .box:nth-child(8) {
-      animation-delay: 8s;
-    }
-
-    .box:nth-child(9) {
-      animation-delay: 9s;
-    }
-
-    .box:nth-child(10) {
-      animation-delay: 10s;
-    }
-
-    @keyframes grow {
-      from {
-        opacity: .5;
-        transform: scale(0);
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #25272c;
+        display: grid;
+        place-items: center;
+        height: 100vh;
       }
 
-      to {
-        opacity: 0;
-        transform: scale(3.85);
+      .container {
+        background-color: #eb5bec;
+        width: 300px;
+        height: 400px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div class="container">
-    <div class="box">01</div>
-    <div class="box">02</div>
-    <div class="box">03</div>
-    <div class="box">04</div>
-    <div class="box">05</div>
-    <div class="box">06</div>
-    <div class="box">07</div>
-    <div class="box">08</div>
-    <div class="box">09</div>
-    <div class="box">10</div>
-  </div>
-</body>
+      .box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        opacity: 0.5;
+        background-color: #471e45;
+        animation: grow 10s linear infinite;
+      }
 
+      .box {
+        animation-delay: 1s;
+      }
+
+      .box:nth-child(2) {
+        animation-delay: 2s;
+      }
+
+      .box:nth-child(3) {
+        animation-delay: 3s;
+      }
+
+      .box:nth-child(4) {
+        animation-delay: 4s;
+      }
+
+      .box:nth-child(5) {
+        animation-delay: 5s;
+      }
+
+      .box:nth-child(6) {
+        animation-delay: 6s;
+      }
+
+      .box:nth-child(7) {
+        animation-delay: 7s;
+      }
+
+      .box:nth-child(8) {
+        animation-delay: 8s;
+      }
+
+      .box:nth-child(9) {
+        animation-delay: 9s;
+      }
+
+      .box:nth-child(10) {
+        animation-delay: 10s;
+      }
+
+      @keyframes grow {
+        from {
+          opacity: 0.5;
+          transform: scale(0);
+        }
+
+        to {
+          opacity: 0;
+          transform: scale(3.85);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box">01</div>
+      <div class="box">02</div>
+      <div class="box">03</div>
+      <div class="box">04</div>
+      <div class="box">05</div>
+      <div class="box">06</div>
+      <div class="box">07</div>
+      <div class="box">08</div>
+      <div class="box">09</div>
+      <div class="box">10</div>
+    </div>
+  </body>
 </html>
 ```
