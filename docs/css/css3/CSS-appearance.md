@@ -10,11 +10,11 @@ button {
 }
 ```
 
-<div class="example-box">
-    <button>button 样式</button>
-    <br />
-    <button style="appearance:none;">文本样式</button>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="更改&lt;button /&gt;的默认样式为无" src="https://codepen.io/firefly1984982452/embed/poaQjwd?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/poaQjwd">
+  更改&lt;button /&gt;的默认样式为无</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## 【2】更改`<input />`默认的大小和边框样式
 
@@ -45,8 +45,8 @@ input#test {
 }
 </style>
 
-<div class="example-box">
-  <input type="checkbox" />默认复选框
-  <br />
-  <input id="test" type="checkbox" />更改默认复选框
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="更改&lt;input /&gt;默认的大小和边框样式" src="https://codepen.io/firefly1984982452/embed/LYQXpLo?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/LYQXpLo">
+  更改&lt;input /&gt;默认的大小和边框样式</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>

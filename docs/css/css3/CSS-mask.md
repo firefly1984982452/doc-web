@@ -12,7 +12,7 @@
 - mask-size：面具大小
 - mask-composite：面具复合
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="mask示例" src="https://codepen.io/firefly1984982452/embed/YzYwPpw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style="width: 100%;" scrolling="no" title="mask示例" src="https://codepen.io/firefly1984982452/embed/YzYwPpw?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/firefly1984982452/pen/YzYwPpw">
   mask示例</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
   on <a href="https://codepen.io">CodePen</a>.

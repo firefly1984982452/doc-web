@@ -1,6 +1,6 @@
 # CSS - 溢出省略
 
-## 限定 N 行
+## 一、限定 N 行
 
 ```css
 div {
@@ -21,53 +21,21 @@ div {
 }
 ```
 
-<div class="example-box">
-  <p style="width:300px;display: -webkit-box;
-overflow: hidden;
-white-space: normal!important;
-text-overflow: ellipsis;
-word-wrap: break-word;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;">日历中的历法又分为阴历、阳历和阴阳合历,三种。 阳历亦即太阳历,其历年为一个回归年,现时国际通用的公历(格里高利历)和中国的干支历即属于太阳历这类。</p>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="CSS - 溢出省略 - 限定 N 行" src="https://codepen.io/firefly1984982452/embed/mdXQVOw?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/mdXQVOw">
+  CSS - 溢出省略 - 限定 N 行</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ---
 
-## 单行居中显示文字，多行居左显示，最多两行超过用省略号结尾
+## 二、单行居中显示文字，多行居左显示，最多两行超过用省略号结尾
 
-<style>
-.line-clamp{
-  width: 400px;
-  border: 1px solid #000;
-}
-.line-clamp h2{
-  text-align: center;
-  margin: 0!important;
-  color: #ee2746!important;
-  font-size: 1.3em!important;
-}
-.line-clamp p{
-  display: inline-block;
-  text-align: left;
-  overflow : hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.line-clamp b{
-  display: block;
-  text-align: center;
-}
-</style>
-
-<div class="example-box">
-  <div class="line-clamp">
-    <h2><p><b>单行居中显示文字。<b></p></h2>
-    <h2><p>单行居中显示文字，多行居左显示。</p></h2>
-    <h2><p>单行居中显示文字，多行居左显示，最多两行，超过用省略号结尾。</p></h2>
-  </div>
-</div>
+<iframe height="300" style="width: 100%;" scrolling="no" title="CSS - 溢出省略 - 单行居中显示文字，多行居左显示，最多两行超过用省略号结尾" src="https://codepen.io/firefly1984982452/embed/wvyQMJj?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/wvyQMJj">
+  CSS - 溢出省略 - 单行居中显示文字，多行居左显示，最多两行超过用省略号结尾</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 解析：
 
@@ -151,7 +119,9 @@ h2 {
 </div>
 ```
 
-## 整块文本溢出省略
+---
+
+## 三、整块文本溢出省略
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="整块文本溢出省略" src="https://codepen.io/firefly1984982452/embed/oNEapae?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/firefly1984982452/pen/oNEapae">

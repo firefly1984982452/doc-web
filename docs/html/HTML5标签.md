@@ -847,6 +847,8 @@ body>header{页眉}+(main>article>h1{文章标题}+section>h2{第一章}+p{文�
   <a href="data:,hello,world" download="hello.txt">下载hello.txt</a>
 </div>
 
+<a href="https://firefly1984982452.github.io/my-web-page/css/blog-grid.css" download>Download CSS File</a>
+
 ## 【1.3】`rel` 属性
 
 - noopener
@@ -898,6 +900,28 @@ body>header{页眉}+(main>article>h1{文章标题}+section>h2{第一章}+p{文�
 <link rel="preload" as="image" href="map.png" media="(max-width: 600px)" />
 <link rel="preload" as="script" href="map.js" media="(min-width: 601px)" />
 ```
+
+## 【2.2】title
+
+firefox 浏览器可启用备用样式
+
+![image](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_80/w_2000/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/bd02ce55-1048-437a-886a-d8e55cfa8984/3-html-attributes-you-never-use.png)
+
+备用样式表功能通过两个属性启用：`title`属性和`rel=alternate`应用于`<link>`元素，如下面的代码所示：
+
+```html
+<link href="main.css" rel="stylesheet" title="Default" />
+<link href="contrast.css" rel="alternate stylesheet" title="High Contrast" />
+<link href="readable.css" rel="alternate stylesheet" title="Readable" />
+```
+
+测试 Demo：
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="Alternate Stylesheets Using rel title Attributes" src="https://codepen.io/smashingmag/embed/ExojRgm?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/smashingmag/pen/ExojRgm">
+  Alternate Stylesheets Using rel title Attributes</a> by Smashing Magazine (<a href="https://codepen.io/smashingmag">@smashingmag</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## 【3】`<script>`
 
@@ -1086,6 +1110,29 @@ body>header{页眉}+(main>article>h1{文章标题}+section>h2{第一章}+p{文�
 - placeholder：提示信息
 - multiple：允许上传多个文件
 - pattern：用正则表达式验证值
+- enterkeyhint：移动端输入内容后 enter 键的文字内容
+
+◆ enterkeyhint
+
+enterkeyhint 的值只能是以下 7 个值之一：
+
+```
+enter
+done
+go
+next
+previous
+search
+send
+```
+
+移动端可直接测试下方 demo：
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/firefly1984982452/embed/WNMYbvJ?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/WNMYbvJ">
+  Untitled</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ---
 

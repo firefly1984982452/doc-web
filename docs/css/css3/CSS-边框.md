@@ -216,6 +216,14 @@ border-image: 33.3% url("./test.jpg") round;
 
 ## 【8】border-radius 中斜杠`/`的用法
 
+效果预览：
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="border-radius 中斜杠/的用法" src="https://codepen.io/firefly1984982452/embed/XWZyXJw?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/XWZyXJw">
+  border-radius 中斜杠/的用法</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
 ◆ 自适应椭圆
 
 ```css
@@ -224,10 +232,6 @@ height: 100px;
 background-color: #fbb;
 border-radius: 20% / 50%;
 ```
-
-<div class="example-box">
-  <div class="box bg-color-red" style="width: 300px; height: 100px; border-radius: 20% / 50%"></div>
-</div>
 
 ◆ 半圆
 
@@ -238,10 +242,6 @@ background-color: #fbb;
 border-radius: 0 100% 100% 0 / 50%;
 ```
 
-<div class="example-box">
-  <div class="box bg-color-red" style="width: 50px; height: 100px; border-radius: 0 100% 100% 0 / 50%"></div>
-</div>
-
 ◆ 其它形状
 
 ```css
@@ -250,10 +250,6 @@ height: 100px;
 background-color: #fbb;
 border-radius: 10% 50% / 50% 10%;
 ```
-
-<div class="example-box">
-  <div class="box bg-color-red" style="width: 300px; height: 100px; border-radius: 10% 50% / 50% 10%"></div>
-</div>
 
 ◆ 斜杠`/`的用法
 
