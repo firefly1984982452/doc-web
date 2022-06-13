@@ -1,4 +1,4 @@
-#  JavaScript之String对象
+# JavaScript 之 String 对象
 
 ---
 
@@ -17,21 +17,21 @@
 ## 【1】`charAt`：返回指定位置的字符
 
 ```js
-'ewfwef'.charAt(5); // f
-'ewfwef'[5]; // f
+"ewfwef".charAt(5); // f
+"ewfwef"[5]; // f
 ```
 
 区别：
 
 ```js
-'ewfwef'.charAt(53); // ""
-'ewfwef'[59]; // undefined
+"ewfwef".charAt(53); // ""
+"ewfwef"[59]; // undefined
 ```
 
 ## 【2】`charCodeAt`：返回 `uniccode/accsic` 编码
 
 ```js
-'a'.charCodeAt(0); // 97
+"a".charCodeAt(0); // 97
 ```
 
 ## 【3】`fromCharCode`：将 `Unicode` 编码转为一个字符
@@ -43,13 +43,13 @@ String.fromCharCode(65); // A
 ## 【4】`indexOf`：返回字符首次出现的位置
 
 ```js
-'abcc'.indexOf('c'); // 2
+"abcc".indexOf("c"); // 2
 ```
 
 ◆ `indexOf` 有可选的参数（即开始查询的位置）
 
 ```js
-'ab ab ab'.indexOf('a',1); // 3
+"ab ab ab".indexOf("a", 1); // 3
 ```
 
 ## 【5】`lastIndexOf`：返回字符出现的倒数位置
@@ -59,7 +59,7 @@ String.fromCharCode(65); // A
 ## 【6】`includes`：判断字符串中是否包含某字符串
 
 ```js
-'abcc'.includes('c'); // true
+"abcc".includes("c"); // true
 ```
 
 ## 【7】`search`：返回字符首次出现的位置【检索和与正则】
@@ -67,13 +67,13 @@ String.fromCharCode(65); // A
 - 检索字符串
 
 ```js
-'hello world'.search('wor'); // 6
+"hello world".search("wor"); // 6
 ```
 
 - 匹配正则
 
 ```js
-'hello world 2'.search(/\d/); // 11【返回下标】
+"hello world 2".search(/\d/); // 11【返回下标】
 ```
 
 ## 【8】`match`：返回匹配规则首次出现的位置【检索和与正则】
@@ -81,7 +81,7 @@ String.fromCharCode(65); // A
 - 检索字符串
 
 ```js
-'hello world'.match('world'); // ["world", index: 6, input: "hello world", groups: undefined]
+"hello world".match("world"); // ["world", index: 6, input: "hello world", groups: undefined]
 ```
 
 - 匹配正则
@@ -107,29 +107,29 @@ String.fromCharCode(65); // A
 ## 【1】`split`：分割为数组
 
 ```js
-'abcd'.split(''); // ["a", "b", "c", "d"]
+"abcd".split(""); // ["a", "b", "c", "d"]
 ```
 
 ## 【2】`substr`：截取（位置，个数）
 
 ```js
-'abcdefg'.substr(2,3); // "cde"
+"abcdefg".substr(2, 3); // "cde"
 ```
 
 ## 【3】`substring`：截取（开始位置，结束位置）
 
 ```js
-'abcdefg'.substring(2,3); // "c"
-'abcdefg'.substring(2); // "cdefg"
-'abcdefg'.substring(2,-9); // "ab"
+"abcdefg".substring(2, 3); // "c"
+"abcdefg".substring(2); // "cdefg"
+"abcdefg".substring(2, -9); // "ab"
 ```
 
 ## 【4】`slice`：截取（开始位置，结束位置）
 
 ```js
-'abcdefg'.slice(2,3); // "c"
-'abcdefg'.slice(2); // "cdefg"
-'abcdefg'.slice(2,-9); // ""
+"abcdefg".slice(2, 3); // "c"
+"abcdefg".slice(2); // "cdefg"
+"abcdefg".slice(2, -9); // ""
 ```
 
 # 三、合并字符串
@@ -137,13 +137,13 @@ String.fromCharCode(65); // A
 ## 【1】concat()
 
 ```js
-'w'.concat('e'); // 'we'
+"w".concat("e"); // 'we'
 ```
 
 ## 【2】加号
 
 ```js
-'a'+'b'; // 'ab'
+"a" + "b"; // 'ab'
 ```
 
 ---
@@ -151,7 +151,7 @@ String.fromCharCode(65); // A
 # 四、raw：模板字符串
 
 ```js
-String.raw`${2+3}`; // 5
+String.raw`${2 + 3}`; // 5
 ```
 
 ```js
@@ -165,14 +165,14 @@ s === "hello\\n"; // true
 # 五、repeat：重复并返回
 
 ```js
-'e'.repeat(30); // "eeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+"e".repeat(30); // "eeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
 ```
 
 # 六、replace 和 replaceAll：替换
 
 ```js
-'12333345'.replace('3','0'); // "12033345"
-'12333345'.replaceAll('3','0'); // "12000045"
+"12333345".replace("3", "0"); // "12033345"
+"12333345".replaceAll("3", "0"); // "12000045"
 ```
 
 正则例子
@@ -180,30 +180,32 @@ s === "hello\\n"; // true
 ## 【1】 多维数组扁平化为单维数组
 
 ```js
-const arr = [1, [1,2], [1,2,3]];
-JSON.stringify(arr).replace(/(\[|\])/g,''); // "1,1,2,1,2,3"
+const arr = [1, [1, 2], [1, 2, 3]];
+JSON.stringify(arr).replace(/(\[|\])/g, ""); // "1,1,2,1,2,3"
 ```
 
 ## 【2】 时间格式化
 
 ```js
-'yyyy-mm'.replace(/([a-z])/ig,($1)=>{return 0}); // "0000-00"
+"yyyy-mm".replace(/([a-z])/gi, ($1) => {
+  return 0;
+}); // "0000-00"
 ```
 
 ## 【3】 字符串转换为驼峰格式
 
 ```js
-var sName = 'font-size'
+var sName = "font-size";
 ```
 
 或
 
 ```js
-var sName = '-webkit-background-composite'
+var sName = "-webkit-background-composite";
 
 return sName.replace(/-[a-zA-Z]{1}/g, ($1, $2) => {
-  return $2 === 0 ? $1[1] : $1.toUpperCase()[1]
-})
+  return $2 === 0 ? $1[1] : $1.toUpperCase()[1];
+});
 ```
 
 ## 【4】 颜色字符串 rgb 转换为 hex 方法
@@ -212,21 +214,21 @@ return sName.replace(/-[a-zA-Z]{1}/g, ($1, $2) => {
 
 ```js
 function rgb2hex(sRGB) {
-    var reg = /^(rgb|RGB)/
-    if (reg.test(sRGB)) {
-      let arr = sRGB.replace(/(\(|\)|rgb|RGB| )*/g, '').split(',')
-      let str = arr
-        .map(v => {
-          return ('0'+(Number(v).toString(16))).slice(-2)
-        })
-        .join('')
-      return '#'+str
-    } else {
-      return sRGB
-    }
+  var reg = /^(rgb|RGB)/;
+  if (reg.test(sRGB)) {
+    let arr = sRGB.replace(/(\(|\)|rgb|RGB| )*/g, "").split(",");
+    let str = arr
+      .map((v) => {
+        return ("0" + Number(v).toString(16)).slice(-2);
+      })
+      .join("");
+    return "#" + str;
+  } else {
+    return sRGB;
+  }
 }
 
-rgb2hex('rgb(255, 255, 255)'); // '#ffffff'
+rgb2hex("rgb(255, 255, 255)"); // '#ffffff'
 ```
 
 ---
@@ -238,7 +240,7 @@ rgb2hex('rgb(255, 255, 255)'); // '#ffffff'
 把字符串变为小写
 
 ```js
-'B'.toLowerCase(); // "b"
+"B".toLowerCase(); // "b"
 ```
 
 ## 【2】toUpperCase()
@@ -246,7 +248,7 @@ rgb2hex('rgb(255, 255, 255)'); // '#ffffff'
 把字符串变为大写
 
 ```js
-'a'.toUpperCase(); // "A"
+"a".toUpperCase(); // "A"
 ```
 
 ---
@@ -254,7 +256,7 @@ rgb2hex('rgb(255, 255, 255)'); // '#ffffff'
 # 八、trim：去掉两边的空字符串
 
 ```js
-' we '.trim(); // "we"
+" we ".trim(); // "we"
 ```
 
 # 九、padStart() 和 padEnd() 进行补位
@@ -262,15 +264,15 @@ rgb2hex('rgb(255, 255, 255)'); // '#ffffff'
 用法：
 
 ```js
-'x'.padStart(10,'ab'); // "ababababax"
+"x".padStart(10, "ab"); // "ababababax"
 ```
 
 示例：
 
 ```js
-'abc'.padStart(10, '0123456789'); // '0123456abc'
-'1'.padStart(10, '0') // "0000000001"
-'09-12'.padStart(10, 'YYYY-MM-DD') // "YYYY-09-12"
+"abc".padStart(10, "0123456789"); // '0123456abc'
+"1".padStart(10, "0"); // "0000000001"
+"09-12".padStart(10, "YYYY-MM-DD"); // "YYYY-09-12"
 ```
 
 # 十、toLocaleString
@@ -298,8 +300,8 @@ date.toLocaleString([locales [, options]])
 array 和 number 类同
 
 ```js
-Number(1).toLocaleString('zh',{style:'currency',currency:'cny'}); // "¥1.00"
-[1,2,3].toLocaleString('zh',{style:'currency',currency:'cny'}); // "¥1.00,¥2.00,¥3.00"
+Number(1).toLocaleString("zh", { style: "currency", currency: "cny" }); // "¥1.00"
+[1, 2, 3].toLocaleString("zh", { style: "currency", currency: "cny" }); // "¥1.00,¥2.00,¥3.00"
 ```
 
 ### 【2.2】date
@@ -314,10 +316,10 @@ new Date().toLocaleString(); // "2021/7/20下午2:39:35"
 
 ```js
 new Date().toLocaleString(); // "2021/7/20下午2:44:40"
-new Date().toLocaleString('zh'); // "2021/7/20下午2:44:40"
-new Date().toLocaleString('en-US'); // "7/20/2021, 2:44:14 PM"
-new Date().toLocaleString('en-gb'); // "20/07/2021, 14:44:23"
-new Date().toLocaleString('ko-kr'); // "2021. 7. 20. 오후 2:44:33"
+new Date().toLocaleString("zh"); // "2021/7/20下午2:44:40"
+new Date().toLocaleString("en-US"); // "7/20/2021, 2:44:14 PM"
+new Date().toLocaleString("en-gb"); // "20/07/2021, 14:44:23"
+new Date().toLocaleString("ko-kr"); // "2021. 7. 20. 오후 2:44:33"
 ```
 
 #### 【2.2.2】`options`
@@ -327,12 +329,12 @@ new Date().toLocaleString('ko-kr'); // "2021. 7. 20. 오후 2:44:33"
 - formatMatcher 要使用的格式匹配算法
 
 ```js
-var date = new Date()
+var date = new Date();
 date.toLocaleString(); // "2021/7/20下午2:51:24"
-date.toLocaleString('zh',{ hour12: false }); // "2021/7/20 14:51:24"
-date.toLocaleString('zh',{ timeZone: 'GMT' }); // "2021/7/20上午6:51:24"（格林威治标准时间）
-date.toLocaleString('zh',{ timeZoneName: 'short' }); // "2021/7/20GMT+8 下午2:51:24"
-date.toLocaleString('zh',{ timeZoneName: 'long' }); // "2021/7/20中国标准时间 下午2:51:24"
+date.toLocaleString("zh", { hour12: false }); // "2021/7/20 14:51:24"
+date.toLocaleString("zh", { timeZone: "GMT" }); // "2021/7/20上午6:51:24"（格林威治标准时间）
+date.toLocaleString("zh", { timeZoneName: "short" }); // "2021/7/20GMT+8 下午2:51:24"
+date.toLocaleString("zh", { timeZoneName: "long" }); // "2021/7/20中国标准时间 下午2:51:24"
 ```
 
 ## 【3】不同参数
@@ -348,17 +350,17 @@ date.toLocaleString('zh',{ timeZoneName: 'long' }); // "2021/7/20中国标准时
 ```js
 var num = 1234567890;
 num.toLocaleString(); // '1,234,567,890'
-num.toLocaleString('en-US'); // 效果相同 '1,234,567,890'
-num.toLocaleString('zh'); // 效果相同 '1,234,567,890'
-num.toLocaleString('jp'); // 效果相同 '1,234,567,890'
+num.toLocaleString("en-US"); // 效果相同 '1,234,567,890'
+num.toLocaleString("zh"); // 效果相同 '1,234,567,890'
+num.toLocaleString("jp"); // 效果相同 '1,234,567,890'
 ```
 
 `zh-u-nu-hanidec`：中文十进制数字
 
 ```js
-var num = 12345
-num.toLocaleString('zh-u-nu-hanidec'); // "一二,三四五"
-num.toLocaleString('zh-u-nu-hanidec',{useGrouping: false}); // "一二三四五"
+var num = 12345;
+num.toLocaleString("zh-u-nu-hanidec"); // "一二,三四五"
+num.toLocaleString("zh-u-nu-hanidec", { useGrouping: false }); // "一二三四五"
 ```
 
 ### 【3.2】`options`
@@ -381,8 +383,8 @@ num.toLocaleString('zh-u-nu-hanidec',{useGrouping: false}); // "一二三四五"
 
 ```js
 Number(1345.2345).toLocaleString(); // "1,345.235"
-Number(1345.2345).toLocaleString('zh',{style:'percent'}); // "134,523%"
-Number(1345.2345).toLocaleString('zh',{style:'currency' , currency:'CNY' }) // "¥1,345.23"
+Number(1345.2345).toLocaleString("zh", { style: "percent" }); // "134,523%"
+Number(1345.2345).toLocaleString("zh", { style: "currency", currency: "CNY" }); // "¥1,345.23"
 ```
 
 #### 【3.2.2】currency 在货币格式化中使用的货币符号（如果 style 是“currency”,必须提供货币属性）
@@ -392,10 +394,10 @@ Number(1345.2345).toLocaleString('zh',{style:'currency' , currency:'CNY' }) // "
 - CNY 人民币
 
 ```js
-Number(12345678).toLocaleString('zh',{style:'currency' , currency:'CNY' }); // "¥12,345,678.00"
-Number(12345678).toLocaleString('zh',{style:'currency' , currency:'JPY' }); // "JP¥12,345,678"
-Number(12345678).toLocaleString('zh',{style:'currency' , currency:'USD' }); // "US$12,345,678.00"
-Number(12345678).toLocaleString('zh',{style:'currency' , currency:'EUR' }); // "€12,345,678.00"
+Number(12345678).toLocaleString("zh", { style: "currency", currency: "CNY" }); // "¥12,345,678.00"
+Number(12345678).toLocaleString("zh", { style: "currency", currency: "JPY" }); // "JP¥12,345,678"
+Number(12345678).toLocaleString("zh", { style: "currency", currency: "USD" }); // "US$12,345,678.00"
+Number(12345678).toLocaleString("zh", { style: "currency", currency: "EUR" }); // "€12,345,678.00"
 ```
 
 #### 【3.2.3】currencyDisplay 货币格式化
@@ -405,71 +407,71 @@ Number(12345678).toLocaleString('zh',{style:'currency' , currency:'EUR' }); // "
 - name 使用本地化的货币名称
 
 ```js
-Number(1).toLocaleString('zh',{style:'currency' , currency:'USD' }); // "US$1.00
-Number(1).toLocaleString('zh',{style:'currency' , currency:'USD' ,currencyDisplay: 'code'}); // "USD 1.00"
-Number(1).toLocaleString('zh',{style:'currency' , currency:'USD' ,currencyDisplay: 'name'}); // "1.00美元"
+Number(1).toLocaleString("zh", { style: "currency", currency: "USD" }); // "US$1.00
+Number(1).toLocaleString("zh", { style: "currency", currency: "USD", currencyDisplay: "code" }); // "USD 1.00"
+Number(1).toLocaleString("zh", { style: "currency", currency: "USD", currencyDisplay: "name" }); // "1.00美元"
 ```
 
 #### 【3.2.4】useGrouping 是否使用分组分隔符，默认：`true`
 
 ```js
-Number(1234.56).toLocaleString('zh'); // "1,234.56"
-Number(1234.56).toLocaleString('zh', { useGrouping: false }); // "1234.56"
+Number(1234.56).toLocaleString("zh"); // "1,234.56"
+Number(1234.56).toLocaleString("zh", { useGrouping: false }); // "1234.56"
 ```
 
 #### 【3.2.5】minimumIntegerDigits：指定整数最少位数
 
 ```js
-Number(123.456).toLocaleString('zh'); // "123.456"
-Number(123.456).toLocaleString('zh',{minimumIntegerDigits: 5}); // "00,123.456"
+Number(123.456).toLocaleString("zh"); // "123.456"
+Number(123.456).toLocaleString("zh", { minimumIntegerDigits: 5 }); // "00,123.456"
 ```
 
 #### 【3.2.6】minimumFractionDigits：指定小数点后最少位数
 
 ```js
-Number(123.456).toLocaleString('zh'); // "123.456"
-Number(123.456).toLocaleString('zh',{minimumFractionDigits: 5}); // "123.45600"
+Number(123.456).toLocaleString("zh"); // "123.456"
+Number(123.456).toLocaleString("zh", { minimumFractionDigits: 5 }); // "123.45600"
 ```
 
 #### 【3.2.7】maximumFractionDigits：小数位数的最大数目（四舍五入）
 
 ```js
-Number(123.456).toLocaleString('zh'); // "123.456"
-Number(123.456).toLocaleString('zh',{maximumFractionDigits: 2}); // "123.46"
+Number(123.456).toLocaleString("zh"); // "123.456"
+Number(123.456).toLocaleString("zh", { maximumFractionDigits: 2 }); // "123.46"
 ```
 
 #### 【3.2.8】minimumSignificantDigits：使用的有效数字的最小数目
 
 ```js
-Number(123.456).toLocaleString('zh'); // "123.456"
-Number(123.456).toLocaleString('zh',{minimumSignificantDigits: 10}); // "123.4560000"
+Number(123.456).toLocaleString("zh"); // "123.456"
+Number(123.456).toLocaleString("zh", { minimumSignificantDigits: 10 }); // "123.4560000"
 ```
 
 #### 【3.2.9】maximumSignificantDigits：使用的有效数字的最大数量
 
 ```js
-Number(123.456).toLocaleString('zh'); // "123.456"
-Number(123.456).toLocaleString('zh',{maximumSignificantDigits: 2}); // "120"
+Number(123.456).toLocaleString("zh"); // "123.456"
+Number(123.456).toLocaleString("zh", { maximumSignificantDigits: 2 }); // "120"
 ```
 
 ---
 
-# 其它技巧
+# 十一、其它技巧
 
-## 单行写一个评级组件
+## 【1】单行写一个评级组件
 
 ```js
 "★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate); //定义一个变量 rate 是 1 到 5 的值
 ```
 
-## 利用`slice`时间格式化补 0
+## 【2】利用`slice`时间格式化补 0
 
 ```js
 ("0" + t.getHours()).slice(-2); // '01'
 ```
 
-## 把字符串变为数组最快的方法
+## 【3】把字符串变为数组最快的方法
 
 ```js
-'abc'.split(' '); // ['abc']
+"abc".split(" "); // ['abc']
 ```

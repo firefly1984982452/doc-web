@@ -1011,41 +1011,11 @@ $ lighthouse https://www.cnblogs.com/
 
 ## 【1】`html`版
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>数字自动增加</title>
-  </head>
-
-  <body>
-    <h1 id="time">0</h1>
-
-    <script>
-      function NumAutoPlusAnimation(targetEle, options) {
-        var $this = document.getElementById(targetEle),
-          finalNum = options.num, //要显示的真实数值
-          step = finalNum / (options.time / 30) /*每30ms增加的数值--*/,
-          count = 0;
-        var timer = setInterval(function () {
-          count += step;
-          if (count >= finalNum) {
-            clearInterval(timer);
-            count = finalNum;
-          }
-          $this.innerHTML = Math.floor(count).toLocaleString();
-        }, 30);
-      }
-
-      NumAutoPlusAnimation("time", {
-        time: 1500,
-        num: 100,
-      });
-    </script>
-  </body>
-</html>
-```
+<iframe height="300" style="width: 100%;" scrolling="no" title="JS实现数字递增动画" src="https://codepen.io/firefly1984982452/embed/VwQqPKg?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/VwQqPKg">
+  JS实现数字递增动画</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## 【2】`vue`组件版
 

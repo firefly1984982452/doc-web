@@ -108,3 +108,11 @@ transform: rotate(45deg);
 ```
 
 ---
+
+## CSS hover 动效
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="CSS mouse-out transition effect" src="https://codepen.io/argyleink/embed/poEjvpd?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/argyleink/pen/poEjvpd">
+  CSS mouse-out transition effect</a> by Adam Argyle (<a href="https://codepen.io/argyleink">@argyleink</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>

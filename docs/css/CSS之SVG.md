@@ -1,6 +1,6 @@
-# CSS之SVG
+# CSS 之 SVG
 
-# 一、学习链接
+## 一、学习链接
 
 - [阮一峰-SVG 教程](https://wangdoc.com/webapi/svg.html)
 - [菜鸟教程-SVG 教程](https://www.runoob.com/svg/svg-rect.html)
@@ -8,9 +8,9 @@
 
 ---
 
-# 二、简介
+## 二、简介
 
-## 【0】SVG 效果预览
+### 【0】SVG 效果预览
 
 ![image](https://s1.ax1x.com/2022/03/14/bOeJ4f.jpg)
 
@@ -18,7 +18,7 @@
 
 - [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/svg.html)
 
-## 【1】SVG 的预定义形状
+### 【1】SVG 的预定义形状
 
 - 矩形 `<rect>`
 - 圆形 `<circle>`
@@ -28,7 +28,7 @@
 - 多边形 `<polygon>`
 - 路径 `<path>`
 
-## 【2】SVG 的通用标准语法
+### 【2】SVG 的通用标准语法
 
 - width：宽度；
 - height：高度；
@@ -56,7 +56,6 @@
     </g>
   </svg>
 </div>
-
 
 **stroke-dasharray：**
 
@@ -88,37 +87,37 @@
 </svg>
 ```
 
-## 【3】使用
+### 【3】使用
 
-### 【3.1】直接写入`html`中
+#### 【3.1】直接写入`html`中
 
 ```html
 <!DOCTYPE html>
 <html>
-<head></head>
-<body>
-<svg
-  id="mysvg"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 800 600"
-  preserveAspectRatio="xMidYMid meet"
->
-  <circle id="mycircle" cx="400" cy="300" r="50" />
-</svg>
-</body>
+  <head></head>
+  <body>
+    <svg
+      id="mysvg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 800 600"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <circle id="mycircle" cx="400" cy="300" r="50" />
+    </svg>
+  </body>
 </html>
 ```
 
-### 【3.2】写在独立文件中，用`<img>`、`<object>`、`<embed>`、`<iframe>`等标签插入网页。
+#### 【3.2】写在独立文件中，用`<img>`、`<object>`、`<embed>`、`<iframe>`等标签插入网页。
 
 ```html
-<img src="circle.svg">
+<img src="circle.svg" />
 <object id="object" data="circle.svg" type="image/svg+xml"></object>
-<embed id="embed" src="icon.svg" type="image/svg+xml">
+<embed id="embed" src="icon.svg" type="image/svg+xml" />
 <iframe id="iframe" src="icon.svg"></iframe>
 ```
 
-### 【3.3】CSS 中使用 SVG
+#### 【3.3】CSS 中使用 SVG
 
 ```css
 .logo {
@@ -126,17 +125,17 @@
 }
 ```
 
-### 【3.4】SVG 转为 BASE64 编码，然后作用 DATA URL 写入网页。
+#### 【3.4】SVG 转为 BASE64 编码，然后作用 DATA URL 写入网页。
 
 ```html
-<img src="data:image/svg+xml;base64,[data]">
+<img src="data:image/svg+xml;base64,[data]" />
 ```
 
 ---
 
-# 三、元素语法
+## 三、元素语法
 
-## 【1】`<svg>`
+### 【1】`<svg>`
 
 SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的一部分，就要指定`viewBox`属性。
 
@@ -146,7 +145,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </svg>
 ```
 
-## 【2】`<rect>`矩形
+### 【2】`<rect>`矩形
 
 <div class="example-box">
   <svg>
@@ -160,7 +159,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </svg>
 ```
 
-## 【3】`<circle>`圆形
+### 【3】`<circle>`圆形
 
 - CX：圆中心的 x 坐标；
 - CY：圆中心的 y 坐标；
@@ -174,11 +173,11 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 ```html
 <svg>
-  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
+  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
 </svg>
 ```
 
-## 【4】`<ellipse>`椭圆
+### 【4】`<ellipse>`椭圆
 
 - CX：圆中心的 x 坐标；
 - CY：圆中心的 y 坐标；
@@ -191,14 +190,13 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg>
-  <ellipse cx="300" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"/>
+  <ellipse cx="300" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2" />
 </svg>
 ```
 
-## 【5】`<line>`直线
+### 【5】`<line>`直线
 
 - x1：x 轴定义线条的开始；
 - y1：y 轴定义线条的开始；
@@ -211,14 +209,13 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg>
-  <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"/>
+  <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
 </svg>
 ```
 
-## 【6】`<polygon>`多边形
+### 【6】`<polygon>`多边形
 
 <div class="example-box">
   <svg height="250" width="500">
@@ -226,14 +223,13 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg height="250" width="500">
   <polygon points="220,10 300,210 170,250 123,234" style="fill:lime;stroke:purple;stroke-width:1" />
 </svg>
 ```
 
-## 【7】`<polyline>`曲线
+### 【7】`<polyline>`曲线
 
 <div class="example-box">
   <svg>
@@ -242,15 +238,20 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg>
-  <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:none;stroke:black;stroke-width:3" />
-  <polyline points="20,20 40,25 60,40 80,120 120,140 200,180"style="fill:none;stroke:red;stroke-width:4" />
+  <polyline
+    points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
+    style="fill:none;stroke:black;stroke-width:3"
+  />
+  <polyline
+    points="20,20 40,25 60,40 80,120 120,140 200,180"
+    style="fill:none;stroke:red;stroke-width:4"
+  />
 </svg>
 ```
 
-## 【8】`<path>`路径
+### 【8】`<path>`路径
 
 - M = moveto【函数】
 - L = lineto【画线】
@@ -258,8 +259,8 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 - V = vertical lineto【垂直线】
 - C = curveto【曲线到】
 - S = smooth curveto【平滑曲线】
-- Q = quadratic Bézier curve【二次Bézier曲线】
-- T = smooth quadratic Bézier curveto【光滑二次曲线Bézier曲线】
+- Q = quadratic Bézier curve【二次 Bézier 曲线】
+- T = smooth quadratic Bézier curveto【光滑二次曲线 Bézier 曲线】
 - A = elliptical Arc【椭圆弧】
 - Z = closepath【闭合路径】
 
@@ -269,14 +270,13 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg>
-    <path d="M150 0 L75 200 L225 200 Z" />
+  <path d="M150 0 L75 200 L225 200 Z" />
 </svg>
 ```
 
-## 【9】`<text>`文本
+### 【9】`<text>`文本
 
 <div class="example-box">
   <svg>
@@ -289,10 +289,9 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg>
-   <defs>
+  <defs>
     <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
   </defs>
   <text x="10" y="100" style="fill:red;">
@@ -303,14 +302,14 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 ---
 
-# 四、元素滤镜
+## 四、元素滤镜
 
-## 【1】`<defs>` 和 `<filter>`
+### 【1】`<defs>` 和 `<filter>`
 
 - `<filter>`元素 id 属性定义一个滤镜的唯一名称；
 - `<defs>`标签用于自定义形状
 
-## 【2】`<feGaussianBlur>`模糊
+### 【2】`<feGaussianBlur>`模糊
 
 <div class="example-box">
   <svg>
@@ -332,12 +331,11 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
       <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
     </filter>
   </defs>
-  <rect width="90" height="90" stroke="green" stroke-width="3"
-  fill="yellow" filter="url(#f1)" />
+  <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f1)" />
 </svg>
 ```
 
-## 【3】`<feOffset>`阴影
+### 【3】`<feOffset>`阴影
 
 - [更多阴影效果](https://www.runoob.com/svg/svg-feoffset.html)
 
@@ -355,7 +353,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg>
   <defs>
@@ -365,12 +362,11 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
       <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
     </filter>
   </defs>
-  <rect width="90" height="90" stroke="green" stroke-width="3"
-  fill="yellow" filter="url(#f2)" />
+  <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f2)" />
 </svg>
 ```
 
-## 【4】`<linearGradient>`线性渐变
+### 【4】`<linearGradient>`线性渐变
 
 <div class="example-box">
   <svg>
@@ -384,7 +380,6 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg>
   <defs>
@@ -397,7 +392,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </svg>
 ```
 
-## 【5】`<radialGradient>`放射性渐变
+### 【5】`<radialGradient>`放射性渐变
 
 <div class="example-box">
   <svg>
@@ -412,13 +407,15 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   </svg>
 </div>
 
-
 ```html
 <svg>
   <defs>
     <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-      <stop offset="0%" style="stop-color:rgb(255,255,255);
-      stop-opacity:0" />
+      <stop
+        offset="0%"
+        style="stop-color:rgb(255,255,255);
+      stop-opacity:0"
+      />
       <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
     </radialGradient>
   </defs>
@@ -428,9 +425,9 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 ---
 
-# 五、更多元素标签
+## 五、更多元素标签
 
-## 【1】`<g>`组
+### 【1】`<g>`组
 
 <div class="example-box">
   <svg width="300" height="100">
@@ -447,14 +444,14 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 <svg width="300" height="100">
   <g id="myCircle">
     <text x="25" y="20">圆形</text>
-    <circle cx="50" cy="50" r="20"/>
+    <circle cx="50" cy="50" r="20" />
   </g>
   <use href="#myCircle" x="100" y="0" fill="blue" />
   <use href="#myCircle" x="200" y="0" fill="white" stroke="blue" />
 </svg>
 ```
 
-## 【2】`<pattern>`图案填充
+### 【2】`<pattern>`图案填充
 
 <div class="example-box">
   <svg width="500" height="500">
@@ -478,7 +475,7 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 </svg>
 ```
 
-## 【3】`<image>`图片
+### 【3】`<image>`图片
 
 <div class="example-box">
   <svg viewBox="0 0 100 100" width="200" height="200">
@@ -489,12 +486,11 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
 
 ```html
 <svg viewBox="0 0 100 100" width="200" height="200">
-  <image xlink:href="https://s1.ax1x.com/2022/03/11/bI6bE8.png"
-    width="100%" height="100%"/>
+  <image xlink:href="https://s1.ax1x.com/2022/03/11/bI6bE8.png" width="100%" height="100%" />
 </svg>
 ```
 
-## 【4】`<animate>`动画
+### 【4】`<animate>`动画
 
 - `attributeName`：发生动画效果的属性名。
 - `from`：单次动画的初始值。
@@ -515,5 +511,37 @@ SVG 代码都放在顶层标签`<svg>`之中，如果只想展示 SVG 图像的�
   <rect x="0" y="0" width="100" height="100" fill="#feac5e">
     <animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" />
   </rect>
+</svg>
+```
+
+---
+
+## 六、其它
+
+### 【1】`<clipPath></clipPath>`
+
+`CSS`里面的`clip-path`：
+
+```css
+clip-path: circle();
+```
+
+`svg`里面的`<clipPath></clipPath>`
+
+```html
+<div class="item" style="clip-path: url(#menu);"></div>
+
+<svg viewBox="0 0 202.9 45.5">
+  <clipPath
+    id="menu"
+    clipPathUnits="objectBoundingBox"
+    transform="scale(0.0049285362247413 0.021978021978022)"
+  >
+    <path
+      d="M6.7,45.5c5.7,0.1,14.1-0.4,23.3-4c5.7-2.3,9.9-5,18.1-10.5c10.7-7.1,11.8-9.2,20.6-14.3c5-2.9,9.2-5.2,15.2-7
+        c7.1-2.1,13.3-2.3,17.6-2.1c4.2-0.2,10.5,0.1,17.6,2.1c6.1,1.8,10.2,4.1,15.2,7c8.8,5,9.9,7.1,20.6,14.3c8.3,5.5,12.4,8.2,18.1,10.5
+        c9.2,3.6,17.6,4.2,23.3,4H6.7z"
+    />
+  </clipPath>
 </svg>
 ```
