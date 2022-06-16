@@ -1258,3 +1258,9 @@ summary::-webkit-details-marker {
 <div class="example-box">
   <marquee>hello world , your canvas is good.</marquee>
 </div>
+
+--
+
+# 十七、不常用但好用的标签
+
+## 【1】、`<center>`标签

@@ -87,3 +87,19 @@ clip-path: polygon(0 100%, 50% 0, 100% 100%);
 ![image](https://s1.ax1x.com/2022/03/17/q9yjbt.jpg)
 
 ---
+
+## 【五】、clip 属性
+
+```css {2}
+img {
+  position: absolute;
+  clip: rect(0 256px 128px 128px);
+}
+```
+
+---
+
+```python
+#!/usr/bin/env python3
+print("Hello, World!");
+```

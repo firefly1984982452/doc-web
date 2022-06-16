@@ -46,3 +46,11 @@ img {
 </div>
 
 ---
+
+## padding-inline-start 和 padding-left 的区别
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="padding-inline-start和padding-left的区别" src="https://codepen.io/firefly1984982452/embed/ExQrYNP?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/ExQrYNP">
+  padding-inline-start和padding-left的区别</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>

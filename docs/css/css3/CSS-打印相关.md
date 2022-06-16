@@ -127,3 +127,13 @@ table {
 ## 【8】`:left`和`:right`
 
 页面左右是由文档的主要书写方向决定的。例如，如果第一页的主要书写方向是从左到右，那么它将是一个`:right`页面，如果它具有从右到左的主要书写方向，那么它将是一个`:left`页面。
+
+---
+
+# print-color-adjust：打印颜色调整
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="color-adjust" src="https://codepen.io/firefly1984982452/embed/mdXvLZW?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/mdXvLZW">
+  color-adjust</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>

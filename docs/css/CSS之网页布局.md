@@ -165,7 +165,7 @@ place-content: center;
 
 ## 【3】grid-template-columns 更多属性
 
-### 【3.1】响应式布局`auto-fit`
+### 【3.1】响应式布局`auto-fit`和`auto-fill`
 
 ```css
 width: 100%;
@@ -173,9 +173,19 @@ height: 400px;
 display: grid;
 grid-gap: 10px;
 grid-template-columns: repeat(auto-fit, 100px);
+/* 或 */
+grid-template-columns: repeat(auto-fill, 100px);
 ```
 
 重点：`grid-template-columns: repeat(auto-fit, 100px);`代表以 `100px` 为子元素长度，自动排一行的数量，当一行不够时自动换行。
+
+**`auto-fit`和`auto-fill`的区别**
+
+<iframe height="450" style="width: 100%;" scrolling="no" title="CSS grid auto-fill和auto-fit的使用和区别" src="https://codepen.io/firefly1984982452/embed/KKQJexO?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/KKQJexO">
+  CSS grid auto-fill和auto-fit的使用和区别</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ### 【3.2】跨越所有列`1 / -1`
 
@@ -186,6 +196,14 @@ grid-template-columns: repeat(auto-fit, 100px);
 ```
 
 重点：`1 / -1`是指从第 1 列开始，直到最后一列结束，即铺满整行。
+
+### 【3.3】grid-template-areas 的使用
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="CSS grid grid-template-areas" src="https://codepen.io/firefly1984982452/embed/oNEmMzd?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/oNEmMzd">
+  CSS grid grid-template-areas</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ---
 
