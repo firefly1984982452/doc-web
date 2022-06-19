@@ -39,38 +39,18 @@
 - minmax()函数
 - auto 关键字
 
-### 【3】grid-row-gap 属性、grid-column-gap 属性以及 grid-gap 属性
+#### 1.固定的列宽和行高
 
-### 【4】grid-template-areas 属性
+<iframe height="300" style="width: 100%;" scrolling="no" title="CSS grid grid-template-columns 属性和 grid-template-rows 属性" src="https://codepen.io/firefly1984982452/embed/PoQLxjX?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/PoQLxjX">
+  CSS grid grid-template-columns 属性和 grid-template-rows 属性</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
-### 【5】grid-auto-flow 属性
-
-### 【6】justify-items 属性、align-items 属性以及 place-items 属性
-
-### 【7】justify-content 属性、align-content 属性以及 place-content 属性
-
-### 【8】grid-auto-columns 属性和 grid-auto-rows 属性
-
-### 【1】place-content
-
-`place-content` 属性是`align-content` 和 `justify-content`的简写。
-
-`place-items`和`place-self`上同。
+#### 2.auto-fill 和 auto -fit 关键字
 
 ```css
 display: grid;
-place-content: center;
-```
-
-## 【3】grid-template-columns 更多属性
-
-### 【3.1】响应式布局`auto-fit`和`auto-fill`
-
-```css
-width: 100%;
-height: 400px;
-display: grid;
-grid-gap: 10px;
 grid-template-columns: repeat(auto-fit, 100px);
 /* 或 */
 grid-template-columns: repeat(auto-fill, 100px);
@@ -86,7 +66,58 @@ grid-template-columns: repeat(auto-fill, 100px);
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-### 【3.2】跨越所有列`1 / -1`
+#### 3.minmax()关键字
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="CSS grid grid-template-columns minmax" src="https://codepen.io/firefly1984982452/embed/bGLZQJN?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/bGLZQJN">
+  CSS grid grid-template-columns minmax</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+#### 4.auto 关键字
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="CSS grid grid-template-columns auto关键字" src="https://codepen.io/firefly1984982452/embed/bGLZOGV?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/bGLZOGV">
+  CSS grid grid-template-columns auto关键字</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+### 【3】grid-row-gap 属性、grid-column-gap 属性以及 grid-gap 属性
+
+### 【4】grid-template-areas 属性
+
+◆ grid-template-areas 的使用
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="CSS grid grid-template-areas" src="https://codepen.io/firefly1984982452/embed/oNEmMzd?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/oNEmMzd">
+  CSS grid grid-template-areas</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+### 【5】grid-auto-flow 属性
+
+### 【6】justify-items 属性、align-items 属性以及 place-items 属性
+
+### 【7】justify-content 属性、align-content 属性以及 place-content 属性
+
+◆ place-content
+
+`place-content` 属性是`align-content` 和 `justify-content`的简写。
+
+`place-items`和`place-self`上同。
+
+```css
+display: grid;
+place-content: center;
+```
+
+### 【8】grid-auto-columns 属性和 grid-auto-rows 属性
+
+## 三、项目属性
+
+### grid-column
+
+grid-column 跨越所有列`1 / -1`
 
 ```css
 .fullwidth {
@@ -95,13 +126,3 @@ grid-template-columns: repeat(auto-fill, 100px);
 ```
 
 重点：`1 / -1`是指从第 1 列开始，直到最后一列结束，即铺满整行。
-
-### 【3.3】grid-template-areas 的使用
-
-<iframe height="400" style="width: 100%;" scrolling="no" title="CSS grid grid-template-areas" src="https://codepen.io/firefly1984982452/embed/oNEmMzd?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/firefly1984982452/pen/oNEmMzd">
-  CSS grid grid-template-areas</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
-
-## 三、项目属性
