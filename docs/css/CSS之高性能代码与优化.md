@@ -1,4 +1,4 @@
-# CSS之高性能代码与优化
+# CSS 之高性能代码与优化
 
 # 一、CSS 编码技巧
 
@@ -12,17 +12,17 @@
 比如`line-height`写倍数、`font-size`写百分比更利于维护。
 
 ```css
-font-size:20px;
-height:20px;
-line-heigth:20px;
+font-size: 20px;
+height: 20px;
+line-heigth: 20px;
 ```
 
 换成
 
 ```css
 font-size: 150%;
-height:20px;
-line-heigth:1.5;
+height: 20px;
+line-heigth: 1.5;
 ```
 
 ## 【2】代码易维护 vs．代码量少
@@ -47,7 +47,7 @@ border-style: solid;
 ## 【3】currentColor
 
 ```css
-p{
+p {
   color: red;
   border: solid 1px currentColor;
   // 或直接简化
@@ -81,9 +81,9 @@ background-color: red;
  * font-family-config.css----引入配置字体的css
  * public.css----------------引入全局公用的css
  */
-import './assets/css/base.css';
-import './config/font-family-config.css';
-import './assets/css/public.css';
+import "./assets/css/base.css";
+import "./config/font-family-config.css";
+import "./assets/css/public.css";
 ```
 
 ## 具体 CSS 文件的注释
@@ -92,24 +92,21 @@ import './assets/css/public.css';
 /*-------*\
   $主框架
 \*-------*/
-.page{}
-
-
-
+.page {
+}
 
 /*-------*\
  $标题菜单
 \*-------*/
-.title{}
-
-
-
+.title {
+}
 
 /*------------*\
  $滚动栏样式重置
 \*------------*/
 
-::-webkit-scrollbar{}
+::-webkit-scrollbar {
+}
 ```
 
 中间最好留 5 行以上，好在全览时看起来像个段落。
@@ -133,9 +130,12 @@ import './assets/css/public.css';
 下划线（ `__` ）代表子元素；连字符（ `-` ）代表不同状态；
 
 ```css
-.ul{}
-.ul_li{}
-.ul_li-display{}
+.ul {
+}
+.ul_li {
+}
+.ul_li-display {
+}
 ```
 
 ## BEM 命名法
@@ -180,3 +180,27 @@ Class
 如不可点击时可改为`cursor: not-allowed;`
 
 - [所有的鼠标样式](https://www.w3school.com.cn/tiy/t.asp?f=eg_csse_cursor)
+
+---
+
+# 八、content-visibility：内容可见性
+
+◆ 网页渲染性能提升
+
+默认给 100 个 div 加动画样式：
+
+![image](https://s1.ax1x.com/2022/06/20/Xxin54.png)
+
+使用 `content-visifility` 优化后：
+
+![image](https://s1.ax1x.com/2022/06/20/XxPb8A.png)
+
+配合 `contain-intrinsic-size` 优化后：
+
+![image](https://s1.ax1x.com/2022/06/20/XxidGd.png)
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="content-visibility" src="https://codepen.io/firefly1984982452/embed/LYQoYZx?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/LYQoYZx">
+  content-visibility</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
