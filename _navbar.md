@@ -1,6 +1,5 @@
 - HTML
 
-  - [HTML5 标签](/docs/html/HTML5标签.md)
   - [HTML5 之 canvas](/docs/html/HTML5之canvas.md)
   - [HTML 之 DOM 对象](/docs/html/HTML之DOM对象.md)
   - [HTML 之 DOM 事件对象](/docs/html/HTML之DOM事件对象.md)

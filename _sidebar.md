@@ -17,8 +17,8 @@
     - [input 标签](/docs/html/HTML5-Element/input标签.md)
     - [其它标签](/docs/html/HTML5-Element/其它标签.md)
     - [网页的语义结构](/docs/html/HTML5-Element/网页的语义结构.md)
+    - [实体](/docs/html/HTML5-Element/实体.md)
 
-  - [HTML5 标签](/docs/html/HTML5标签.md)
   - [HTML5 之 canvas](/docs/html/HTML5之canvas.md)
   - [HTML 之 DOM 对象](/docs/html/HTML之DOM对象.md)
   - [HTML 之 DOM 事件对象](/docs/html/HTML之DOM事件对象.md)
