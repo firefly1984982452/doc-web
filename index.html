@@ -8,6 +8,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <link rel="shortcut icon" href="./assets/images/vue.ico" />
   <link rel="stylesheet" href="./assets/doc.css">
 </head>
@@ -27,6 +28,7 @@
       // 左侧导航栏
       loadSidebar: true,
       subMaxLevel: 4,
+      sidebarDisplayLevel: 0,
       auto2top: true,
       // 顶部菜单栏
       loadNavbar: true,
@@ -84,6 +86,8 @@
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
   <!-- 插件：bash命令高亮 -->
   <script src="//fastly.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <!-- 插件：侧边栏折叠插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
 </body>
 
