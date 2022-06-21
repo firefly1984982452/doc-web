@@ -52,12 +52,6 @@
     - [caret-color](/docs/css/css3/CSS-caret-color.md)
     - [scorll](/docs/css/css3/CSS-scorll.md)
     - [自定义下划线](/docs/css/css3/CSS-自定义下划线.md)
-    - [background](/docs/css/css3/CSS-background.md)
-    - [background](/docs/css/css3/CSS-background.md)
-    - [background](/docs/css/css3/CSS-background.md)
-    - [background](/docs/css/css3/CSS-background.md)
-    - [background](/docs/css/css3/CSS-background.md)
-    - [background](/docs/css/css3/CSS-background.md)
 
   - CSS 其他示例
 
@@ -71,10 +65,6 @@
     - [最后一个 li 不显示 border](/docs/css/examples/CSS-最后一个li不显示border.md)
     - [单个 div 下渐变进度条](/docs/css/examples/CSS-单个div下渐变进度条.md)
     - [outline 属性实现悬浮时高亮](/docs/css/examples/CSS-outline属性实现悬浮时高亮.md)
-    - [background](/docs/css/examples/CSS-background.md)
-    - [background](/docs/css/examples/CSS-background.md)
-    - [background](/docs/css/examples/CSS-background.md)
-    - [background](/docs/css/examples/CSS-background.md)
     - [水波特效动画](/docs/css/examples/CSS-水波特效动画.md)
     - [动画效果](/docs/css/examples/css-动画效果.md)
 
@@ -88,13 +78,7 @@
     - [经典布局](/docs/css/layout/css-经典布局.md)
 
   - CSS 进阶
-
-    <!-- - [CSS 之 CSS3 样式](/docs/css/CSS之CSS3样式.md) -->
-
     - [CSS 之 SVG](/docs/css/CSS之SVG.md)
-      <!-- - [CSS 之网页布局](/docs/css/CSS之网页布局.md) -->
-        <!-- - [CSS 之进阶总结](/docs/css/CSS之进阶总结.md) -->
-        <!-- - [CSS 之实现各种功能](/docs/css/CSS之实现各种功能.md) -->
     - [CSS 之高性能代码与优化](/docs/css/CSS之高性能代码与优化.md)
     - [CSS 之工具](/docs/css/CSS之工具：PostCSS、CSS-in-JS、CSS-Moudles.md)
     - [CSS 之预处理器](</docs/css/CSS之预处理器：Scss(Sass)、Less、stylus.md>)
