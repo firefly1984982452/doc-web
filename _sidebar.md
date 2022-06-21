@@ -7,6 +7,16 @@
 
     - [head 部分](/docs/html/HTML5-Element/head.md)
     - [全局属性](/docs/html/HTML5-Element/全局属性.md)
+    - [文本标签](/docs/html/HTML5-Element/文本标签.md)
+    - [列表标签](/docs/html/HTML5-Element/列表标签.md)
+    - [图像标签](/docs/html/HTML5-Element/图像标签.md)
+    - [视频标签](/docs/html/HTML5-Element/视频标签.md)
+    - [链接标签](/docs/html/HTML5-Element/链接标签.md)
+    - [表格标签](/docs/html/HTML5-Element/表格标签.md)
+    - [表单标签](/docs/html/HTML5-Element/表单标签.md)
+    - [input 标签](/docs/html/HTML5-Element/input标签.md)
+    - [其它标签](/docs/html/HTML5-Element/其它标签.md)
+    - [网页的语义结构](/docs/html/HTML5-Element/网页的语义结构.md)
 
   - [HTML5 标签](/docs/html/HTML5标签.md)
   - [HTML5 之 canvas](/docs/html/HTML5之canvas.md)
