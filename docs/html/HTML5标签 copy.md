@@ -5,7 +5,201 @@
 
 !> 只记录了冷门的不常用的知识，其它基础的没有记录。
 
+# 一、`<head>` 部分
+
+## 【1】`<base>`：设置相对 URL 的基础
+
+作用：有`href`和`target`属性。
+
+用法：
+
+```html
+<head>
+  <base href="https://www.baidu.cn/" target="_blank" />
+</head>
+
+<body>
+  <a href="https://www.baidu.com/">打开默认网址以外的网址：写全称</a>
+  <a href="img/PCfb_5bf082d29588c07f842ccde3f97243ea.png">打开默认网址下的页面：写后缀</a>
+  <img src="img/PCfb_5bf082d29588c07f842ccde3f97243ea.png" alt="" srcset="" />
+  <img src="https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png" alt="" srcset="" />
+</body>
+```
+
+这时`<a>`标签不用再写`target="_blank"`也能直接新标签页打写，`<img>`标签不用再写网址前缀也可以直接获取到地址。如果想用默认地址以外的地址：**写全称**。
+
+## 【1】禁止缓存
+
+```html
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+```
+
+## 【2】添加标签栏 logo
+
+```html
+<link rel="shortcut icon" type="image/x-icon" href="./static/logo.ico" rel="shortcut icon" />
+```
+
+!> `vue-cli` 项目中，要把`.ico` 文件放在 `static` 文件中，并重新编译运行
+
+## 【3】自适应手机
+
+```html
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+```
+
 ---
+
+# 二、全局属性
+
+1. id 中的`#`锚点
+2. `title`：鼠标悬停时有提示文字
+3. `tabindex`：按<kbd>tab</kbd>键之后按顺序遍历
+4. `accessKey`：使用自定义键来聚焦
+5. `hidden`：不渲染这个 DOM 元素
+6. `dir`：文字的阅读方向
+7. `contenteditable`：允许修改内容
+8. `spellcheck`：打开拼写检查
+9. `data-`：放置自定义数据
+10. `translate`：是否翻译
+
+## 【1】id 中的`#`锚点
+
+代码中有`<h1 id="test">测试</h1>`时，在浏览器直接后缀加上`#test`即可精准定位到指定 ID 地方。
+
+## 【2】`title`：鼠标悬停时有提示文字
+
+```html
+<h1 title="版权说明">版权项：XXX</h1>
+```
+
+<div class="example-box">
+  <p title="版权说明">版权项：XXX</p>
+</div>
+
+## 【3】`tabindex`：按<kbd>tab</kbd>键之后按顺序遍历
+
+属性值：
+
+- 负整数：可以获取焦点（如 JavaScript 中的`focus()`方法），但按<kbd>tab</kbd>键之后不会参与遍历。这个值通常是`-1`。
+- `0`：参与遍历，如果都是 0，按顺序遍历。
+- 正整数：参与遍历，按顺序遍历。
+
+**3 个值都有的情况下的顺序：**
+
+1. `tabindex`为`0`；
+2. 地址栏`url`；
+3. `tabindex`为正整数。
+
+**tabindex 为负数时不参与**
+
+## 【4】`accessKey`：使用自定义键来聚焦
+
+```html
+<button accesskey="s">提交</button>
+```
+
+使用：
+
+- window：使用<kbd>Alt</kbd> + `accessKey` (或者 <kbd>Shift</kbd> + <kbd>Alt</kbd> + `accessKey`)
+
+- macbook：使用<kbd>control</kbd> + <kbd>option</kbd> + `accessKey`。
+
+<div class="example-box">
+  <button accesskey="s">按组合键+s聚焦</button>
+</div>
+
+## 【5】`hidden`：不渲染这个 DOM 元素
+
+作用：不渲染这个 DOM 元素，相当于`display:none`。
+
+```html
+<p hidden>本句不会显示在页面上。</p>
+```
+
+## 【6】`dir`：文字的阅读方向
+
+有三个可能的值。
+
+- `ltr`：从左到右阅读，比如英语。
+- `rtl`：从右到左阅读，阿拉伯语、波斯语、希伯来语都属于这一类。
+- `auto`：浏览器根据内容的解析结果，自行决定。
+
+`rtl`从右到左阅读时，效果相当于`text-align:right`，起作用的属性是：`direction:rtl`。
+
+```
+  <p dir="ltr">hello world.【dir="ltr"】</p>
+  <p dir="rtl">【dir="rtl"】hello world.</p>
+  <p dir="auto">hello world.【dir="auto"】</p>
+  <p style="text-align: right">【text-align: right】hello world.</p>
+```
+
+<div class="example-box">
+  <p dir="ltr">hello world.【dir="ltr"】</p>
+  <p dir="rtl">【dir="rtl"】hello world.</p>
+  <p dir="auto">hello world.【dir="auto"】</p>
+  <p style="text-align: right">【text-align: right】hello world.</p>
+</div>
+
+## 【7】`contenteditable`：允许修改内容
+
+```html
+<p contenteditable="true">阅读时是正常模式，鼠标点击后，本句内容可修改。</p>
+```
+
+<div class="example-box">
+  <p contenteditable="true">阅读时是正常模式，鼠标点击后，本句内容可修改。</p>
+</div>
+
+## 【8】`spellcheck`：打开拼写检查
+
+```html
+<p contenteditable="true" spellcheck="true">英语单词 separate 容易写错成 seperate。</p>
+```
+
+<div class="example-box">
+  <p contenteditable="true" spellcheck="true">
+  英语单词 separate 容易写错成 seperate。
+  </p>
+</div>
+
+?> chrome 浏览器下，鼠标点击上方示例后可看到写错的单词 seperate 下面有错误的标识
+
+## 【9】`data-`：放置自定义数据
+
+```css
+<style>
+  h1[data-yeah]::before {
+    content: attr(data-yeah);
+  }
+</style>
+```
+
+```html
+<h1 data-yeah="显示信息：">data-yeah</h1>
+```
+
+<style>
+  .example-box h1[data-yeah]::before {
+    content: attr(data-yeah);
+    font-size: .7em;
+    color: #f0f;
+  }
+</style>
+<div class="example-box">
+  <h1 data-yeah='显示信息：'>data-yeah</h1>
+</div>
+
+## 【10】`translate`：是否翻译
+
+!> 暂无浏览器支持此属性
+
+```
+<p translate="no">请勿翻译本段。</p>
+<p>本段可被译为任意语言。</p>
+```
 
 ---
 
@@ -569,16 +763,16 @@ body>header{页眉}+(main>article>h1{文章标题}+section>h2{第一章}+p{文�
 <button onclick="screenShot()">Screenshot</button>
 <script>
   function screenShot() {
-    const video = document.getElementById('video');
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
+    const video = document.getElementById("video");
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     ctx.drawImage(video, 0, 0);
 
     // download picture
-    const a = document.createElement('a');
-    a.href = canvas.toDataURL('image/png');
+    const a = document.createElement("a");
+    a.href = canvas.toDataURL("image/png");
     a.download = `${Date.now()}`;
     a.click();
   }
@@ -953,7 +1147,7 @@ send
 JS 操作：
 
 ```js
-const modal = document.querySelector('dialog');
+const modal = document.querySelector("dialog");
 // 对话框显示，相当于增加 open 属性
 modal.showModal();
 // 对话框关闭，相当于移除 open 属性

@@ -3,13 +3,18 @@
 
 - HTML
 
+  - HTML5 元素
+
+    - [head 部分](/docs/html/HTML5-Element/head.md)
+    - [全局属性](/docs/html/HTML5-Element/全局属性.md)
+
   - [HTML5 标签](/docs/html/HTML5标签.md)
   - [HTML5 之 canvas](/docs/html/HTML5之canvas.md)
   - [HTML 之 DOM 对象](/docs/html/HTML之DOM对象.md)
   - [HTML 之 DOM 事件对象](/docs/html/HTML之DOM事件对象.md)
   - [HTML 代码简写](</docs/html/HTML代码简写：Emmet(ZenCoding)和Pug语法.md>)
 
-- [CSS](/docs/css/_sidebar.md)
+- CSS
 
   - CSS3
 
@@ -84,30 +89,32 @@
     - [CSS 之工具](/docs/css/CSS之工具：PostCSS、CSS-in-JS、CSS-Moudles.md)
     - [CSS 之预处理器](</docs/css/CSS之预处理器：Scss(Sass)、Less、stylus.md>)
 
-- JavaScript 基础对象
+- JavaScrip
 
-  - [JavaScript 之 Object 对象](/docs/JavaScript-Object/JavaScript之Object对象.md)
-  - [JavaScript 之 Array 数组](/docs/JavaScript-Object/JavaScript之Array数组.md)
-  - [JavaScript 之 String 对象](/docs/JavaScript-Object/JavaScript之String对象.md)
-  - [JavaScript 之 Number](/docs/JavaScript-Object/JavaScript之Number.md)
-  - [JavaScript 之 Math](/docs/JavaScript-Object/JavaScript之Math.md)
-  - [JavaScript 之 Date 时间对象](/docs/JavaScript-Object/JavaScript之Date时间对象.md)
-  - [JavaScript 之 RegExp 正则表达式](/docs/JavaScript-Object/JavaScript之RegExp正则表达式.md)
-  - [JavaScript 之 Function 函数](/docs/JavaScript-Object/JavaScript之Function函数.md)
-  - [JavaScript 之 HTTP 对象](/docs/JavaScript-Object/JavaScript之HTTP对象.md)
-  - [JavaScript 之 ES6 总结](/docs/JavaScript-Object/JavaScript之ES6总结.md)
+  - JavaScript 基础对象
 
-- JavaScript 进阶
+    - [JavaScript 之 Object 对象](/docs/js/JavaScript-Object/JavaScript之Object对象.md)
+    - [JavaScript 之 Array 数组](/docs/js/JavaScript-Object/JavaScript之Array数组.md)
+    - [JavaScript 之 String 对象](/docs/js/JavaScript-Object/JavaScript之String对象.md)
+    - [JavaScript 之 Number](/docs/js/JavaScript-Object/JavaScript之Number.md)
+    - [JavaScript 之 Math](/docs/js/JavaScript-Object/JavaScript之Math.md)
+    - [JavaScript 之 Date 时间对象](/docs/js/JavaScript-Object/JavaScript之Date时间对象.md)
+    - [JavaScript 之 RegExp 正则表达式](/docs/js/JavaScript-Object/JavaScript之RegExp正则表达式.md)
+    - [JavaScript 之 Function 函数](/docs/js/JavaScript-Object/JavaScript之Function函数.md)
+    - [JavaScript 之 HTTP 对象](/docs/js/JavaScript-Object/JavaScript之HTTP对象.md)
+    - [JavaScript 之 ES6 总结](/docs/js/JavaScript-Object/JavaScript之ES6总结.md)
 
-  - [JavaScrip 专业名词](docs/JavaScript/JavaScrip专业名词.md)
-  - [JavaScript 递归穷举所有排列组合并找出重复值](docs/JavaScript/JavaScript递归穷举所有排列组合并找出重复值.md)
-  - [JavaScript 之观察者模式-Obverse](/docs/JavaScript/JavaScript之观察者模式-Obverse.md)
-  - [JavaScript 控制对象](/docs/JavaScript/JavaScript控制对象.md)
-  - [JavaScript 之面向对象](/docs/JavaScript/JavaScript之面向对象.md)
-  - [JavaScript 之进阶总结](/docs/JavaScript/JavaScript之进阶总结.md)
-  - [JavaScript 深拷贝浅拷贝全析](/docs/JavaScript/JavaScript深拷贝浅拷贝全析.md)
-  - [JavaScript 异步操作解决方案](/docs/JavaScript/JavaScript异步操作解决方案.md)
-  - [JavaScript 之运行机制](/docs/JavaScript/JavaScript之运行机制.md)
+  - JavaScript 进阶
+
+    - [JavaScrip 专业名词](/docs/js/JavaScript-More/JavaScrip专业名词.md)
+    - [JavaScript 递归穷举所有排列组合并找出重复值](/docs/js/JavaScript-More/JavaScript递归穷举所有排列组合并找出重复值.md)
+    - [JavaScript 之观察者模式-Obverse](/docs/js/JavaScript-More/JavaScript之观察者模式-Obverse.md)
+    - [JavaScript 控制对象](/docs/js/JavaScript-More/JavaScript控制对象.md)
+    - [JavaScript 之面向对象](/docs/js/JavaScript-More/JavaScript之面向对象.md)
+    - [JavaScript 之进阶总结](/docs/js/JavaScript-More/JavaScript之进阶总结.md)
+    - [JavaScript 深拷贝浅拷贝全析](/docs/js/JavaScript-More/JavaScript深拷贝浅拷贝全析.md)
+    - [JavaScript 异步操作解决方案](/docs/js/JavaScript-More/JavaScript异步操作解决方案.md)
+    - [JavaScript 之运行机制](/docs/js/JavaScript-More/JavaScript之运行机制.md)
 
 - 前端
 
@@ -137,7 +144,7 @@
   - [Vue3.0+TypeScript 学习笔记](/docs/vue/Vue3.0+TypeScript学习笔记.md)
   - [weex 踩坑集](/docs/vue/weex踩坑集.md)
 
-- 小程序
+- 微信小程序
 
   - [微信小程序踩坑集](/docs/mp.weixin/微信小程序踩坑集.md)
   - [小程序接口配置](/docs/mp.weixin/小程序接口配置.md)
