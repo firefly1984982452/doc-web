@@ -5,7 +5,7 @@
 - [阮一峰的 HTML 教程](https://wangdoc.com/html/)
 - [《HTML5 权威指南》](https://book.douban.com/subject/25786074/)
 
-# HTML 之 DOM 对象
+## HTML 之 DOM 对象
 
 - [菜鸟教程](https://www.runoob.com/jsref/dom-obj-document.html)
 - [w3cschool](https://www.w3school.com.cn/js/js_htmldom_document.asp)

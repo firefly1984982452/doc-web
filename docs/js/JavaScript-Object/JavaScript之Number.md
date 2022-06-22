@@ -39,7 +39,7 @@ console.log(isNaN(true)); //false
 console.log(isNaN(false)); //false
 console.log(isNaN(0)); //false
 console.log(isNaN(undefined)); //true
-console.log(isNaN("AB")); //true
+console.log(isNaN('AB')); //true
 console.log(isNaN({ a: 1 })); //true
 console.log(isNaN(NaN)); //true
 
@@ -49,7 +49,7 @@ console.log(Number.isNaN(true)); //false
 console.log(Number.isNaN(false)); //false
 console.log(Number.isNaN(0)); //false
 console.log(Number.isNaN(undefined)); //false
-console.log(Number.isNaN("AB")); //false
+console.log(Number.isNaN('AB')); //false
 console.log(Number.isNaN({ a: 1 })); //false
 console.log(Number.isNaN(NaN)); //true
 ```
@@ -79,15 +79,15 @@ console.log(Number.isNaN(NaN)); //true
 ◆ `Number()`和`parseInt()`的区别
 
 ```js
-Number("3e"); // NaN
-parseInt("3e"); // 3
+Number('3e'); // NaN
+parseInt('3e'); // 3
 ```
 
 ◆ `parseInt()`对其它进制进行取整转换
 
 ```js
 // 0X默认解读为16进制
-parseInt("0x10"); // 16
+parseInt('0x10'); // 16
 ```
 
 ◆ 保留小数点后两位
@@ -176,7 +176,7 @@ console.log(largeNumber); // 1000000000"
 
 - 如果不使用 `toString()`，后面会自带 1 个 `n`，`10n==10`是`true`，`10n===10`是`false`；
 
-- 不能再用`Number`转义，`Number`转义会自动转为科学计数法。
+!> 不能再用`Number`转义，`Number`转义会自动转为科学计数法。
 
 ```
 Number("81129638414606663681390495662081")
