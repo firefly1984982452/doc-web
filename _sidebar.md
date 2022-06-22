@@ -164,7 +164,6 @@
     - [与 JAVA 相通的概念](/docs/js/JavaScript-More/与JAVA相通的概念.md)
     - [hybird 混合式开发](/docs/js/JavaScript-More/hybird混合式开发.md)
     - [Blob](/docs/js/JavaScript-More/Blob.md)
-    - [打开下载后立马关闭](/docs/js/JavaScript-More/打开下载后立马关闭.md)
     - [Web Animation API](/docs/js/JavaScript-More/Web-Animation-API.md)
     - [数据类型：`valueOf`、`toString` 和 `Symbol.toPrimitive`](/docs/js/JavaScript-More/数据类型.md)
     - [HTML 渲染过程](/docs/js/JavaScript-More/HTML渲染过程.md)
@@ -174,10 +173,23 @@
     - [JavaScript 递归穷举所有排列组合并找出重复值](/docs/js/JavaScript-More/JavaScript递归穷举所有排列组合并找出重复值.md)
     - [JavaScript 控制对象](/docs/js/JavaScript-More/JavaScript控制对象.md)
     - [JavaScript 之面向对象](/docs/js/JavaScript-More/JavaScript之面向对象.md)
-    - [JavaScript 之进阶总结](/docs/js/JavaScript-More/JavaScript之进阶总结.md)
     - [JavaScript 深拷贝浅拷贝全析](/docs/js/JavaScript-More/JavaScript深拷贝浅拷贝全析.md)
     - [JavaScript 异步操作解决方案](/docs/js/JavaScript-More/JavaScript异步操作解决方案.md)
     - [JavaScript 之运行机制](/docs/js/JavaScript-More/JavaScript之运行机制.md)
+
+  - JavaScript 实现某功能
+
+    - [打开下载后立马关闭](/docs/js/JavaScript-Funtions/打开下载后立马关闭.md)
+    - [用 iframe 实现 HTML 在线编辑](/docs/js/JavaScript-Funtions/用iframe实现HTML在线编辑.md)
+    - [数字递增动画](/docs/js/JavaScript-Funtions/数字递增动画.md)
+    - [全屏功能](/docs/js/JavaScript-Funtions/全屏功能.md)
+    - [快速使变量变成对象](/docs/js/JavaScript-Funtions/快速使变量变成对象.md)
+    - [检测到当前开启了大写键盘](/docs/js/JavaScript-Funtions/检测到当前开启了大写键盘.md)
+    - [禁用鼠标左键](/docs/js/JavaScript-Funtions/禁用鼠标左键.md)
+    - [可终止条件](/docs/js/JavaScript-Funtions/可终止条件.md)
+    - [undefined 和 void0](/docs/js/JavaScript-Funtions/undefined和void0.md)
+    - [前端路由和后端路由](/docs/js/JavaScript-Funtions/前端路由和后端路由.md)
+    - [typeof null 为什么返回 object](/docs/js/JavaScript-Funtions/typeof_null为什么返回object.md)
 
 - 前端
 
