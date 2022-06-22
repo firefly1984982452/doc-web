@@ -1,4 +1,3 @@
-- [目录](/docs/menu.md)
 - [说明](/docs/about.md)
 
 - HTML
@@ -19,7 +18,15 @@
     - [网页的语义结构](/docs/html/HTML5-Element/网页的语义结构.md)
     - [实体](/docs/html/HTML5-Element/实体.md)
 
-  - HTML DOM Event
+  - HTML DOM 对象
+
+    - [DOM console 对象](/docs/html/DOM-Object/console.md)
+    - [DOM Dcoument 对象集合](/docs/html/DOM-Object/对象集合.md)
+    - [DOM Element 元素对象](/docs/html/DOM-Object/元素对象.md)
+    - [DOM 属性对象](/docs/html/DOM-Object/属性对象.md)
+    - [DOM 事件对象](/docs/html/DOM-Object/事件对象.md)
+
+  - HTML DOM 事件对象
 
     - [事件对象的使用](/docs/html/DOM-Event/事件对象的使用.md)
     - [事件对象](/docs/html/DOM-Event/事件对象.md)
@@ -36,9 +43,12 @@
     - [过渡事件](/docs/html/DOM-Event/过渡事件.md)
     - [其他事件](/docs/html/DOM-Event/其他事件.md)
 
+  - HTML 其它
+
+    - [Emmet(ZenCoding)](/docs/html/other/Emmet.md)
+    - [Pug](/docs/html/other/Pug.md)
+
   - [HTML5 之 canvas](/docs/html/HTML5之canvas.md)
-  - [HTML 之 DOM 对象](/docs/html/HTML之DOM对象.md)
-  - [HTML 代码简写](</docs/html/HTML代码简写：Emmet(ZenCoding)和Pug语法.md>)
 
 - CSS
 
