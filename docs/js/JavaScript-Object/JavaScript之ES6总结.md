@@ -1,4 +1,4 @@
-# JavaScript之ES6总结
+# JavaScript 之 ES6 总结
 
 !> 不只 ES6，ES7 和 ES8 等 都会加上
 
@@ -58,7 +58,7 @@ if (true) {
 
 ◆ 【2.3】不允许重复声明
 
-以下2个代码都会报错
+以下 2 个代码都会报错
 
 ```js
 function func() {
@@ -99,7 +99,7 @@ function func() {
 如上，变成`IIFE`写法
 
 ```js
-(function(){
+(function () {
   var a = 1;
   console.log(a);
 })();
@@ -136,18 +136,18 @@ arr = ['world']; // 报错
 **方法 1：`Object.defineProperty`**
 
 ```js
-function _const (key,value) {
-    window[key] = value;
-    Object.defineProperty(window, key, {
-        enumerable: false, // for...of和Object.keys不能获取到该属性
-        configurable: false, // 是否能被删除
-        get: function () {
-            return value;
-        },
-        set: function () {
-            throw new TypeError('error')
-        }
-    })
+function _const(key, value) {
+  window[key] = value;
+  Object.defineProperty(window, key, {
+    enumerable: false, // for...of和Object.keys不能获取到该属性
+    configurable: false, // 是否能被删除
+    get: function () {
+      return value;
+    },
+    set: function () {
+      throw new TypeError('error');
+    },
+  });
 }
 _const('cc', 35);
 cc = 1; // error
@@ -158,7 +158,7 @@ Object.keys(window).indexOf('cc'); // -1
 **方法 2：`Object.freeze`**
 
 ```js
-var f = Object.freeze({'name':'admin'});
+var f = Object.freeze({ name: 'admin' });
 f.name = 'hello'; // 严格模式下是会报错的
 f.name; // 打印出admin ,值没有被改变
 ```
@@ -194,17 +194,17 @@ f.name; // 打印出admin ,值没有被改变
 
 ```js
 let [x, , y] = [1, 2, 3];
-x // 1
-y // 3
+x; // 1
+y; // 3
 
 let [head, ...tail] = [1, 2, 3, 4];
-head // 1
-tail // [2, 3, 4]
+head; // 1
+tail; // [2, 3, 4]
 
 let [x, y, ...z] = ['a'];
-x // "a"
-y // undefined
-z // []
+x; // "a"
+y; // undefined
+z; // []
 ```
 
 ◆ 【2.2】默认值
@@ -213,12 +213,12 @@ z // []
 
 ```js
 let [foo = true] = [];
-foo // true
+foo; // true
 
 let [x, y = 'b'] = ['a']; // x='a', y='b'
 let [x, y = 'b'] = ['a', undefined]; // x='a', y='b'
 let [x = 1] = [null];
-x // null
+x; // null
 ```
 
 ## 【3】对象
@@ -229,11 +229,11 @@ x // null
 
 ```js
 let { bar, foo } = { foo: 'aaa', bar: 'bbb' };
-foo // "aaa"
-bar // "bbb"
+foo; // "aaa"
+bar; // "bbb"
 
 let { baz } = { foo: 'aaa', bar: 'bbb' };
-baz // undefined
+baz; // undefined
 ```
 
 实际上`let { bar } = { bar: 'bbb' };`是简写，全称是：`let { bar:bar } = { bar: 'bbb' };`；
@@ -243,8 +243,8 @@ baz // undefined
 （字义`name`变量接收对象里的`title`字段）
 
 ```js
-let {title:name} = {title:'小明',sex:'男'};
-title // 小明
+let { title: name } = { title: '小明', sex: '男' };
+title; // 小明
 ```
 
 在解构中，**左边是模式，右边是赋值**。
@@ -254,33 +254,33 @@ title // 小明
 **默认值：对象属性严格等于===，默认值才生效**
 
 ```js
-var {x, y = 5} = {x: 1};
-x // 1
-y // 5
+var { x, y = 5 } = { x: 1 };
+x; // 1
+y; // 5
 
-var {x: y = 3} = {};
-y // 3
+var { x: y = 3 } = {};
+y; // 3
 
-var {x: y = 3} = {x: 5};
-y // 5
+var { x: y = 3 } = { x: 5 };
+y; // 5
 ```
 
 假设想要的效果是这样的：
 
 ```js
-var foo = function(x,y){
-    x = x || 10;
-    y = y || 20;
-    console.log(x+y);
-}
-foo(1,2); // 3
+var foo = function (x, y) {
+  x = x || 10;
+  y = y || 20;
+  console.log(x + y);
+};
+foo(1, 2); // 3
 foo(); // 30
 ```
 
 但是也有出错的时候：
 
 ```js
-foo(0,1); // 11
+foo(0, 1); // 11
 ```
 
 第一个参数 0 被解析成了`false`，而不是数字 0 进行计算。
@@ -288,10 +288,10 @@ foo(0,1); // 11
 用`默认参数值`
 
 ```js
-var foo = function(x=10, y=20){
-    console.log(x+y);
-}
-foo(0,1); // 1
+var foo = function (x = 10, y = 20) {
+  console.log(x + y);
+};
+foo(0, 1); // 1
 ```
 
 ◆ 【3.3】注意点
@@ -311,22 +311,22 @@ let x;
 
 ```js
 let x;
-({x} = {x:1});
+({ x } = { x: 1 });
 ```
 
 !> （2）解构允许等号左边不放置任何变量，但是无意义。
 
 ```js
-({} = {x:1});
+({} = { x: 1 });
 ```
 
 !> （3）数组中模式为数字时，代表下标
 
 ```js
 let arr = [1, 2, 3];
-let {0 : first, [arr.length - 1] : last} = arr;
-first // 1
-last // 3
+let { 0: first, [arr.length - 1]: last } = arr;
+first; // 1
+last; // 3
 ```
 
 ## 【4】字符串
@@ -335,13 +335,13 @@ last // 3
 
 ```js
 const [a, b, c, d, e] = 'hello';
-a // "h"
-b // "e"
-c // "l"
-d // "l"
-e // "o"
-let {length : len} = 'hello';
-len // 5
+a; // "h"
+b; // "e"
+c; // "l"
+d; // "l"
+e; // "o"
+let { length: len } = 'hello';
+len; // 5
 ```
 
 ## 【5】数值和布尔值
@@ -349,11 +349,11 @@ len // 5
 如果等号右边是数值和布尔值，会转换成对象。
 
 ```js
-let {toString: s} = 123;
-s === Number.prototype.toString // true
+let { toString: s } = 123;
+s === Number.prototype.toString; // true
 
-let {toString: s} = true;
-s === Boolean.prototype.toString // true
+let { toString: s } = true;
+s === Boolean.prototype.toString; // true
 ```
 
 ## 【6】用途
@@ -363,7 +363,7 @@ s === Boolean.prototype.toString // true
 ```js
 let x = 1;
 let y = 2;
-[x,y] = [y,x];
+[x, y] = [y, x];
 ```
 
 （2）提取对象的属性
@@ -378,7 +378,7 @@ map.set('first', 'hello');
 map.set('second', 'world');
 
 for (let [key, value] of map) {
-  console.log(key + " is " + value);
+  console.log(key + ' is ' + value);
 }
 // first is hello
 // second is world
@@ -401,31 +401,31 @@ improt {list1} from 'list'
 ◆ 【1.1】代替 apply
 
 ```js
-var test = function(a,b,c){
-  console.log(a,b,c);
-}
-var arr = [1,2,3];
+var test = function (a, b, c) {
+  console.log(a, b, c);
+};
+var arr = [1, 2, 3];
 test(...arr); // 1 2 3
 ```
 
 用 apply 的写法：
 
 ```js
-test.apply(null,arr);
+test.apply(null, arr);
 ```
 
 ◆ 【1.2】代替 concat
 
 ```js
-var arr1 = [1,2,3,4];
-var arr2 = [0,...arr1,5,6];
+var arr1 = [1, 2, 3, 4];
+var arr2 = [0, ...arr1, 5, 6];
 console.log(arr2); // [0, 1, 2, 3, 4, 5, 6]
 ```
 
 用 concat 的写法：
 
 ```js
-[0].concat(arr1,5,6); // [0, 1, 2, 3, 4, 5, 6]
+[0].concat(arr1, 5, 6); // [0, 1, 2, 3, 4, 5, 6]
 ```
 
 ◆ 【1.3】代替 split
@@ -449,31 +449,31 @@ console.log(arr3); // ["h", "e", "l", "l", "o"]
 此功能和`JAVA`一样，当形参传入个数不确定时可用在形参上。
 
 ```js
-var rest2 = function(item, ...arr){
-  console.log(item,arr);
-}
-rest2('hello',2,3,3,4); // hello [2, 3, 3, 4]
+var rest2 = function (item, ...arr) {
+  console.log(item, arr);
+};
+rest2('hello', 2, 3, 3, 4); // hello [2, 3, 3, 4]
 ```
 
 ◆ 【2.2】配合解构时使用
 
 ```js
-var [a,...temp] = [1,2,3,4];
-console.log(a,temp); // 1 [2, 3, 4]
+var [a, ...temp] = [1, 2, 3, 4];
+console.log(a, temp); // 1 [2, 3, 4]
 ```
 
 ---
 
 # 四、字符串的扩展
 
-- 参考[JavaScript之String对象](docs/JavaScript-Object/JavaScript之String对象.md)
+- 参考[JavaScript 之 String 对象](docs/JavaScript-Object/JavaScript之String对象.md)
 
 ---
 
 # 五、数值的扩展
 
-- 参考[JavaScript之Number](docs/JavaScript-Object/JavaScript之Number.md)
-- 参考[JavaScript之Math](docs/JavaScript-Object/JavaScript之Math.md)
+- 参考[JavaScript 之 Number](docs/JavaScript-Object/JavaScript之Number.md)
+- 参考[JavaScript 之 Math](docs/JavaScript-Object/JavaScript之Math.md)
 
 ---
 
@@ -488,9 +488,9 @@ function log(x, y = 'World') {
   console.log(x, y);
 }
 
-log('Hello') // Hello World
-log('Hello', 'China') // Hello China
-log('Hello', '') // Hello
+log('Hello'); // Hello World
+log('Hello', 'China'); // Hello China
+log('Hello', ''); // Hello
 ```
 
 ◆ 【1.1】与解构赋值默认值结合使用
@@ -498,14 +498,14 @@ log('Hello', '') // Hello
 **当不使用默认值时**：
 
 ```js
-function foo({x, y = 5}) {
+function foo({ x, y = 5 }) {
   console.log(x, y);
 }
 
-foo({}) // undefined 5
-foo({x: 1}) // 1 5
-foo({x: 1, y: 2}) // 1 2
-foo() // TypeError: Cannot read property 'x' of undefined
+foo({}); // undefined 5
+foo({ x: 1 }); // 1 5
+foo({ x: 1, y: 2 }); // 1 2
+foo(); // TypeError: Cannot read property 'x' of undefined
 ```
 
 此时的 x 和 y 没有函数参数默认值，所以会报错。
@@ -513,11 +513,11 @@ foo() // TypeError: Cannot read property 'x' of undefined
 **使用默认值时**：
 
 ```js
-function foo({x, y = 5} = {}) {
+function foo({ x, y = 5 } = {}) {
   console.log(x, y);
 }
 
-foo() // undefined 5
+foo(); // undefined 5
 ```
 
 ◆ 【1.2】位置
@@ -541,19 +541,19 @@ foo() // undefined 5
 （`reset`参数的形式与`java`类似）
 
 ```js
-function f1(){
-    console.log(arguments)
-    console.log(Array.from(arguments))
+function f1() {
+  console.log(arguments);
+  console.log(Array.from(arguments));
 }
-function f2(...values){
-    console.log(values)
+function f2(...values) {
+  console.log(values);
 }
 
-f1(3213,23,2,2332,32,);
+f1(3213, 23, 2, 2332, 32);
 // Arguments(5) [3213, 23, 2, 2332, 32, callee: ƒ, Symbol(Symbol.iterator): ƒ]
 // (5) [3213, 23, 2, 2332, 32]
 
-f2(3213,23,2,2332,32,)
+f2(3213, 23, 2, 2332, 32);
 // (5) [3213, 23, 2, 2332, 32]
 ```
 
@@ -572,23 +572,23 @@ f2(3213,23,2,2332,32,)
 
 ```js
 // 简写：
-data.map(val => val.id);
+data.map((val) => val.id);
 // 全写：
 data.map((val) => {
   return val.id;
-})
+});
 ```
 
 ◆ 【3.2】与箭头函数结合
 
 ```js
-function f1(...values){
-    return values;
+function f1(...values) {
+  return values;
 }
 var f2 = (...values) => values;
 
-f1(1,2,3,4); // [1, 2, 3, 4]
-f2(1,2,3,4); // [1, 2, 3, 4]
+f1(1, 2, 3, 4); // [1, 2, 3, 4]
+f2(1, 2, 3, 4); // [1, 2, 3, 4]
 ```
 
 ## 【4】尾调用优化
@@ -601,18 +601,18 @@ f2(1,2,3,4); // [1, 2, 3, 4]
 
 ```js
 // 情况一
-function f(x){
+function f(x) {
   let y = g(x);
   return y;
 }
 
 // 情况二
-function f(x){
+function f(x) {
   return g(x) + 1;
 }
 
 // 情况三
-function f(x){
+function f(x) {
   g(x);
 }
 ```
@@ -655,7 +655,7 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 
-factorial(5) // 120
+factorial(5); // 120
 ```
 
 此时需要保存`n`个记录，复杂度`O(n)`；
@@ -668,7 +668,7 @@ function factorial(n, total) {
   return factorial(n - 1, n * total);
 }
 
-factorial(5, 1) // 120
+factorial(5, 1); // 120
 ```
 
 ◆ 【4.4】递归函数的改写
@@ -681,39 +681,40 @@ function factorial(n, total = 1) {
   return factorial(n - 1, n * total);
 }
 
-factorial(5) // 120
+factorial(5); // 120
 ```
 
 ---
 
 # 七、数组的扩展
 
-- 参考[JavaScript之Array数组](/docs/JavaScript-Object/JavaScript之Array数组.md)
+- 参考[JavaScript 之 Array 数组](/docs/JavaScript-Object/JavaScript之Array数组.md)
+
 ---
 
 # 八、对象
 
-- 参考[JavaScript之Object对象](/docs/JavaScript-Object/JavaScript之Object对象.md)
+- 参考[JavaScript 之 Object 对象](/docs/JavaScript-Object/JavaScript之Object对象.md)
 
 ---
 
 # 九、正则 RegExp
 
-- 参考[JavaScript之RegExp正则表达式](/docs/JavaScript-Object/JavaScript之RegExp正则表达式.md)
+- 参考[JavaScript 之 RegExp 正则表达式](/docs/JavaScript-Object/JavaScript之RegExp正则表达式.md)
 
 # 十、Symbol
 
 ## 【1】Symbol 与普通 String 的区别
 
 ```js
-var a = Symbol('e')
-var b = Symbol('e')
-a == b //false
+var a = Symbol('e');
+var b = Symbol('e');
+a == b; //false
 
-var c = 'e'
-var d = 'e'
-c == d // true
-c === d // true
+var c = 'e';
+var d = 'e';
+c == d; // true
+c === d; // true
 ```
 
 可以看出，正常情况下，只要值一样，不管是`==`还是`===`，都是相等的，但是`Symbol`就能保证值的唯一性。
@@ -721,7 +722,7 @@ c === d // true
 ## 【2】Symbol.description
 
 ```js
-const s = Symbol('foo')
+const s = Symbol('foo');
 console.log(s); // Symbol(foo)
 console.log(s.description); // 'foo'
 ```
@@ -736,10 +737,11 @@ console.log(s.description); // 'foo'
 
 ```js
 var m = {};
-var x = {id:1}, y = {id:2};
+var x = { id: 1 },
+  y = { id: 2 };
 m[x] = 'foo';
 m[y] = 'bar';
-console.log(m,m[x],m[y]); // {[object Object]: "bar"} "bar" "bar"
+console.log(m, m[x], m[y]); // {[object Object]: "bar"} "bar" "bar"
 ```
 
 对象`m`中只有一个`[object Object]`，值都是`'bar'`，它无法解析两个对象为键。
@@ -748,13 +750,14 @@ console.log(m,m[x],m[y]); // {[object Object]: "bar"} "bar" "bar"
 
 ```js
 var m = new Map();
-var x = {id:1}, y = {id:2};
-m.set(x , 'foo');
-m.set(y , 'bar');
+var x = { id: 1 },
+  y = { id: 2 };
+m.set(x, 'foo');
+m.set(y, 'bar');
 console.log(m);
 console.log(m.get(x));
 console.log(m.get(y));
-console.log(m.get({id:1}));
+console.log(m.get({ id: 1 }));
 ```
 
 结果：
@@ -791,10 +794,10 @@ var m3 = new Map(m1); // 深拷贝
 
 ```js
 var mm = new Map();
-mm.set('a',{id:1});
+mm.set('a', { id: 1 });
 var mm2 = new Map(mm);
-mm2.set('a', {id:4});
-console.log(mm2,mm);
+mm2.set('a', { id: 4 });
+console.log(mm2, mm);
 ```
 
 **结果：**
@@ -813,9 +816,10 @@ console.log(mm2,mm);
 
 ```js
 var m = new Map();
-var x = {id:1}, y = {id:2};
-m.set(x , 'foo');
-m.set(y , 'bar');
+var x = { id: 1 },
+  y = { id: 2 };
+m.set(x, 'foo');
+m.set(y, 'bar');
 console.log(m.values()); // MapIterator {"foo", "bar"}
 console.log([...m.values()]); // ["foo", "bar"]
 console.log(Array.from(m.values())); // ["foo", "bar"]
@@ -825,9 +829,10 @@ console.log(Array.from(m.values())); // ["foo", "bar"]
 
 ```js
 var m = new Map();
-var x = {id:1}, y = {id:2};
-m.set(x , 'foo');
-m.set(y , 'bar');
+var x = { id: 1 },
+  y = { id: 2 };
+m.set(x, 'foo');
+m.set(y, 'bar');
 console.log(m.entries()); // MapIterator {{…} => "foo", {…} => "bar"}
 console.log([...m.entries()]); // [[{id: 1},'foo'],[{id: 2},'bar']]
 console.log([...m.entries()][0][1]); // "foo"
@@ -840,9 +845,10 @@ console.log([...m.entries()][1][1]); // "bar"
 
 ```js
 var m = new Map();
-var x = {id:1}, y = {id:2};
-m.set(x , 'foo');
-m.set(y , 'bar');
+var x = { id: 1 },
+  y = { id: 2 };
+m.set(x, 'foo');
+m.set(y, 'bar');
 console.log([...m.keys()]); // [{id:1},{id:2}]
 ```
 
@@ -850,9 +856,10 @@ console.log([...m.keys()]); // [{id:1},{id:2}]
 
 ```js
 var m = new Map();
-var x = {id:1}, y = {id:2};
-m.set(x , 'foo');
-m.set(y , 'bar');
+var x = { id: 1 },
+  y = { id: 2 };
+m.set(x, 'foo');
+m.set(y, 'bar');
 console.log(m.has(y)); // true
 ```
 
@@ -866,8 +873,9 @@ console.log(m.has(y)); // true
 
 ```js
 var m = new WeakMap();
-var x = {id:1}, y = {id:2};
-m.set(x ,y);
+var x = { id: 1 },
+  y = { id: 2 };
+m.set(x, y);
 console.log(m.has(x)); // true
 x = null;
 console.log(m.has(x)); // false
@@ -889,7 +897,7 @@ API:
 ## 【1】新建
 
 ```js
-var s = new Set([0,-0,1,2,NaN,2,3,NaN]);
+var s = new Set([0, -0, 1, 2, NaN, 2, 3, NaN]);
 console.log(s); // Set(5) {0, 1, 2, NaN, 3}
 ```
 
@@ -942,14 +950,14 @@ s.keys() == s.values(); // false
 **只能存对象**
 
 ```js
-var ws = new WeakSet([1,2,2,3]); // 无效：Uncaught TypeError: Invalid value used in weak set
+var ws = new WeakSet([1, 2, 2, 3]); // 无效：Uncaught TypeError: Invalid value used in weak set
 ```
 
 `WeakSet`使用：
 
 ```js
-var obj1 = {id:1};
-var obj2 = {id:2};
+var obj1 = { id: 1 };
+var obj2 = { id: 2 };
 var ws = new WeakSet();
 ws.add(obj1).add(obj2).add(obj1);
 console.log(ws); // [{id:1},{id:2}]
@@ -1039,33 +1047,33 @@ console.log(ws); // [{id:1}]
 ◆ `Proxy` 替代 `Object.defineProperty`
 
 ```js
-function observerProxy(obj){
+function observerProxy(obj) {
   let handler = {
-		get(target,key,receiver){
-			console.log('获取'+key);
-			if(typeof target[key] === 'object' && target[key] !== null) {
-				return new Proxy(target[key],handler);
-			}
-			return Reflect.get(target,key,receiver);
-		},
-    set(target,key,value,reciver){
-			console.log(target,key,value,reciver)
-			return Reflect.set(target,key,value,reciver);
-    }
-  }
-  return new Proxy(obj,handler)
+    get(target, key, receiver) {
+      console.log('获取' + key);
+      if (typeof target[key] === 'object' && target[key] !== null) {
+        return new Proxy(target[key], handler);
+      }
+      return Reflect.get(target, key, receiver);
+    },
+    set(target, key, value, reciver) {
+      console.log(target, key, value, reciver);
+      return Reflect.set(target, key, value, reciver);
+    },
+  };
+  return new Proxy(obj, handler);
 }
 var obj2 = {
   name: '小明',
   flag: {
     book: {
-      name : 'js',
-      page: 325
+      name: 'js',
+      page: 325,
     },
-  }
-}
-var objTest = observerProxy(obj2)
-objTest.flag.book.page = 33
+  },
+};
+var objTest = observerProxy(obj2);
+objTest.flag.book.page = 33;
 ```
 
 ---
@@ -1126,41 +1134,38 @@ Reflect.has(obj, 'name');
 首先假设要依次调用 3 个`promise`的代码：
 
 ```js
-var pro1 = new Promise((resolve,reject) => {
-    console.log(1);
-    resolve('hello')
-})
-var pro2 = new Promise((resolve,reject) => {
-    console.log(2);
-    setTimeout(()=>{
-        resolve('world')
-    },1000);
-})
-var pro3 = new Promise((resolve,reject) => {
-    console.log(3);
-    setTimeout(()=>{
-        resolve('pdd')
-    },2000);
-})
+var pro1 = new Promise((resolve, reject) => {
+  console.log(1);
+  resolve('hello');
+});
+var pro2 = new Promise((resolve, reject) => {
+  console.log(2);
+  setTimeout(() => {
+    resolve('world');
+  }, 1000);
+});
+var pro3 = new Promise((resolve, reject) => {
+  console.log(3);
+  setTimeout(() => {
+    resolve('pdd');
+  }, 2000);
+});
 ```
 
 如果不用`promise.all`来调用的话：
 
 ```js
-pro1.then((res1)=>{
-});
-pro2.then((res2)=>{
-})
-pro3.then((res3)=>{
-})
+pro1.then((res1) => {});
+pro2.then((res2) => {});
+pro3.then((res3) => {});
 ```
 
 只有不停的用`.then`才能保证每一步都正确，此时使用`promise.all`：
 
 ```js
-Promise.all([pro1,pro2,pro3]).then(val=>{
-    console.log(val);
-})
+Promise.all([pro1, pro2, pro3]).then((val) => {
+  console.log(val);
+});
 ```
 
 ## 【2】promise.race
@@ -1170,21 +1175,21 @@ Promise.all([pro1,pro2,pro3]).then(val=>{
 这种模式称为门闩模式、`promise`中称中`竞态`。
 
 ```js
-var pro2 = new Promise((resolve,reject) => {
-    console.log(2);
-    setTimeout(()=>{
-        resolve('world')
-    },1000);
-})
-var pro3 = new Promise((resolve,reject) => {
-    console.log(3);
-    setTimeout(()=>{
-        resolve('pdd')
-    },2000);
-})
-Promise.race([pro2,pro3]).then(val=>{
-    console.log(val);
-})
+var pro2 = new Promise((resolve, reject) => {
+  console.log(2);
+  setTimeout(() => {
+    resolve('world');
+  }, 1000);
+});
+var pro3 = new Promise((resolve, reject) => {
+  console.log(3);
+  setTimeout(() => {
+    resolve('pdd');
+  }, 2000);
+});
+Promise.race([pro2, pro3]).then((val) => {
+  console.log(val);
+});
 ```
 
 此时，pro2 要花费 1 秒，pro3 要花费 2 秒，谁先`resolve`，`.then`获取的`val`就是谁的。
@@ -1195,13 +1200,13 @@ Promise.race([pro2,pro3]).then(val=>{
 
 ```js
 const p1 = new Promise((resolve, reject) => {
-    reject("第一个错");
+  reject('第一个错');
 });
 const p2 = new Promise((resolve, reject) => {
-    resolve('第二个对----');
+  resolve('第二个对----');
 });
-Promise.allSettled([p1, p2]).then(results => {
-    console.log(results);
+Promise.allSettled([p1, p2]).then((results) => {
+  console.log(results);
 });
 ```
 
@@ -1209,7 +1214,7 @@ Promise.allSettled([p1, p2]).then(results => {
 
 有一个成功就算成功
 
-```js
+````js
 const p1 = new Promise((resolve, reject) => {
   reject("第一个错");
 });
@@ -1262,15 +1267,21 @@ Promise.race([p1, p2, p3]).then(result => {
 Promise.any([p1, p2, p3]).then(result => {
   console.log('谁最先resolve：', result);
 })
-```
+````
 
 ## 【6】promise.finally
 
 ```js
-  promise
-  .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.log(error); })
-  .finally(function() { isLoading = false; });
+promise
+  .then(function (json) {
+    /* process your JSON further */
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+    isLoading = false;
+  });
 ```
 
 ---
@@ -1312,7 +1323,7 @@ for (let pair of arr.values()) {
 ◆ 字符串
 
 ```js
-let str = "hello";
+let str = 'hello';
 
 for (let s of str) {
   console.log(s); // h e l l o
@@ -1321,7 +1332,7 @@ for (let s of str) {
 
 ◆ DOM NodeList 对象
 
-```js
+````js
 let paras = document.querySelectorAll("p");
 
 for (let p of paras) {
@@ -1341,7 +1352,7 @@ function printArgs() {
 printArgs('a', 'b');
 // 'a'
 // 'b'
-```
+````
 
 ## 【3】 for...in 遍历对象
 
@@ -1350,8 +1361,8 @@ printArgs('a', 'b');
 ```js
 let es6 = {
   edition: 6,
-  committee: "TC39",
-  standard: "ECMA-262"
+  committee: 'TC39',
+  standard: 'ECMA-262',
 };
 
 for (let e in es6) {
@@ -1412,12 +1423,12 @@ myArray.forEach(function (value) {
 ```js
 let generator = function* () {
   yield 1;
-  yield* [2,3,4]; //在数组前加* 遍历所有元素，不加* 直接遍历整体
+  yield* [2, 3, 4]; //在数组前加* 遍历所有元素，不加* 直接遍历整体
   yield 5;
-  yield {name:'123',num:123};
+  yield { name: '123', num: 123 };
 };
 
-var iterator = generator();  //generator返回的是Iterator对象，所以调用时候要使用next()
+var iterator = generator(); //generator返回的是Iterator对象，所以调用时候要使用next()
 
 console.log(iterator.next().value); // 1
 console.log(iterator.next().value); // 2
@@ -1438,8 +1449,8 @@ console.log(iterator.next().value); // {name:'123',num:123}
 - 普通函数：
 
 ```js
-function testAsync(){
-    return 'hello world'
+function testAsync() {
+  return 'hello world';
 }
 testAsync(); // 'hello world'
 ```
@@ -1447,8 +1458,8 @@ testAsync(); // 'hello world'
 - `async`函数：
 
 ```js
-async function testAsync(){
-    return 'hello world'
+async function testAsync() {
+  return 'hello world';
 }
 testAsync(); // Promise {<fulfilled>: "hello world"}
 ```
@@ -1460,14 +1471,14 @@ testAsync(); // Promise {<fulfilled>: "hello world"}
 - 如果不用`async/await`：
 
 ```js
-async function testAsync(){
-    return new Promise(resolve => {
-        setTimeout(()=>resolve('long_time_value'), 1000);
-    })
+async function testAsync() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve('long_time_value'), 1000);
+  });
 }
-testAsync().then(v=>{
-    console.log('get',v);
-})
+testAsync().then((v) => {
+  console.log('get', v);
+});
 ```
 
 1 秒后：`get long_time_value`
@@ -1475,15 +1486,15 @@ testAsync().then(v=>{
 - 如果用的话：
 
 ```js
-function testAsync(){
-    return new Promise(resolve => {
-        setTimeout(()=>resolve('long_time_value'), 1000);
-    })
+function testAsync() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve('long_time_value'), 1000);
+  });
 }
 
-async function test(){
-    const v = await testAsync();
-    console.log(v);
+async function test() {
+  const v = await testAsync();
+  console.log(v);
 }
 test();
 ```
@@ -1494,7 +1505,7 @@ test();
 
 - 如果不用`async/await`
 
-```js
+````js
 function takeLongTime(n){
     return new Promise(resolve => {
         setTimeout(()=> resolve(n+200), n);
@@ -1553,7 +1564,7 @@ async function doIt(){
 }
 doIt();
 
-```
+````
 
 结果和上一个不停用`then`链的一样，但是代码要清晰得多，而且没有回调地狱。
 
@@ -1561,7 +1572,7 @@ doIt();
 
 # 二十、Class
 
-- 参考[JavaScript之面向对象](/docs/JavaScript/JavaScript之面向对象.md)
+- 参考[JavaScript 之面向对象](/docs/JavaScript/JavaScript之面向对象.md)
 
 ---
 
@@ -1573,23 +1584,20 @@ constant.js
 
 ```js
 var constant = {
-    edit:"编辑",
-    test:'2'
-}
+  edit: '编辑',
+  test: '2',
+};
 
 var b = {};
 
-export {
-    constant,
-    b
-};
+export { constant, b };
 ```
 
 test.vue
 
 ```js
-import {constant,b} from '@/utils/test';
-console.log(constant,b)
+import { constant, b } from '@/utils/test';
+console.log(constant, b);
 ```
 
 ## 【2】全局使用
@@ -1598,10 +1606,10 @@ constant.js
 
 ```js
 export default {
-    list1:[],
-    list2:[],
-    b:function(){}
-}
+  list1: [],
+  list2: [],
+  b: function () {},
+};
 ```
 
 main.js
@@ -1631,3 +1639,19 @@ this.list = this.$constant.list1;
 ```js
 defaultImg2: require("../../../assets/img/default.png"),
 ```
+
+---
+
+# 二十二、空值合并：`??`
+
+```js
+// 原来的：
+let x = foo !== null && foo !== undefined ? foo : bar();
+
+// 优化后：
+let x = foo ?? bar();
+```
+
+`??` 与 `||` 的区别：
+
+`??`只能判断 `null` 和 `undefined`，而`||`是判断非真的值，比如 `0`、`false`、`''`、`NaN`等。

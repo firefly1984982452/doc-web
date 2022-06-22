@@ -3,13 +3,13 @@
 - [官方文档](https://www.pugjs.cn/api/getting-started.html)
 - [入门](https://www.cnblogs.com/xiaohuochai/p/7222227.html)
 
-# 一、下载
+## 一、下载
 
 ```bash
 npm install pug-cli -g
 ```
 
-# 二、编译
+## 二、编译
 
 - 1.基础编译
 
@@ -53,7 +53,7 @@ pug <xx.pug> <xx/xx.html>
 pug -w ./ -o ./html -P
 ```
 
-# 三、结构语法
+## 三、结构语法
 
 ```pug
 doctype html
@@ -91,3 +91,9 @@ html
       checked
     )
 ```
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="Pug语法使用Demo" src="https://codepen.io/firefly1984982452/embed/zYRVvVK?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/firefly1984982452/pen/zYRVvVK">
+  Pug语法使用Demo</a> by 彭丹丹 (<a href="https://codepen.io/firefly1984982452">@firefly1984982452</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>

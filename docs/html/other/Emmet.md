@@ -1,10 +1,10 @@
-# 一、Emmet
+# Emmet
 
 - [参考原文](https://blog.csdn.net/seasunexpect/article/details/71124299)
 
-# 一、DOM 添加
+## 一、DOM 添加
 
-## 【1】子节点 `>`
+### 【1】子节点 `>`
 
 - 语法：
 
@@ -22,7 +22,7 @@ div>ul>li
 </div>
 ```
 
-## 【2】兄弟节点 `+`
+### 【2】兄弟节点 `+`
 
 - 语法：
 
@@ -37,7 +37,7 @@ div+p
 <p></p>
 ```
 
-## 【3】上线节点 `^`
+### 【3】上线节点 `^`
 
 - 语法：
 
@@ -54,9 +54,9 @@ div>p>span^b
 </div>
 ```
 
-# 【二】类和 ID
+## 二、类和 ID
 
-## 【1】ID `#`
+### 【1】ID `#`
 
 - 语法：
 
@@ -70,7 +70,7 @@ div#page
 <div id="page"></div>
 ```
 
-## 【2】class `.`
+### 【2】class `.`
 
 - 语法：
 
@@ -84,7 +84,7 @@ div.page
 <div class="page"></div>
 ```
 
-## 【3】`.class#id`
+### 【3】`.class#id`
 
 - 语法
 
@@ -98,7 +98,7 @@ div.class#id
 <div class="class" id="id"></div>
 ```
 
-## 【4】`.class.class`
+### 【4】`.class.class`
 
 - 语法
 
@@ -112,9 +112,9 @@ div.class.class
 <div class="class class"></div>
 ```
 
-# 三、算法
+## 三、算法
 
-## 【1】次数 `*`
+### 【1】次数 `*`
 
 - 语法：
 
@@ -132,7 +132,7 @@ ul>li*3
 </ul>
 ```
 
-## 【2】分组 `()`
+### 【2】分组 `()`
 
 - 语法：
 
@@ -156,7 +156,7 @@ div>(header>ul>li*2)+footer>p
 </div>
 ```
 
-## 【3】编号 `$`
+### 【3】编号 `$`
 
 - 语法：
 
@@ -174,9 +174,9 @@ ul>li.item$$$*3
 </ul>
 ```
 
-# 四、属性
+## 四、属性
 
-## 【1】自定义属性 `[attr]`
+### 【1】自定义属性 `[attr]`
 
 - 语法：
 
@@ -192,7 +192,7 @@ a[href='www.baidu.com' target='_blank']
 <a href="www.baidu.com" target="_blank"></a>
 ```
 
-## 【2】改变编号基数和方向 `$@-`
+### 【2】改变编号基数和方向 `$@-`
 
 - 语法：
 
@@ -217,7 +217,7 @@ ul>li.item$@3*3
 </ul>
 ```
 
-# 五、文本 `{}`
+## 五、文本 `{}`
 
 - 语法：
 
@@ -233,7 +233,7 @@ p>{click}+a{here}+{continue}
 <p>click<a href="">here</a>continue</p>
 ```
 
-# 六、隐式标签
+## 六、隐式标签
 
 - 语法：
 
@@ -250,7 +250,7 @@ ul>.test*2
 </ul>
 ```
 
-# 七、其它
+## 七、其它
 
 **不能有空格**
 
