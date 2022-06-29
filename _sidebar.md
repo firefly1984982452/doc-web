@@ -108,7 +108,7 @@
     - [单个 div 下渐变进度条](/docs/css/examples/CSS-单个div下渐变进度条.md)
     - [outline 属性实现悬浮时高亮](/docs/css/examples/CSS-outline属性实现悬浮时高亮.md)
     - [水波特效动画](/docs/css/examples/CSS-水波特效动画.md)
-    - [动画效果](/docs/css/examples/css-动画效果.md)
+    - [动画效果](/docs/css/examples/CSS-动画效果.md)
 
   - CSS 页面布局
 
