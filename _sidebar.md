@@ -112,12 +112,12 @@
 
   - CSS 页面布局
 
-    - [position：定位](/docs/css/layout/css-position.md)
-    - [column：多列布局](/docs/css/layout/css-column.md)
-    - [Flex：弹性盒子](/docs/css/layout/css-flex.md)
+    - [position：定位](/docs/css/layout/CSS-position.md)
+    - [column：多列布局](/docs/css/layout/CSS-column.md)
+    - [Flex：弹性盒子](/docs/css/layout/CSS-flex.md)
     - [Grid：网格布局【完】](/docs/css/layout/CSS-grid.md)
-    - [BFC、IFC、GFC、FFC](/docs/css/layout/css-BFC、IFC、GFC、FFC.md)
-    - [经典布局](/docs/css/layout/css-经典布局.md)
+    - [BFC、IFC、GFC、FFC](/docs/css/layout/CSS-BFC、IFC、GFC、FFC.md)
+    - [经典布局](/docs/css/layout/CSS-经典布局.md)
 
   - CSS 进阶
     - [CSS 之 SVG](/docs/css/more/CSS之SVG.md)
