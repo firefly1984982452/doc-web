@@ -115,7 +115,7 @@
     - [position：定位](/docs/css/layout/css-position.md)
     - [column：多列布局](/docs/css/layout/css-column.md)
     - [Flex：弹性盒子](/docs/css/layout/css-flex.md)
-    - [Grid：网格布局【完】](/docs/css/layout/css-grid.md)
+    - [Grid：网格布局【完】](/docs/css/layout/CSS-grid.md)
     - [BFC、IFC、GFC、FFC](/docs/css/layout/css-BFC、IFC、GFC、FFC.md)
     - [经典布局](/docs/css/layout/css-经典布局.md)
 

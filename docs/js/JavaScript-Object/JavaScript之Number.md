@@ -83,11 +83,12 @@ Number('3e'); // NaN
 parseInt('3e'); // 3
 ```
 
-◆ `parseInt()`对其它进制进行取整转换
+◆ `parseInt()`和`Number()`都可以对其它进制进行取整转换
 
 ```js
 // 0X默认解读为16进制
 parseInt('0x10'); // 16
+Number('0x10'); // 16
 ```
 
 ◆ 保留小数点后两位
