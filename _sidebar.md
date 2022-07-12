@@ -193,12 +193,12 @@
 
 - 前端
 
+  - [常用网站列表](/docs/web/常用网站列表.md)
   - [全栈练习](/docs/web/全栈练习.md)
   - [前端优化](/docs/web/前端优化方案.md)
   - [前端之模块功能实现](/docs/web/前端之模块功能实现.md)
   - [算法和代码片段](/docs/web/算法和代码片段.md)
   - [编程问题录](/docs/web/编程问题录.md)
-  - [常用网站列表](/docs/web/常用网站列表.md)
   - [电脑开发常用设置](/docs/web/电脑开发常用设置.md)
   - [高效使用搜索引擎](/docs/web/高效使用搜索引擎.md)
   - [前端构建工具 Webpack](/docs/web/前端构建工具Webpack.md)
