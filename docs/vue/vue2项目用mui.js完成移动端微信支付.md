@@ -4,15 +4,15 @@
 
 > 这个测试是建立在 DCould 公司上的，如果支付，也是 DCould 公司收的钱哦
 
-# 工具
+## 工具
 
 `HBuilder`、`mui.js`
 
-# 引入 mui.js
+## 引入 mui.js
 
 将`mui.js`放到根目录下的`js文件夹`里，然后在`index.html`中引入 `<script src="js/mui.js" type="text/JavaScript" charset="utf-8"></script>`
 
-# 代码
+## 代码
 
 在支付的 vue 页面写：
 
@@ -57,11 +57,11 @@ function pay(){
 }
 ```
 
-# 打包
+## 打包
 
 `npm run build` 打包之后把`dist`文件夹拖到 HBuilder 里面，右键转换成 App 项目，然后直接连接手机测试
 
-# 发行
+## 发行
 
 前面就说了，是 DCould 公司写的后台,所以打包的时候是没有 DCould 公司的微信支付 app_id 的，所以只能用手机测试。
 

@@ -2,12 +2,12 @@
 
 ---
 
-# 链接
+## 链接
 
 - [官方链接](http://lbsyun.baidu.com/jsdemo.htm#a1_2)
 - [其它示例链接](https://blog.csdn.net/dosthing/article/details/85223254)
 
-# 代码
+## 代码
 
 !> 示例中的`<script />`中的`src`省略了`https:`，应写全`<script type="text/JavaScript" src="https://api.map.baidu.com/api?v=3.0&ak=0OWWSRyoeYuDcFPIdUN1aCupU0m2eAzZ"></script>`。
 

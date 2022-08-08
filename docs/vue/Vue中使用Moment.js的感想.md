@@ -2,7 +2,7 @@
 
 ---
 
-# 下载
+## 下载
 
 ```bash
 npm install moment --save
@@ -12,7 +12,7 @@ npm install moment --save
 cnpm install moment --save
 ```
 
-# 导入并定义
+## 导入并定义
 
 `main.js`文件中：
 
@@ -22,7 +22,7 @@ Vue.prototype.$moment = moment // 赋值使用
 moment.locale('zh-cn') // 需要汉化
 ```
 
-# 使用
+## 使用
 
 ```js
 this.$moment().add('months',6).format('YYYY-MM-DD')
@@ -30,7 +30,7 @@ this.$moment().add('months',6).format('YYYY-MM-DD')
 
 这个方法就是从此刻开始算，往后加6个月
 
-# 感想
+## 感想
 
 刚开始我需要实现这样的一个需求：`从此刻开始算，往后加6个月`，之前有考虑过`moment.js`，但是看文档复杂，再又看网上教程没有我想要的，就没有仔细的看，踩了好几次坑，才终于又找到这个方法解决了这个问题。
 

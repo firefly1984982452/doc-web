@@ -2,7 +2,7 @@
 
 ---
 
-# 一、查询过滤检索
+## 一、查询过滤检索
 
 1. `charAt`：返回指定位置的字符
 2. `charCodeAt`：返回 `uniccode/accsic` 编码
@@ -14,7 +14,7 @@
 8. `match`：返回匹配规则首次出现的位置【检索和与正则】
 9. `matchAll`：返回匹配规则所有出现的位置【检索和与正则】
 
-## 【1】`charAt`：返回指定位置的字符
+### 【1】`charAt`：返回指定位置的字符
 
 ```js
 "ewfwef".charAt(5); // f
@@ -28,19 +28,19 @@
 "ewfwef"[59]; // undefined
 ```
 
-## 【2】`charCodeAt`：返回 `uniccode/accsic` 编码
+### 【2】`charCodeAt`：返回 `uniccode/accsic` 编码
 
 ```js
 "a".charCodeAt(0); // 97
 ```
 
-## 【3】`fromCharCode`：将 `Unicode` 编码转为一个字符
+### 【3】`fromCharCode`：将 `Unicode` 编码转为一个字符
 
 ```js
 String.fromCharCode(65); // A
 ```
 
-## 【4】`indexOf`：返回字符首次出现的位置
+### 【4】`indexOf`：返回字符首次出现的位置
 
 ```js
 "abcc".indexOf("c"); // 2
@@ -52,17 +52,17 @@ String.fromCharCode(65); // A
 "ab ab ab".indexOf("a", 1); // 3
 ```
 
-## 【5】`lastIndexOf`：返回字符出现的倒数位置
+### 【5】`lastIndexOf`：返回字符出现的倒数位置
 
 上同，倒数。
 
-## 【6】`includes`：判断字符串中是否包含某字符串
+### 【6】`includes`：判断字符串中是否包含某字符串
 
 ```js
 "abcc".includes("c"); // true
 ```
 
-## 【7】`search`：返回字符首次出现的位置【检索和与正则】
+### 【7】`search`：返回字符首次出现的位置【检索和与正则】
 
 - 检索字符串
 
@@ -76,7 +76,7 @@ String.fromCharCode(65); // A
 "hello world 2".search(/\d/); // 11【返回下标】
 ```
 
-## 【8】`match`：返回匹配规则首次出现的位置【检索和与正则】
+### 【8】`match`：返回匹配规则首次出现的位置【检索和与正则】
 
 - 检索字符串
 
@@ -90,13 +90,13 @@ String.fromCharCode(65); // A
 "1 plus 2 equal 3".match(/\d/g); // ["1", "2", "3"]
 ```
 
-## 【9】`matchAll`：返回匹配规则所有出现的位置【检索和与正则】
+### 【9】`matchAll`：返回匹配规则所有出现的位置【检索和与正则】
 
 效果上同，返回所有符合条件的值的 `Iterator` 遍历器。
 
 ---
 
-# 二、截取和分割
+## 二、截取和分割
 
 1. `split`：分割为数组
 2. `substr`：截取（位置，个数）
@@ -104,19 +104,19 @@ String.fromCharCode(65); // A
 4. `slice`：截取（开始位置，结束位置）
 5. `substr`、`substring`、`slice` 的区别
 
-## 【1】`split`：分割为数组
+### 【1】`split`：分割为数组
 
 ```js
 "abcd".split(""); // ["a", "b", "c", "d"]
 ```
 
-## 【2】`substr`：截取（位置，个数）
+### 【2】`substr`：截取（位置，个数）
 
 ```js
 "abcdefg".substr(2, 3); // "cde"
 ```
 
-## 【3】`substring`：截取（开始位置，结束位置）
+### 【3】`substring`：截取（开始位置，结束位置）
 
 ```js
 "abcdefg".substring(2, 3); // "c"
@@ -124,7 +124,7 @@ String.fromCharCode(65); // A
 "abcdefg".substring(2, -9); // "ab"
 ```
 
-## 【4】`slice`：截取（开始位置，结束位置）
+### 【4】`slice`：截取（开始位置，结束位置）
 
 ```js
 "abcdefg".slice(2, 3); // "c"
@@ -132,15 +132,15 @@ String.fromCharCode(65); // A
 "abcdefg".slice(2, -9); // ""
 ```
 
-# 三、合并字符串
+## 三、合并字符串
 
-## 【1】concat()
+### 【1】concat()
 
 ```js
 "w".concat("e"); // 'we'
 ```
 
-## 【2】加号
+### 【2】加号
 
 ```js
 "a" + "b"; // 'ab'
@@ -148,7 +148,7 @@ String.fromCharCode(65); // A
 
 ---
 
-# 四、raw：模板字符串
+## 四、raw：模板字符串
 
 ```js
 String.raw`${2 + 3}`; // 5
@@ -162,13 +162,13 @@ s === "hello\\n"; // true
 
 ---
 
-# 五、repeat：重复并返回
+## 五、repeat：重复并返回
 
 ```js
 "e".repeat(30); // "eeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
 ```
 
-# 六、replace 和 replaceAll：替换
+## 六、replace 和 replaceAll：替换
 
 ```js
 "12333345".replace("3", "0"); // "12033345"
@@ -177,14 +177,14 @@ s === "hello\\n"; // true
 
 正则例子
 
-## 【1】 多维数组扁平化为单维数组
+### 【1】 多维数组扁平化为单维数组
 
 ```js
 const arr = [1, [1, 2], [1, 2, 3]];
 JSON.stringify(arr).replace(/(\[|\])/g, ""); // "1,1,2,1,2,3"
 ```
 
-## 【2】 时间格式化
+### 【2】 时间格式化
 
 ```js
 "yyyy-mm".replace(/([a-z])/gi, ($1) => {
@@ -192,7 +192,7 @@ JSON.stringify(arr).replace(/(\[|\])/g, ""); // "1,1,2,1,2,3"
 }); // "0000-00"
 ```
 
-## 【3】 字符串转换为驼峰格式
+### 【3】 字符串转换为驼峰格式
 
 ```js
 var sName = "font-size";
@@ -208,7 +208,7 @@ return sName.replace(/-[a-zA-Z]{1}/g, ($1, $2) => {
 });
 ```
 
-## 【4】 颜色字符串 rgb 转换为 hex 方法
+### 【4】 颜色字符串 rgb 转换为 hex 方法
 
 `rgb(255, 255, 255)` 转为 `#ffffff`
 
@@ -233,9 +233,9 @@ rgb2hex("rgb(255, 255, 255)"); // '#ffffff'
 
 ---
 
-# 七、大小写更换
+## 七、大小写更换
 
-## 【1】toLowerCase()
+### 【1】toLowerCase()
 
 把字符串变为小写
 
@@ -243,7 +243,7 @@ rgb2hex("rgb(255, 255, 255)"); // '#ffffff'
 "B".toLowerCase(); // "b"
 ```
 
-## 【2】toUpperCase()
+### 【2】toUpperCase()
 
 把字符串变为大写
 
@@ -253,13 +253,13 @@ rgb2hex("rgb(255, 255, 255)"); // '#ffffff'
 
 ---
 
-# 八、trim：去掉两边的空字符串
+## 八、trim：去掉两边的空字符串
 
 ```js
 " we ".trim(); // "we"
 ```
 
-# 九、padStart() 和 padEnd() 进行补位
+## 九、padStart() 和 padEnd() 进行补位
 
 用法：
 
@@ -275,15 +275,15 @@ rgb2hex("rgb(255, 255, 255)"); // '#ffffff'
 "09-12".padStart(10, "YYYY-MM-DD"); // "YYYY-09-12"
 ```
 
-# 十、toLocaleString
+## 十、toLocaleString
 
-## 【1】用法
+### 【1】用法
 
 ```js
 number.toLocaleString([locales [, options]])
 ```
 
-## 【2】不同类型
+### 【2】不同类型
 
 - string
 - array
@@ -295,7 +295,7 @@ array.toLocaleString([locales [, options]])
 date.toLocaleString([locales [, options]])
 ```
 
-### 【2.1】array
+#### 【2.1】array
 
 array 和 number 类同
 
@@ -304,13 +304,13 @@ Number(1).toLocaleString("zh", { style: "currency", currency: "cny" }); // "¥1.
 [1, 2, 3].toLocaleString("zh", { style: "currency", currency: "cny" }); // "¥1.00,¥2.00,¥3.00"
 ```
 
-### 【2.2】date
+#### 【2.2】date
 
 ```js
 new Date().toLocaleString(); // "2021/7/20下午2:39:35"
 ```
 
-#### 【2.2.1】`locales`
+##### 【2.2.1】`locales`
 
 不同时区
 
@@ -322,7 +322,7 @@ new Date().toLocaleString("en-gb"); // "20/07/2021, 14:44:23"
 new Date().toLocaleString("ko-kr"); // "2021. 7. 20. 오후 2:44:33"
 ```
 
-#### 【2.2.2】`options`
+##### 【2.2.2】`options`
 
 - hour12 是否使用 12 小时的时间（而不是 24 小时的时间）。true\false; 默认值是语言环境相关的。
 - timeZone 要使用的时区
@@ -337,9 +337,9 @@ date.toLocaleString("zh", { timeZoneName: "short" }); // "2021/7/20GMT+8 下午2
 date.toLocaleString("zh", { timeZoneName: "long" }); // "2021/7/20中国标准时间 下午2:51:24"
 ```
 
-## 【3】不同参数
+### 【3】不同参数
 
-### 【3.1】`locales`
+#### 【3.1】`locales`
 
 - `zh-Hans-CN`：中国（简写`zh`）
 - `ja-Jp`：日本（简写`jp`）
@@ -363,7 +363,7 @@ num.toLocaleString("zh-u-nu-hanidec"); // "一二,三四五"
 num.toLocaleString("zh-u-nu-hanidec", { useGrouping: false }); // "一二三四五"
 ```
 
-### 【3.2】`options`
+#### 【3.2】`options`
 
 1. style
 2. currency
@@ -375,7 +375,7 @@ num.toLocaleString("zh-u-nu-hanidec", { useGrouping: false }); // "一二三四�
 8. minimumSignificantDigits
 9. maximumSignificantDigits
 
-#### 【3.2.1】style 格式化时使用的样式
+##### 【3.2.1】style 格式化时使用的样式
 
 - decimal 表示纯数字格式 为默认值
 - currency 表示货币格式
@@ -387,7 +387,7 @@ Number(1345.2345).toLocaleString("zh", { style: "percent" }); // "134,523%"
 Number(1345.2345).toLocaleString("zh", { style: "currency", currency: "CNY" }); // "¥1,345.23"
 ```
 
-#### 【3.2.2】currency 在货币格式化中使用的货币符号（如果 style 是“currency”,必须提供货币属性）
+##### 【3.2.2】currency 在货币格式化中使用的货币符号（如果 style 是“currency”,必须提供货币属性）
 
 - USD 美元
 - EUR 欧元
@@ -400,7 +400,7 @@ Number(12345678).toLocaleString("zh", { style: "currency", currency: "USD" }); /
 Number(12345678).toLocaleString("zh", { style: "currency", currency: "EUR" }); // "€12,345,678.00"
 ```
 
-#### 【3.2.3】currencyDisplay 货币格式化
+##### 【3.2.3】currencyDisplay 货币格式化
 
 - symbol 使用本地化的货币符号例如 € （默认）
 - code 使用国际标准组织货币代码
@@ -412,42 +412,42 @@ Number(1).toLocaleString("zh", { style: "currency", currency: "USD", currencyDis
 Number(1).toLocaleString("zh", { style: "currency", currency: "USD", currencyDisplay: "name" }); // "1.00美元"
 ```
 
-#### 【3.2.4】useGrouping 是否使用分组分隔符，默认：`true`
+##### 【3.2.4】useGrouping 是否使用分组分隔符，默认：`true`
 
 ```js
 Number(1234.56).toLocaleString("zh"); // "1,234.56"
 Number(1234.56).toLocaleString("zh", { useGrouping: false }); // "1234.56"
 ```
 
-#### 【3.2.5】minimumIntegerDigits：指定整数最少位数
+##### 【3.2.5】minimumIntegerDigits：指定整数最少位数
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"
 Number(123.456).toLocaleString("zh", { minimumIntegerDigits: 5 }); // "00,123.456"
 ```
 
-#### 【3.2.6】minimumFractionDigits：指定小数点后最少位数
+##### 【3.2.6】minimumFractionDigits：指定小数点后最少位数
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"
 Number(123.456).toLocaleString("zh", { minimumFractionDigits: 5 }); // "123.45600"
 ```
 
-#### 【3.2.7】maximumFractionDigits：小数位数的最大数目（四舍五入）
+##### 【3.2.7】maximumFractionDigits：小数位数的最大数目（四舍五入）
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"
 Number(123.456).toLocaleString("zh", { maximumFractionDigits: 2 }); // "123.46"
 ```
 
-#### 【3.2.8】minimumSignificantDigits：使用的有效数字的最小数目
+##### 【3.2.8】minimumSignificantDigits：使用的有效数字的最小数目
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"
 Number(123.456).toLocaleString("zh", { minimumSignificantDigits: 10 }); // "123.4560000"
 ```
 
-#### 【3.2.9】maximumSignificantDigits：使用的有效数字的最大数量
+##### 【3.2.9】maximumSignificantDigits：使用的有效数字的最大数量
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"
@@ -456,21 +456,21 @@ Number(123.456).toLocaleString("zh", { maximumSignificantDigits: 2 }); // "120"
 
 ---
 
-# 十一、其它技巧
+## 十一、其它技巧
 
-## 【1】单行写一个评级组件
+### 【1】单行写一个评级组件
 
 ```js
 "★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate); //定义一个变量 rate 是 1 到 5 的值
 ```
 
-## 【2】利用`slice`时间格式化补 0
+### 【2】利用`slice`时间格式化补 0
 
 ```js
 ("0" + t.getHours()).slice(-2); // '01'
 ```
 
-## 【3】把字符串变为数组最快的方法
+### 【3】把字符串变为数组最快的方法
 
 ```js
 "abc".split(" "); // ['abc']

@@ -4,19 +4,19 @@
 
 - [链接](https://jspang.com/detailed?id=64)
 
-# 搭建 vue3 环境
+## 搭建 vue3 环境
 
 下载最新 vue-cli
 
 ```bash
 npm install -g @vue/cli
-# OR
+## OR
 yarn global add @vue/cli
 ```
 
 使用`vue --version`检查版本大于`@vue/cli 4.5.6`即可。
 
-## 【1】vue-cli 命令行搭建
+### 【1】vue-cli 命令行搭建
 
 9 步式对话。
 
@@ -25,13 +25,13 @@ yarn global add @vue/cli
 3. 选择 TypeScript 
 4. 创建完成后使用`yarn serve`运行项目
 
-## 【2】vue-cli 图形界面搭建
+### 【2】vue-cli 图形界面搭建
 
 1.使用`vue ui`创建 2.打开运行的`http://localhost:80` 3.创建新项目 4.创建完成后使用`yarn serve`运行项目
 
 ---
 
-# setup 和 ref
+## setup 和 ref
 
 做一个单行点击显示值事件
 
@@ -76,9 +76,9 @@ export default defineComponent({
 
 ---
 
-# 优化程序
+## 优化程序
 
-## 【1】reactive 优化
+### 【1】reactive 优化
 
 为什么要用 reactive，因为不用的话，在方法里面要用`selectGirl.value`才能获取到值。
 
@@ -115,7 +115,7 @@ export default {
 </script>
 ```
 
-## 【2】给 data 增加类型注解优化
+### 【2】给 data 增加类型注解优化
 
 `data`变量没有作`类型注解`，而是采用了`TypeScript`的`类型推断`。
 
@@ -128,7 +128,7 @@ interface DataProps {
 const data: DataProps = ...
 ```
 
-## 【3】用 toRefs 优化 DOM 中的对象
+### 【3】用 toRefs 优化 DOM 中的对象
 
 ```js
 import { reactive, toRefs } from "vue";
@@ -167,9 +167,9 @@ export default {
 
 ---
 
-# 生命周期
+## 生命周期
 
-## 【1】对比
+### 【1】对比
 
 ```
 Vue2--------------vue3
@@ -186,7 +186,7 @@ deactivated   -> onDeactivated
 errorCaptured -> onErrorCaptured
 ```
 
-## 【2】使用
+### 【2】使用
 
 ```js
 setup() {
@@ -221,7 +221,7 @@ setup() {
   },
 ```
 
-## 【3】和 vue2 的生命周期也能混合使用
+### 【3】和 vue2 的生命周期也能混合使用
 
 ```js
 setup() {
@@ -246,9 +246,9 @@ updated() {
 
 ---
 
-# onRenderTracked()和 onRenderTriggered()钩子函数
+## onRenderTracked()和 onRenderTriggered()钩子函数
 
-## 【1】onRenderTracked 状态跟踪
+### 【1】onRenderTracked 状态跟踪
 
 只要页面中有`update`的情况，就会跟踪生成`event`。
 
@@ -263,7 +263,7 @@ onRenderTracked((event) => {
 });
 ```
 
-## 【2】onRenderTriggered 状态触发
+### 【2】onRenderTriggered 状态触发
 
 只有发生变化的值才会触发
 
@@ -285,7 +285,7 @@ event:
 
 ---
 
-# watch
+## watch
 
 例子上说`methods`无法改变`document.title`，要用`watch`监听后改，但我尝试后都是可以的。
 
@@ -312,9 +312,9 @@ return {
 
 ---
 
-# 模块化
+## 模块化
 
-## 【1】模块化 JS 功能
+### 【1】模块化 JS 功能
 
 假设有很多页面需要公用一个时间函数，这时先新建一个`ts`文件，实现这个功能。
 
@@ -361,7 +361,7 @@ export default defineComponent({
 </script>
 ```
 
-## 【2】模块化组件
+### 【2】模块化组件
 
 随机图片展示：
 
@@ -427,11 +427,11 @@ export default defineComponent({
 
 ---
 
-# teleport
+## teleport
 
 瞬间移动组件、独立组件。
 
-## 【1】普通组件
+### 【1】普通组件
 
 Modal.vue
 
@@ -467,7 +467,7 @@ const app = {
 //...
 ```
 
-## 【2】使用 teleport
+### 【2】使用 teleport
 
 更改 modal.vue
 
@@ -494,9 +494,9 @@ const app = {
 
 ---
 
-# Suspense 异步请求组件
+## Suspense 异步请求组件
 
-## 【1】编写 AsyncShow.vue 异步返回数据的组件
+### 【1】编写 AsyncShow.vue 异步返回数据的组件
 
 ```js
 <template>
@@ -518,7 +518,7 @@ export default defineComponent({
 </script>
 ```
 
-## 【2】引用
+### 【2】引用
 
 ```js
 import AsyncShow from "./components/AsyncShow.vue";
@@ -535,7 +535,7 @@ const app = {
 
 ```
 
-## 【3】使用
+### 【3】使用
 
 ```vue
 <div>

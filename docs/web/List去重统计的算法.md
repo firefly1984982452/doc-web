@@ -2,7 +2,7 @@
 
 ---
 
-# 题：将list变成arry
+## 题：将list变成arry
 
 ```js
 const list = [
@@ -22,7 +22,7 @@ const arry = [
 ]
 ```
 
-# 6月12号解题
+## 6月12号解题
 
 最原始的写法，写了4个for循环，每个都嵌套了2层。
 
@@ -133,7 +133,7 @@ const arry = [
       console.log(data)
 ```
 
-# 8月28日二解
+## 8月28日二解
 
 ```js
 const arr = [];
@@ -159,7 +159,7 @@ arr.push(item);
 console.log(arr);
 ```
 
-# 别人写的
+## 别人写的
 
 
 ```js

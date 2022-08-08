@@ -1,6 +1,6 @@
 # JavaScript之Date时间对象
 
-# 一、date 获取日期时间的所有方法
+## 一、date 获取日期时间的所有方法
 
 ```js
 var date = new Date();
@@ -21,7 +21,7 @@ console.log(print);
 
 ---
 
-# 二、把时间戳转为时间（年月日时分秒）
+## 二、把时间戳转为时间（年月日时分秒）
 
 ```js
 var time = new Date();
@@ -41,7 +41,7 @@ console.log(Y + "-" + m + "-" + d + " " + H + ":" + mi + ":" + s);
 
 ---
 
-# 三、时间自定义格式化(如 yyyy-MM-dd)
+## 三、时间自定义格式化(如 yyyy-MM-dd)
 
 ```js
 var formatDatePD = function(t,str) {
@@ -70,7 +70,7 @@ formatDate(new Date(1409894060000), 'yyyy-MM-dd HH:mm:ss 星期w')
 
 ---
 
-# 四、时间 String 化
+## 四、时间 String 化
 
 - `toLocaleString`
 - `toLocaleDateString`
@@ -82,7 +82,7 @@ new Date().toLocaleDateString(); // "2021/7/20"
 
 ---
 
-# 五、获取指定时间的时间戳
+## 五、获取指定时间的时间戳
 
 ```js
 Math.floor(new Date(Date.UTC(2020, 0, 1, 0, 0, 0)).getTime() / 1000) // 2020/1/1 0:0:0 --> 1577808000
@@ -92,7 +92,7 @@ Date.parse('2020-01-01 00:00:00')/1000 // 2020/1/1 0:0:0 --> 1577808000
 
 ---
 
-# 六、获取当前时间戳
+## 六、获取当前时间戳
 
 以下为秒数，如果要毫秒数就不要`/1000`
 
@@ -106,7 +106,7 @@ Date.parse('2020-01-01 00:00:00')/1000 // 2020/1/1 0:0:0 --> 1577808000
 
 ---
 
-# 七、两个时间戳相减所距时间
+## 七、两个时间戳相减所距时间
 
 ```js
 getTime(value = Math.round(Date.now() / 1000)) {
@@ -127,7 +127,7 @@ getTime(value = Math.round(Date.now() / 1000)) {
 
 ---
 
-# 八、计算今天是今年的进度的多少
+## 八、计算今天是今年的进度的多少
 
 ```js
 getPlan(){
@@ -169,7 +169,7 @@ getAge24Time() {
 
 ---
 
-# 九、国际化相对时间格式化：Intl.RelativeTimeFormat
+## 九、国际化相对时间格式化：Intl.RelativeTimeFormat
 
 ```js
 const rtf = new Intl.RelativeTimeFormat("zh", { numeric: "auto" });

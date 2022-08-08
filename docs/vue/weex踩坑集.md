@@ -1,7 +1,7 @@
 #  weex踩坑集
 
 ---
-# 项目创建
+## 项目创建
 
 ```bash
 weex create proj
@@ -13,14 +13,14 @@ weex run android
 
 ```
 
-# 运行
+## 运行
 
 ```bash
 npm run dev
 npm run serve
 ```
 
-# 布局的不同
+## 布局的不同
  - 使用flex布局
  - 不支持百分数
  - border要分开写
@@ -28,9 +28,9 @@ npm run serve
  - 宽：720px=100%
  - 高：1250px =100%
 
-# 组件
+## 组件
 
-## text组件
+### text组件
 
 - 模版里（template）最外层标签只能用<div>
 标签来表示，其他标签都会报错，这是weex里的一个小坑，需要你注意。
@@ -38,18 +38,18 @@ npm run serve
 - ID
 在写Css样式时，必须使用类名或者ID进行设置，其他选择器不起作用。这个坑也比较深，我研究了很久。
 
-## image组件
+### image组件
 
 ```html
 <image :src="item.src"></image>
 ```
 
-## 列表组件
+### 列表组件
 
 用内置组件`<list></list>`和`<cell></cell>`
 相当于html中的`<ul></ul>`和`<li></li>`
 
-# 调用原生组件 
+## 调用原生组件 
 
 ```js
 var modal = weex.requireModule('modal');
@@ -60,7 +60,7 @@ modal.toast({
 	})
 ```
 
-# 网络请求
+## 网络请求
 
 **stream的引入**
 
@@ -72,7 +72,7 @@ modal.toast({
 
 如果要一进入页面就请求数据，在`created(){}`或`mounted(){}`中写
 
-## 方法一
+### 方法一
 
 ```js
 let url = 'http://api.tkjidi.com/getGoodsLink?appkey=ed33ed5a1a73e00c65f6c8da5793fb8a&type=www_lingquan';
@@ -94,7 +94,7 @@ getData(url,callback){
 }
 ```
 
-## 方法二
+### 方法二
 
 ```js
 stream.fetch({

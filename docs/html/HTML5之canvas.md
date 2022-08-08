@@ -1,5 +1,5 @@
 # HTML5之canvas
-# 一、学习链接
+## 一、学习链接
 
 - [阮一峰-canvas 教程](https://wangdoc.com/webapi/canvas.html)
 - [菜鸟教程-canvas 教程](https://www.runoob.com/html/html5-canvas.html)
@@ -7,23 +7,23 @@
 
 ---
 
-# 二、简介
+## 二、简介
 
-## 【0】canvas 效果预览
+### 【0】canvas 效果预览
 
 ![image](https://s1.ax1x.com/2022/03/14/bOetC8.jpg)
 
 - [在线观看](https://firefly1984982452.github.io/my-web-page/canvas.html)
 - [源码地址](https://github.com/firefly1984982452/my-web-page/blob/master/canvas.html)
 
-## 【1】canvas 的通用标准语法
+### 【1】canvas 的通用标准语法
 
 - width：宽度；
 - height：高度；
 - fill：填充色；
 - stroke：边框色；
 
-## 【2】使用
+### 【2】使用
 
 ```html
 <!DOCTYPE html>
@@ -44,9 +44,9 @@
 
 ---
 
-# 三、元素语法
+## 三、元素语法
 
-## 【1】`<canvas>`
+### 【1】`<canvas>`
 
 canvas 代码都放在顶层标签`<canvas>`之中，由 JS 生成内容，一般情况下没有内层标签。
 
@@ -55,7 +55,7 @@ canvas 代码都放在顶层标签`<canvas>`之中，由 JS 生成内容，一�
 </canvas>
 ```
 
-## 【2】`rect`矩形
+### 【2】`rect`矩形
 
 ```html
 <canvas class="box" id="rect"> </canvas>
@@ -70,7 +70,7 @@ function rectFn() {
 }
 ```
 
-## 【3】`moveTo`矩形
+### 【3】`moveTo`矩形
 
 ```html
 <canvas class="box" id="moveTo"> </canvas>
@@ -86,7 +86,7 @@ function rectFn() {
 }
 ```
 
-## 【4】`arc`圆形
+### 【4】`arc`圆形
 
 ```html
 <canvas class="box" id="arc"> </canvas>
@@ -102,7 +102,7 @@ function rectFn() {
 }
 ```
 
-## 【5】text【文本】
+### 【5】text【文本】
 
 ```html
 <canvas class="box" id="text"> </canvas>
@@ -118,7 +118,7 @@ function rectFn() {
 }
 ```
 
-## 【6】gradient【渐变】
+### 【6】gradient【渐变】
 
 ```html
 <canvas class="box" id="gradient"> </canvas>
@@ -137,7 +137,7 @@ function rectFn() {
 }
 ```
 
-## 【7】image【图像】
+### 【7】image【图像】
 
 ```html
 <img
@@ -164,7 +164,7 @@ function rectFn() {
 
 ---
 
-# 四、实例：canvas数据流动效
+## 四、实例：canvas数据流动效
 
 - [效果预览](https://firefly1984982452.github.io/my-web-page/canvas-dataflow.html)
 

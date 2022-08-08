@@ -2,7 +2,7 @@
 
 ---
 
-# 一、链接
+## 一、链接
 
 - [官方 API 链接](https://echarts.apache.org/zh/option.html)
 
@@ -16,9 +16,9 @@
 
 ---
 
-# 二、在 vue 中如何使用
+## 二、在 vue 中如何使用
 
-## 【1】下载
+### 【1】下载
 
 ```bash
 npm install echarts --save
@@ -26,7 +26,7 @@ npm install echarts --save
 
 !> 如果 echarts 用的是 5.0 以上，对应的其它插件也要更新到最新版。
 
-## 【2】写 echarts 组件
+### 【2】写 echarts 组件
 
 ```js
 <template>
@@ -218,7 +218,7 @@ export default {
 
 ```
 
-## 【3】main.js 里面定义
+### 【3】main.js 里面定义
 
 和常规的注册全局组件一样的写法
 
@@ -228,7 +228,7 @@ import Ehcart from "@/components/echarts";
 Vue.component("ehcart", Ehcart);
 ```
 
-## 【4】在 vue 里面使用
+### 【4】在 vue 里面使用
 
 ```js
 <ehcart ref="echarts_nevel" config="test" height="3.58rem" width="100%" />;
@@ -241,7 +241,7 @@ echart.resizeB(); // 如果要后期改变大小
 echart.refresh();
 ```
 
-## 【5】配置 echarts 具体内容
+### 【5】配置 echarts 具体内容
 
 ```js
 import { getAdapterFont } from "../../assets/js/common";
@@ -288,7 +288,7 @@ export const option = {
 };
 ```
 
-## 【6】echarts 其它公用方法 common.js
+### 【6】echarts 其它公用方法 common.js
 
 common.js
 
@@ -319,7 +319,7 @@ export const getAdapterFont = (e = 7) => {
 
 ---
 
-# 三、常见通用配置项
+## 三、常见通用配置项
 
 ```js
 option = {
@@ -434,9 +434,9 @@ option = {
 
 ---
 
-# 四、组件其它设置
+## 四、组件其它设置
 
-## 【1】颜色渐变
+### 【1】颜色渐变
 
 ```js
 color:[new echarts.graphic.LinearGradient(
@@ -448,14 +448,14 @@ color:[new echarts.graphic.LinearGradient(
     ),'#556783'],
 ```
 
-## 【2】饼图最小区域面积
+### 【2】饼图最小区域面积
 
 ```js
 type: 'pie',
 minAngle: 15,
 ```
 
-## 【3】y 轴文字过长显示省略号
+### 【3】y 轴文字过长显示省略号
 
 ```js
 axisLabel: {
@@ -476,9 +476,9 @@ axisLabel: {
 
 ---
 
-# 五、js 控制 echarts
+## 五、js 控制 echarts
 
-## 【1】`window.eventBus`实现 vue 页面与普通 js 数据通信
+### 【1】`window.eventBus`实现 vue 页面与普通 js 数据通信
 
 重点：用`window.eventBus`而不是`this.eventBus`，因为普通 js 里面的`this`是代表`vue`，而普通 js 获取不到`vue`的值。
 
@@ -514,7 +514,7 @@ window.$eventBus.$on("residenceData", (v) => {
 
 ![image](https://s1.ax1x.com/2022/03/14/bOMM79.jpg)
 
-## 【2】echarts 与 elementUI 中的 carousel 走马灯结合的轮播
+### 【2】echarts 与 elementUI 中的 carousel 走马灯结合的轮播
 
 ```js
 <el-carousel :interval="3000" arrow="always" class="img-box">
@@ -556,15 +556,15 @@ resizeB: function () {
 }
 ```
 
-## 【3】普通的控制显示隐藏
+### 【3】普通的控制显示隐藏
 
 用`v-if`，不要用`v-show`，这样就会重新生成`DOM`，而不是显示隐藏。
 
 ---
 
-# 六、常用图表——折线图、柱状图、饼图
+## 六、常用图表——折线图、柱状图、饼图
 
-## 【1】折线图-line
+### 【1】折线图-line
 
 ```js
 option = {
@@ -585,7 +585,7 @@ option = {
 };
 ```
 
-## 【1.1】折线图最高值显示
+### 【1.1】折线图最高值显示
 
 ```js
 markPoint: {
@@ -605,9 +605,9 @@ markPoint: {
 },
 ```
 
-## 【2】柱状图-bar
+### 【2】柱状图-bar
 
-### 【2.1】柱状图横/竖向显示
+#### 【2.1】柱状图横/竖向显示
 
 竖向
 
@@ -633,7 +633,7 @@ yAxis: {
 },
 ```
 
-### 【2.2】堆叠
+#### 【2.2】堆叠
 
 重点：所有数据有一个共同的`stack`，如`stack: '总量'`。
 
@@ -660,9 +660,9 @@ series: [
 ];
 ```
 
-## 【3】饼图-pie
+### 【3】饼图-pie
 
-### 【3.1】普通饼图
+#### 【3.1】普通饼图
 
 重点：`type: 'pie',radius: '55%',`
 
@@ -683,7 +683,7 @@ series: [
 ];
 ```
 
-### 【3.2】圆环饼图
+#### 【3.2】圆环饼图
 
 重点：`type: 'pie',radius: ['50%', '70%'],`
 
@@ -706,7 +706,7 @@ series: [
 
 ---
 
-### 【3.3】饼图其它设置
+#### 【3.3】饼图其它设置
 
 - 鼠标悬浮时去掉动画
 
@@ -716,7 +716,7 @@ hoverAnimation:false,
 
 ---
 
-# 七、水波图
+## 七、水波图
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="echarts-liquidfill Demo" src="https://codepen.io/firefly1984982452/embed/VwQEzxM?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/firefly1984982452/pen/VwQEzxM">
@@ -726,7 +726,7 @@ hoverAnimation:false,
 
 ---
 
-# 八、雷达图
+## 八、雷达图
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="echarts-radar Demo" src="https://codepen.io/firefly1984982452/embed/yLvRoQy?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/firefly1984982452/pen/yLvRoQy">

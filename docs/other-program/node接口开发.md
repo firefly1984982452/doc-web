@@ -2,15 +2,15 @@
 
 ---
 
-# 前置准备工作
+## 前置准备工作
 
-## 用`jw`做`token`验证
-## 用`express`做框架
-## 用`mysql2`连接数据库
+### 用`jw`做`token`验证
+### 用`express`做框架
+### 用`mysql2`连接数据库
     `mysql2`比`mysql`多了个`promise`的功能
-## 用`apidoc`做接口文档
+### 用`apidoc`做接口文档
 
-# 接口实现
+## 接口实现
 
 ```js
 var express = require('express')

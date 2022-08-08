@@ -2,13 +2,13 @@
 
 ---
 
-# 完整日期
+## 完整日期
 
 ```
 yyyy-MM-DD HH:mm:ss
 ```
 
-# 当前周
+## 当前周
 
 ```js
 getCurrWeekDays () {
@@ -19,7 +19,7 @@ getCurrWeekDays () {
 },
 ```
 
-# 当前月
+## 当前月
 
 ```js
 getCurrMonthDays () {
@@ -29,7 +29,7 @@ getCurrMonthDays () {
 },
 ```
 
-# 当前季度
+## 当前季度
 
 ```js
 getCurrJiDays () {
@@ -39,7 +39,7 @@ getCurrJiDays () {
 },
 ```
 
-# 当前年
+## 当前年
 
 ```js
 getCurrYearDays () {

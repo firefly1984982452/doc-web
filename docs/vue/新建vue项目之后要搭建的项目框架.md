@@ -2,15 +2,15 @@
 
 - [github地址](https://github.com/firefly1984982452/base)
 
-# 搭建
+## 搭建
 
 用`vue-cli`[创建](https://firefly1984982452.github.io/2018/03/19/vue%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/#vue-cli%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE)好项目
 
 ---
 
-# css
+## css
 
-## 【1】rem
+### 【1】rem
 
 新建一个`rem-config.js`文件
 
@@ -44,7 +44,7 @@ import remConfig from './config/rem-config'; // 配置rem
 remConfig(); // 执行rem
 ```
 
-## 【2】初始化css
+### 【2】初始化css
 
 新建`reset.css`
 
@@ -80,7 +80,7 @@ input[type="number"]{-moz-appearance:textfield;}
 </style>
 ```
 
-## 【3】字体文件
+### 【3】字体文件
 
 一般设计稿上会用其它字体。
 
@@ -113,7 +113,7 @@ font-family: 'PINGFANG-REGULAR';
 
 ---
 
-# 组件
+## 组件
 
 公用组件全局配置
 
@@ -134,9 +134,9 @@ Vue.component('Box', Box);
 
 ---
 
-# 路由
+## 路由
 
-## 【1】定义主页及路由跳转文件
+### 【1】定义主页及路由跳转文件
 
 ```
 home.vue
@@ -145,7 +145,7 @@ page1.vue
 page2.vue
 ```
 
-## 【2】在route.js里面定义
+### 【2】在route.js里面定义
 
 ```js
 import Vue from 'vue'
@@ -185,7 +185,7 @@ export default new Router({
 
 ```
 
-## 【3】在home里面跳转
+### 【3】在home里面跳转
 
 ```js
 ...
@@ -230,26 +230,26 @@ export default new Router({
 
 ---
 
-# Vuex
+## Vuex
 
 - 参考[Vuex](/docs/vue/vue常用方法总结.md#Vuex)
 
 ---
 
-# EventBus
+## EventBus
 
 - 参考[EventBus](/docs/vue/vue常用方法总结.md#EventBus)
 
 ---
 
-# 配置echarts
+## 配置echarts
 
 - 参考[配置echarts](/docs/tool/echarts超全超详情配置项.md#在vue中如何使用)
 
 ---
-# 写README.MD
+## 写README.MD
 
-### 项目结构
+#### 项目结构
 ```
 ├── build  #webpack编译相关文件目录，一般不用动
 ├── config  #配置目录，一般不用动
@@ -262,7 +262,7 @@ export default new Router({
 |   |    ├─── font #公共字体文件
 |   |─── bus   #eventBus
 │   ├─── components  #公共组件及框架组件
-|   |─── config   # rem或字体配置代码
+|   |─── config   ## rem或字体配置代码
 │   ├─── layouts  #页面布局组件，基本布局都已经好了，一般不允许在此添加文件
 |   |    ├─── console.vue #登录页等全屏的布局
 |   |    ├─── default.vue #无侧边菜单的布局
@@ -281,18 +281,18 @@ export default new Router({
 └── README.md #项目的说明文档，markdown 格式
 ```
 
-## 项目约定
+### 项目约定
 
-## 启动步骤
+### 启动步骤
 
 ``` bash
-# 安装项目依赖
+## 安装项目依赖
 npm install --registry https://i.youbankeji.com/nexus/content/groups/youban-npm/
 
-# 本地运行
+## 本地运行
 npm run dev
 
-# 发布上线
+## 发布上线
 npm run build
 ```
 

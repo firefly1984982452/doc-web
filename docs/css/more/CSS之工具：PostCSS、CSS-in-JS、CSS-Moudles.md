@@ -1,12 +1,12 @@
 # CSS之工具：PostCSS、CSS-in-JS、CSS-Moudles
 
-# 一、PostCSS
+## 一、PostCSS
 
 - [PostCSS 官网链接](https://www.postcss.com.cn/)
 
 我理解到的`PostCSS`就是个工具集，比如里面的`autoprefixer`插件能自动补全前缀，`PostCSS Preset Env`能使用新特性
 
-# 二、CSS in JS
+## 二、CSS in JS
 
 - [阮一峰的博客教程](https://www.ruanyifeng.com/blog/2017/04/css_in_js.html)
 
@@ -47,22 +47,22 @@ const styles = {
 };
 ```
 
-## 缺点
+### 缺点
 
 - 学习坡度很陡
 - 简单静态页面一般用不着
 
-# 三、CSS Moudles
+## 三、CSS Moudles
 
 - [阮一峰的博客教程](https://www.ruanyifeng.com/blog/2016/06/css_modules.html)
 
-## CSS Moudles 是什么
+### CSS Moudles 是什么
 
 > CSS files in which all class names and animation names are scoped locally by default.
 
 所以`CSS Modules`并不是一个正式的声明或者是浏览器的一个实现，而是通过构建工具（`webpack or Browserify`）来使所有的 `class` 达到 `scope` 的一个过程。
 
-## CSS Moudles 如何使用
+### CSS Moudles 如何使用
 
 配置`webpack.config.js`：
 
@@ -94,7 +94,7 @@ module.exports = {
 
 上面代码中，关键的一行是`style-loader!css-loader?modules`，它在`css-loader`后面加了一个查询参数`modules`，表示打开 `CSS Modules` 功能。
 
-## CSS Moudles 解决什么问题
+### CSS Moudles 解决什么问题
 
 1. 全局命名冲突
 

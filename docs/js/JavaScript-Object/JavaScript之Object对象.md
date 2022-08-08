@@ -1,20 +1,20 @@
 # JavaScript之Object对象
-# 一、对象的增删改查
+## 一、对象的增删改查
 
-## 【1】增/改
+### 【1】增/改
 
 ```js
 var obj = {};
 obj.id = 1;
 ```
 
-## 【2】删
+### 【2】删
 
 ```js
 delete obj.id;
 ```
 
-## 【3】查
+### 【3】查
 
 ◆ 1. 普通的查询
 
@@ -53,16 +53,16 @@ let n_val = obj?.attr?.name
 
 ---
 
-# 二、合并多个对象
+## 二、合并多个对象
 
-## 【1】用`Object.assign`
+### 【1】用`Object.assign`
 
 ```js
 let obj = Object.assign({a:3},{b:4},{c:5});
 obj; // {a: 3, b: 4, c: 5}
 ```
 
-## 【2】用`(```)`可以合并多个对象
+### 【2】用`(```)`可以合并多个对象
 
 ```js
 let obj = {...{a:3},...{b:4},...{c:5}}
@@ -71,7 +71,7 @@ obj; // {a: 3, b: 4, c: 5}
 
 ---
 
-# 三、深拷贝
+## 三、深拷贝
 
 [链接](docs/JavaScript/JavaScript深拷贝浅拷贝全析.md)
 
@@ -81,7 +81,7 @@ obj; // {a: 3, b: 4, c: 5}
 
 ---
 
-# 四、遍历
+## 四、遍历
 
 - `Object.keys()`
 - `Object.values()`
@@ -89,7 +89,7 @@ obj; // {a: 3, b: 4, c: 5}
 
 ---
 
-# 五、`Object.definedProperty`：定义属性
+## 五、`Object.definedProperty`：定义属性
 
 递归遍历对象用`defineProperty`实现`vue`双向绑定
 
@@ -135,7 +135,7 @@ obj.arr.slice(1); // 修改数组监听失败
 
 ---
 
-# 六、`Object.fromEntries`：把序列化的字符串反转为对象
+## 六、`Object.fromEntries`：把序列化的字符串反转为对象
 
 ```js
 window.location.search = '?roomId=9&status=1&taskId=7&serviceId=1109';
@@ -146,7 +146,7 @@ var param = Object.fromEntries(p);
 
 ---
 
-# 七、防篡改对象
+## 七、防篡改对象
 
 `preventExtensions`：不能增，能删改
 `seal`：不能增删，能改
@@ -158,7 +158,7 @@ var param = Object.fromEntries(p);
 |       seal        |  ×  |  ×  |  ✓  |
 |      freeze       |  ×  |  ×  |  ×  |
 
-## 【1】不可扩展对象`preventExtensions`
+### 【1】不可扩展对象`preventExtensions`
 
 !> `Object.preventExtensions`不能增，能删改
 
@@ -181,7 +181,7 @@ console.log(obj); // {b: "hello"} 修改成功
 Object.isExtensible(obj);// false
 ```
 
-## 【2】密封的对象`seal`
+### 【2】密封的对象`seal`
 
 !> `Object.seal`不能增删，能改
 
@@ -204,7 +204,7 @@ console.log(obj); // {a:1,b: "hello"} 修改成功
 Object.isSealed(obj);// true
 ```
 
-## 【3】冻结的对象`freeze`
+### 【3】冻结的对象`freeze`
 
 !> `Object.freeze`不能增删改
 
@@ -229,7 +229,7 @@ Object.isFrozen(obj);// true
 
 ---
 
-# 八、`Object.entries`：分割对象
+## 八、`Object.entries`：分割对象
 
 ```js
 const obj = { foo: 'bar', baz: 42 };
@@ -238,13 +238,13 @@ console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 ---
 
-# 九、`Object.is()`：对象比较
+## 九、`Object.is()`：对象比较
 
 比如之前判断一个值是否为`NaN`的话可能会用`Number.isNaN()`，现在用`Object.is(NaN, NaN)`也能达到一样的效果。
 
 ---
 
-# 十、判断对象`{}`是否为空
+## 十、判断对象`{}`是否为空
 
 ```js
 if(Object.keys(obj).length === 0){...}
@@ -252,7 +252,7 @@ if(Object.keys(obj).length === 0){...}
 
 ---
 
-# 十一、对象 key 值构建
+## 十一、对象 key 值构建
 
 ```js
 var a = 'name'

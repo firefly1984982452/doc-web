@@ -2,7 +2,7 @@
 
 ---
 
-# 判断当前是哪个浏览器
+## 判断当前是哪个浏览器
 
 ```js
 var inBrowser = typeof window !== 'undefined';
@@ -19,7 +19,7 @@ var isPhantomJS = UA && /phantomjs/.test(UA);
 var isFF = UA && UA.match(/firefox\/(\d+)/);
 ```
 
-# 用正则代替 indexOf 和 includes
+## 用正则代替 indexOf 和 includes
 
 ```js
 /native code/.test(Array.toString())

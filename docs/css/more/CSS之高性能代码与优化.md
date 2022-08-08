@@ -1,8 +1,8 @@
 # CSS 之高性能代码与优化
 
-# 一、CSS 编码技巧
+## 一、CSS 编码技巧
 
-## 【1】尽量减少代码重复
+### 【1】尽量减少代码重复
 
 - `line-height`写倍数
 - `font-size`写百分比
@@ -25,7 +25,7 @@ height: 20px;
 line-heigth: 1.5;
 ```
 
-## 【2】代码易维护 vs．代码量少
+### 【2】代码易维护 vs．代码量少
 
 比如：我们不需要左边框
 
@@ -44,7 +44,7 @@ border-color: #fff;
 border-style: solid;
 ```
 
-## 【3】currentColor
+### 【3】currentColor
 
 ```css
 p {
@@ -57,7 +57,7 @@ p {
 
 p 标签的边框会直接获取到 color 的颜色。
 
-## 【4】合理使用简写
+### 【4】合理使用简写
 
 ```css
 background: red;
@@ -68,9 +68,9 @@ background-color: red;
 
 ---
 
-# 二、文档分析注释
+## 二、文档分析注释
 
-## 目录注释
+### 目录注释
 
 ```js
 /*--*\
@@ -86,7 +86,7 @@ import "./config/font-family-config.css";
 import "./assets/css/public.css";
 ```
 
-## 具体 CSS 文件的注释
+### 具体 CSS 文件的注释
 
 ```css
 /*-------*\
@@ -113,7 +113,7 @@ import "./assets/css/public.css";
 
 ---
 
-# 三、CSS 编写顺序
+## 三、CSS 编写顺序
 
 1. Reset；
 2. DOM 元素，如 ul、li；
@@ -123,9 +123,9 @@ import "./assets/css/public.css";
 
 ---
 
-# 四、CSS 命名
+## 四、CSS 命名
 
-## 命名规范
+### 命名规范
 
 下划线（ `__` ）代表子元素；连字符（ `-` ）代表不同状态；
 
@@ -138,15 +138,15 @@ import "./assets/css/public.css";
 }
 ```
 
-## BEM 命名法
+### BEM 命名法
 
 块（Block）、元素（Element）、修饰符（Modifier）例：`class="button button--state-danger"`
 
 ---
 
-# 五、优先级及优化
+## 五、优先级及优化
 
-## 优先级
+### 优先级
 
 ```
 !important
@@ -157,13 +157,13 @@ Class
 越清楚优先级越高
 ```
 
-## 优化
+### 优化
 
 尽量不要使用`!important`，下次会使用更多的`!important`去覆盖它。
 
 ---
 
-# 六、CSS 样式继承
+## 六、CSS 样式继承
 
 - 文字相关：`font-family`、`color`、`font-size`、`font-style`等。
 - 列表相关：`list-style`、`list-style-type`、`list-style-position`等。
@@ -173,7 +173,7 @@ Class
 
 ---
 
-# 七、SEO 优化和增加可读性
+## 七、SEO 优化和增加可读性
 
 - 鼠标样式随功能变化；
 
@@ -183,7 +183,7 @@ Class
 
 ---
 
-# 八、content-visibility：内容可见性
+## 八、content-visibility：内容可见性
 
 ◆ 网页渲染性能提升
 

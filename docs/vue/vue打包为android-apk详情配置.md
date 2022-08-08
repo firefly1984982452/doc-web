@@ -2,24 +2,24 @@
 
 ---
 
-# 配置打包信息
+## 配置打包信息
 
-## 安装JAVA环境
+### 安装JAVA环境
 
-### 安装
+#### 安装
 
 	像安装QQ一样安装即可（找到安装包后一直点击下一步即可）
 
 参考这个：[链接](https://jingyan.baidu.com/article/e75aca85b29c3b142edac6a8.html)
 
-### 环境配置（如果只是创建签名文件，此步骤可以忽略）
+#### 环境配置（如果只是创建签名文件，此步骤可以忽略）
 
 JAVA环境参考这个：[链接](https://www.runoob.com/java/java-environment-setup.html#win-install)
 
 
-## 创建签名文件
+### 创建签名文件
 
-### 生成 
+#### 生成 
 	
 在需要安装的目录下输入如下命令：
 
@@ -35,7 +35,7 @@ keytool -genkey -keystore key.jks  -alias key1 -keyalg RSA -validity 10000
 
 !> 输入密码是不会显示出明文，也不会显示`*****`，神马都不会显示，没关系，输入完后按回车键就行
 
-### 查看
+#### 查看
 
 在刚刚生成的目录下输入命令：
 
@@ -45,11 +45,11 @@ keytool -v -list -keystore key.jks
 
 **同样，输入密码时，无论你输入什么，控制台都不会显示，所以正常输入即可**
 
-# 打包源码
+## 打包源码
 
-## 项目运行
+### 项目运行
 
-### 运行环境
+#### 运行环境
 
 - 安装node
 
@@ -65,11 +65,11 @@ npm install
 
 **如果有红色报错可多试几次npm install 如果有黄色警告可以不用管）**
 
-## 打包
+### 打包
 
 以下配置参考[链接](https://blog.csdn.net/niesiyuan000/article/details/78890240)
 
-# 其它
+## 其它
 
 - 配置文件里面要有所用到的权限
 - appID要一致

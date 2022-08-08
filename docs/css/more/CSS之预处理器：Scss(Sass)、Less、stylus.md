@@ -1,6 +1,6 @@
 # CSS 之预处理器：Scss(Sass)、Less、stylus
 
-# 前言：CSS 的进化历史
+## 前言：CSS 的进化历史
 
 - `Scss(Sass)`、`Less`、`stylus` 和 `PostCSS` 等 CSS 预处理器
 
@@ -20,14 +20,14 @@
 
   `JavaScript` 和 `CSS` 可以方便的共享变量和方法
 
-# 一、链接
+## 一、链接
 
 - [Scss 官网链接](https://www.sass.hk/guide/)
 - [Less 官网链接](https://less.bootcss.com/#%E6%A6%82%E8%A7%88)
 - [Stylus 官网链接](https://stylus.zcopy.site/)
 - [Stylus 其它教程](https://www.jianshu.com/p/5fb15984f22d)
 
-# 二、Scss、Sass 的关系
+## 二、Scss、Sass 的关系
 
 `Scss`是`Sass`的升级版
 
@@ -51,9 +51,9 @@
 }
 ```
 
-# 三、Scss(Sass)、Less、stylus 的安装与编译
+## 三、Scss(Sass)、Less、stylus 的安装与编译
 
-## 在 Node.js 环境中使用
+### 在 Node.js 环境中使用
 
 安装
 
@@ -71,14 +71,14 @@ less test.scss
 stylus test.scss
 ```
 
-## 在浏览器环境中使用
+### 在浏览器环境中使用
 
 ```html
 <link rel="stylesheet/less" type="text/css" href="styles.less" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js"></script>
 ```
 
-# 四、常用语法
+## 四、常用语法
 
 |       语法        |            Less            |         Scss         | Stylus | 备注 |
 | :---------------: | :------------------------: | :------------------: | :----: | :--: |
@@ -87,7 +87,7 @@ stylus test.scss
 |  嵌套（Nesting）  |         `{ { } }`          |      `{ { } }`       |  缩进  |      |
 |  函数(Functions)  | `.name {@functions ~IFFE}` |   `@function name`   |  缩进  |      |
 
-## 【1】变量
+### 【1】变量
 
 以下 3 种模板均编译为：
 
@@ -130,7 +130,7 @@ siteHeight = siteWidth + 10px
   height siteHeight
 ```
 
-## 【2】混合（Mixins）
+### 【2】混合（Mixins）
 
 - Less：`.public();`
 
@@ -165,7 +165,7 @@ p
   border-radius(5px)
 ```
 
-## 【3】嵌套（Nesting）
+### 【3】嵌套（Nesting）
 
 - Less 和 Scss：`{ { } }`
 
@@ -185,7 +185,7 @@ header
     color: #f00
 ```
 
-## 【4】函数(Functions)
+### 【4】函数(Functions)
 
 ```css
 body{
@@ -231,7 +231,7 @@ add(a, b)
   a + b
 ```
 
-# 五、特性
+## 五、特性
 
 - Stylus
 

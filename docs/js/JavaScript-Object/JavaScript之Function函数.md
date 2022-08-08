@@ -1,8 +1,8 @@
 # JavaScript之Function函数
 
-# 一、function和object
+## 一、function和object
 
-## 【1】function
+### 【1】function
 
 ```js
 var str = (()=> {
@@ -31,7 +31,7 @@ str.sum(); // 1
 ```
 此时的str是已经立即执行函数了，返回的是Object，是{sum:f,reduce:f}，注意，这里的str是获取不到count的，只有return的数据能获取到。
 
-## 【2】Object
+### 【2】Object
 
 ```js
 var obj = {
@@ -44,12 +44,12 @@ obj.sum(); // 1
 
 这里的`obj`是`Object`，不同于`str`的是，它能获取到`count`，`object`里面的所有数据都能获取到。
 
-## 【3】区别
+### 【3】区别
 
 - `Function`只有`return`的方法才能获取到（闭包）
 - `Function`执行后返回的是对象
 
-# 二、JavaScript函数调用及this参数
+## 二、JavaScript函数调用及this参数
 
 JS有4种方式调用函数
 
@@ -67,7 +67,7 @@ JS有4种方式调用函数
 
 详解：
 
-## 【1】函数调用
+### 【1】函数调用
 
 ```js
 function fn(){
@@ -86,7 +86,7 @@ function fn(){
 fn(); // undefined
 ```
 
-## 【2】方法调用
+### 【2】方法调用
 
 ```js
 var obj = {
@@ -97,7 +97,7 @@ var obj = {
 obj.fn() // 返回obj对象：{fn: ƒ}
 ```
 
-## 【3】构造函数调用
+### 【3】构造函数调用
 
 ```js
 function Cat(x,y){
@@ -125,7 +125,7 @@ var p = new Point(1,2)
 p // Point{x:1,y:2} 指向p对象
 ```
 
-## 【4】aplly或call
+### 【4】aplly或call
 
 ```js
 var name = '张三';
@@ -152,7 +152,7 @@ obj.fun.bind(pd,['长沙','上海'])(); // 彭丹 年龄18 来自长沙上海 �
 
 ---
 
-# 三、`new Function`：函数构造器
+## 三、`new Function`：函数构造器
 
 与`构造函数`名字类似，但无太大关系。
 
@@ -182,7 +182,7 @@ test(){
 
 ---
 
-# 四、`generator`：函数生成器
+## 四、`generator`：函数生成器
 
 ```js
 function* test(){

@@ -1,6 +1,6 @@
 #  vue常用方法总结
 
-# vue绑定内联样式
+## vue绑定内联样式
 
 ```html
 <div :style="styleData">
@@ -19,7 +19,7 @@ data:{
 
 ---
 
-# slot插槽
+## slot插槽
 
 father.vue
 ```html
@@ -47,7 +47,7 @@ start content end
 
 ---
 
-# mixin
+## mixin
 
 **如果要使用全局filter的话，原来的做法是：**
 
@@ -94,9 +94,9 @@ export default {
 
 ---
 
-# 公共组件
+## 公共组件
 
-## 【1】全局使用
+### 【1】全局使用
 
 main.js
 ```js
@@ -110,7 +110,7 @@ Vue.use(VueResource)
 Vue.component('six-button', SixiButton)
 ```
 
-## 【2】局部使用
+### 【2】局部使用
 
 test.vue
 ```vue
@@ -133,9 +133,9 @@ components:{
 ```
 
 ---
-# 路由跳转及传参
+## 路由跳转及传参
 
-## 【1】直接跳转
+### 【1】直接跳转
 
 A.vue
 ```js
@@ -155,7 +155,7 @@ this.$route.params
 !> A.vue使用的是`$router`，B.vue使用的是`$route`，极易混淆。<br />
  此处push的必须是name，不能是path，如果要用path的话，可以用query
 
-## 【2】地址栏'/'传参
+### 【2】地址栏'/'传参
 
 router.js
 
@@ -173,7 +173,7 @@ A.vue
 
 获取：`this.$route.params.order_id`
 
-## 【3】地址栏'?'传参
+### 【3】地址栏'?'传参
 
 地址：`http://localhost:8080/#/success?id=257`
 
@@ -181,9 +181,9 @@ A.vue
 
 ---
 
-# axios网络模块
+## axios网络模块
 
-## 【1】axios网络请求
+### 【1】axios网络请求
 
 `this.axios.post().then().catch();`
 
@@ -198,7 +198,7 @@ this.axios.post(url,params).then((res) => {
 });
 ```
 
-## 【2】设置请求头带cooike
+### 【2】设置请求头带cooike
 
 ```js
 import axios from 'axios'
@@ -208,36 +208,36 @@ Vue.prototype.$axios = axios;
 
 ---
 
-# vue-cli快速构建vue2项目
+## vue-cli快速构建vue2项目
 
-## 【1】安装webpack
+### 【1】安装webpack
 ```bash
 npm install -g webpack
 ```
 
-## 【2】安装vue-cli
+### 【2】安装vue-cli
 ```bash
 npm install -g vue-cli
 ```
 
-## 【3】初始化
+### 【3】初始化
 ```bash
 vue init webpack myVueStudy
 ```
 
 初始化过程中有些需要填的选项，直接按`enter`键就可以了。
 
-## 【4】安装模块
+### 【4】安装模块
 ```bash
 npm install
 ```
 
-## 【5】运行
+### 【5】运行
 ```bash
 npm run dev
 ```
 
-## 【6】打包
+### 【6】打包
 
 config/index.js
 
@@ -251,9 +251,9 @@ npm run build
 
 ---
 
-# 限制input、el-input只能输入数字
+## 限制input、el-input只能输入数字
 
-## 方法一：事件监听
+### 方法一：事件监听
 
 ```html
 <el-input 
@@ -274,7 +274,7 @@ npm run build
 
 - `oninput="value=value.replace(/[^0-9.]/g,'')"`是input触发
 
-## 方法二：自定义指令
+### 方法二：自定义指令
 
 ```html
 <el-input v-model.number=“value” v-number-only placeholder="请输入电话"></el-input>
@@ -298,7 +298,7 @@ directives: {
 },
 ```
 
-## 方法三：最后验证
+### 方法三：最后验证
 
 ```js
 if(Number.isNaN(Number(this.searchForm.contactPhone))){
@@ -308,7 +308,7 @@ if(Number.isNaN(Number(this.searchForm.contactPhone))){
 
 ------------
 
-# vue中监听键盘事件
+## vue中监听键盘事件
 
 ```js
 created(){
@@ -323,13 +323,13 @@ created(){
 ```
 
 ---
-# vue获取后端数据应该在created还是mounted方法
+## vue获取后端数据应该在created还是mounted方法
 
 看情况了，一般放到`created`里面就可以了，这样可以及早发请求获取数据，如果有依赖`dom`必须存在的情况，就放到`mounted(){this.$nextTick(() => { /* code */ })}`里面。
 
 ---
 
-# vue中新标签用target:blank跳转
+## vue中新标签用target:blank跳转
 
 ```js
 let routeUrl = this.$router.resolve({
@@ -341,15 +341,15 @@ window.open(routeUrl.href, '_blank')
 
 ---
 
-# mode模式区别
+## mode模式区别
 
-## 【1】history
+### 【1】history
 
 优点：地址栏不会有`#`号，利于`SEO`优化
 
 缺点：线上刷新后会404，需要前后台都配置才行
 
-## 【2】hash
+### 【2】hash
 
 优点：线上线下都没有刷新异常的问题
 
@@ -357,7 +357,7 @@ window.open(routeUrl.href, '_blank')
 
 ---
 
-# vue项目for循环注意事项
+## vue项目for循环注意事项
 
 项目中用了
 ```js
@@ -373,11 +373,11 @@ V-for="item in arr"
 
 ---
 
-# vue父子组件相互通信
+## vue父子组件相互通信
 
-## 【1】子 => 父 传值
+### 【1】子 => 父 传值
 
-### child.vue
+#### child.vue
 
 ```js
 sendData() {
@@ -385,7 +385,7 @@ sendData() {
 }
 ```
 
-### father.vue
+#### father.vue
 
 ```html
 <child @sendDataFun="get"></child>
@@ -395,15 +395,15 @@ get(val){
 }
 ```
 
-## 【2】父 => 子 传值
+### 【2】父 => 子 传值
 
-### father.vue
+#### father.vue
 
 ```html
 <child :sendType="type"></child>
 ```
 
-### child.vue
+#### child.vue
 
 ```js
 ...
@@ -418,9 +418,9 @@ watch:{
 ...
 ```
 
-## 【3】父 => 子 调方法
+### 【3】父 => 子 调方法
 
-### father.vue
+#### father.vue
 
 ```vue
 <child ref="child" @sendDataFun="get"></child>
@@ -433,7 +433,7 @@ get(val){
 
 ```
 
-### child.vue
+#### child.vue
 
 ```js
 sendData() {
@@ -445,7 +445,7 @@ sendData() {
 
 ---
 
-# EventBus
+## EventBus
 
 新建`bus.js`
 
@@ -483,7 +483,7 @@ mounted() {
 
 ---
 
-# `window.eventBus`实现vue页面与普通js数据通信
+## `window.eventBus`实现vue页面与普通js数据通信
 
 适用于`echarts.js`和`map.js`。
 
@@ -517,7 +517,7 @@ window.$eventBus.$on('residenceData',v=>{
 
 ---
 
-# filter访问data数据
+## filter访问data数据
 
 ```js
 var that;
@@ -544,9 +544,9 @@ export default {
 - 在`filter`中使用`that`.
 
 ---
-# Vue导航守卫BeforeRouteEnter、BeforeRouteUpdate
+## Vue导航守卫BeforeRouteEnter、BeforeRouteUpdate
 
-## beforeRouteEnter用法：keepAlive-列表不缓存详情页缓存
+### beforeRouteEnter用法：keepAlive-列表不缓存详情页缓存
 
 ```js
 meta: {
@@ -575,7 +575,7 @@ activated(){
 
 ```
 
-## beforeRouteEnter访问data里面的数据
+### beforeRouteEnter访问data里面的数据
 
 ```js
 beforeRouteEnter(to, from, next) {
@@ -594,7 +594,7 @@ next(vm=>{vm.show=true;})
 ```
 
 
-## beforeRouteUpdate
+### beforeRouteUpdate
 
 当页面路由不变，参数改变时用它
 
@@ -608,15 +608,15 @@ beforeRouteUpdate(to,form,next){
 
 ---
 
-# Vuex
+## Vuex
 
-## 下载
+### 下载
 
 ```bash
 npm install vuex --save
 ```
 
-## `main.vue`
+### `main.vue`
 
 ```js
 import { mapState,mapMutations } from 'vuex';
@@ -644,7 +644,7 @@ this.handleTabsList(this.tabsList)
 
 ```
 
-## store.js
+### store.js
 
 ```js
 import Vue from 'vue'
@@ -671,7 +671,7 @@ export default new Vuex.Store({
 })
 ```
 
-## main.js
+### main.js
 
 ```js
 import store from './store'
@@ -688,7 +688,7 @@ new Vue({
 
 ---
 
-# 使用静态资源
+## 使用静态资源
 
 ```js
 image:require('../../assets/img/fn1.png')
@@ -696,20 +696,20 @@ image:require('../../assets/img/fn1.png')
 
 ---
 
-# element-UI的坑
+## element-UI的坑
 
-## 翻页
+### 翻页
 
 `el-pagination`翻页组件重置时`:current-page="currentPage”`的值已经是1了，内容也是1了，但是DOM没更新，要加`.sync`，变成`:current-page.sync="currentPage”`。
 
-## 关闭element中的多条消息（只显示一条）
+### 关闭element中的多条消息（只显示一条）
 
 ```js
 this.$message.closeAll();
 this.$message.success('info');
 ```
 
-## 让el-select可以绑定对象
+### 让el-select可以绑定对象
 
 ```html
 <el-select value-key="name">
@@ -722,7 +722,7 @@ this.$message.success('info');
 </el-select>
 ```
 
-## 手动控制popover弹层的显示与隐藏状态
+### 手动控制popover弹层的显示与隐藏状态
 
 ```html
 <popover ref="popover"></popover>
@@ -752,7 +752,7 @@ this.$message.success('info');
 
 ---
 
-# vue2的双向绑定原理【`Object.defineProperty`】
+## vue2的双向绑定原理【`Object.defineProperty`】
 
 ```html
 <div id="div"></div>
@@ -773,16 +773,16 @@ this.$message.success('info');
 ```
 
 ---
-# v-if与v-show的区别
+## v-if与v-show的区别
 
 `v-if`：整个元素删除；适用于条件少变动时。
 `v-show`：用`display:none`；适用于频繁切换。
 
 ---
 
-# vue下swiper的使用
+## vue下swiper的使用
 
-## 安装
+### 安装
 
 ```bash
 npm install swiper
@@ -790,7 +790,7 @@ npm install swiper
 
 然后视情况看要不要在main.js里面全局引用，如果界面少可以不用。
 
-## 引用
+### 引用
 
 `html`部分：
 
@@ -846,15 +846,15 @@ components: {
 
 ---
 
-# vue国际化i18n使用
+## vue国际化i18n使用
 
-## 安装vue-i18n
+### 安装vue-i18n
 
 ```bash
 npm install vue-i18n --save
 ```
 
-## main.js文件配置
+### main.js文件配置
 
 ```js
 // 引入i18n国际化插件
@@ -956,7 +956,7 @@ new Vue({
 }
 ```
 
-## 使用vue-i18n
+### 使用vue-i18n
 
 ```html
 <h1 >{{$t('common.home')}}</h1>
@@ -973,7 +973,7 @@ changeTest(){
 ---
 
 
-# 消息无缝滚动
+## 消息无缝滚动
 
 ```js
 export default {
@@ -1007,7 +1007,7 @@ export default {
 
 ---
 
-# 图片错误时显示默认图片
+## 图片错误时显示默认图片
 
 ```html
 <img v-bind:src="userData.photo" :onerror="logo" class="img-box4">  
@@ -1025,7 +1025,7 @@ data: () => ({
 
 ---
 
-# 图片中绝对地址和相对址引用
+## 图片中绝对地址和相对址引用
 
 ```js
 <img src="~static/20180315130936.png"/>
@@ -1033,7 +1033,7 @@ data: () => ({
 
 ---
 
-# 引入不能npm下载的js（如mui）
+## 引入不能npm下载的js（如mui）
 
 复制`mui.min.js`进去
 
@@ -1060,9 +1060,9 @@ import mui from '../../js/mui.js';
 
 ---
 
-# watch
+## watch
 
-## 【1】箭头函数不指向this
+### 【1】箭头函数不指向this
 
 ```js
 watch:{

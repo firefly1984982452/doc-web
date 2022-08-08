@@ -2,7 +2,7 @@
 
 ---
 
-# mac下卸载node的命令
+## mac下卸载node的命令
 
 依次在终端执行下面的脚本
 
@@ -15,27 +15,27 @@ sudo rm /usr/local/share/man/man1/node.1
 sudo rm /usr/local/lib/dtrace/node.d
 ```
 
-# 安装node
+## 安装node
 
 - [官网](https://nodejs.org/en/download/)
 
 下载好之后自动有`node`和`npm`
 
-# npm链接
+## npm链接
 
 - [官方文档](https://www.npmjs.com.cn/)
 - [中文文档](https://cloud.tencent.com/developer/doc/1282)
 - [入门](https://blog.csdn.net/qq_38490457/article/details/109739444)
 
-# NPM 常用命令
+## NPM 常用命令
 
-## 【0】清理缓存后
+### 【0】清理缓存后
 
 ```bash
 npm cache clear --force
 ```
 
-## 【1】config：配置淘宝镜像源
+### 【1】config：配置淘宝镜像源
 
 设置 npm 镜像源：
 
@@ -72,7 +72,7 @@ npm config set registry http://registry.cnpmjs.org/
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
-## 【2】全局命令
+### 【2】全局命令
 
 - `i` 是 `install` 的简写
 - `-g` 与`--global` 是全局安装，不带 `-g` 会安装在个人文件夹
@@ -81,7 +81,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 `--save`和`--save-dev`的区别主要是，`devDependencies` 通常是开发的工具（例如测试的库），而 `dependencies` 则是与生产环境中的应用程序相关。
 
-## 【3】install 安装软件包
+### 【3】install 安装软件包
 
 ```bash
 npm install
@@ -93,7 +93,7 @@ npm install
 npm install <package-name>
 ```
 
-## 【4】uninstall:卸载软件包
+### 【4】uninstall:卸载软件包
 
 ```bash
 npm uninstall
@@ -112,13 +112,13 @@ npm uninstall -D <package-name>
 npm uninstall -g <package-name>
 ```
 
-## 【5】outdated：查看有哪些过时的软件包
+### 【5】outdated：查看有哪些过时的软件包
 
 ```bash
 npm outdated
 ```
 
-## 【6】update：更新软件包
+### 【6】update：更新软件包
 
 ```bash
 npm update
@@ -136,7 +136,7 @@ npm update <package-name>
 npm install npm@latest -g
 ```
 
-## 【7】@：安装旧版软件包
+### 【7】@：安装旧版软件包
 
 可以使用 @ 语法来安装 npm 软件包的旧版本：
 
@@ -148,7 +148,7 @@ npm install <package>@<version>
 npm install -g webpack@4.16.4
 ```
 
-## 【8】version：软件包版本查看
+### 【8】version：软件包版本查看
 
 列出软件包所有的以前的版本：
 
@@ -162,7 +162,7 @@ npm view <package> versions
 npm view [package_name] version
 ```
 
-## 【9】list：项目所有软件包
+### 【9】list：项目所有软件包
 
 所有已安装的 npm 软件包的最新版本：
 
@@ -174,7 +174,7 @@ npm list
 
 若要仅获取顶层的软件包（基本上就是告诉 `npm` 要安装并在 `package.json` 中列出的软件包），则运行 `npm list --depth=0`：
 
-## 【10】软件包版本介绍
+### 【10】软件包版本介绍
 
 如果 `Node.js` 软件包中有一件很棒的事情，那就是它们都同意使用语义版本控制作为版本编号。
 
@@ -196,7 +196,7 @@ npm list
 
 因为 `npm` 设置了一些规则，可用于在 `package.json` 文件中选择要将软件包更新到的版本（当运行 `npm update` 时）。
 
-## 【12】显示文件夹的路径
+### 【12】显示文件夹的路径
 
 - bin
 
@@ -219,7 +219,7 @@ npm root
 /Users/evalx/node_modules
 ```
 
-## 【13】doctor检查
+### 【13】doctor检查
 
 检查出当前是否最新版本，是否有错误
 
@@ -227,19 +227,19 @@ npm root
 npm doctor
 ```
 
-# npm 查看全局包/路径 Mac 下默认的全局路径
+## npm 查看全局包/路径 Mac 下默认的全局路径
 
 ```
 /usr/local/lib/node_modules
 ```
 
-# 使用软件包
+## 使用软件包
 
 ```js
 const _ = require('lodash')
 ```
 
-# package.json 文件
+## package.json 文件
 
 - `name` 设置了应用程序/软件包的名称。
 - `version` 表明了当前的版本。

@@ -6,13 +6,13 @@
 
 rollup.js是JavaScript的ES模块打包器，我们熟知的Vue、React等诸多知名框架或类库都通过rollup.js进行打包。
 
-# 安装
+## 安装
 
 ```bash
 npm i rollup -g
 ```
 
-# 新建文件
+## 新建文件
 
 src/a.js
 ```js
@@ -28,16 +28,16 @@ export default function(){
 }
 ```
 
-# 打包编译
+## 打包编译
 
 ```bash
-# 编译
+## 编译
 $ rollup src/main.js -f es
 
-# 编译并以ES模块输出
+## 编译并以ES模块输出
 $ rollup src/main.js -f es -o dist/bundle.js
 
-# 编译并以CommonJS模块输出
+## 编译并以CommonJS模块输出
 $ rollup src/main.js --format cjs --output.file dist/bundle-cjs.js
 ```
 
@@ -47,9 +47,9 @@ $ rollup src/main.js --format cjs --output.file dist/bundle-cjs.js
 - cjs为CommonJS标准，
 - esm（或es）为ES模块标准.
 
-# 验证打包结果
+## 验证打包结果
 
-## CommonJS标准
+### CommonJS标准
 
 ```bash
 $ node
@@ -58,7 +58,7 @@ $ node
 1 
 ```
 
-## ES标准
+### ES标准
 
 ```bash
 $ node

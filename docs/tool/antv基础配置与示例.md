@@ -2,14 +2,14 @@
 
 ---
 
-# 链接
+## 链接
 
 - [官方链接-G2快速上手](https://g2.antv.vision/zh/docs/manual/getting-started)
 - [官方链接-G2Plot快速上手](https://g2plot.antv.vision/zh/docs/manual/getting-started)
 - [G2-github](https://github.com/antvis/G2)
 - [G2Plot-github](https://github.com/antvis/g2plot)
 
-# G2基础示例
+## G2基础示例
 
 基础条形图
 
@@ -89,7 +89,7 @@
 </html>
 ```
 
-# G2Plot基础示例
+## G2Plot基础示例
 
 基础条形图-滚动条
 

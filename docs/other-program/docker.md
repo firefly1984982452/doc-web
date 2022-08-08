@@ -4,7 +4,7 @@
 
 docker 可以理解为**容器/虚拟机/服务器**。
 
-# 一、参考链接
+## 一、参考链接
 
 - [Docker 官方社区](https://hub.docker.com/)
 
@@ -12,13 +12,13 @@ docker 可以理解为**容器/虚拟机/服务器**。
 
 - [菜鸟教程](https://www.runoob.com/docker/docker-tutorial.html)
 
-# 二、下载
+## 二、下载
 
 在官网下载安装包
 
 像安装 node、qq 一样正常安装即可
 
-# 三、创建、查看、运行镜像
+## 三、创建、查看、运行镜像
 
 以 `nginx` 为例：
 
@@ -34,7 +34,7 @@ docker 可以理解为**容器/虚拟机/服务器**。
 
 - `docker run --name test nginx`：运行指定名称的镜像
 
-# 四、停止、删除、重启
+## 四、停止、删除、重启
 
 `xx` 为`<ID or Image Name >`
 
@@ -54,13 +54,13 @@ docker 可以理解为**容器/虚拟机/服务器**。
 
 - `docker image prune -a`：删除没有使用的所有镜像
 
-# 五、端口映射的 2 种模式
+## 五、端口映射的 2 种模式
 
 - 【1】attached 模式：在前台运行
 
 - 【2】detached 模式：在后台运行
 
-## 【1】启动端口
+### 【1】启动端口
 
 将 docker 的 80 端口，映射到服务器的 8080 端口：
 
@@ -70,11 +70,11 @@ docker run -p 8080:80 nginx
 
 打开浏览器，进入[127.0.0.1:8080](http://127.0.0.1:8080/)，就可以看到内容
 
-## 【2】attached 模式【默认】
+### 【2】attached 模式【默认】
 
 第次访问都会留下访问记录
 
-## 【3】detached 模式
+### 【3】detached 模式
 
 不会显示访问记录
 
@@ -84,7 +84,7 @@ docker run -p 8080:80 nginx
 docker run -d -p 8080:80 nginx
 ```
 
-## 【4】detched 模式转换为 attached 模式
+### 【4】detched 模式转换为 attached 模式
 
 `xx` 为`<ID or Image Name >`
 
@@ -92,7 +92,7 @@ docker run -d -p 8080:80 nginx
 docker attach xx
 ```
 
-## 【5】detached 模式下查看 log
+### 【5】detached 模式下查看 log
 
 `xx` 为`<ID or Image Name >`
 
@@ -108,11 +108,11 @@ docker logx xx
 docker logs -f xx
 ```
 
-# 六、交互模式
+## 六、交互模式
 
 只看看访问日志已经无法满足需求，这时候就需要交互模式
 
-## 【1】使用镜像时直接开启交互模式（进入 Shell 脚本）
+### 【1】使用镜像时直接开启交互模式（进入 Shell 脚本）
 
 ```bash
 docker run -it ubuntu sh
@@ -134,7 +134,7 @@ docker run -it ubuntu sh
 
 - 输入`exit`退出交互模式
 
-## 【2】detached 模式下再进入交互模式
+### 【2】detached 模式下再进入交互模式
 
 进入 detached 模式：
 
@@ -148,7 +148,7 @@ docker run -d -p 8080:80 nginx
 docker exec -it xx sh
 ```
 
-# 七、镜像的导出和导入
+## 七、镜像的导出和导入
 
 导出
 
@@ -162,9 +162,9 @@ docker image save test:lastest -o new-test.image
 docker image load -i .\new-test.image
 ```
 
-# 八、Dockerfile
+## 八、Dockerfile
 
-## 【1】通过 Dockerfile 构建镜像
+### 【1】通过 Dockerfile 构建镜像
 
 1. 新建 dockerfile 文件
 
@@ -196,7 +196,7 @@ docker image build -f test -t name .
 docker run name
 ```
 
-## 【2】把镜像分享到 Dockerhub
+### 【2】把镜像分享到 Dockerhub
 
 必须遵守`用户ID/镜像名称`的规则
 
@@ -218,7 +218,7 @@ dcker login
 docker image push pdd/pdd-name
 ```
 
-## 【3】FROM 语法的使用
+### 【3】FROM 语法的使用
 
 最新版
 
@@ -232,7 +232,7 @@ FROM ubuntu:latest
 FROM ubuntu:最合适的版本
 ```
 
-## 【4】RUN 执行指令使用技巧
+### 【4】RUN 执行指令使用技巧
 
 不建议：
 
@@ -260,9 +260,9 @@ RUN apt-get update && \
 
 这 2 次打包分别是`119MB`和`134MB`，者打包时间比后者快`6.7倍`。
 
-## 【5】文件操作：ADD 和 COPY 的区别
+### 【5】文件操作：ADD 和 COPY 的区别
 
-### （1）用 COPY 构建镜像
+#### （1）用 COPY 构建镜像
 
 1. 新建 Dockerfile.copy 文件
 
@@ -303,7 +303,7 @@ docker container run -it -p 3000:3000 hello-copy sh
 
 5. 打开[127.0.0.1:3000](http://127.0.0.1:3000/)进行访问
 
-### （2）用 ADD 构建镜像
+#### （2）用 ADD 构建镜像
 
 1. Dockerfile.add 文件内容
 
@@ -327,7 +327,7 @@ docker container run -it -p 3000:3000 hello-gzip sh
 
 4. 再进入 app 路径下面，可以看到下面自动给我们解压了 index.tar 文件。
 
-## 【6】定义变量：ARG 和 ENV
+### 【6】定义变量：ARG 和 ENV
 
 将 dockerfile 文件中的 `version` 的 `2.0.1` 改为变量：
 
@@ -387,7 +387,7 @@ docker container run -it ipinfo-arg-2.0.0
 
 然后再通过`shell`命令，i`pinfo verison`查看`ipinfo`的版本，可以看到版本已经变成了`2.0.0`了。
 
-## 【7】CMD 和 entrypoint
+### 【7】CMD 和 entrypoint
 
 1. 编写三个 Dockerfile 文件，Dockerfile-cmd、Dockerfile-entrypoint 和 Dockerfile.
 

@@ -2,7 +2,7 @@
 
 ---
 
-# 为什么要用 nextTick
+## 为什么要用 nextTick
 
 ```html
 <!DOCTYPE html>
@@ -39,7 +39,7 @@
 
 运行结果是报错，找不到节点。也就是说，当你执行到 isShow=true 时，此时 dom 节点尚未更新，只能等待 dom 更新后，你才能执行下面的 focus。
 
-# 用 MessageChannel 实现
+## 用 MessageChannel 实现
 
 ```html
 <!DOCTYPE html>
@@ -89,7 +89,7 @@
 </script>
 ```
 
-# 用 MutationObserver 实现
+## 用 MutationObserver 实现
 
 ```html
 <!DOCTYPE html>
@@ -139,7 +139,7 @@
 </script>
 ```
 
-# 为何弃用 MessageChannel 使用 MutationObserver
+## 为何弃用 MessageChannel 使用 MutationObserver
 
 ![image](https://s1.ax1x.com/2022/03/14/bOMy1f.jpg)
 

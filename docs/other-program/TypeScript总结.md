@@ -4,9 +4,9 @@
 
 - [链接](https://jspang.com/detailed?id=63)
 
-# 安装及使用
+## 安装及使用
 
-## 安装
+### 安装
 
 ```bash
 npm install typescript -g
@@ -18,7 +18,7 @@ npm install typescript -g
 yarn global add typescript
 ```
 
-## 使用
+### 使用
 
 **新建`demo.ts`：**
 
@@ -51,13 +51,13 @@ ts-node Demo1.ts
 
 ---
 
-# 静态类型
+## 静态类型
 
 被定义后就不可改变变量的类型了。
 
 js 是弱类型语言，可以被改变。
 
-## 【1】基本使用
+### 【1】基本使用
 
 ```js
 // 定义count是number类型
@@ -65,7 +65,7 @@ const count : number = 1;
 count = 'hello'; // 此时改变类型为string就会报错编译不通过
 ```
 
-## 【2】自定义静态类型
+### 【2】自定义静态类型
 
 ```js
 interface XisoJieJie {
@@ -79,13 +79,13 @@ const xh : XisoJieJie = {
 console.log(xh);
 ```
 
-## 【3】基础静态类型和对象类型
+### 【3】基础静态类型和对象类型
 
-### 【3.1】静态类型
+#### 【3.1】静态类型
 
 `null`,`undefinde`,`symbol`,`boolean`，`void`等。
 
-### 【3.2】对象类型
+#### 【3.2】对象类型
 
 - 对象类型
 - 数组类型
@@ -130,16 +130,16 @@ console.log(j);
 
 ---
 
-# 类型注释和类型推断
+## 类型注释和类型推断
 
-## 【1】类型注释
+### 【1】类型注释
 
 ```js
 let count : number;
 count = 123
 ```
 
-## 【2】类型推断
+### 【2】类型推断
 
 ```js
 let countInference = 123
@@ -149,9 +149,9 @@ let countInference = 123
 
 ---
 
-# 函数参数和返回类型定义
+## 函数参数和返回类型定义
 
-## 【1】类型定义
+### 【1】类型定义
 
 **无定义时：**
 
@@ -202,7 +202,7 @@ function sayHello(){
  }
 ```
 
-## 【2】函数参数为对象（解构）时
+### 【2】函数参数为对象（解构）时
 
 TS 函数参数解构：
 
@@ -227,9 +227,9 @@ console.log(sum); // 8
 
 ---
 
-# 数组
+## 数组
 
-## 各种类型
+### 各种类型
 
 ```js
 const numberArr : number [] = [1,2,3];
@@ -262,7 +262,7 @@ const xiaoJieJies1: Lady1[] = [{
 
 ---
 
-# 元组
+## 元组
 
 无约束：
 
@@ -277,9 +277,9 @@ const arr2 : [string,string,number] = ['a','b',3];
 
 ---
 
-# 接口
+## 接口
 
-## 【1】定义接口
+### 【1】定义接口
 
 ```js
 interface Girl {
@@ -301,11 +301,11 @@ const xh = {
 getResume(xh);
 ```
 
-## 【2】接口(`interface`)和类型别名(`type`)的区别
+### 【2】接口(`interface`)和类型别名(`type`)的区别
 
 - 类型别名可以直接给类型，比如`string`，但接口必须给对象。
 
-## 【3】接口定义非必填值`?:`
+### 【3】接口定义非必填值`?:`
 
 语法：`?:`
 
@@ -317,7 +317,7 @@ interface Girl {
 }
 ```
 
-## 【4】接口允许加入任意值`[anyname:string]:any;`
+### 【4】接口允许加入任意值`[anyname:string]:any;`
 
 语法：`[anyname:string]:any;`
 
@@ -339,7 +339,7 @@ const xh = {
 }
 ```
 
-## 【5】接口里定义方法
+### 【5】接口里定义方法
 
 语法：`fun(): type`
 
@@ -365,7 +365,7 @@ const xh = {
 }
 ```
 
-## 【6】类实现接口
+### 【6】类实现接口
 
 类实现接口时必须把**所有**要必填的属性和方法实现，否则就会报错。
 
@@ -390,7 +390,7 @@ class XiaoJieJie implements Girl{
 console.log(XiaoJieJie)
 ```
 
-## 【7】接口继承接口
+### 【7】接口继承接口
 
 重点：
 
@@ -418,17 +418,17 @@ const girl2 = {
 getResume2(girl2);
 ```
 
-## 【8】自我总结
+### 【8】自我总结
 
 接口更像是一种约束，约束用户的对象的属性类型。
 
 ---
 
-# 类
+## 类
 
 类描述对象的属性和方法。接口则包含类要实现的方法。
 
-## 【1】继承与重写
+### 【1】继承与重写
 
 ```js
 class Lady {
@@ -477,13 +477,13 @@ class Dog extends Animal{
 - 编译器可以验证该方法是否在父类中已有
 - 非必填。如果没写@Override，方法名与父类一模一样，如果返回类型相同，视为重写，反之，视为新方法
 
-## 【2】访问类型
+### 【2】访问类型
 
-### 【2.1】public
+#### 【2.1】public
 
 默认就是它
 
-### 【2.2】private
+#### 【2.2】private
 
 私有，只有自己能用。
 
@@ -502,7 +502,7 @@ class XiaoJieJie extends Lady {
 console.log(new Lady().privateFn()); // 编译不通过
 ```
 
-### 【2.3】protected
+#### 【2.3】protected
 
 受保护，只能在自己及子类用。
 
@@ -522,7 +522,7 @@ class XiaoJieJie extends Lady {
 console.log(new Lady().protectedFn()); // 编译不通过
 ```
 
-### 【2.4】对比表
+#### 【2.4】对比表
 
 |            类型             | public | protected | private |
 | :-------------------------: | :----: | :-------: | :-----: |
@@ -538,7 +538,7 @@ console.log(new Lady().protectedFn()); // 编译不通过
 |        继承（子类）         |   ✓    |     ✓     |    ×    |
 | 外部（`new Class().fun()`） |   ✓    |     ×     |    ×    |
 
-## 【3】构造函数
+### 【3】构造函数
 
 构造函数及继承
 
@@ -604,7 +604,7 @@ public class Teacher extends People {
 }
 ```
 
-## 【4】get 和 set
+### 【4】get 和 set
 
 ```js
 class XiaoJieJie {
@@ -659,7 +659,7 @@ class Stutent1{
 }
 ```
 
-## 【5】static 装饰符
+### 【5】static 装饰符
 
 不用 new 新建就可以创建
 
@@ -675,7 +675,7 @@ console.log(Girl.sayLove());
 
 不用 new Girl()就可以调用方法了。
 
-## 【6】只读属性 readonly
+### 【6】只读属性 readonly
 
 ```js
 class XiaoJieJie {
@@ -701,9 +701,9 @@ xj.age = 33; // 报错
 console.log(xj,xj.age);
 ```
 
-## 【7】抽象类
+### 【7】抽象类
 
-### 【7.1】不加 abstract 时
+#### 【7.1】不加 abstract 时
 
 特点：
 
@@ -743,7 +743,7 @@ console.log(new Girl().skill())
 
 ```
 
-### 【7.2】加 abstract 关键字时
+#### 【7.2】加 abstract 关键字时
 
 特点：
 
@@ -781,7 +781,7 @@ console.log(new Girl3().skill())
 
 区别：写了`abstract`关键字就是抽象类，如果不加，就是`重写（Override）`，也视为多态。
 
-### 【7.3】多态
+#### 【7.3】多态
 
 多态是同一个行为具有多个不同表现形式或形态的能力。比如打印机有打印方法，彩色打印机类打印方法是彩色，黑色打印机类打印方法是黑色。
 
@@ -819,11 +819,11 @@ class Dog extends Animal {
 
 ---
 
-# 配置项 tsconfig.json
+## 配置项 tsconfig.json
 
 `tsconfig.json`为配置文件，该配置文件通过`tsc --init`命令行来生成。
 
-## 【1】include、exclude、files
+### 【1】include、exclude、files
 
 直接在命令行输入`tsc`不带任何文件的话会默认编译所有文件。
 
@@ -863,7 +863,7 @@ class Dog extends Animal {
 }
 ```
 
-## 【2】compilerOptions 配置
+### 【2】compilerOptions 配置
 
 - `removeComments`：编译文件是否显示注释
 - `static`：是否按严格模式编译和书写
@@ -874,9 +874,9 @@ class Dog extends Animal {
 
 ---
 
-# 联合类型和类型保护
+## 联合类型和类型保护
 
-## 【1】联合类型
+### 【1】联合类型
 
 ```js
 interface Waiter {
@@ -894,7 +894,7 @@ function test(animal: Waiter | Teacher){})
 
 上例就是联合类型，`function test(animal: Waiter | Teacher){animal.say()})`会报错，所以需要类型保护。
 
-## 【2】类型保护-类型断言
+### 【2】类型保护-类型断言
 
 根据具体的值来断言用哪个接口
 
@@ -909,7 +909,7 @@ function test(animal: Waiter | Teacher){
 }
 ```
 
-## 【3】类型保护-in 语法
+### 【3】类型保护-in 语法
 
 判断在对象中是否存在该方法
 
@@ -925,7 +925,7 @@ function test(animal: Waiter | Teacher){
 
 ```
 
-## 【4】断言和 in 的实例
+### 【4】断言和 in 的实例
 
 ```js
 interface Waiter {
@@ -971,7 +971,7 @@ test(xiaohong);
 test(xiaoming);
 ```
 
-## 【5】类型保护-typeof 语法
+### 【5】类型保护-typeof 语法
 
 判断是不是不同的类型
 
@@ -986,7 +986,7 @@ console.log(add(1,'2')) // 12
 console.log(add(1,2)) // 3
 ```
 
-## 【6】类型保护-instanceof 语法
+### 【6】类型保护-instanceof 语法
 
 ```js
 class NumberObj{
@@ -1023,7 +1023,7 @@ console.log(addObj(obj3,obj4)) // 480
 
 ---
 
-# 枚举
+## 枚举
 
 ```js
 enum Data {
@@ -1075,9 +1075,9 @@ undefined
 
 ---
 
-# 泛型
+## 泛型
 
-## 【1】在方法中使用
+### 【1】在方法中使用
 
 ```js
 function join<T>(first: T, second: T){
@@ -1098,7 +1098,7 @@ function join<T1,T2>(first: T1, second: T2){
 console.log(join <number,string> (3,'date')) // 3date
 ```
 
-## 【2】在类中使用
+### 【2】在类中使用
 
 ```js
 class SelectGirl {
@@ -1126,7 +1126,7 @@ const selectGirl2 = new SelectGirl([1,2,3]);
 
 ---
 
-# 搭建浏览器开发环境
+## 搭建浏览器开发环境
 
 1. 建立好文件夹后，打开 `VSCode`，把文件夹拉到编辑器当中，然后打开终端，运行`npm init -y`,创建`package.json`文件。
 2. 生成文件后，我们接着在终端中运行`tsc -init`,生成`tsconfig.json`文件。
@@ -1139,9 +1139,9 @@ const selectGirl2 = new SelectGirl([1,2,3]);
 
 ---
 
-# 命名空间 namespace
+## 命名空间 namespace
 
-## 【1】当不使用命名空间时
+### 【1】当不使用命名空间时
 
 在 page.ts 文件里，写出下面的代码：
 
@@ -1189,7 +1189,7 @@ class Page {
 
 此时控制台(Console)中，分别输入`Header`、`Content`、`Footer`和`Page`都时可以拿到对应的变量的,说明他们全都是全局变量。
 
-## 【2】使用命名空间
+### 【2】使用命名空间
 
 用 namespace 和 export 导出，用 Home.page()实例化。
 
@@ -1233,7 +1233,7 @@ namespace Home {
 new Home.Page();
 ```
 
-## 【3】组件化
+### 【3】组件化
 
 新建一个`components.ts`文件作为组件
 
@@ -1268,7 +1268,7 @@ namespace Home {
 <script src="./build/components.js"></script>
 ```
 
-## 【4】多文件编译成一个文件
+### 【4】多文件编译成一个文件
 
 将`tsconfig.json`中的`"module":"commonjs"`改为`"module":"amd"`；然后修改`outFile`配置项。
 
@@ -1280,7 +1280,7 @@ namespace Home {
 
 此时`index.html`文件不引用`component.js`也可以正常使用了。
 
-## 【5】子命名空间
+### 【5】子命名空间
 
 在`Components.ts`文件下编写：
 
@@ -1298,7 +1298,7 @@ namespace Components {
 
 ---
 
-# 使用 import 和 export
+## 使用 import 和 export
 
 修改`compontens.ts`，删除`namespace`
 
@@ -1320,7 +1320,7 @@ export class Content1 {
 }
 ```
 
-## 【1】直接使用
+### 【1】直接使用
 
 `page.ts`：
 
@@ -1340,7 +1340,7 @@ export class Page {
 <script>new Home.Page();</script>
 ```
 
-## 【2】使用 require
+### 【2】使用 require
 
 **【2.1】引入：**
 
@@ -1372,7 +1372,7 @@ export default class Page {
 
 ---
 
-# 使用 parcel 打包
+## 使用 parcel 打包
 
 安装
 
@@ -1390,6 +1390,6 @@ yarn add --dev parcel@next
 
 ---
 
-# 结语
+## 结语
 
 学习开始于 2020-09-01，结束于 2020-10-26，耗时 55 天。

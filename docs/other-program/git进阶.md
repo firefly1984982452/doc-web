@@ -4,7 +4,7 @@
 
 - [链接](https://blog.csdn.net/shenlei19911210/article/details/78529939?spm=1001.2014.3001.5501)
 
-# 一、普通发布代码
+## 一、普通发布代码
 
 ```bash
 git add .
@@ -13,32 +13,32 @@ git pull
 git push
 ```
 
-# 二、绑定 git 仓库
+## 二、绑定 git 仓库
 
 ```bash
 git remote add origin 地址
 ```
 
-# 三、线上版本回退
+## 三、线上版本回退
 
 ```bash
 git reset --hard '7位数版本号'
 git pull -f
 ```
 
-# 四、不要本地的更改文件
+## 四、不要本地的更改文件
 
 ```bash
 git checkout .
 ```
 
-# 五、导出干净代码
+## 五、导出干净代码
 
 ```bash
 git archive --format zip --output "out.zip" master -0
 ```
 
-# 六、两个版本之前的补丁包
+## 六、两个版本之前的补丁包
 
 比如我要 10 月 3 日 至 10 月 5 日 的补丁包
 
@@ -46,7 +46,7 @@ git archive --format zip --output "out.zip" master -0
 $ git diff 10月5日的7位数版本号 10月3日的7位数版本号 --name-only | xargs zip update.zip
 ```
 
-# 七、不同分支开发
+## 七、不同分支开发
 
 1. 新建分支
 
@@ -57,7 +57,7 @@ git checkout -b name
 2. 发布新的分支
 
 ```bash
-# 提交发布代码后：
+## 提交发布代码后：
 git push origin name
 ```
 
@@ -103,7 +103,7 @@ git push
 
 ---
 
-# 八、新电脑开发新项目
+## 八、新电脑开发新项目
 
 0. 使用 git 命令取消全局设置
 
@@ -145,14 +145,24 @@ open ~/.ssh
 git clone 'xx'
 ```
 
-# 九、git 设备多帐户
+## 九、git 设备多帐户
 
 - [链接](https://www.jianshu.com/p/cacf91579268)
 
-# 十、将源码转入新的仓库
+## 十、将源码转入新的仓库
 
 ```bash
 git remote rm origin
 git remote add origin https://git.coding.net/**/**.git
 git pull origin master --allow-unrelated-histories
+```
+
+## 十一、已存在的 Git 版本库
+
+```bash
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin ssh://git@gittsl.com:2222/pengdan/inOne-test.git
+git push -u origin --all
+git push -u origin --tags
 ```

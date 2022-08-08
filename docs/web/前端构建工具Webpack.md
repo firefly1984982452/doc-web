@@ -2,7 +2,7 @@
 
 ---
 
-# 一、链接
+## 一、链接
 
 - [阮一峰的教程](https://github.com/ruanyf/webpack-demos)
 
@@ -10,7 +10,7 @@
 
 - [源码](https://github.com/firefly1984982452/pd-webpack-demo)
 
-# 二、学习 webpack 的对应版本
+## 二、学习 webpack 的对应版本
 
 截至 2021 年 8 月 24 日，`webpack` 和 `webpack-dev-server` 的版本都到了 `5.x` 以上，但是之前成熟的课程都是 `3.x` 的样子，所以我就阮一峰的经典版本安装测试。
 
@@ -36,7 +36,7 @@
 }
 ```
 
-# 三、用到的 module 模块
+## 三、用到的 module 模块
 
 - `babel-loader`：解析 `ES6`、`ES7` 等新语法；
 - `css-loader`：将 `css` 插入到页面的`style`标签等；
@@ -52,7 +52,7 @@
 - `include/exclude`:手动添加必须处理的文件（文件夹）或屏蔽不需要处理的文件（文件夹）（可选）；
 - `query`：为`loaders`提供额外的设置选项（可选）。
 
-# 四、webpack 模板
+## 四、webpack 模板
 
 ```json
 module.exports={
@@ -69,7 +69,7 @@ module.exports={
 }
 ```
 
-# 五、入口和出口配置
+## 五、入口和出口配置
 
 ```js
 const path = require('path');
@@ -84,7 +84,7 @@ module.exports={
 }
 ```
 
-## 配置 webpack 之前打包
+### 配置 webpack 之前打包
 
 ◆ src/main.js
 
@@ -98,7 +98,7 @@ document.getElementById('title').innerHTML='Hello Webpack';
 webpack main.js bundle.js
 ```
 
-## 配置 webpack 之后打包
+### 配置 webpack 之后打包
 
 ◆ 配置`webpack.config.js` 文件
 
@@ -117,7 +117,7 @@ module.exports = {
 $ webpack
 ```
 
-# 六、多入口、多出口配置
+## 六、多入口、多出口配置
 
 ```js
 const path = require('path');
@@ -133,7 +133,7 @@ module.exports={
 }
 ```
 
-# 七、服务和热更新
+## 七、服务和热更新
 
 ◆ 先下载
 
@@ -166,7 +166,7 @@ devServer:{
 
 ◆ 这时使用 `npm run server` 就可以运行项目并热更新了。
 
-# 八、打包 css 文件
+## 八、打包 css 文件
 
 减少 `http` 的请求数，就是把多个 `css` 文件打包到一个 `js` 里
 
@@ -204,7 +204,7 @@ module:{
 },
 ```
 
-# 九、打包 js 文件
+## 九、打包 js 文件
 
 `webpack` 版本里默认已经集成 `uglifyjs-webpack-plugin`，不需要再次安装
 
@@ -219,7 +219,7 @@ module.exports={
 }
 ```
 
-# 十、打包 HTML 文件
+## 十、打包 HTML 文件
 
 ◆ 先把 dist 中的 html 文件剪切到 src 目录中，并去掉我们的 JS 引入代码（webpack 会自动为我们引入 JS）
 
@@ -250,7 +250,7 @@ module.exports={
 - `hash`：为了开发中 js 有缓存效果，所以加入 hash，这样可以有效避免缓存 JS。
 - `template`：是要打包的 html 模版路径和文件名称。
 
-# 十一、css 图片处理
+## 十一、css 图片处理
 
 ◆ 安装 `url-loader`
 
@@ -280,7 +280,7 @@ module:{
 - `use`：是指定使用的 `loader` 和 `loader` 的配置参数。
 - `limit`：是把小于 `500000B` 的文件打成 `Base64` 的格式，写入 `JS`。
 
-# 十二、SCSS 文件的打包
+## 十二、SCSS 文件的打包
 
 ◆ 安装 `node-sass` 和 `sass-loader`
 
@@ -297,7 +297,7 @@ $ npm i -D node-sass sass-loader
 }
 ```
 
-# 十三、自动处理 CSS3 属性前缀
+## 十三、自动处理 CSS3 属性前缀
 
 ◆ 安装 `postcss-loader` 和 `autoprefixer`（自动添加前缀的插件）
 
@@ -330,7 +330,7 @@ module.exports = {
 }
 ```
 
-# 十四、添加 Babel 支持
+## 十四、添加 Babel 支持
 
 ◆ 安装
 

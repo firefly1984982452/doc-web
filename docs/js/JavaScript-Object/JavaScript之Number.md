@@ -1,12 +1,12 @@
 # JavaScript 之 Number
 
-# 一、判断
+## 一、判断
 
 1. `Number.isFinite`：是否为数字型
 2. `Number.isInteger`：是否为整数
 3. `Number.isNaN`：是否为`NaN`
 
-## 【1】`Number.isFinite`：是否为数字型
+### 【1】`Number.isFinite`：是否为数字型
 
 之前判断一个值是否为数字类型都是用`typeof`，此处的 `isFinite`也有同样的效果
 
@@ -15,13 +15,13 @@ typeof 1.2; // 'number'
 Number.isFinite(1.2); // true
 ```
 
-## 【2】`Number.isInteger`：是否为整数
+### 【2】`Number.isInteger`：是否为整数
 
 ```js
 Number.isInteger(13);
 ```
 
-## 【3】`Number.isNaN`：是否为`NaN`
+### 【3】`Number.isNaN`：是否为`NaN`
 
 ```js
 console.log(Number.isNaN(NaN)); //true
@@ -56,7 +56,7 @@ console.log(Number.isNaN(NaN)); //true
 
 ---
 
-# 二、安全范围
+## 二、安全范围
 
 整数的操作有一个安全范围，即 2 的 53 次方。`Math.pow(2, 53) - 1 = 9007199254740991`
 
@@ -68,7 +68,7 @@ console.log(Number.isNaN(NaN)); //true
 
 ---
 
-# 三、数值转换
+## 三、数值转换
 
 1. `+'404'`
 2. `Number()`
@@ -108,7 +108,7 @@ this.all_price = b.substring(0, b.toString().length - 1);
 
 ---
 
-# 四、toString：转为字符串/转换进制
+## 四、toString：转为字符串/转换进制
 
 ◆ 基本用法：
 
@@ -131,7 +131,7 @@ Number(123).toString(2);
 
 ---
 
-# 五、toLocaleString：金钱格式化
+## 五、toLocaleString：金钱格式化
 
 ```js
 Number(123456789).toLocaleString(); // '123,456,789'
@@ -139,7 +139,7 @@ Number(123456789).toLocaleString(); // '123,456,789'
 
 ---
 
-# 六、进制转换（toString 和 parseInt）
+## 六、进制转换（toString 和 parseInt）
 
 十进制转二进制：
 
@@ -155,7 +155,7 @@ parseInt(101110, 2); // 46
 
 ---
 
-# 七、数字分隔符`_`
+## 七、数字分隔符`_`
 
 ```js
 const largeNumber = 1_000_000_000;
@@ -165,7 +165,7 @@ console.log(largeNumber); // 1000000000"
 
 ---
 
-# 八、BigInt：大整数
+## 八、BigInt：大整数
 
 大整数会自动转为科学计数法，这时使用`BigInt`可以避免这种情况。
 

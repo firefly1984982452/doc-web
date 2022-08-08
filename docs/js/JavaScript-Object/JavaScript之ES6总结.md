@@ -6,9 +6,9 @@
 
 ---
 
-# 一、let、const 和 globalThis
+## 一、let、const 和 globalThis
 
-## 【1】对比表
+### 【1】对比表
 
 | 区别项 | let | var | const |
 | :-: | :-: | :-: | :-: |
@@ -19,7 +19,7 @@
 | 暂时性死区 | ✓ | × | ✓ |
 | 值不变 | v | × | 常量值不变是指指向的内存地址不变，复合数据类型可改变内部数据 |
 
-## 【2】let
+### 【2】let
 
 ◆ 【2.0】let 的特点
 
@@ -108,7 +108,7 @@ console.log(a);
 
 此时，外面的`a`会报错`Uncaught ReferenceError: a is not defined`
 
-## 【3】const
+### 【3】const
 
 ◆ 【2.0】const 的特点
 
@@ -163,7 +163,7 @@ f.name = 'hello'; // 严格模式下是会报错的
 f.name; // 打印出admin ,值没有被改变
 ```
 
-## 【4】globalThis
+### 【4】globalThis
 
 |      顶层对象      | 浏览器 | Node | Web Worker |
 | :----------------: | :----: | :--: | :--------: |
@@ -174,9 +174,9 @@ f.name; // 打印出admin ,值没有被改变
 
 ---
 
-# 二、变量的解构赋值
+## 二、变量的解构赋值
 
-## 【1】对比表
+### 【1】对比表
 
 | 值 | 用法 | 括号 | 默认值 | 默认值生效条件 |
 | :-: | :-: | :-: | :-: | :-: |
@@ -186,7 +186,7 @@ f.name; // 打印出admin ,值没有被改变
 | 数值（转对象、无意义） | `let {toString: s} = 123;` | 对象`{}` | - | - |
 | 布尔（转对象、无意义） | `let {toString: s} = true;` | 对象`{}` | - | - |
 
-## 【2】数组
+### 【2】数组
 
 ◆ 【2.1】用法
 
@@ -221,7 +221,7 @@ let [x = 1] = [null];
 x; // null
 ```
 
-## 【3】对象
+### 【3】对象
 
 ◆ 【3.1】使用
 
@@ -329,7 +329,7 @@ first; // 1
 last; // 3
 ```
 
-## 【4】字符串
+### 【4】字符串
 
 字符串直接转换为数组赋值
 
@@ -344,7 +344,7 @@ let { length: len } = 'hello';
 len; // 5
 ```
 
-## 【5】数值和布尔值
+### 【5】数值和布尔值
 
 如果等号右边是数值和布尔值，会转换成对象。
 
@@ -356,7 +356,7 @@ let { toString: s } = true;
 s === Boolean.prototype.toString; // true
 ```
 
-## 【6】用途
+### 【6】用途
 
 (1) 变换变量的值
 
@@ -392,9 +392,9 @@ improt {list1} from 'list'
 
 ---
 
-# 三、ES6`…`扩展（spread）/收集（rest）运算符详解
+## 三、ES6`…`扩展（spread）/收集（rest）运算符详解
 
-## 【1】扩展运算符
+### 【1】扩展运算符
 
 我理解的，用`()`包起来就是扩展成单个值，用`[]`包起来就是扩展成数组。
 
@@ -442,7 +442,7 @@ console.log(arr3); // ["h", "e", "l", "l", "o"]
 'hello'.split(''); // ["h", "e", "l", "l", "o"]
 ```
 
-## 【2】收集运算符
+### 【2】收集运算符
 
 ◆ 【2.1】接收不确定个数的形参
 
@@ -464,22 +464,22 @@ console.log(a, temp); // 1 [2, 3, 4]
 
 ---
 
-# 四、字符串的扩展
+## 四、字符串的扩展
 
 - 参考[JavaScript 之 String 对象](docs/JavaScript-Object/JavaScript之String对象.md)
 
 ---
 
-# 五、数值的扩展
+## 五、数值的扩展
 
 - 参考[JavaScript 之 Number](docs/JavaScript-Object/JavaScript之Number.md)
 - 参考[JavaScript 之 Math](docs/JavaScript-Object/JavaScript之Math.md)
 
 ---
 
-# 六、函数的扩展
+## 六、函数的扩展
 
-## 【1】函数的默认参数
+### 【1】函数的默认参数
 
 值为`undefined`时才生效
 
@@ -532,7 +532,7 @@ foo(); // undefined 5
 
 - 如果省略某参数，函数仍然进行
 
-## 【2】reset 参数
+### 【2】reset 参数
 
 ◆ 【2.1】使用
 
@@ -561,7 +561,7 @@ f2(3213, 23, 2, 2332, 32);
 
 必须是尾参数。
 
-## 【3】箭头函数
+### 【3】箭头函数
 
 作用：
 
@@ -591,7 +591,7 @@ f1(1, 2, 3, 4); // [1, 2, 3, 4]
 f2(1, 2, 3, 4); // [1, 2, 3, 4]
 ```
 
-## 【4】尾调用优化
+### 【4】尾调用优化
 
 ◆ 【4.1】尾调用是什么
 
@@ -686,25 +686,25 @@ factorial(5); // 120
 
 ---
 
-# 七、数组的扩展
+## 七、数组的扩展
 
 - 参考[JavaScript 之 Array 数组](/docs/JavaScript-Object/JavaScript之Array数组.md)
 
 ---
 
-# 八、对象
+## 八、对象
 
 - 参考[JavaScript 之 Object 对象](/docs/JavaScript-Object/JavaScript之Object对象.md)
 
 ---
 
-# 九、正则 RegExp
+## 九、正则 RegExp
 
 - 参考[JavaScript 之 RegExp 正则表达式](/docs/JavaScript-Object/JavaScript之RegExp正则表达式.md)
 
-# 十、Symbol
+## 十、Symbol
 
-## 【1】Symbol 与普通 String 的区别
+### 【1】Symbol 与普通 String 的区别
 
 ```js
 var a = Symbol('e');
@@ -719,7 +719,7 @@ c === d; // true
 
 可以看出，正常情况下，只要值一样，不管是`==`还是`===`，都是相等的，但是`Symbol`就能保证值的唯一性。
 
-## 【2】Symbol.description
+### 【2】Symbol.description
 
 ```js
 const s = Symbol('foo');
@@ -729,7 +729,7 @@ console.log(s.description); // 'foo'
 
 ---
 
-# 十一、Map 和 weakMap
+## 十一、Map 和 weakMap
 
 为什么要用`Map`？因为普通数据结构无法以非字符串为键。
 
@@ -746,7 +746,7 @@ console.log(m, m[x], m[y]); // {[object Object]: "bar"} "bar" "bar"
 
 对象`m`中只有一个`[object Object]`，值都是`'bar'`，它无法解析两个对象为键。
 
-## 【1】使用 Map 以非字符串为键
+### 【1】使用 Map 以非字符串为键
 
 ```js
 var m = new Map();
@@ -764,26 +764,26 @@ console.log(m.get({ id: 1 }));
 
 ![image](https://s1.ax1x.com/2022/03/17/q9DDAO.jpg)
 
-## 【2】delete 删除
+### 【2】delete 删除
 
 ```js
 m.delete(y);
 ```
 
-## 【3】clean 清除所有
+### 【3】clean 清除所有
 
 ```js
 m.clear();
 m.size; // 0
 ```
 
-## 【4】size 大小
+### 【4】size 大小
 
 ```js
 m.size;
 ```
 
-## 【5】`new Map`深拷贝
+### 【5】`new Map`深拷贝
 
 ```js
 var m2 = m1; // 浅拷贝
@@ -806,7 +806,7 @@ console.log(mm2, mm);
 
 两个 value 值都是对象，互不影响。
 
-## 【6】Map 所有的值
+### 【6】Map 所有的值
 
 **方法 1：`m.values()`** **方法 2：`m.entries()`**
 
@@ -839,7 +839,7 @@ console.log([...m.entries()][0][1]); // "foo"
 console.log([...m.entries()][1][1]); // "bar"
 ```
 
-## 【7】Map 所有的键
+### 【7】Map 所有的键
 
 ◆ 【7.1】keys
 
@@ -863,7 +863,7 @@ m.set(y, 'bar');
 console.log(m.has(y)); // true
 ```
 
-## 【8】WeakMap
+### 【8】WeakMap
 
 区别：
 
@@ -883,7 +883,7 @@ console.log(m.has(x)); // false
 
 ---
 
-# 十二、Set 和 weakSet
+## 十二、Set 和 weakSet
 
 `Set`是一个值的集合，其中的值是唯一的。
 
@@ -894,7 +894,7 @@ API:
 - **删：delete()**
 - **查:has**
 
-## 【1】新建
+### 【1】新建
 
 ```js
 var s = new Set([0, -0, 1, 2, NaN, 2, 3, NaN]);
@@ -903,14 +903,14 @@ console.log(s); // Set(5) {0, 1, 2, NaN, 3}
 
 `0`和`-0`被认为是同一个值，`NaN`与`NaN`也是相等的。
 
-## 【2】添加（add）
+### 【2】添加（add）
 
 ```js
 s.add(7);
 console.log(s); // Set(6) {0, 1, 2, NaN, 3, 7}
 ```
 
-## 【3】删除（delete 和 clear）
+### 【3】删除（delete 和 clear）
 
 ```js
 s.delete(2);
@@ -919,7 +919,7 @@ s.clear();
 console.log(s.size); // 0
 ```
 
-## 【4】查询是否存在（has)
+### 【4】查询是否存在（has)
 
 不像`Map`里面的`get`能直接取值，这里是查询是否存在该值。
 
@@ -927,7 +927,7 @@ console.log(s.size); // 0
 s.has(1); // true
 ```
 
-## 【5】迭代
+### 【5】迭代
 
 同`Map`
 
@@ -943,7 +943,7 @@ s.entries(); // SetIterator {0 => 0, 1 => 1, NaN => NaN, 3 => 3, 7 => 7}
 s.keys() == s.values(); // false
 ```
 
-## 【6】WeakSet
+### 【6】WeakSet
 
 和`Set`的区别：
 
@@ -984,9 +984,9 @@ console.log(ws); // [{id:1}]
 
 ---
 
-# 十三、Array、Map、WeakMap、Set、WeakSet 的对比
+## 十三、Array、Map、WeakMap、Set、WeakSet 的对比
 
-## 【1】对比表
+### 【1】对比表
 
 | 功能属性 | Array | Map | WeakMap | Set | WeakSet |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -1003,7 +1003,7 @@ console.log(ws); // [{id:1}]
 | 迭代 | `entries` | `entries` | - | `entries` | - |
 | 长度 | `length` | `size` | - | `size` | - |
 
-## 【2】Map API:
+### 【2】Map API:
 
 - size 数量
 - set()设置
@@ -1015,7 +1015,7 @@ console.log(ws); // [{id:1}]
 - values()值
 - entries()迭代
 
-## 【3】WeakMap API:
+### 【3】WeakMap API:
 
 - set()设置
 - delete()删除
@@ -1023,7 +1023,7 @@ console.log(ws); // [{id:1}]
 - get()获取
 - clear()清除（已弃用，但可通过 new WeakMap()空对象来置空）
 
-## 【4】Set API:
+### 【4】Set API:
 
 - size 数量
 - add()添加
@@ -1034,7 +1034,7 @@ console.log(ws); // [{id:1}]
 - values()值
 - entries()迭代
 
-## 【5】WeakSet API：
+### 【5】WeakSet API：
 
 - add()添加
 - delete()删除
@@ -1042,7 +1042,7 @@ console.log(ws); // [{id:1}]
 
 ---
 
-# 十四、Proxy
+## 十四、Proxy
 
 ◆ `Proxy` 替代 `Object.defineProperty`
 
@@ -1078,9 +1078,9 @@ objTest.flag.book.page = 33;
 
 ---
 
-# 十五、Reflect
+## 十五、Reflect
 
-## 【1】修改 Object 的返回结果
+### 【1】修改 Object 的返回结果
 
 `Object.defineProperty(obj, name, desc)`在无法定义属性时，会抛出一个错误，而`Reflect.defineProperty(obj, name, desc)`则会返回`false`。
 
@@ -1105,7 +1105,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 }
 ```
 
-## 【2】命令式编程变成函数式编程
+### 【2】命令式编程变成函数式编程
 
 - 原来的：
 
@@ -1119,15 +1119,15 @@ if (Reflect.defineProperty(target, property, attributes)) {
 Reflect.has(obj, 'name');
 ```
 
-## 【3】与 Proxy 语法一一对应
+### 【3】与 Proxy 语法一一对应
 
 ---
 
-# 十六、Promise
+## 十六、Promise
 
 `promise`代替`callback`回调。
 
-## 【1】promise.all
+### 【1】promise.all
 
 **只能同时调用不受关联的`promise`，如果`promise2`的值受`promise1`影响，不能用`promise.all`，可以用`async/await`**
 
@@ -1168,7 +1168,7 @@ Promise.all([pro1, pro2, pro3]).then((val) => {
 });
 ```
 
-## 【2】promise.race
+### 【2】promise.race
 
 第一个抛出`resolve`的`promise`就是`Promise.race`获取的值。
 
@@ -1194,7 +1194,7 @@ Promise.race([pro2, pro3]).then((val) => {
 
 此时，pro2 要花费 1 秒，pro3 要花费 2 秒，谁先`resolve`，`.then`获取的`val`就是谁的。
 
-## 【3】promise.allSellted
+### 【3】promise.allSellted
 
 不管什么状态，都会收集起来。
 
@@ -1210,7 +1210,7 @@ Promise.allSettled([p1, p2]).then((results) => {
 });
 ```
 
-## 【4】promise.any
+### 【4】promise.any
 
 有一个成功就算成功
 
@@ -1227,7 +1227,7 @@ Promise.any([p1, p2]).then(results => {
 
 ```js
 
-## 【5】`Promise.all`、`Promise.race`、`Promise.allSellted`、`Promise.any`的区别
+### 【5】`Promise.all`、`Promise.race`、`Promise.allSellted`、`Promise.any`的区别
 
 - Promise.all 是所有的保证每一步都对，如果其中有一个 reject，都会报错。
 - Promise.race 是第一个返回的是 resolve 或 reject，就获取谁的值。
@@ -1269,7 +1269,7 @@ Promise.any([p1, p2, p3]).then(result => {
 })
 ````
 
-## 【6】promise.finally
+### 【6】promise.finally
 
 ```js
 promise
@@ -1286,9 +1286,9 @@ promise
 
 ---
 
-# 十七、Iterater 和 for...of 、for...in 循环
+## 十七、Iterater 和 for...of 、for...in 循环
 
-## 【1】Iterator
+### 【1】Iterator
 
 可遍历的类数组：
 
@@ -1298,7 +1298,7 @@ promise
 
 都可以用`for...of`遍历值。
 
-## 【2】for...of
+### 【2】for...of
 
 `for...of`的使用范围是所有部署了`Iterator`的对象。
 
@@ -1354,7 +1354,7 @@ printArgs('a', 'b');
 // 'b'
 ````
 
-## 【3】 for...in 遍历对象
+### 【3】 for...in 遍历对象
 
 遍历对象可以减少使用`Object.keys()`这一步骤。
 
@@ -1375,7 +1375,7 @@ for (let e in es6) {
 
 **注：用`for...of`遍历对象时会报错**
 
-## 【4】 对比
+### 【4】 对比
 
 - `for`的缺陷
 
@@ -1418,7 +1418,7 @@ myArray.forEach(function (value) {
 
 ---
 
-# 十八、Generator
+## 十八、Generator
 
 ```js
 let generator = function* () {
@@ -1440,11 +1440,11 @@ console.log(iterator.next().value); // {name:'123',num:123}
 
 ---
 
-# 十九、async/await
+## 十九、async/await
 
 - [学习链接](https://segmentfault.com/a/1190000007535316)
 
-## 【1】普通函数和 async 的区别
+### 【1】普通函数和 async 的区别
 
 - 普通函数：
 
@@ -1466,7 +1466,7 @@ testAsync(); // Promise {<fulfilled>: "hello world"}
 
 `async`返回的是一个`promise`对象
 
-## 【2】await
+### 【2】await
 
 - 如果不用`async/await`：
 
@@ -1570,15 +1570,15 @@ doIt();
 
 ---
 
-# 二十、Class
+## 二十、Class
 
 - 参考[JavaScript 之面向对象](/docs/JavaScript/JavaScript之面向对象.md)
 
 ---
 
-# 二十一、export 和 import 和 require
+## 二十一、export 和 import 和 require
 
-## 【1】普通使用
+### 【1】普通使用
 
 constant.js
 
@@ -1600,7 +1600,7 @@ import { constant, b } from '@/utils/test';
 console.log(constant, b);
 ```
 
-## 【2】全局使用
+### 【2】全局使用
 
 constant.js
 
@@ -1625,12 +1625,12 @@ test.vue
 this.list = this.$constant.list1;
 ```
 
-## 【3】`export`和`export default`的区别
+### 【3】`export`和`export default`的区别
 
 - `export`需要导出多个并需要`{}`，`export default`只需要一个`{}`导出全部（没有额外`{}`）；
 - `import`时，`export`需要导入多个，`export default`是默认的，只需要给一个名字；
 
-## 【4】require
+### 【4】require
 
 `require`是`AMD`规范；`import`是`ES6`规范。
 
@@ -1642,7 +1642,7 @@ defaultImg2: require("../../../assets/img/default.png"),
 
 ---
 
-# 二十二、空值合并：`??`
+## 二十二、空值合并：`??`
 
 ```js
 // 原来的：
