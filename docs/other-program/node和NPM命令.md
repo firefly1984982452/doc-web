@@ -18,6 +18,7 @@ sudo rm /usr/local/lib/dtrace/node.d
 ## 安装node
 
 - [官网](https://nodejs.org/en/download/)
+- [官网选择版本](https://nodejs.org/zh-cn/blog/)
 
 下载好之后自动有`node`和`npm`
 
