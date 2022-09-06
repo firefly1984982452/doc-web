@@ -295,7 +295,7 @@ array.toLocaleString([locales [, options]])
 date.toLocaleString([locales [, options]])
 ```
 
-#### 【2.1】array
+**【2.1】array**
 
 array 和 number 类同
 
@@ -304,13 +304,13 @@ Number(1).toLocaleString("zh", { style: "currency", currency: "cny" }); // "¥1.
 [1, 2, 3].toLocaleString("zh", { style: "currency", currency: "cny" }); // "¥1.00,¥2.00,¥3.00"
 ```
 
-#### 【2.2】date
+**【2.2】date**
 
 ```js
 new Date().toLocaleString(); // "2021/7/20下午2:39:35"
 ```
 
-##### 【2.2.1】`locales`
+【2.2.1】`locales`
 
 不同时区
 
@@ -322,7 +322,7 @@ new Date().toLocaleString("en-gb"); // "20/07/2021, 14:44:23"
 new Date().toLocaleString("ko-kr"); // "2021. 7. 20. 오후 2:44:33"
 ```
 
-##### 【2.2.2】`options`
+【2.2.2】`options`
 
 - hour12 是否使用 12 小时的时间（而不是 24 小时的时间）。true\false; 默认值是语言环境相关的。
 - timeZone 要使用的时区
@@ -339,7 +339,7 @@ date.toLocaleString("zh", { timeZoneName: "long" }); // "2021/7/20中国标准�
 
 ### 【3】不同参数
 
-#### 【3.1】`locales`
+**【3.1】`locales`**
 
 - `zh-Hans-CN`：中国（简写`zh`）
 - `ja-Jp`：日本（简写`jp`）
@@ -363,7 +363,7 @@ num.toLocaleString("zh-u-nu-hanidec"); // "一二,三四五"
 num.toLocaleString("zh-u-nu-hanidec", { useGrouping: false }); // "一二三四五"
 ```
 
-#### 【3.2】`options`
+**【3.2】`options`**
 
 1. style
 2. currency
@@ -375,7 +375,7 @@ num.toLocaleString("zh-u-nu-hanidec", { useGrouping: false }); // "一二三四�
 8. minimumSignificantDigits
 9. maximumSignificantDigits
 
-##### 【3.2.1】style 格式化时使用的样式
+【3.2.1】style 格式化时使用的样式
 
 - decimal 表示纯数字格式 为默认值
 - currency 表示货币格式
@@ -387,7 +387,7 @@ Number(1345.2345).toLocaleString("zh", { style: "percent" }); // "134,523%"
 Number(1345.2345).toLocaleString("zh", { style: "currency", currency: "CNY" }); // "¥1,345.23"
 ```
 
-##### 【3.2.2】currency 在货币格式化中使用的货币符号（如果 style 是“currency”,必须提供货币属性）
+【3.2.2】currency 在货币格式化中使用的货币符号（如果 style 是“currency”,必须提供货币属性）
 
 - USD 美元
 - EUR 欧元
@@ -400,7 +400,7 @@ Number(12345678).toLocaleString("zh", { style: "currency", currency: "USD" }); /
 Number(12345678).toLocaleString("zh", { style: "currency", currency: "EUR" }); // "€12,345,678.00"
 ```
 
-##### 【3.2.3】currencyDisplay 货币格式化
+【3.2.3】currencyDisplay 货币格式化
 
 - symbol 使用本地化的货币符号例如 € （默认）
 - code 使用国际标准组织货币代码
@@ -412,42 +412,42 @@ Number(1).toLocaleString("zh", { style: "currency", currency: "USD", currencyDis
 Number(1).toLocaleString("zh", { style: "currency", currency: "USD", currencyDisplay: "name" }); // "1.00美元"
 ```
 
-##### 【3.2.4】useGrouping 是否使用分组分隔符，默认：`true`
+【3.2.4】useGrouping 是否使用分组分隔符，默认：`true`
 
 ```js
 Number(1234.56).toLocaleString("zh"); // "1,234.56"
 Number(1234.56).toLocaleString("zh", { useGrouping: false }); // "1234.56"
 ```
 
-##### 【3.2.5】minimumIntegerDigits：指定整数最少位数
+【3.2.5】minimumIntegerDigits：指定整数最少位数
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"
 Number(123.456).toLocaleString("zh", { minimumIntegerDigits: 5 }); // "00,123.456"
 ```
 
-##### 【3.2.6】minimumFractionDigits：指定小数点后最少位数
+【3.2.6】minimumFractionDigits：指定小数点后最少位数
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"
 Number(123.456).toLocaleString("zh", { minimumFractionDigits: 5 }); // "123.45600"
 ```
 
-##### 【3.2.7】maximumFractionDigits：小数位数的最大数目（四舍五入）
+【3.2.7】maximumFractionDigits：小数位数的最大数目（四舍五入）
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"
 Number(123.456).toLocaleString("zh", { maximumFractionDigits: 2 }); // "123.46"
 ```
 
-##### 【3.2.8】minimumSignificantDigits：使用的有效数字的最小数目
+【3.2.8】minimumSignificantDigits：使用的有效数字的最小数目
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"
 Number(123.456).toLocaleString("zh", { minimumSignificantDigits: 10 }); // "123.4560000"
 ```
 
-##### 【3.2.9】maximumSignificantDigits：使用的有效数字的最大数量
+【3.2.9】maximumSignificantDigits：使用的有效数字的最大数量
 
 ```js
 Number(123.456).toLocaleString("zh"); // "123.456"

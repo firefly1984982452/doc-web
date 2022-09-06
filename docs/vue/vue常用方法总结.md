@@ -377,7 +377,7 @@ V-for="item in arr"
 
 ### 【1】子 => 父 传值
 
-#### child.vue
+**child.vue**
 
 ```js
 sendData() {
@@ -385,7 +385,7 @@ sendData() {
 }
 ```
 
-#### father.vue
+**father.vue**
 
 ```html
 <child @sendDataFun="get"></child>
@@ -397,13 +397,13 @@ get(val){
 
 ### 【2】父 => 子 传值
 
-#### father.vue
+**father.vue**
 
 ```html
 <child :sendType="type"></child>
 ```
 
-#### child.vue
+**child.vue**
 
 ```js
 ...
@@ -420,7 +420,7 @@ watch:{
 
 ### 【3】父 => 子 调方法
 
-#### father.vue
+**father.vue**
 
 ```vue
 <child ref="child" @sendDataFun="get"></child>
@@ -433,7 +433,7 @@ get(val){
 
 ```
 
-#### child.vue
+**child.vue**
 
 ```js
 sendData() {

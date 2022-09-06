@@ -89,7 +89,7 @@
 
 ### 【3】使用
 
-#### 【3.1】直接写入`html`中
+**【3.1】直接写入`html`中**
 
 ```html
 <!DOCTYPE html>
@@ -108,7 +108,7 @@
 </html>
 ```
 
-#### 【3.2】写在独立文件中，用`<img>`、`<object>`、`<embed>`、`<iframe>`等标签插入网页。
+**【3.2】写在独立文件中，用`<img>`、`<object>`、`<embed>`、`<iframe>`等标签插入网页。**
 
 ```html
 <img src="circle.svg" />
@@ -117,7 +117,7 @@
 <iframe id="iframe" src="icon.svg"></iframe>
 ```
 
-#### 【3.3】CSS 中使用 SVG
+**【3.3】CSS 中使用 SVG**
 
 ```css
 .logo {
@@ -125,7 +125,7 @@
 }
 ```
 
-#### 【3.4】SVG 转为 BASE64 编码，然后作用 DATA URL 写入网页。
+**【3.4】SVG 转为 BASE64 编码，然后作用 DATA URL 写入网页。**
 
 ```html
 <img src="data:image/svg+xml;base64,[data]" />

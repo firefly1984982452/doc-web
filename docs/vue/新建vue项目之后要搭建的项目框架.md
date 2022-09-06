@@ -249,7 +249,7 @@ export default new Router({
 ---
 ## 写README.MD
 
-#### 项目结构
+**项目结构**
 ```
 ├── build  #webpack编译相关文件目录，一般不用动
 ├── config  #配置目录，一般不用动

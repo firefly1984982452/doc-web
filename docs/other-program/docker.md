@@ -262,7 +262,7 @@ RUN apt-get update && \
 
 ### 【5】文件操作：ADD 和 COPY 的区别
 
-#### （1）用 COPY 构建镜像
+**（1）用 COPY 构建镜像**
 
 1. 新建 Dockerfile.copy 文件
 
@@ -303,7 +303,7 @@ docker container run -it -p 3000:3000 hello-copy sh
 
 5. 打开[127.0.0.1:3000](http://127.0.0.1:3000/)进行访问
 
-#### （2）用 ADD 构建镜像
+**（2）用 ADD 构建镜像**
 
 1. Dockerfile.add 文件内容
 

@@ -54,7 +54,7 @@
 把JS、CSS、IMG等静态资源分离到独立域名的服务器上。
 **缺点：只能实现GET请求**。
 
-#### 【1.1】原生实现
+**【1.1】原生实现**
 
 ```js
 <script>
@@ -72,7 +72,7 @@
 </script>
 ```
 
-#### 【1.2】jquery ajax
+**【1.2】jquery ajax**
 
 ```js
 $.ajax({
@@ -84,7 +84,7 @@ $.ajax({
 });
 ```
 
-#### 【1.3】vue.js：
+**【1.3】vue.js**
 
 ```js
 this.$http.jsonp('http://www.domain2.com:8080/login', {
@@ -98,7 +98,7 @@ this.$http.jsonp('http://www.domain2.com:8080/login', {
 
 普通跨域请求，只需要服务端设置`Access-Control-Allow-Origin`即可；若要携带`cookie`请求，前后端都要设置。
 
-#### 【2.1】原生ajax
+**【2.1】原生ajax**
 
 前端设置是否带cookie
 
@@ -106,7 +106,7 @@ this.$http.jsonp('http://www.domain2.com:8080/login', {
 xhr.withCredentials = true;
 ```
 
-#### 【2.2】jQuery ajax
+**【2.2】jQuery ajax**
 
 ```js
 $.ajax({
@@ -119,7 +119,7 @@ $.ajax({
 });
 ```
 
-#### 【2.3】vue框架 axios设置
+**【2.3】vue框架 axios设置**
 
 ```js
 axios.defaults.withCredentials = true

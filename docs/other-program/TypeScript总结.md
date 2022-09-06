@@ -4,7 +4,7 @@
 
 - [链接](https://jspang.com/detailed?id=63)
 
-## 安装及使用
+## 一、安装及使用
 
 ### 安装
 
@@ -51,7 +51,7 @@ ts-node Demo1.ts
 
 ---
 
-## 静态类型
+## 二、静态类型
 
 被定义后就不可改变变量的类型了。
 
@@ -81,11 +81,11 @@ console.log(xh);
 
 ### 【3】基础静态类型和对象类型
 
-#### 【3.1】静态类型
+**【3.1】静态类型**
 
 `null`,`undefinde`,`symbol`,`boolean`，`void`等。
 
-#### 【3.2】对象类型
+**【3.2】对象类型**
 
 - 对象类型
 - 数组类型
@@ -130,7 +130,7 @@ console.log(j);
 
 ---
 
-## 类型注释和类型推断
+## 三、类型注释和类型推断
 
 ### 【1】类型注释
 
@@ -149,7 +149,7 @@ let countInference = 123
 
 ---
 
-## 函数参数和返回类型定义
+## 四、函数参数和返回类型定义
 
 ### 【1】类型定义
 
@@ -227,7 +227,7 @@ console.log(sum); // 8
 
 ---
 
-## 数组
+## 五、数组
 
 ### 各种类型
 
@@ -262,7 +262,7 @@ const xiaoJieJies1: Lady1[] = [{
 
 ---
 
-## 元组
+## 六、元组
 
 无约束：
 
@@ -277,7 +277,7 @@ const arr2 : [string,string,number] = ['a','b',3];
 
 ---
 
-## 接口
+## 七、接口
 
 ### 【1】定义接口
 
@@ -424,7 +424,7 @@ getResume2(girl2);
 
 ---
 
-## 类
+## 八、类
 
 类描述对象的属性和方法。接口则包含类要实现的方法。
 
@@ -479,11 +479,11 @@ class Dog extends Animal{
 
 ### 【2】访问类型
 
-#### 【2.1】public
+**【2.1】public**
 
 默认就是它
 
-#### 【2.2】private
+**【2.2】private**
 
 私有，只有自己能用。
 
@@ -502,7 +502,7 @@ class XiaoJieJie extends Lady {
 console.log(new Lady().privateFn()); // 编译不通过
 ```
 
-#### 【2.3】protected
+**【2.3】protected**
 
 受保护，只能在自己及子类用。
 
@@ -522,7 +522,7 @@ class XiaoJieJie extends Lady {
 console.log(new Lady().protectedFn()); // 编译不通过
 ```
 
-#### 【2.4】对比表
+**【2.4】对比表**
 
 |            类型             | public | protected | private |
 | :-------------------------: | :----: | :-------: | :-----: |
@@ -703,7 +703,7 @@ console.log(xj,xj.age);
 
 ### 【7】抽象类
 
-#### 【7.1】不加 abstract 时
+**【7.1】不加 abstract 时**
 
 特点：
 
@@ -743,7 +743,7 @@ console.log(new Girl().skill())
 
 ```
 
-#### 【7.2】加 abstract 关键字时
+**【7.2】加 abstract 关键字时**
 
 特点：
 
@@ -781,7 +781,7 @@ console.log(new Girl3().skill())
 
 区别：写了`abstract`关键字就是抽象类，如果不加，就是`重写（Override）`，也视为多态。
 
-#### 【7.3】多态
+**【7.3】多态**
 
 多态是同一个行为具有多个不同表现形式或形态的能力。比如打印机有打印方法，彩色打印机类打印方法是彩色，黑色打印机类打印方法是黑色。
 
@@ -819,7 +819,7 @@ class Dog extends Animal {
 
 ---
 
-## 配置项 tsconfig.json
+## 九、配置项 tsconfig.json
 
 `tsconfig.json`为配置文件，该配置文件通过`tsc --init`命令行来生成。
 
@@ -874,7 +874,7 @@ class Dog extends Animal {
 
 ---
 
-## 联合类型和类型保护
+## 十、联合类型和类型保护
 
 ### 【1】联合类型
 
@@ -1023,7 +1023,7 @@ console.log(addObj(obj3,obj4)) // 480
 
 ---
 
-## 枚举
+## 十一、枚举
 
 ```js
 enum Data {
@@ -1075,7 +1075,7 @@ undefined
 
 ---
 
-## 泛型
+## 十二、泛型
 
 ### 【1】在方法中使用
 
@@ -1126,7 +1126,7 @@ const selectGirl2 = new SelectGirl([1,2,3]);
 
 ---
 
-## 搭建浏览器开发环境
+## 十三、搭建浏览器开发环境
 
 1. 建立好文件夹后，打开 `VSCode`，把文件夹拉到编辑器当中，然后打开终端，运行`npm init -y`,创建`package.json`文件。
 2. 生成文件后，我们接着在终端中运行`tsc -init`,生成`tsconfig.json`文件。
@@ -1139,7 +1139,7 @@ const selectGirl2 = new SelectGirl([1,2,3]);
 
 ---
 
-## 命名空间 namespace
+## 十四、命名空间 namespace
 
 ### 【1】当不使用命名空间时
 
@@ -1298,7 +1298,7 @@ namespace Components {
 
 ---
 
-## 使用 import 和 export
+## 十五、使用 import 和 export
 
 修改`compontens.ts`，删除`namespace`
 
@@ -1372,7 +1372,7 @@ export default class Page {
 
 ---
 
-## 使用 parcel 打包
+## 十六、使用 parcel 打包
 
 安装
 
@@ -1390,6 +1390,6 @@ yarn add --dev parcel@next
 
 ---
 
-## 结语
+## 十七、结语
 
 学习开始于 2020-09-01，结束于 2020-10-26，耗时 55 天。
