@@ -1354,6 +1354,10 @@ printArgs('a', 'b');
 // 'b'
 ````
 
+<div class="comments-box">
+  <p data-time="2022-10-20">for...of可替代forEach来遍历异步事件。</p>
+</div>
+
 ### 【3】 for...in 遍历对象
 
 遍历对象可以减少使用`Object.keys()`这一步骤。
