@@ -101,6 +101,14 @@ git pull origin name
 git push
 ```
 
+
+9. 删除分支
+
+```
+git branch --delete 分支名
+git push origin --delete 分支名
+```
+
 ---
 
 ## 八、新电脑开发新项目
