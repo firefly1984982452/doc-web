@@ -108,3 +108,11 @@
 !> 目前测试 chrome、firefox、safari 浏览器兼容性均不能实现这个功能。
 
 ## 【6】prefers-reduced-motion：减少动画
+
+## 【7】范围
+
+```
+@media screen and (min-width:1280px) and (max-width:1440px) {
+  body{}
+}
+```
