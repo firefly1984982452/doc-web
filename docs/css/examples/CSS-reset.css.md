@@ -1,5 +1,9 @@
 # CSS - reset.css
 
+
+- [reseter.min.css在线链接](https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css)
+- [normalize.min.css在线链接](https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css)
+
 作者推荐了`normalize.css`替代传统的`reset.css`。 [链接](https://github.com/chokcoco/iCSS/issues/5)
 
 reset.css
@@ -40,7 +44,7 @@ h1,h2,h3,h4{margin: 0;font-size: 100%;}
 
 img{border:none;}
 a{color: #21a557;cursor: pointer; text-decoration: none; }
-a:active,a:hover{outline：none;}
+a:active,a:hover{outline: none;}
 a:hover{text-decoration: underline;}
 
 strong{font-weight:normal;}
