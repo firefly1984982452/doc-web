@@ -130,7 +130,7 @@ table {
 
 ---
 
-# print-color-adjust：打印颜色调整
+## 【9】print-color-adjust：打印颜色调整
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="color-adjust" src="https://codepen.io/firefly1984982452/embed/mdXvLZW?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/firefly1984982452/pen/mdXvLZW">
