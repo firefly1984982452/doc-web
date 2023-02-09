@@ -252,3 +252,4 @@
   - [用 node 安装一些有用的插件](/docs/other-program/用node安装一些有用的插件.md)
 
 - [参考资料](/docs/resources.md)
+- [将markdown文档转换为epub电子书](/docs/blog/md2epub.md)
