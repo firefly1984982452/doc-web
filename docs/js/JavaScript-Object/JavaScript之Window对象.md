@@ -103,6 +103,7 @@ export function detectiveBrowse() {
 
 ```js
 let clientScreenMsg =
+  `devicePixelRatio：window.devicePixelRatio：${window.devicePixelRatio}\n` +
   `窗口可见区域宽（控制台不算）：window.innerWidth：${window.innerWidth}\n` +
   `窗口可见区域高（控制台不算）：window.innerHeight：${window.innerHeight}\n` +
   `网页可见区域宽(body)：document.body.clientWidth：${document.body.clientWidth}\n` +
