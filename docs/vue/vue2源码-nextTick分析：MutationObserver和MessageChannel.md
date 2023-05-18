@@ -20,7 +20,7 @@
     </div>
   </body>
 </html>
-<script src="https://fastly.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
   var app = new Vue({
     el: "#app",
@@ -59,7 +59,7 @@
   </body>
 </html>
 
-<script src="https://fastly.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
   var app = new Vue({
     el: "#app",
@@ -107,7 +107,7 @@
     </div>
   </body>
 </html>
-<script src="https://fastly.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
   var app = new Vue({
     el: "#app",
@@ -165,7 +165,7 @@ vue2 中在 2018 年 12 月 20 号用 MutationObser 替换了 MessageChannel（�
   </body>
 </html>
 
-<script src="https://fastly.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
   var app = new Vue({
     el: "#app",

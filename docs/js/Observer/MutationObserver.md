@@ -43,7 +43,7 @@
     </div>
   </body>
 </html>
-<script src="https://fastly.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
   var app = new Vue({
     el: '#app',
