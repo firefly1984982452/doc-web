@@ -73,7 +73,7 @@ obj; // {a: 3, b: 4, c: 5}
 
 ## 三、深拷贝
 
-[链接](docs/JavaScript/JavaScript深拷贝浅拷贝全析.md)
+[链接](docs/js/JavaScript-More/JavaScript深拷贝浅拷贝全析.md)
 
 - 方法 1：`JSON.parse(JSON.stringify())`
 - 方法 2：`MessageChannel`

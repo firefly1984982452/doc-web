@@ -227,7 +227,7 @@ arr.indexOf(124);    //1
 ## 五、迭代器及遍历
 
 1. `entries`：返回迭代器
-2. `fromEntries`：将键值对数组转为对象
+2. `fromEntries`：将`Map数组（键值对数组）`转为对象
 3. `values`：返回数组里的值的迭代器
 4. `keys`：返回数组里的下标的迭代器
 5. `map`：遍历，返回新数据，对原数组不影响
@@ -241,7 +241,7 @@ arr.indexOf(124);    //1
 
 `['a', 'b', 'c'].entries().next().value`
 
-### 【2】`fromEntries`：将键值对数组转为对象
+### 【2】`fromEntries`：将`Map数组（键值对数组）`转为对象
 
 ```js
 const map = new Map().set('foo', true).set('bar', false);
@@ -547,7 +547,7 @@ function instanceof(left, right) {
 ### 【1】toString
 
 ```js
-[1,2,3,4,5].String()
+[1,2,3,4,5].toString()
 "1,2,3,4,5"
 ```
 
