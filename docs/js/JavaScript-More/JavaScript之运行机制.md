@@ -65,7 +65,7 @@ fun : function(){
 宏任务（`macrotask`）：主代码、`setTimeout`、`setInterval`、`setImmediate(IE)`、`MessageChannel`
 微任务（`microtask`）：`promise`、`process.nextTick`、`MutationObserver`
 
-执行顺序：先宏任务--》执行结束后--》再执行所有微任务--》渲染--》下一个宏任务
+执行顺序：先宏任务-->执行结束后-->再执行所有微任务-->渲染-->下一个宏任务
 
 ```js
 console.log('start');

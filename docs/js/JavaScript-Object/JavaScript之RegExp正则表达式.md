@@ -314,3 +314,67 @@ re.exec('010 12345'); // null
 ```js
 /^([\w+\.])+@(\w+)([.]\w+)+$/.test('238fwe@qq.com'); // true
 ```
+
+```js
+
+/* 合法uri*/
+export function validateURL(textval) {
+  const urlregex = /^(https?|ftp):\/\/([a-zA-Z0-9.-]+(:[a-zA-Z0-9.&%$-]+)*@)*((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(:[0-9]+)*(\/($|[a-zA-Z0-9.,?'\\+&%$#=~_-]+))*$/
+  return urlregex.test(textval)
+}
+
+/* 小写字母*/
+export function validateLowerCase(str) {
+  const reg = /^[a-z]+$/
+  return reg.test(str)
+}
+
+/* 大写字母*/
+export function validateUpperCase(str) {
+  const reg = /^[A-Z]+$/
+  return reg.test(str)
+}
+
+/* 大小写字母*/
+export function validatAlphabets(str) {
+  const reg = /^[A-Za-z]+$/
+  return reg.test(str)
+}
+
+//邮箱
+export function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(email)
+}
+//手机号
+export function validatePhone(str) {
+    const re = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/
+    return re.test(str)
+  }
+//电话号码
+export function validateTelephone(str) {
+  const re = /\d{7}$/
+  return re.test(str)
+}
+
+//密码验证8-20位字符，包含数字字母大小写
+export function validatePwd(str) {
+    const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,20}$/;
+    return re.test(str)
+}
+//验证数字
+export function validateNumber(str) {
+    const re = /^[0-9]*$/
+    return re.test(str)
+}
+//验证字母
+export function validateLetter(str) {
+    const re = /^[A-Za-z]+$/
+    return re.test(str)
+}
+//验证汉字
+export function validateWord(str) {
+    const re = /[^\u0000-\u00FF]/
+    return re.test(str)
+}
+```

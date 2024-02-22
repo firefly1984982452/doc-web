@@ -466,14 +466,14 @@ console.log(a, temp); // 1 [2, 3, 4]
 
 ## 四、字符串的扩展
 
-- 参考[JavaScript 之 String 对象](docs/JavaScript-Object/JavaScript之String对象.md)
+- 参考[JavaScript 之 String 对象](docs/js/JavaScript-Object/JavaScript之String对象.md)
 
 ---
 
 ## 五、数值的扩展
 
-- 参考[JavaScript 之 Number](docs/JavaScript-Object/JavaScript之Number.md)
-- 参考[JavaScript 之 Math](docs/JavaScript-Object/JavaScript之Math.md)
+- 参考[JavaScript 之 Number](docs/js/JavaScript-Object/JavaScript之Number.md)
+- 参考[JavaScript 之 Math](docs/js/JavaScript-Object/JavaScript之Math.md)
 
 ---
 
@@ -688,19 +688,19 @@ factorial(5); // 120
 
 ## 七、数组的扩展
 
-- 参考[JavaScript 之 Array 数组](/docs/JavaScript-Object/JavaScript之Array数组.md)
+- 参考[JavaScript 之 Array 数组](/docs/js/JavaScript-Object/JavaScript之Array数组.md)
 
 ---
 
 ## 八、对象
 
-- 参考[JavaScript 之 Object 对象](/docs/JavaScript-Object/JavaScript之Object对象.md)
+- 参考[JavaScript 之 Object 对象](/docs/js/JavaScript-Object/JavaScript之Object对象.md)
 
 ---
 
 ## 九、正则 RegExp
 
-- 参考[JavaScript 之 RegExp 正则表达式](/docs/JavaScript-Object/JavaScript之RegExp正则表达式.md)
+- 参考[JavaScript 之 RegExp 正则表达式](/docs/js/JavaScript-Object/JavaScript之RegExp正则表达式.md)
 
 ## 十、Symbol
 
@@ -1576,7 +1576,7 @@ doIt();
 
 ## 二十、Class
 
-- 参考[JavaScript 之面向对象](/docs/JavaScript/JavaScript之面向对象.md)
+- 参考[JavaScript 之面向对象](/docs/js/JavaScript-More/JavaScript之面向对象.md)
 
 ---
 

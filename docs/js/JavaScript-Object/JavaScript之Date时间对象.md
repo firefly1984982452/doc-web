@@ -44,7 +44,7 @@ console.log(Y + "-" + m + "-" + d + " " + H + ":" + mi + ":" + s);
 ## 三、时间自定义格式化(如 yyyy-MM-dd)
 
 ```js
-var formatDatePD = function(t,str) {
+var formatDate = function(t,str) {
   var obj = {
     yyyy:t.getFullYear(),
     yy:(""+ t.getFullYear()).slice(-2),
@@ -65,7 +65,7 @@ var formatDatePD = function(t,str) {
   return str.replace(/([a-z]+)/ig,($1)=>{return obj[$1]})
 }
 
-formatDate(new Date(1409894060000), 'yyyy-MM-dd HH:mm:ss 星期w')
+formatDate(new Date(+new Date()), 'yyyy-MM-dd HH:mm:ss 星期w')
 ```
 
 ---
@@ -109,7 +109,7 @@ Date.parse('2020-01-01 00:00:00')/1000 // 2020/1/1 0:0:0 --> 1577808000
 ## 七、两个时间戳相减所距时间
 
 ```js
-getTime(value = Math.round(Date.now() / 1000)) {
+var getTime = function(value = Math.round(Date.now() / 1000)){
   let nowTimeStamp = Math.round(Date.now() / 1000);
   let reduceTimeStamp = nowTimeStamp - value;
   let day = Math.floor(reduceTimeStamp / 60 / 60 / 24);
@@ -119,10 +119,11 @@ getTime(value = Math.round(Date.now() / 1000)) {
   hour = hour > 9 ? hour : "0" + hour;
   minute = minute > 9 ? minute : "0" + minute;
   seconds = seconds > 9 ? seconds : "0" + seconds;
-  let result = hour + ":" + minute + ":" + seconds;
-  console.log("两个时间段相距：" + day + "天 " + result);
+  let result = `${day}天 ${hour}:${minute}:${seconds}`
+  console.log("两个时间段相距：" + result);
   return result;
-},
+}
+getTime(1308562859);
 ```
 
 ---

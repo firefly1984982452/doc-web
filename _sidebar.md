@@ -140,13 +140,6 @@
     - [JavaScript 之 HTTP 对象](/docs/js/JavaScript-Object/JavaScript之HTTP对象.md)
     - [JavaScript 之 ES6 总结](/docs/js/JavaScript-Object/JavaScript之ES6总结.md)
 
-  - JavaScript 之观察者模式
-
-    - [说明](/docs/js/Observer/about.md)
-    - [ResizeObserver：resize 监听](/docs/js/Observer/ResizeObserver.md)
-    - [MutationObserver：监听 DOM 节点的变动](/docs/js/Observer/MutationObserver.md)
-    - [InterSectionObserver：异步视口观察](/docs/js/Observer/InterSectionObserver.md)
-
   - JavaScript 进阶
 
     - [`<script>`标签](/docs/js/JavaScript-More/<script>标签.md)
@@ -176,6 +169,13 @@
     - [JavaScript 深拷贝浅拷贝全析](/docs/js/JavaScript-More/JavaScript深拷贝浅拷贝全析.md)
     - [JavaScript 异步操作解决方案](/docs/js/JavaScript-More/JavaScript异步操作解决方案.md)
     - [JavaScript 之运行机制](/docs/js/JavaScript-More/JavaScript之运行机制.md)
+
+  - JavaScript 之观察者模式
+
+    - [说明](/docs/js/Observer/about.md)
+    - [ResizeObserver：resize 监听](/docs/js/Observer/ResizeObserver.md)
+    - [MutationObserver：监听 DOM 节点的变动](/docs/js/Observer/MutationObserver.md)
+    - [InterSectionObserver：异步视口观察](/docs/js/Observer/InterSectionObserver.md)
 
   - JavaScript 实现某功能
 

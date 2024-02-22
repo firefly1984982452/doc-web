@@ -2,7 +2,7 @@
 
 ---
 
-[链接]](http://www.runoob.com/w3cnote/scrapy-detail.html)
+[链接](http://www.runoob.com/w3cnote/scrapy-detail.html)
 
 ## 爬虫
 
