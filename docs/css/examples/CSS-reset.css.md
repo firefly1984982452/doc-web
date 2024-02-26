@@ -110,7 +110,7 @@ a {
 abbr[title] {
   /*移除Chrome57- and Firefox 39-中的border-bottom*/
   border-bottom: none;
-  /*统一text*/-decoration
+  /*统一text-decoration*/
   text-decoration: underline;
   text-decoration: underline dotted;
 }
@@ -233,7 +233,7 @@ legend {
 progress {
   /*重置IE9-浏览器的display*/
   display: inline-block;
-  /*重置Chrome*/, Firefox浏览器的vertical-align
+  /*重置Chrome, Firefox浏览器的vertical-align*/
   vertical-align: baseline;
 }
 textarea {
@@ -242,7 +242,7 @@ textarea {
 }
 
 [type="checkbox"],[type="radio"] {
-  /*重置IE9-浏览器的box-sizing及padding    */
+  /*重置IE9-浏览器的box-sizing及padding*/
   box-sizing: border-box;
   padding: 0;
 }
@@ -293,4 +293,5 @@ template {
   /*重置IE9-浏览器的display    */
   display: none;
 }
+
 ```
